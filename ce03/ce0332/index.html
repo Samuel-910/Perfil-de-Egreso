@@ -1,0 +1,2181 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentos oficiales del perfil de egreso (ciclo 10) — ERP «Articulos», Salud Total SAC">
+      
+      
+      
+        <link rel="canonical" href="https://samuel-910.github.io/Perfil-de-Egreso/ce03/ce0332/">
+      
+      
+        <link rel="prev" href="../ce0312/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>CE0332-CE0333 - S2 - E3: Implementación, Gestión y Control de Centro de Datos - Perfil de Egreso — Ingeniería de Sistemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ce0332-ce0333-s2-e3-implementacion-gestion-y-control-de-centro-de-datos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Perfil de Egreso — Ingeniería de Sistemas" class="md-header__button md-logo" aria-label="Perfil de Egreso — Ingeniería de Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Perfil de Egreso — Ingeniería de Sistemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CE0332-CE0333 - S2 - E3: Implementación, Gestión y Control de Centro de Datos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Samuel-910/Perfil-de-Egreso" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Samuel-910/Perfil-de-Egreso
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Perfil de Egreso — Ingeniería de Sistemas" class="md-nav__button md-logo" aria-label="Perfil de Egreso — Ingeniería de Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg>
+
+    </a>
+    Perfil de Egreso — Ingeniería de Sistemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Samuel-910/Perfil-de-Egreso" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Samuel-910/Perfil-de-Egreso
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE01: Gestión de Tecnologías de Información
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE01: Gestión de Tecnologías de Información
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0111-CE0115 - E1: Diagnóstico Organizacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0113 - E2: Business Case del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0121-CE0125 - E3: Plan de Gestión del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0131-CE0135 - E4: Modelado de Procesos AS-IS / TO-BE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0141-CE0145 - E5: Propuesta de Solución TIC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce02/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE02: Ingeniería de Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE02: Ingeniería de Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce02/ce021/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce02/ce021/galeria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Galería del prototipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce02/ce022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE022 - S2 - E2: Plataforma de Datos del Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce02/ce023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE023 - S2 - E3: Sistema de Software Funcional Integrado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce02/ce024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE024 - S2 - E4: Gestión del Proyecto y Calidad de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE03: Infraestructura Tecnológica
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE03: Infraestructura Tecnológica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce0311/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0311 - S1 - E1: Análisis y Diseño de Red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce0331/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0331 - S1 - E2: Análisis y Diseño de Centro de Datos Híbrido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce0321/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0321-CE0324 - S2 - E1: Planificación e Implementación del SGSI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce0312/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0312-CE0313 - S2 - E2: Implementación, Testing y Monitoreo de Red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0332-CE0333 - S2 - E3: Implementación, Gestión y Control de Centro de Datos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0332-CE0333 - S2 - E3: Implementación, Gestión y Control de Centro de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#control-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de versiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-resumen-ejecutivo-de-la-implementacion-del-centro-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Resumen ejecutivo de la implementación del centro de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-trazabilidad-con-el-diseno-de-centro-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Trazabilidad con el diseño de centro de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-implementacion-del-entorno-on-premise-vmware-esxi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Implementación del entorno on-premise (VMware ESXi)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-implementacion-del-entorno-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Implementación del entorno AWS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Implementación del entorno AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-vpc-desplegada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 VPC desplegada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-instancias-ec2-desplegadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Instancias EC2 desplegadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-security-groups-y-nacl-configurados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Security Groups y NACL configurados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-gestion-de-identidades-y-accesos-del-centro-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gestión de identidades y accesos del centro de datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Gestión de identidades y accesos del centro de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-aws-iam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 AWS IAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-accesos-administrativos-esxi-y-servidores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Accesos administrativos (ESXi y servidores)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-inventario-final-de-activos-del-centro-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Inventario final de activos del centro de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gestion-de-continuidad-respaldo-y-recuperacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Gestión de continuidad — respaldo y recuperación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-monitoreo-y-control-operativo-del-centro-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Monitoreo y control operativo del centro de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-control-de-cambios-y-gestion-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Control de cambios y gestión de configuración
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-resultados-y-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Resultados y conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Referencias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Referencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivos-del-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos del entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#control-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de versiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-resumen-ejecutivo-de-la-implementacion-del-centro-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Resumen ejecutivo de la implementación del centro de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-trazabilidad-con-el-diseno-de-centro-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Trazabilidad con el diseño de centro de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-implementacion-del-entorno-on-premise-vmware-esxi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Implementación del entorno on-premise (VMware ESXi)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-implementacion-del-entorno-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Implementación del entorno AWS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Implementación del entorno AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-vpc-desplegada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 VPC desplegada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-instancias-ec2-desplegadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Instancias EC2 desplegadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-security-groups-y-nacl-configurados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Security Groups y NACL configurados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-gestion-de-identidades-y-accesos-del-centro-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gestión de identidades y accesos del centro de datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Gestión de identidades y accesos del centro de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-aws-iam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 AWS IAM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-accesos-administrativos-esxi-y-servidores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Accesos administrativos (ESXi y servidores)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-inventario-final-de-activos-del-centro-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Inventario final de activos del centro de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gestion-de-continuidad-respaldo-y-recuperacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Gestión de continuidad — respaldo y recuperación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-monitoreo-y-control-operativo-del-centro-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Monitoreo y control operativo del centro de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-control-de-cambios-y-gestion-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Control de cambios y gestión de configuración
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-resultados-y-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Resultados y conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Referencias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Referencias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivos-del-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos del entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ce0332-ce0333-s2-e3-implementacion-gestion-y-control-de-centro-de-datos">CE0332-CE0333 - S2 - E3: Implementación, Gestión y Control de Centro de Datos<a class="headerlink" href="#ce0332-ce0333-s2-e3-implementacion-gestion-y-control-de-centro-de-datos" title="Permanent link">&para;</a></h1>
+<p><strong>UNIVERSIDAD PERUANA UNIÓN</strong></p>
+<p>Facultad de Ingeniería y Arquitectura · Escuela Profesional de Ingeniería de Sistemas</p>
+<p><strong>SEMESTRE 2 · ENTREGABLE 3 DE 3</strong></p>
+<p><strong>Implementación, Gestión y Control de Centro de Datos</strong></p>
+<p><em>(CE0332–CE0333 · Línea de Infraestructura — CE03)</em></p>
+<p>Centro de datos híbrido del ERP «Articulos» — Salud Total SAC</p>
+<table>
+<thead>
+<tr>
+<th><strong>Campo</strong></th>
+<th><strong>Detalle</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Responsables</td>
+<td>Jhosef Anthony Quispe Huarilloclla · Jose Samuel Turpo Cauna · Yesenia Alejandra Gutierrez Anco</td>
+</tr>
+<tr>
+<td>Versión y fecha</td>
+<td>v2.0 — 19 de noviembre de 2026</td>
+</tr>
+<tr>
+<td>Diseño de referencia</td>
+<td>CE0331 E2 v2.0 (Análisis y Diseño de Centro de Datos Híbrido)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="control-de-versiones">Control de versiones<a class="headerlink" href="#control-de-versiones" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Versión</strong></th>
+<th><strong>Fecha</strong></th>
+<th><strong>Cambios</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>30/06/2026</td>
+<td>Servicios de centro de datos en laboratorio (DNS, LDAP, NTP, LVM, respaldo cifrado) sobre el diseño anterior (con Kafka, vCenter y SAN)</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>19/11/2026</td>
+<td>Rehecho según la plantilla S2-E3 y alineado al E2 v2.0: trazabilidad, despliegue real en AWS, accesos, inventario, registro de recuperación, monitoreo, control de cambios y brechas</td>
+</tr>
+</tbody>
+</table>
+<p>Anexos: Anexos/Registro_Recuperacion_Inventario_S2E3.xlsx (registro de recuperación, trazabilidad, inventario, accesos y brechas) y version_anterior_v1/Evidencias_DataCenter_SaludTotal.zip (configuraciones y salidas de junio).</p>
+<h2 id="1-resumen-ejecutivo-de-la-implementacion-del-centro-de-datos">1. Resumen ejecutivo de la implementación del centro de datos<a class="headerlink" href="#1-resumen-ejecutivo-de-la-implementacion-del-centro-de-datos" title="Permanent link">&para;</a></h2>
+<p>Proyecto: centro de datos híbrido del ERP «Articulos» de Salud Total SAC, diseñado en el E2 v2.0 (host ESXi de contingencia y seguridad en Juliaca y una EC2 con Docker Compose en AWS us-east-2).</p>
+<p>Lo desplegado. En AWS: una EC2 Ubuntu 24.04 con Elastic IP en la VPC por defecto, Security Group con SSH para el administrador y el ERP en el puerto 8090, y los cinco contenedores del ERP en estado saludable. On-premise: el host ESXi no se desplegó; en junio se ejecutaron en una VM Linux de laboratorio los servicios de soporte DNS y LDAP, y un respaldo cifrado con restauración verificada.</p>
+<p>Identidades y accesos: SSH solo con llave y desde la IP del administrador, llaves JWT fuera de git y rol de base de datos sin superusuario están implementados; MFA, usuario IAM y rol de instancia no tienen evidencia.</p>
+<p>Respaldo y recuperación: se ejecutaron tres recuperaciones con el mismo stack del ERP: rollback de un despliegue fallido en 18,5 s (RTO objetivo 4 h), restauración de la base en ≈ 4,2 s con conteos idénticos, y restauración de un respaldo cifrado en junio. La recuperación de una VM, de un snapshot de AWS y de la VPN no se ejecutaron.</p>
+<p>Conclusión: la parte en la nube cumple el diseño en lo esencial (una EC2 con el ERP en contenedores, filtrado perimetral en el Security Group, recuperación probada de servicio y datos), con dos desvíos justificados (VPC por defecto y puerto 8090 sin TLS). La parte on-premise no se implementó; las brechas y su plan de cierre están en la sección 10.</p>
+<h2 id="2-trazabilidad-con-el-diseno-de-centro-de-datos">2. Trazabilidad con el diseño de centro de datos<a class="headerlink" href="#2-trazabilidad-con-el-diseno-de-centro-de-datos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Elemento diseñado</strong></th>
+<th><strong>¿Según diseño?</strong></th>
+<th><strong>Cambio / justificación</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host ESX-JUL-01, vSwitches, port groups y 7 VM (E2 §5.2)</td>
+<td>No</td>
+<td>No se dispuso de servidor ni de licencia; la equivalencia técnica (Workstation o VirtualBox) tampoco se montó. Queda como brecha B01</td>
+</tr>
+<tr>
+<td>Servicios de soporte on-premise (DNS, directorio)</td>
+<td>Sí, en laboratorio</td>
+<td>DNS (dnsmasq) y directorio LDAP ejecutados en una VM Linux de laboratorio en junio; no forman parte del diseño v2.0 pero sirven como evidencia de operación</td>
+</tr>
+<tr>
+<td>NAS de respaldos y RAID 1</td>
+<td>Parcial</td>
+<td>Se ejecutó la creación de PV/VG de LVM sobre dispositivos de bucle; el RAID se documentó sin instanciarlo (el kernel del laboratorio no cargaba md)</td>
+</tr>
+<tr>
+<td>VPC-ST 10.50.0.0/16 con subredes por capa (E2 §6.2)</td>
+<td>Con cambio</td>
+<td>Se utilizó la VPC por defecto 172.31.0.0/16 en el despliegue inicial As-Is; la migración a la VPC-ST dedicada (10.50.0.0/16) forma parte del plan de endurecimiento (B02)</td>
+</tr>
+<tr>
+<td>EC2-ERP-01 t3.large con Docker Compose (E2 §6.3)</td>
+<td>Sí, con ajuste</td>
+<td>EC2 Ubuntu 24.04 con Elastic IP y los cinco contenedores del ERP saludables; el tipo de instancia no está registrado</td>
+</tr>
+<tr>
+<td>sg-erp y NACL (E2 §6.4)</td>
+<td>Parcial</td>
+<td>Security Group con 22 (IP del administrador) y 8090; sin NACL dedicada; puerto público 8090 sin TLS en lugar de 443</td>
+</tr>
+<tr>
+<td>Rol IAM, S3 de respaldos, DLM, CloudWatch, Budgets (E2 §6.3)</td>
+<td>Sin evidencia</td>
+<td>Procedimiento de configuración y monitoreo documentado; capturas en proceso de consolidación operativa</td>
+</tr>
+<tr>
+<td>Respaldo 3-2-1 y restauración (E2 §10)</td>
+<td>Parcial</td>
+<td>pg_dump y restauración verificados con el mismo stack en local y respaldo cifrado verificado en junio; falta en la EC2</td>
+</tr>
+<tr>
+<td>Monitoreo del ERP (Prometheus, 6 alertas)</td>
+<td>Sí</td>
+<td>Mismo docker-compose que la EC2; verificado en local</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-implementacion-del-entorno-on-premise-vmware-esxi">3. Implementación del entorno on-premise (VMware ESXi)<a class="headerlink" href="#3-implementacion-del-entorno-on-premise-vmware-esxi" title="Permanent link">&para;</a></h2>
+<p>No se desplegó el host ESX-JUL-01 ni una equivalencia técnica, por lo que no hay vSwitches, port groups, NIC teaming, VM, firewall virtual ni IDS dentro de un hipervisor que documentar. Lo que se ejecutó on-premise fue en una VM Linux de laboratorio (1 vCPU, 3,9 GiB de RAM; ev03), en junio:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Servicio</strong></th>
+<th><strong>Configuración</strong></th>
+<th><strong>Resultado</strong></th>
+<th><strong>Vigencia frente al diseño v2.0</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNS interno (dnsmasq)</td>
+<td>Zona saludtotal.pe</td>
+<td>Resolución verificada con dig (ev01)</td>
+<td>Útil como servicio de soporte; los registros de Kafka y vCenter son del diseño anterior y ya no aplican</td>
+</tr>
+<tr>
+<td>Directorio LDAP (slapd)</td>
+<td>dc=saludtotal,dc=pe; unidades Juliaca y Puno; grupos Cajeros, Médicos y Administradores</td>
+<td>Consulta verificada; bind sin contraseña rechazado (ev02)</td>
+<td>Equivalente a un directorio corporativo; el ERP usa su propia autenticación JWT</td>
+</tr>
+<tr>
+<td>NTP (chrony)</td>
+<td>Configuración</td>
+<td>Documentado</td>
+<td>Vigente</td>
+</tr>
+<tr>
+<td>LVM</td>
+<td>PV y VG sobre dispositivos de bucle</td>
+<td>Creación de PV/VG ejecutada (ev_lvm_pvvg)</td>
+<td>Ilustra el aprovisionamiento; el diseño v2.0 usa RAID 1 en el host y un NAS</td>
+</tr>
+<tr>
+<td>RAID 6 y SAN iSCSI</td>
+<td>Configuración documentada</td>
+<td>No instanciado (sin módulos md en el laboratorio)</td>
+<td>Obsoleto: el diseño v2.0 no usa SAN ni RAID 6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-implementacion-del-entorno-aws">4. Implementación del entorno AWS<a class="headerlink" href="#4-implementacion-del-entorno-aws" title="Permanent link">&para;</a></h2>
+<h3 id="41-vpc-desplegada">4.1 VPC desplegada<a class="headerlink" href="#41-vpc-desplegada" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Elemento</strong></th>
+<th><strong>Real</strong></th>
+<th><strong>Diseño (E2)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VPC</td>
+<td>VPC por defecto 172.31.0.0/16</td>
+<td>VPC-ST 10.50.0.0/16</td>
+</tr>
+<tr>
+<td>Subred</td>
+<td>Subred pública por defecto de la zona de la instancia (IP privada 172.31.4.35)</td>
+<td>snet-publica-a 10.50.0.0/24</td>
+</tr>
+<tr>
+<td>Route table</td>
+<td>Tabla principal de la VPC por defecto con ruta 0.0.0.0/0 al Internet Gateway</td>
+<td>rtb-publica: 0.0.0.0/0 → IGW; sedes → VGW</td>
+</tr>
+<tr>
+<td>Internet Gateway</td>
+<td>El de la VPC por defecto</td>
+<td>IGW-ST</td>
+</tr>
+<tr>
+<td>NAT</td>
+<td>No hay (no se necesita: la única instancia es pública)</td>
+<td>No en la fase 1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-instancias-ec2-desplegadas">4.2 Instancias EC2 desplegadas<a class="headerlink" href="#42-instancias-ec2-desplegadas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Instancia</strong></th>
+<th><strong>Tipo</strong></th>
+<th><strong>IP privada / pública</strong></th>
+<th><strong>Estado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EC2 del ERP (Ubuntu 24.04, disco 20 GB)</td>
+<td>No registrado (el diseño pide t3.large)</td>
+<td>172.31.4.35 / Elastic IP pública (198.51.100.50)*</td>
+<td>Activa en el despliegue inicial; cinco contenedores saludables; arranque del backend ≈ 35 s</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-security-groups-y-nacl-configurados">4.3 Security Groups y NACL configurados<a class="headerlink" href="#43-security-groups-y-nacl-configurados" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Nombre</strong></th>
+<th><strong>Alcance</strong></th>
+<th><strong>Regla efectiva</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Security Group de la EC2</td>
+<td>Instancia</td>
+<td>22 desde la IP del administrador; 8090 desde 0.0.0.0/0; el resto cerrado</td>
+</tr>
+<tr>
+<td>NACL</td>
+<td>Subred</td>
+<td>NACL por defecto de la VPC (sin reglas adicionales a nivel de subred; el control de acceso efectivo recae en el Security Group de la instancia, quedando la NACL dedicada para la fase de endurecimiento</td>
+</tr>
+<tr>
+<td>Publicación en el host</td>
+<td>docker-compose.yml</td>
+<td>8085, 8087, 9090 y 5433 publicados en 0.0.0.0 (protegidos solo por el Security Group): no conformidad H02 del SGSI</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-gestion-de-identidades-y-accesos-del-centro-de-datos">5. Gestión de identidades y accesos del centro de datos<a class="headerlink" href="#5-gestion-de-identidades-y-accesos-del-centro-de-datos" title="Permanent link">&para;</a></h2>
+<h3 id="51-aws-iam">5.1 AWS IAM<a class="headerlink" href="#51-aws-iam" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Control</strong></th>
+<th><strong>Implementación</strong></th>
+<th><strong>Estado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EC2 por SSH</td>
+<td>Llave .pem del administrador; Security Group solo desde su IP pública</td>
+<td>Implementado (resumen §6.3)</td>
+</tr>
+<tr>
+<td>Usuario IAM administrador distinto de root, con MFA</td>
+<td>—</td>
+<td>Sin evidencia</td>
+</tr>
+<tr>
+<td>MFA en la cuenta raíz</td>
+<td>—</td>
+<td>Sin evidencia</td>
+</tr>
+<tr>
+<td>Rol de instancia para respaldos en S3</td>
+<td>—</td>
+<td>No implementado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-accesos-administrativos-esxi-y-servidores">5.2 Accesos administrativos (ESXi y servidores)<a class="headerlink" href="#52-accesos-administrativos-esxi-y-servidores" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Control</strong></th>
+<th><strong>Implementación</strong></th>
+<th><strong>Estado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Llaves JWT</td>
+<td>Generadas en la VM y montadas desde secrets/; fuera de git</td>
+<td>Implementado; rotación periódica pendiente</td>
+</tr>
+<tr>
+<td>Base de datos</td>
+<td>Rol de aplicación st_app sin superusuario (script de inicialización del compose)</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>Acceso administrativo a ESXi y firewall</td>
+<td>—</td>
+<td>No aplica (no desplegados)</td>
+</tr>
+</tbody>
+</table>
+<p>Política aplicada en la práctica: SSH con llave y sin contraseña; las llaves JWT se generan en el servidor y no viajan por git (incidente INC-02 del SGSI); el escaneo de secretos del pipeline bloquea llaves nuevas en el repositorio. La rotación periódica de llaves JWT y SSH no se ha ejecutado todavía.</p>
+<h2 id="6-inventario-final-de-activos-del-centro-de-datos">6. Inventario final de activos del centro de datos<a class="headerlink" href="#6-inventario-final-de-activos-del-centro-de-datos" title="Permanent link">&para;</a></h2>
+<p>Coherente con el inventario del SGSI (activos A01–A15), con la evidencia de cada componente:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Activo</strong></th>
+<th><strong>Propietario</strong></th>
+<th><strong>Ubicación</strong></th>
+<th><strong>Criticidad</strong></th>
+<th><strong>Evidencia</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instancia EC2 del ERP (Ubuntu 24.04, Elastic IP 198.51.100.50*)</td>
+<td>Responsable de nube</td>
+<td>AWS us-east-2</td>
+<td>Crítica</td>
+<td>Despliegue operativo en AWS; procedimiento de validación documentado</td>
+</tr>
+<tr>
+<td>Security Group (22 administrador, 8090 público)</td>
+<td>Responsable de nube</td>
+<td>AWS</td>
+<td>Crítica</td>
+<td>Reglas operativas en AWS; procedimiento de validación documentado</td>
+</tr>
+<tr>
+<td>Contenedores frontend, backend, mensajería, db, prometheus</td>
+<td>Administrador de TI</td>
+<td>EC2 (Docker Compose)</td>
+<td>Crítica</td>
+<td>docker compose ps con 5 servicios saludables (resumen) y en local (pipeline_20261119-063850.log)</td>
+</tr>
+<tr>
+<td>Base clinica_db (PostgreSQL 17, Flyway V1 y V2)</td>
+<td>Administrador de TI</td>
+<td>Contenedor db</td>
+<td>Crítica</td>
+<td>Restauración verificada (respaldo_restauracion.txt)</td>
+</tr>
+<tr>
+<td>Llaves JWT en secrets/jwt</td>
+<td>Responsable de seguridad</td>
+<td>EC2</td>
+<td>Crítica</td>
+<td>Incidente INC-02 del SGSI (generadas en la VM)</td>
+</tr>
+<tr>
+<td>Llave SSH de la EC2</td>
+<td>Administrador de TI</td>
+<td>Equipo del administrador</td>
+<td>Crítica</td>
+<td>Uso en operación (sin captura)</td>
+</tr>
+<tr>
+<td>Prometheus con 6 reglas de alerta</td>
+<td>Administrador de TI</td>
+<td>Contenedor prometheus</td>
+<td>Media</td>
+<td>monitoring/alertas.yml y figura 2.1 de CE02 E4</td>
+</tr>
+<tr>
+<td>Servicios de laboratorio: DNS y LDAP</td>
+<td>Administrador de TI</td>
+<td>VM Linux de laboratorio (junio)</td>
+<td>Media</td>
+<td>version_anterior_v1/Evidencias_DataCenter_SaludTotal.zip (ev01, ev02)</td>
+</tr>
+<tr>
+<td>Host ESXi y sus 7 VM</td>
+<td>Administrador de TI</td>
+<td>Rack de Juliaca</td>
+<td>Alta</td>
+<td>No desplegado (brecha B01)</td>
+</tr>
+<tr>
+<td>NAS de respaldos</td>
+<td>Administrador de TI</td>
+<td>Rack de Juliaca</td>
+<td>Alta</td>
+<td>No desplegado; LVM de laboratorio (ev_lvm_pvvg)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-gestion-de-continuidad-respaldo-y-recuperacion">7. Gestión de continuidad — respaldo y recuperación<a class="headerlink" href="#7-gestion-de-continuidad-respaldo-y-recuperacion" title="Permanent link">&para;</a></h2>
+<p>Estrategia de respaldo implementada: pg_dump en formato custom con retención de 7 copias (ci/respaldo.ps1) y verificación por restauración en una base temporal; en junio, respaldo cifrado con AES-256. El snapshot EBS diario, la copia a S3 y la copia en el NAS del diseño (regla 3-2-1) no están implementados en la EC2.</p>
+<p>Procedimiento de restauración: (1) copiar el respaldo al contenedor db; (2) crear una base temporal; (3) pg_restore --no-owner --no-acl; (4) comparar conteos de productos, venta_registro, kardex, orden_reabastecimiento y flyway_schema_history; (5) si coinciden, apuntar el servicio a la base restaurada o renombrarla.</p>
+<table>
+<thead>
+<tr>
+<th><strong>ID</strong></th>
+<th><strong>Escenario</strong></th>
+<th><strong>RTO obj.</strong></th>
+<th><strong>RTO obtenido</strong></th>
+<th><strong>RPO obj.</strong></th>
+<th><strong>Estado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RC-01</td>
+<td>Recuperación de un servicio: despliegue fallido del backend</td>
+<td>4 h</td>
+<td>18,5 s</td>
+<td>—</td>
+<td>Ejecutado (local)</td>
+</tr>
+<tr>
+<td>RC-02</td>
+<td>Restauración de la base clinica_db desde respaldo</td>
+<td>4 h</td>
+<td>≈ 4,2 s (1,4 s respaldo + 2,8 s restauración)</td>
+<td>24 h</td>
+<td>Ejecutado (local)</td>
+</tr>
+<tr>
+<td>RC-03</td>
+<td>Restauración de un respaldo cifrado (AES-256) con 200 002 filas de kardex</td>
+<td>4 h</td>
+<td>No medido</td>
+<td>24 h</td>
+<td>Ejecutado (laboratorio, junio)</td>
+</tr>
+<tr>
+<td>RC-04</td>
+<td>Recuperación de una VM desde respaldo</td>
+<td>24 h</td>
+<td>—</td>
+<td>24 h</td>
+<td>No ejecutado</td>
+</tr>
+<tr>
+<td>RC-05</td>
+<td>Recuperación de un recurso AWS desde snapshot</td>
+<td>4 h</td>
+<td>—</td>
+<td>24 h</td>
+<td>No ejecutado</td>
+</tr>
+<tr>
+<td>RC-06</td>
+<td>Recuperación de la VPN tras una interrupción</td>
+<td>1 h</td>
+<td>—</td>
+<td>—</td>
+<td>No aplica</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-monitoreo-y-control-operativo-del-centro-de-datos">8. Monitoreo y control operativo del centro de datos<a class="headerlink" href="#8-monitoreo-y-control-operativo-del-centro-de-datos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>ERP y contenedores:</strong> Prometheus con métricas del backend, histogramas de latencia y 6 reglas de alerta (backend caído, 5xx, latencia de ventas, eventos outbox atascados o con error, órdenes de reabastecimiento); Actuator y healthchecks de Docker. Verificado con el mismo stack (CE02 E4, figura 2.1).</p>
+</li>
+<li>
+<p><strong>Recursos del servidor:</strong> en el laboratorio de junio se registraron CPU, memoria, disco y servicios activos (ev03); en la EC2 no hay alarmas de capacidad evidenciadas.</p>
+</li>
+<li>
+<p><strong>Host ESXi:</strong> no aplica (no desplegado).</p>
+</li>
+<li>
+<p><strong>CloudWatch:</strong> sin evidencia; el diseño pide StatusCheckFailed_System con recuperación automática, CPU &gt; 70 % y disco &gt; 80 % (B05).</p>
+</li>
+</ul>
+<h2 id="9-control-de-cambios-y-gestion-de-configuracion">9. Control de cambios y gestión de configuración<a class="headerlink" href="#9-control-de-cambios-y-gestion-de-configuracion" title="Permanent link">&para;</a></h2>
+<p>Repositorio técnico: el código del ERP y su infraestructura están en git (copia articulos-e3 y el repositorio GitHub del equipo citado en el resumen). Contenido relevante:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Elemento</strong></th>
+<th><strong>Ubicación</strong></th>
+<th><strong>Estado</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>README con instrucciones para reconstruir</td>
+<td>articulos-e3/README.md (docker compose, .env, iniciar-docker.ps1)</td>
+<td>Disponible</td>
+</tr>
+<tr>
+<td>Infraestructura como código</td>
+<td>docker-compose.yml, Dockerfile ×3, db/init, monitoring/</td>
+<td>Disponible</td>
+</tr>
+<tr>
+<td>Scripts</td>
+<td>ci/pipeline.ps1, ci/rollback.ps1, ci/respaldo.ps1</td>
+<td>Disponible</td>
+</tr>
+<tr>
+<td>Registros</td>
+<td>ci/reportes/ (ejecuciones del pipeline), pruebas/evidencias/</td>
+<td>Disponible</td>
+</tr>
+<tr>
+<td>Diagramas</td>
+<td>Carpetas Diagramas de los entregables E1 y E2 de CE03</td>
+<td>Disponible</td>
+</tr>
+<tr>
+<td>Secretos</td>
+<td>.env y secrets/ excluidos por .gitignore; escaneo de secretos en cada build</td>
+<td>Sin secretos nuevos; llaves de desarrollo heredadas registradas (NC-01)</td>
+</tr>
+<tr>
+<td>Historial de cambios</td>
+<td>Historial de git; en el repositorio del equipo se registró y revirtió el borrado accidental de una carpeta duplicada</td>
+<td>Los cambios de E3/E4 de la copia articulos-e3 aún no están confirmados en git</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-resultados-y-conclusiones">10. Resultados y conclusiones<a class="headerlink" href="#10-resultados-y-conclusiones" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Operativo conforme al diseño:</strong> la EC2 con el ERP en contenedores, el perímetro mínimo por Security Group, el monitoreo con alertas y la recuperación de servicio y de datos probada (RC-01 a RC-03).</p>
+</li>
+<li>
+<p><strong>Prueba de recuperación:</strong> rollback en 18,5 s y restauración de la base en ≈ 4,2 s, ambos muy por debajo del RTO de 4 h; ejecutadas con el mismo docker-compose de la EC2, en el entorno local.</p>
+</li>
+<li>
+<p>Limitaciones: La validación de la infraestructura física on-premise se realizó mediante servicios de soporte en entorno de laboratorio; en la nube de AWS, las evidencias operativas de VPC, IAM y CloudWatch se consolidan mediante procedimientos de captura y validación documentados.</p>
+</li>
+<li>
+<p><strong>Mejoras propuestas:</strong> cerrar las brechas siguientes, empezando por las de menos esfuerzo (MFA, alarmas y respaldo en la EC2).</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>ID</strong></th>
+<th><strong>Brecha</strong></th>
+<th><strong>Acción</strong></th>
+<th><strong>Esfuerzo</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B01</td>
+<td>Host ESXi y VM</td>
+<td>Montar ESXi o una equivalencia técnica (Workstation/VirtualBox) con los port groups de VLAN 10, 20, 70 y 100 y al menos APP-CONT-01 y DB-CONT-01; capturar vSwitches y VM</td>
+<td>2 a 3 h</td>
+</tr>
+<tr>
+<td>B02</td>
+<td>VPC dedicada</td>
+<td>Migrar la instancia EC2 a la VPC-ST dedicada 10.50.0.0/16 con snet-publica-a aplicando el Security Group sg-erp y la NACL diseñada</td>
+<td>1 a 2 h</td>
+</tr>
+<tr>
+<td>B03</td>
+<td>Recuperación en AWS</td>
+<td>Snapshot del volumen, nueva EC2 desde él y medición del tiempo (RC-05)</td>
+<td>1 h</td>
+</tr>
+<tr>
+<td>B04</td>
+<td>IAM y MFA</td>
+<td>MFA en la cuenta raíz, usuario IAM administrador, rol de instancia para S3; capturas</td>
+<td>15 min</td>
+</tr>
+<tr>
+<td>B05</td>
+<td>Monitoreo en la nube</td>
+<td>Alarmas de CloudWatch (StatusCheck, CPU, disco) y AWS Budgets; capturas</td>
+<td>30 min</td>
+</tr>
+<tr>
+<td>B06</td>
+<td>Respaldo en la EC2</td>
+<td>Programar el pg_dump de las 02:00 a S3 y ejecutar una restauración allí</td>
+<td>30 min</td>
+</tr>
+</tbody>
+</table>
+<h2 id="11-referencias">11. Referencias<a class="headerlink" href="#11-referencias" title="Permanent link">&para;</a></h2>
+<p>[1] VMware by Broadcom, "vSphere Networking" y "vSphere Storage — ESXi 8.0", 2025.</p>
+<p>[2] Amazon Web Services, "Amazon EC2 User Guide", "IAM User Guide" y "AWS Backup Developer Guide", 2026.</p>
+<p>[3] ISO/IEC 27001:2022, "Information security management systems — Requirements", ISO, 2022.</p>
+<p>[4] CIS, "CIS Amazon Web Services Foundations Benchmark", v3.0, 2024.</p>
+<p>[5] CIS, "CIS VMware ESXi 8.0 Benchmark", 2024.</p>
+<p>[6] PostgreSQL Global Development Group, "PostgreSQL 17 Documentation — Backup and Restore", 2025.</p>
+<hr />
+<h3 id="archivos-del-entregable">Archivos del entregable<a class="headerlink" href="#archivos-del-entregable" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="Entregable_S2E3_Centro_Datos_SaludTotal.docx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.2 18h-1.4L12 13.2 10.2 20H8.8l-2.2-9h1.5l1.4 6.8 1.8-6.8h1.3l1.8 6.8 1.4-6.8h1.5zM13 9V3.5L18.5 9z"/></svg></span> Descargar documento original (.docx)</a></li>
+</ul>
+<p><strong>Anexos</strong></p>
+<ul>
+<li><a href="archivos/Anexos/Registro_Recuperacion_Inventario_S2E3.xlsx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.8 18H14l-2-3.4-2 3.4H8.2l2.9-4.5L8.2 11H10l2 3.4 2-3.4h1.8l-2.9 4.5zM13 9V3.5L18.5 9z"/></svg></span> Registro_Recuperacion_Inventario_S2E3.xlsx</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.indexes", "navigation.sections", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

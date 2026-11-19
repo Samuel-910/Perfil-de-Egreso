@@ -1,0 +1,5362 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentos oficiales del perfil de egreso (ciclo 10) — ERP «Articulos», Salud Total SAC">
+      
+      
+      
+        <link rel="canonical" href="https://samuel-910.github.io/Perfil-de-Egreso/ce02/ce024/">
+      
+      
+        <link rel="prev" href="../ce023/">
+      
+      
+        <link rel="next" href="../../ce03/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>CE024 - S2 - E4: Gestión del Proyecto y Calidad de Software - Perfil de Egreso — Ingeniería de Sistemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ce024-s2-e4-gestion-del-proyecto-y-calidad-de-software" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Perfil de Egreso — Ingeniería de Sistemas" class="md-header__button md-logo" aria-label="Perfil de Egreso — Ingeniería de Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Perfil de Egreso — Ingeniería de Sistemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CE024 - S2 - E4: Gestión del Proyecto y Calidad de Software
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Samuel-910/Perfil-de-Egreso" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Samuel-910/Perfil-de-Egreso
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Perfil de Egreso — Ingeniería de Sistemas" class="md-nav__button md-logo" aria-label="Perfil de Egreso — Ingeniería de Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg>
+
+    </a>
+    Perfil de Egreso — Ingeniería de Sistemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Samuel-910/Perfil-de-Egreso" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Samuel-910/Perfil-de-Egreso
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE01: Gestión de Tecnologías de Información
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE01: Gestión de Tecnologías de Información
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0111-CE0115 - E1: Diagnóstico Organizacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0113 - E2: Business Case del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0121-CE0125 - E3: Plan de Gestión del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0131-CE0135 - E4: Modelado de Procesos AS-IS / TO-BE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0141-CE0145 - E5: Propuesta de Solución TIC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE02: Ingeniería de Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE02: Ingeniería de Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ce021/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce021/galeria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Galería del prototipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE022 - S2 - E2: Plataforma de Datos del Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE023 - S2 - E3: Sistema de Software Funcional Integrado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE024 - S2 - E4: Gestión del Proyecto y Calidad de Software
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE024 - S2 - E4: Gestión del Proyecto y Calidad de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Ejecutivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-1-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 1: Pruebas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 1: Pruebas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-estrategia-y-niveles-de-prueba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Estrategia y niveles de prueba
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-casos-de-prueba-automatizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Casos de prueba automatizados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-reporte-de-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Reporte de ejecución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Cobertura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-prueba-de-carga-rnf-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Prueba de carga (RNF-14)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-defectos-encontrados-por-las-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Defectos encontrados por las pruebas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Limitaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-2-integracion-despliegue-y-operacion-continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 2: Integración, Despliegue y Operación Continua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 2: Integración, Despliegue y Operación Continua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-pipeline-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Pipeline CI/CD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-contenedores-y-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Contenedores y despliegue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-observabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Observabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-estrategia-de-rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Estrategia de rollback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-respaldos-y-restauracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Respaldos y restauración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-procedimiento-de-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Procedimiento de operación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-3-gestion-agil-del-proyecto-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 3: Gestión Ágil del Proyecto de Software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 3: Gestión Ágil del Proyecto de Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-project-charter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Project Charter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-artefactos-de-gestion-agil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Artefactos de gestión ágil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ceremonias-y-metricas-de-avance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Ceremonias y métricas de avance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-comparacion-y-adaptacion-frente-a-otros-marcos-de-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Comparación y adaptación frente a otros marcos de proceso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-4-aseguramiento-y-auditoria-de-la-calidad-del-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 4: Aseguramiento y Auditoría de la Calidad del Software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 4: Aseguramiento y Auditoría de la Calidad del Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-matriz-de-calidad-e-instrumentos-de-aseguramiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Matriz de calidad e instrumentos de aseguramiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-evaluacion-de-calidad-de-codigo-code-smells-y-deuda-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Evaluación de calidad de código, code smells y deuda técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-informe-de-auditoria-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Informe de auditoría técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-plan-de-mejora-de-la-calidad-del-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Plan de mejora de la calidad del software
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-del-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos del entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce03/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE03: Infraestructura Tecnológica
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE03: Infraestructura Tecnológica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0311/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0311 - S1 - E1: Análisis y Diseño de Red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0331/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0331 - S1 - E2: Análisis y Diseño de Centro de Datos Híbrido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0321/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0321-CE0324 - S2 - E1: Planificación e Implementación del SGSI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0312/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0312-CE0313 - S2 - E2: Implementación, Testing y Monitoreo de Red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0332/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0332-CE0333 - S2 - E3: Implementación, Gestión y Control de Centro de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Ejecutivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-1-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 1: Pruebas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 1: Pruebas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-estrategia-y-niveles-de-prueba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Estrategia y niveles de prueba
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-casos-de-prueba-automatizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Casos de prueba automatizados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-reporte-de-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Reporte de ejecución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Cobertura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-prueba-de-carga-rnf-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Prueba de carga (RNF-14)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-defectos-encontrados-por-las-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Defectos encontrados por las pruebas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-limitaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Limitaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-2-integracion-despliegue-y-operacion-continua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 2: Integración, Despliegue y Operación Continua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 2: Integración, Despliegue y Operación Continua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-pipeline-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Pipeline CI/CD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-contenedores-y-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Contenedores y despliegue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-observabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Observabilidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-estrategia-de-rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Estrategia de rollback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-respaldos-y-restauracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Respaldos y restauración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-procedimiento-de-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Procedimiento de operación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-3-gestion-agil-del-proyecto-de-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 3: Gestión Ágil del Proyecto de Software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 3: Gestión Ágil del Proyecto de Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-project-charter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Project Charter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-artefactos-de-gestion-agil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Artefactos de gestión ágil
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ceremonias-y-metricas-de-avance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Ceremonias y métricas de avance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-comparacion-y-adaptacion-frente-a-otros-marcos-de-proceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Comparación y adaptación frente a otros marcos de proceso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-4-aseguramiento-y-auditoria-de-la-calidad-del-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 4: Aseguramiento y Auditoría de la Calidad del Software
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 4: Aseguramiento y Auditoría de la Calidad del Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-matriz-de-calidad-e-instrumentos-de-aseguramiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Matriz de calidad e instrumentos de aseguramiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-evaluacion-de-calidad-de-codigo-code-smells-y-deuda-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Evaluación de calidad de código, code smells y deuda técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-informe-de-auditoria-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Informe de auditoría técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-plan-de-mejora-de-la-calidad-del-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Plan de mejora de la calidad del software
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-del-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos del entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ce024-s2-e4-gestion-del-proyecto-y-calidad-de-software">CE024 - S2 - E4: Gestión del Proyecto y Calidad de Software<a class="headerlink" href="#ce024-s2-e4-gestion-del-proyecto-y-calidad-de-software" title="Permanent link">&para;</a></h1>
+<p><strong>ENTREGABLE 4</strong></p>
+<p><strong>Gestión del Proyecto y Calidad de Software</strong></p>
+<p><em>(Alineado con CE024)</em></p>
+<p><strong>Gestión ágil del proyecto, aseguramiento y auditoría de la calidad del ERP «Articulos» — Salud Total SAC</strong></p>
+<p><img src="media/media/image1.png" title="erd.png" style="width:3.125in;height:1.59091in" alt="erd.png" /></p>
+<table>
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Título del sistema</strong></th>
+<th>ERP «Articulos» — Salud Total SAC · Gestión ágil, aseguramiento y auditoría de la calidad</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Nombre del estudiante</strong></td>
+<td>Gutierrez Anco Yesenia Alejandra<br />
+Turpo Cauna Jose Samuel<br />
+Quispe Huarilloclla Jhosef Antony</td>
+</tr>
+<tr class="even">
+<td><strong>Semestre</strong></td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td><strong>Curso</strong></td>
+<td>CE024 — Gestión del Proyecto y Calidad de Software</td>
+</tr>
+<tr class="even">
+<td><strong>Fecha</strong></td>
+<td>Noviembre de 2026 — versión 1.0 (Sprint 9 cerrado; Sprint 10 en curso: HU-12 y HU-13 pendientes)</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="resumen-ejecutivo">Resumen Ejecutivo<a class="headerlink" href="#resumen-ejecutivo" title="Permanent link">&para;</a></h2>
+<p>Salud Total SAC —cadena de farmacias con clínica ambulatoria en Juliaca y Puno— opera con el ERP propio «Articulos» (Spring Boot 3.5.9 / Java 21, Angular 20, PostgreSQL y el microservicio mensajeria_api). Este entregable evalúa la calidad del proceso con que se construye el sistema y la calidad del producto. Como en E1 y E2, toda cifra procede del código y del historial git del repositorio, no de lo planificado.</p>
+<p><strong>Gestión del proyecto.</strong> El trabajo se organizó con Scrum adaptado a un equipo de tres estudiantes (un Scrum Master y tres desarrolladores) y a los hitos académicos. Del historial git (134 commits entre el 11/01 y el 17/08/2026) se reconstruyeron ocho sprints de cuatro semanas: se terminaron 164 de los 180 puntos de la release (28 historias), con una velocidad media de 13 puntos y una caída marcada desde el Sprint 4 (S5 sin incremento). El alcance creció un 35 % (de 133 a 180 puntos) por la refactorización «Gold Standard» y por las historias técnicas de E3 y E4. El Sprint 9 (E3) comprometió 39 puntos —tres veces la velocidad media, riesgo R-01— y los entregó completos; en el Sprint 10 ya están terminadas HU-25, HU-26 y HU-27 (21 de 37 puntos) y quedan HU-12 y HU-13. El Project Charter, el Product Backlog, el Sprint Backlog y la comparación con RUP y cascada están en la Sección 3.</p>
+<p><strong>Aseguramiento y auditoría.</strong> La matriz de calidad ISO/IEC 25010 fija 16 métricas con meta y línea base medida. La línea base muestra fortalezas en seguridad de acceso (JWT RSA, bloqueo anti fuerza bruta, 155 @PreAuthorize) y en homogeneidad del código, y brechas en pruebas (1 prueba de backend), configuración (60 de 134 commits con mensajes de una palabra, sin ramas ni tags, Flyway desactivado), secretos versionados (3 archivos .pem) y observabilidad (sin Actuator). La auditoría SCAMPI clase C sobre CMMI-DEV v1.3 ubica el proceso en el nivel de madurez 1: REQM y PP están mayormente implementadas, pero PMC, MA, PPQA y CM solo parcialmente. El plan de mejora (11 acciones) apunta a satisfacer el nivel 2 al cierre del Sprint 10.</p>
+<p><strong>Pruebas, integración y operación.</strong> El backend pasó de 1 a 18 pruebas automatizadas (17 unitarias y 1 de integración sobre PostgreSQL con Flyway), todas aprobadas, con 73,2 % de cobertura en el código nuevo y 5,7 % en el total. La colección Postman de 19 peticiones (41 aserciones) verifica de punta a punta FEFO, reabastecimiento y seguridad, y la prueba de carga cumple el RNF-14 en operación normal (p95 1,37 s con 50 cajeros) pero no en el peor caso de un solo lote (2,16 s, R-11). Las pruebas encontraron ocho defectos, tres graves de concurrencia, ya corregidos. Un pipeline de ocho etapas compila, prueba, analiza, busca secretos, construye imágenes versionadas, despliega en contenedores y ejecuta pruebas de humo con rollback automático; Prometheus vigila seis reglas de alerta técnicas y de negocio.</p>
+<p><strong>Calidad del código.</strong> PMD registra 619 avisos y CPD 18 bloques duplicados; la deuda técnica estimada es de unas 81 horas (≈ 9 %, calificación B), concentrada en VentaServiceImpl, ExcelExportServiceImpl y UserServiceImpl. El código nuevo tiene menos avisos por línea que el heredado.</p>
+<p><strong>Estado de este documento</strong></p>
+<table>
+<thead>
+<tr>
+<th>Sección</th>
+<th>Contenido</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Pruebas</td>
+<td>Casos automatizados, reporte de ejecución y cobertura, flujos críticos</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>2. Integración, despliegue y operación</td>
+<td>Pipeline CI/CD, contenedores, observabilidad, rollback y respaldos</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>3. Gestión ágil</td>
+<td>Charter, historias, backlogs, sprints, métricas, comparación de marcos</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>4.1 Matriz e instrumentos</td>
+<td>ISO 25010, métricas, riesgos, revisiones, inspecciones, checklists</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>4.2 Calidad de código</td>
+<td>Atributos internos/externos, code smells, deuda técnica y refactorización</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>4.3 Auditoría y madurez</td>
+<td>Checklists de gestión, ingeniería y software; SCAMPI C / CMMI</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>4.4 Plan de mejora</td>
+<td>Acciones, responsables, plazos e indicadores</td>
+<td>Hecho</td>
+</tr>
+</tbody>
+</table>
+<h2 id="seccion-1-pruebas">Sección 1: Pruebas<a class="headerlink" href="#seccion-1-pruebas" title="Permanent link">&para;</a></h2>
+<p>Las pruebas se ejecutaron sobre la copia de trabajo articulos-e3 (código del Entregable 3) el 19/11/2026. Los criterios de aceptación en Gherkin de E1 §1.6 y las reglas de negocio RN-10 a RN-13 son el oráculo: cada caso automatizado cita la regla que verifica. La línea base del 18/11 era de una sola prueba de backend (ArticulosApplicationTests.contextLoads) y dos archivos .spec.ts en el frontend.</p>
+<h3 id="11-estrategia-y-niveles-de-prueba">1.1 Estrategia y niveles de prueba<a class="headerlink" href="#11-estrategia-y-niveles-de-prueba" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Herramienta</th>
+<th>Qué cubre</th>
+<th>Dónde corre</th>
+<th>Casos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unitarias</td>
+<td>JUnit 5 + Mockito + AssertJ</td>
+<td>Reglas FEFO (LoteFefoService) y ciclo de vida de las órdenes de reabastecimiento (ReabastecimientoServiceImpl)</td>
+<td>Etapa 1 del pipeline (mvn verify)</td>
+<td>17</td>
+</tr>
+<tr>
+<td>Integración</td>
+<td>Spring Boot Test sobre PostgreSQL 17</td>
+<td>Arranque completo del contexto: Flyway V1/V2, validación del esquema por Hibernate, seguridad y beans</td>
+<td>Etapa 1 del pipeline (base clinica_db_e3)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>API / humo</td>
+<td>Postman CLI 1.73 (colección E3_SaludTotal)</td>
+<td>Flujos críticos de punta a punta: login, permisos, FEFO en la venta, reabastecimiento hasta la orden de compra</td>
+<td>Etapa 8 del pipeline, contra los contenedores desplegados</td>
+<td>19 peticiones / 41 aserciones</td>
+</tr>
+<tr>
+<td>Rendimiento</td>
+<td>Script Python con hilos (pruebas/carga/carga_ventas.py)</td>
+<td>POST /api/ventas con 50 cajeros concurrentes (RNF-14) y consistencia del stock</td>
+<td>Manual, contra Docker</td>
+<td>2 escenarios</td>
+</tr>
+<tr>
+<td>Cobertura</td>
+<td>JaCoCo 0.8.12</td>
+<td>Líneas y ramas ejecutadas por las pruebas; corte: ≥ 60 % en el código nuevo</td>
+<td>Etapa 1 del pipeline</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>El orden sigue la pirámide de pruebas: muchas pruebas unitarias rápidas sobre las reglas de negocio, pocas de integración y un conjunto acotado de pruebas de API que verifican el sistema desplegado. Las pruebas de frontend (Karma) no se incluyeron en el pipeline; es una brecha registrada (1.7).</p>
+<h3 id="12-casos-de-prueba-automatizados">1.2 Casos de prueba automatizados<a class="headerlink" href="#12-casos-de-prueba-automatizados" title="Permanent link">&para;</a></h3>
+<p><strong>Pruebas unitarias del backend (src/test/java)</strong></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Clase</th>
+<th>Caso</th>
+<th>Regla / HU</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UT-01</td>
+<td>LoteFefoService</td>
+<td>Un lote vencido no puede venderse</td>
+<td>RN-11 · HU-09</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-02</td>
+<td>LoteFefoService</td>
+<td>Si otro lote vence antes y tiene stock, se exige venderlo primero</td>
+<td>RN-10 · HU-09</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-03</td>
+<td>LoteFefoService</td>
+<td>El lote que vence primero se vende sin observaciones</td>
+<td>RN-10 · HU-09</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-04</td>
+<td>LoteFefoService</td>
+<td>Si el lote anterior no alcanza para la cantidad, se permite el siguiente</td>
+<td>RN-10 · HU-09</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-05</td>
+<td>LoteFefoService</td>
+<td>Un lote sin fecha de vencimiento cede ante cualquier lote con fecha</td>
+<td>RN-10 · HU-09</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-06</td>
+<td>LoteFefoService</td>
+<td>Con ventas.fefo.estricto=false solo se bloquean los vencidos</td>
+<td>RN-11 · HU-09</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-07</td>
+<td>LoteFefoService</td>
+<td>listarLotes numera en orden FEFO y calcula los días para vencer</td>
+<td>RF-24 · HU-09</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-08</td>
+<td>ReabastecimientoServiceImpl</td>
+<td>Genera una orden por (máximo − stock) bajo el punto de reorden</td>
+<td>RN-12 · HU-11</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-09</td>
+<td>ReabastecimientoServiceImpl</td>
+<td>No duplica si ya existe una orden abierta del producto y sucursal</td>
+<td>RN-12 · HU-11</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-10</td>
+<td>ReabastecimientoServiceImpl</td>
+<td>Sin stock máximo se sugiere hasta el doble del mínimo</td>
+<td>RN-12 · HU-11</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-11</td>
+<td>ReabastecimientoServiceImpl</td>
+<td>Aprobar guarda la cantidad ajustada y pasa a APROBADA</td>
+<td>RF-28 · HU-11</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-12</td>
+<td>ReabastecimientoServiceImpl</td>
+<td>No se puede aprobar una orden rechazada (409)</td>
+<td>RF-28 · HU-11</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-13</td>
+<td>ReabastecimientoServiceImpl</td>
+<td>Rechazar guarda el motivo</td>
+<td>RF-28 · HU-11</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-14</td>
+<td>ReabastecimientoServiceImpl</td>
+<td>Orden inexistente responde 404</td>
+<td>HU-11</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-15</td>
+<td>ReabastecimientoServiceImpl</td>
+<td>Convertir sin proveedor habitual ni indicado es un error de validación</td>
+<td>RF-28 · HU-11</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-16</td>
+<td>ReabastecimientoServiceImpl</td>
+<td>Convertir crea la orden de compra con la cantidad aprobada</td>
+<td>RF-28 · HU-11</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>UT-17</td>
+<td>ReabastecimientoServiceImpl</td>
+<td>Las órdenes pendientes con más de 72 h pasan a VENCIDA</td>
+<td>RN-13 · HU-11</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>IT-01</td>
+<td>ArticulosApplicationTests</td>
+<td>El contexto arranca sobre PostgreSQL con Flyway y validación de esquema</td>
+<td>RNF-11 · HU-23</td>
+<td>Pasa</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Colección Postman E3_SaludTotal (pruebas de API y de humo)</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Petición</th>
+<th>Verifica</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>GET /actuator/health</td>
+<td>Backend y base de datos arriba (UP)</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>02–03</td>
+<td>POST /api/auth/login (inválido / válido)</td>
+<td>401 con credenciales inválidas; token JWT con las válidas (HU-07)</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>04</td>
+<td>GET /api/reabastecimiento sin token</td>
+<td>401: endpoint protegido</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>05–05d</td>
+<td>Lotes FEFO, lotes vencidos, caja chica, proveedor</td>
+<td>Datos de partida: orden FEFO, lote vencido en Puno, caja abierta, proveedor</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>06</td>
+<td>POST /api/ventas con un lote posterior</td>
+<td>400 «Por FEFO debe venderse primero el lote …» (RN-10)</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>07</td>
+<td>POST /api/ventas con un lote vencido</td>
+<td>400 «El lote … venció …» (RN-11)</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>08</td>
+<td>POST /api/ventas con el lote FEFO</td>
+<td>201 y descuento del stock del lote</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>09–10</td>
+<td>POST /api/reabastecimiento/evaluar (dos veces)</td>
+<td>Genera órdenes bajo el mínimo y no las duplica (RN-12)</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>11–14</td>
+<td>Listar, aprobar (inválido / válido) y rechazar</td>
+<td>Paginación; 400 con cantidad ≤ 0; 409 al rechazar una orden aprobada</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>15–16</td>
+<td>Convertir en compra y resumen</td>
+<td>Crea la orden de compra REABASTECIMIENTO-{id}; contadores por estado</td>
+<td>Pasa</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-reporte-de-ejecucion">1.3 Reporte de ejecución<a class="headerlink" href="#13-reporte-de-ejecucion" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Suite</th>
+<th>Ejecutados</th>
+<th>Fallidos</th>
+<th>Duración</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JUnit (Surefire): unitarias + integración</td>
+<td>18</td>
+<td>0</td>
+<td>63,4 s (etapa 1 completa, incluye compilación)</td>
+<td>articulos-backend/target/surefire-reports; log del pipeline</td>
+</tr>
+<tr>
+<td>Postman CLI sobre Docker</td>
+<td>19 peticiones · 41 aserciones</td>
+<td>0</td>
+<td>2,4 s (respuesta media 71 ms, máx. 196 ms)</td>
+<td>pruebas/postman/resultado_e3_docker.json</td>
+</tr>
+<tr>
+<td>Postman CLI en la etapa 8 del pipeline</td>
+<td>19 peticiones · 41 aserciones</td>
+<td>0</td>
+<td>—</td>
+<td>ci/reportes/pipeline_20261119-063850.log</td>
+</tr>
+<tr>
+<td>Carga: 50 ventas concurrentes, lotes distribuidos</td>
+<td>50</td>
+<td>0</td>
+<td>1,46 s · 34,3 ventas/s</td>
+<td>pruebas/evidencias/carga_ventas_distribuido.txt</td>
+</tr>
+<tr>
+<td>Carga: 50 ventas concurrentes, mismo lote</td>
+<td>50</td>
+<td>0</td>
+<td>2,23 s · 22,4 ventas/s</td>
+<td>pruebas/evidencias/carga_ventas_mismo_lote.txt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-cobertura">1.4 Cobertura<a class="headerlink" href="#14-cobertura" title="Permanent link">&para;</a></h3>
+<p><img src="media/media/image2.png" style="width:5.90551in;height:2.49344in" /></p>
+<p><em>Figura 1.1 — Cobertura de líneas y ramas por clase (JaCoCo, mvn verify).</em></p>
+<p>El código nuevo de E3 alcanza 73,2 % de cobertura de líneas y supera el corte del pipeline (60 %); los dos servicios con reglas de negocio superan el 90 % de líneas. La cobertura del backend completo es de 5,7 %: los 565 archivos heredados siguen sin pruebas, por lo que la métrica de la matriz 4.1 (≥ 60 % en servicios críticos) solo se cumple para FEFO y reabastecimiento. VentaServiceImpl y KardexService, también críticos, quedan como siguiente objetivo (PM-01).</p>
+<h3 id="15-prueba-de-carga-rnf-14">1.5 Prueba de carga (RNF-14)<a class="headerlink" href="#15-prueba-de-carga-rnf-14" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Escenario</th>
+<th>Usuarios</th>
+<th>Exitosas</th>
+<th>p50</th>
+<th>p95</th>
+<th>p99</th>
+<th>RNF-14 (p95 \&lt; 2 s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ventas sobre lotes distintos (operación normal)</td>
+<td>50</td>
+<td>50/50</td>
+<td>784 ms</td>
+<td>1 370 ms</td>
+<td>1 439 ms</td>
+<td>Cumple</td>
+</tr>
+<tr>
+<td>Todas las ventas sobre el mismo lote (peor caso)</td>
+<td>50</td>
+<td>50/50</td>
+<td>1 496 ms</td>
+<td>2 162 ms</td>
+<td>2 231 ms</td>
+<td>No cumple</td>
+</tr>
+</tbody>
+</table>
+<p>En el peor caso las 50 transacciones esperan el bloqueo pesimista del mismo lote: es el precio de no vender stock que no existe. El stock final fue coherente en ambos escenarios (70 − 50 = 20 en el mismo lote). Con dos sedes y pocas cajas el escenario es improbable; se registra como riesgo R-11 y la alerta LatenciaVentasAlta lo vigila en operación.</p>
+<h3 id="16-defectos-encontrados-por-las-pruebas">1.6 Defectos encontrados por las pruebas<a class="headerlink" href="#16-defectos-encontrados-por-las-pruebas" title="Permanent link">&para;</a></h3>
+<p>Las pruebas no solo confirmaron el comportamiento: encontraron ocho defectos —siete durante E3 y uno al repetir las pruebas de humo en el pipeline—, todos corregidos.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Defecto</th>
+<th>Cómo se detectó</th>
+<th>Causa</th>
+<th>Corrección</th>
+<th>Sev.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DF-01</td>
+<td>Ventas concurrentes perdían descuentos de stock</td>
+<td>Prueba de carga (stock final mayor al esperado)</td>
+<td>La entidad leída antes del bloqueo seguía en el contexto de persistencia</td>
+<td>entityManager.refresh con PESSIMISTIC_WRITE en actualizarStockKardex</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>DF-02</td>
+<td>Bajo carga el backend se colgaba</td>
+<td>Prueba de carga (timeouts)</td>
+<td>El listener AFTER_COMMIT abría transacciones REQUIRES_NEW en el hilo de la petición y agotaba el pool</td>
+<td>Listener @Async con ejecutor propio (core 2, máx. 4, cola 500)</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>DF-03</td>
+<td>La orden generada por el evento no se guardaba</td>
+<td>Postman 09</td>
+<td>Escritura en AFTER_COMMIT sin transacción activa</td>
+<td>evaluarProducto con REQUIRES_NEW</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>DF-04</td>
+<td>Login con clave incorrecta respondía 500</td>
+<td>Postman 02</td>
+<td>AuthException no estaba mapeada en GlobalExceptionHandler</td>
+<td>Mapeo a 401</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>DF-05</td>
+<td>Convertir en compra fallaba con entidad transitoria</td>
+<td>Postman 15</td>
+<td>DetalleCompra sin idUnidadMedida</td>
+<td>Unidad base del catálogo o UNIDAD</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>DF-06</td>
+<td>Búsqueda de órdenes fallaba con texto vacío</td>
+<td>Postman 11</td>
+<td>Hibernate tipa :q nulo como bytea en lower()</td>
+<td>Enviar siempre cadena vacía</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>DF-07</td>
+<td>El frontend en Docker recibía 403 (CORS)</td>
+<td>Prueba manual en contenedores</td>
+<td>nginx reenviaba Host sin puerto; orígenes fijos en código</td>
+<td>proxy_set_header Host \$http_host y CORS_ALLOWED_ORIGINS</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>DF-08</td>
+<td>Abrir una caja chica ya abierta respondía 500</td>
+<td>Etapa 8 del pipeline (segunda ejecución sobre la misma base)</td>
+<td>CajaChicaService lanzaba RuntimeException genérica (código heredado)</td>
+<td>ConflictException → 409</td>
+<td>Media</td>
+</tr>
+</tbody>
+</table>
+<h3 id="17-limitaciones">1.7 Limitaciones<a class="headerlink" href="#17-limitaciones" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Frontend: los dos .spec.ts existentes no se ejecutan en el pipeline; la pantalla de reabastecimiento se probó manualmente.</p>
+</li>
+<li>
+<p>Mensajería: el contrato /whatsapp/enviar-con-adjunto se verificó compilando y con el backend; el envío real requiere credenciales de Meta que no se usan en pruebas.</p>
+</li>
+<li>
+<p>Kardex: los datos de demostración no tienen movimiento inicial, por lo que algunos saldos del kardex resultan negativos; es un límite de los datos, no del cálculo.</p>
+</li>
+<li>
+<p>La cobertura total (5,7 %) refleja que las pruebas cubren lo nuevo y no el código heredado.</p>
+</li>
+</ul>
+<h2 id="seccion-2-integracion-despliegue-y-operacion-continua">Sección 2: Integración, Despliegue y Operación Continua<a class="headerlink" href="#seccion-2-integracion-despliegue-y-operacion-continua" title="Permanent link">&para;</a></h2>
+<h3 id="21-pipeline-cicd">2.1 Pipeline CI/CD<a class="headerlink" href="#21-pipeline-cicd" title="Permanent link">&para;</a></h3>
+<p>El pipeline existe en dos formas equivalentes: .github/workflows/ci-cd.yml para GitHub Actions y ci/pipeline.ps1 para ejecutarlo en la máquina de desarrollo. El flujo de GitHub aún no se ha ejecutado porque la copia articulos-e3 no se ha publicado en un repositorio remoto; la evidencia de esta sección proviene del pipeline local, que corre las mismas etapas sobre el mismo código.</p>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Herramienta</th>
+<th>Criterio de corte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Backend: pruebas y cobertura</td>
+<td>Maven verify, JUnit 5, JaCoCo</td>
+<td>Cualquier prueba fallida o cobertura del código nuevo \&lt; 60 %</td>
+</tr>
+<tr>
+<td>2. Análisis estático</td>
+<td>PMD 7 (quickstart) + CPD (≥ 100 tokens)</td>
+<td>Informativo: publica conteos por regla y duplicados (4.2)</td>
+</tr>
+<tr>
+<td>3. mensajeria-api</td>
+<td>Maven package (Java 17)</td>
+<td>Error de compilación</td>
+</tr>
+<tr>
+<td>4. Frontend</td>
+<td>Angular CLI, build de producción</td>
+<td>Error de compilación o de presupuesto</td>
+</tr>
+<tr>
+<td>5. Escaneo de secretos</td>
+<td>Expresiones regulares propias (local) / gitleaks (GitHub)</td>
+<td>Hallazgo fuera de ci/secretos-permitidos.txt</td>
+</tr>
+<tr>
+<td>6. Imágenes versionadas</td>
+<td>docker compose build</td>
+<td>Etiqueta = commit corto + fecha (nunca solo latest)</td>
+</tr>
+<tr>
+<td>7. Despliegue</td>
+<td>docker compose up + healthchecks</td>
+<td>Contenedores sin estado healthy en 200 s → rollback</td>
+</tr>
+<tr>
+<td>8. Pruebas de humo</td>
+<td>Actuator health + Postman CLI</td>
+<td>Cualquier aserción fallida → rollback</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejecución del pipeline local (19/11/2026 06:38–06:41, versión 29a26c3-20261119-063850)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Resultado</th>
+<th>Segundos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Backend: pruebas unitarias e integración + cobertura — 18 pruebas, 0 fallos; cobertura total 5,7 %, código E3 73,2 %</td>
+<td>OK</td>
+<td>63,4</td>
+</tr>
+<tr>
+<td>2. Análisis estático — 619 avisos PMD, 18 duplicados CPD</td>
+<td>OK</td>
+<td>14,5</td>
+</tr>
+<tr>
+<td>3. mensajeria-api: compilar y empaquetar</td>
+<td>OK</td>
+<td>5,5</td>
+</tr>
+<tr>
+<td>4. Frontend: build de producción</td>
+<td>OK</td>
+<td>20,1</td>
+</tr>
+<tr>
+<td>5. Escaneo de secretos — 6 hallazgos, todos registrados (NC-01, NC-07)</td>
+<td>OK</td>
+<td>2,4</td>
+</tr>
+<tr>
+<td>6. Imágenes versionadas — backend 654 MB, mensajería 475 MB, frontend 86 MB</td>
+<td>OK</td>
+<td>31,4</td>
+</tr>
+<tr>
+<td>7. Despliegue — backend y frontend healthy</td>
+<td>OK</td>
+<td>37,5</td>
+</tr>
+<tr>
+<td>8. Pruebas de humo — health UP; Postman 19/19 peticiones, 41/41 aserciones</td>
+<td>OK</td>
+<td>5,4</td>
+</tr>
+<tr>
+<td>Total (despliegue confirmado en ci/version-desplegada.txt)</td>
+<td>EXITOSO</td>
+<td>≈ 180</td>
+</tr>
+</tbody>
+</table>
+<p>Poner el pipeline en marcha tomó nueve ejecuciones, y casi cada fallo fue un hallazgo: PowerShell 5.1 trataba como error los avisos que Maven escribe en stderr; una descarga corrupta del wrapper de Maven (transitoria); un archivo versionado con corchetes en el nombre («[Help») que rompía el escaneo; un patrón de secretos demasiado amplio (40 falsos positivos como token = request.getHeader(...)), afinado para exigir valores literales; las credenciales de la base de pruebas, que la etapa 1 dejaba en el entorno y que docker compose priorizaba sobre .env (el backend nuevo no arrancó y el pipeline revirtió); un rollback que trataba como error el progreso que docker escribe en stderr; y el defecto DF-08 del código, detectado por las pruebas de humo al repetir el despliegue sobre la misma base. En la ejecución en que falló la etapa 8 el pipeline volvió solo a la versión anterior y el backend quedó UP en 21,6 s.</p>
+<h3 id="22-contenedores-y-despliegue">2.2 Contenedores y despliegue<a class="headerlink" href="#22-contenedores-y-despliegue" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Imagen</th>
+<th>Puerto</th>
+<th>Healthcheck / dependencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>db</td>
+<td>postgres:17-alpine + db/init (rol st_app sin superusuario)</td>
+<td>5433</td>
+<td>pg_isready; volumen pgdata</td>
+</tr>
+<tr>
+<td>backend</td>
+<td>salud-total-erp-backend:{versión} (temurin 21 JRE, usuario 1001)</td>
+<td>8085</td>
+<td>/actuator/health; espera a db healthy; Flyway al arrancar y ddl-auto=validate</td>
+</tr>
+<tr>
+<td>mensajeria</td>
+<td>salud-total-erp-mensajeria:{versión}</td>
+<td>8087</td>
+<td>Credenciales de Gmail y Meta por variables de entorno</td>
+</tr>
+<tr>
+<td>frontend</td>
+<td>salud-total-erp-frontend:{versión} (nginx, proxy /api, /ws-notifications, /mensajeria)</td>
+<td>8090</td>
+<td>wget 127.0.0.1; espera a backend healthy</td>
+</tr>
+<tr>
+<td>prometheus</td>
+<td>prom/prometheus:v3.1.0</td>
+<td>9090</td>
+<td>Lee monitoring/prometheus.yml y alertas.yml; retención 15 días</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><strong>Configuración:</strong> toda credencial llega por variables de entorno (.env, fuera de git; plantilla .env.example). Las llaves JWT se montan de secrets/ en /run/secrets.</p>
+</li>
+<li>
+<p><strong>Esquema:</strong> Flyway aplica V1 (baseline del esquema real, 83 tablas) y V2 (orden_reabastecimiento, índices FEFO y restricciones de integridad) antes de que Hibernate valide.</p>
+</li>
+<li>
+<p><strong>Mínimo privilegio:</strong> la aplicación se conecta con st_app, dueño de su esquema pero sin superusuario; el contenedor del backend corre con un usuario sin privilegios.</p>
+</li>
+</ul>
+<h3 id="23-observabilidad">2.3 Observabilidad<a class="headerlink" href="#23-observabilidad" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Señal</th>
+<th>Implementación</th>
+<th></th>
+<th>Uso</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Salud</td>
+<td>Actuator /actuator/health (liveness/readiness, base de datos)</td>
+<td></td>
+<td>Healthchecks de Docker y etapa 8 del pipeline</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Métricas técnicas</td>
+<td>Micrometer → /actuator/prometheus: http.server.requests con histograma y SLO (500 ms, 1 s, 2 s), JVM, pool Hikari</td>
+<td></td>
+<td>Latencia p95 por endpoint, errores 5xx</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Métricas de negocio</td>
+<td>MetricasNegocio: articulos.outbox.eventos{estado=PENDIENTE|ERROR}, articulos.reabastecimiento.ordenes{estado}</td>
+<td></td>
+<td>Eventos atascados; órdenes sin atender</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Logs</td>
+<td>Formato ECS JSON en el perfil docker (logging.structured.format.console=ecs)</td>
+<td></td>
+<td>Búsqueda por campo en cualquier agregador (CloudWatch, ELK)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Alertas</td>
+<td>monitoring/alertas.yml; Prometheus recolecta y evalúa cada 15 s</td>
+<td></td>
+<td>Ver tabla siguiente</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Alerta</td>
+<td></td>
+<td><strong>Expresión (PromQL)</strong></td>
+<td></td>
+<td><strong>Durante</strong></td>
+<td><strong>Severidad</strong></td>
+</tr>
+<tr>
+<td>BackendCaido</td>
+<td></td>
+<td>up{job="articulos-backend"} == 0</td>
+<td></td>
+<td>1 min</td>
+<td>Crítica</td>
+</tr>
+<tr>
+<td>ErroresServidor5xx</td>
+<td></td>
+<td>sum(rate(http_server_requests_seconds_count{status=~"5.."}[5m])) &gt; 0</td>
+<td></td>
+<td>2 min</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>LatenciaVentasAlta</td>
+<td></td>
+<td>p95 (histogram_quantile 0.95) de POST /api/ventas &gt; 2 s (RNF-14)</td>
+<td></td>
+<td>5 min</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>OutboxEventosAtascados</td>
+<td></td>
+<td>articulos_outbox_eventos{estado="PENDIENTE"} &gt; 0</td>
+<td></td>
+<td>5 min</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>OutboxEventosConError</td>
+<td></td>
+<td>articulos_outbox_eventos{estado="ERROR"} &gt; 0</td>
+<td></td>
+<td>inmediata</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>OrdenesReabastecimientoPendientes</td>
+<td></td>
+<td>articulos_reabastecimiento_ordenes{estado="PENDIENTE"} &gt; 0</td>
+<td></td>
+<td>24 h</td>
+<td>Baja</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/media/image3.png" style="width:6.10236in;height:3.12746in" /></p>
+<p><em>Figura 2.1 — Las seis reglas cargadas en Prometheus (localhost:9090/alerts) tras el pipeline: cinco inactivas y OrdenesReabastecimientoPendientes en PENDING, porque hay órdenes pendientes y la regla espera 24 h antes de disparar. Target del backend: up.</em></p>
+<h3 id="24-estrategia-de-rollback">2.4 Estrategia de rollback<a class="headerlink" href="#24-estrategia-de-rollback" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Cada despliegue usa imágenes etiquetadas con la versión candidata; la última versión que pasó las pruebas de humo queda en ci/version-desplegada.txt.</p>
+</li>
+<li>
+<p>Si la etapa 7 o la 8 fallan, el pipeline ejecuta ci/rollback.ps1, que vuelve a levantar backend, mensajería y frontend con la versión anterior sin reconstruir.</p>
+</li>
+<li>
+<p>Las migraciones son aditivas (tablas, índices y restricciones nuevas; nunca DROP ni RENAME en la misma versión), así que la versión anterior funciona sobre el esquema migrado (patrón expand/contract).</p>
+</li>
+<li>
+<p>Si una migración debe deshacerse, se escribe una nueva migración correctiva; Flyway no reescribe historia.</p>
+</li>
+</ul>
+<p>Prueba de rollback (ci/reportes/pipeline_20261119-064201.log): con -ForzarFalloDespliegue la etapa 7 detuvo el backend de la versión candidata 29a26c3-20261119-064201; el pipeline ejecutó el rollback a 29a26c3-20261119-063850, el backend respondió UP en 18,5 s y ci/version-desplegada.txt conservó la versión anterior. Antes, en una ejecución real, la etapa 8 detectó DF-08 y el pipeline revirtió solo a la versión previa en 21,6 s.</p>
+<h3 id="25-respaldos-y-restauracion">2.5 Respaldos y restauración<a class="headerlink" href="#25-respaldos-y-restauracion" title="Permanent link">&para;</a></h3>
+<p>ci/respaldo.ps1 genera un pg_dump en formato custom desde el contenedor db, conserva los últimos 7 y, con -ProbarRestauracion, lo restaura en una base temporal y compara conteos. Ejecución del 19/11/2026 (pruebas/evidencias/respaldo_restauracion.txt): respaldo de 0,3 MB en 1,4 s; restauración en 2,8 s; conteos idénticos en productos (10), venta_registro (169), kardex (169), orden_reabastecimiento (9) y flyway_schema_history (2). En AWS (CE03 y E2) el mismo procedimiento se complementa con snapshots automáticos de RDS y copia diaria del pg_dump a S3: RPO ≤ 24 h, RTO ≤ 4 h (RNF-15).</p>
+<h3 id="26-procedimiento-de-operacion">2.6 Procedimiento de operación<a class="headerlink" href="#26-procedimiento-de-operacion" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Despliegue normal</td>
+<td>Push a main → pipeline completo; el despliegue solo se confirma si pasan las pruebas de humo</td>
+</tr>
+<tr>
+<td>Alerta BackendCaido o 5xx</td>
+<td>docker compose ps y logs del backend; si coincide con un despliegue, ci/rollback.ps1 -Version \&lt;anterior&gt;</td>
+</tr>
+<tr>
+<td>Alerta Outbox</td>
+<td>Revisar cola_eventos con estado ERROR; el sondeo de 30 s reintenta los PENDIENTE</td>
+</tr>
+<tr>
+<td>Pérdida de datos</td>
+<td>Restaurar el último pg_dump (RPO ≤ 24 h) o el snapshot de RDS en AWS</td>
+</tr>
+<tr>
+<td>Arranque de Docker en Windows</td>
+<td>iniciar-docker.ps1 limpia los sockets obsoletos antes de iniciar Docker Desktop</td>
+</tr>
+</tbody>
+</table>
+<h2 id="seccion-3-gestion-agil-del-proyecto-de-software">Sección 3: Gestión Ágil del Proyecto de Software<a class="headerlink" href="#seccion-3-gestion-agil-del-proyecto-de-software" title="Permanent link">&para;</a></h2>
+<p>Esta sección documenta cómo se gestiona el proyecto. Los sprints S1 a S8 se reconstruyeron del historial git del repositorio articulos (fecha, mensaje y archivos de cada commit) y se asignó cada historia al sprint en que aparece terminada en el código. Los puntos se estimaron con la escala de Fibonacci en una sesión de estimación retrospectiva; por eso las métricas de S1–S8 son reales en cuanto a fechas y contenido, y estimadas en cuanto a tamaño. Desde el Sprint 9 (E3) los artefactos se mantienen durante el sprint.</p>
+<h3 id="31-project-charter">3.1 Project Charter<a class="headerlink" href="#31-project-charter" title="Permanent link">&para;</a></h3>
+<table>
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Proyecto</strong></th>
+<th>Evolución del ERP «Articulos» para Salud Total SAC: inventario por lotes con FEFO, reabastecimiento automático, ventas, compras, caja, clínica y su operación en la nube</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Patrocinador</strong></td>
+<td>Gerencia General de Salud Total SAC</td>
+</tr>
+<tr class="even">
+<td><strong>Product Owner</strong></td>
+<td>Gerente de operaciones / Jefe de farmacia — Salud Total SAC</td>
+</tr>
+<tr class="odd">
+<td><strong>Scrum Master y equipo de desarrollo</strong></td>
+<td><p>Gutierrez Anco Yesenia Alejandra (Scrum Master y desarrolladora)</p>
+<p>Turpo Cauna Jose Samuel (desarrollador)</p>
+<p>Quispe Huarilloclla Jhosef Antony (desarrollador)</p></td>
+</tr>
+<tr class="even">
+<td><strong>Inicio y fin</strong></td>
+<td>05/01/2026 (Sprint 1) — 15/12/2026 (cierre del Sprint 10 y del Entregable 4)</td>
+</tr>
+<tr class="odd">
+<td><strong>Presupuesto</strong></td>
+<td>Dentro del CAPEX aprobado en el Business Case de CE01: S/ 295 000 (VAN S/ 152 000; TIR 28,2 %)</td>
+</tr>
+<tr class="even">
+<td><strong>Versión del Charter</strong></td>
+<td>1.0 — 18/11/2026. El proyecto arrancó con un alcance acordado de manera informal; este Charter lo formaliza y rige desde el Sprint 9</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="311-justificacion-y-objetivos">3.1.1 Justificación y objetivos<a class="headerlink" href="#311-justificacion-y-objetivos" title="Permanent link">&para;</a></h4>
+<p>El diagnóstico de CE01 mostró que la gestión manual del inventario provoca quiebres de stock, mermas por vencimiento y descuadres de kardex, y que el sistema tenía riesgos de seguridad (llaves en el repositorio, ddl-auto=create). El proyecto existe para cerrar esas brechas con el proceso TO-BE de reabastecimiento. Objetivos SMART:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Objetivo</th>
+<th>Indicador y meta</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OB-1</td>
+<td>Reducir los quiebres de stock con el reabastecimiento automático por punto de reorden</td>
+<td>Quiebres por mes −67 % frente a la línea base, 6 meses después de E3</td>
+<td>CE01 Business Case; HU-11</td>
+</tr>
+<tr>
+<td>OB-2</td>
+<td>Acortar el ciclo de reposición</td>
+<td>Tiempo de ciclo −58 %</td>
+<td>CE01; RF-27, RF-28</td>
+</tr>
+<tr>
+<td>OB-3</td>
+<td>Reducir las mermas por vencimiento con FEFO y alertas</td>
+<td>Parte del ahorro anual de S/ 81 000</td>
+<td>CE01; HU-09, HU-10</td>
+</tr>
+<tr>
+<td>OB-4</td>
+<td>Entregar el alcance de la release</td>
+<td>≥ 95 % de los RF de la release implementados al 15/12/2026</td>
+<td>E1 Anexo B; matriz 4.1</td>
+</tr>
+<tr>
+<td>OB-5</td>
+<td>Operar con calidad verificable</td>
+<td>≥ 60 % de cobertura en servicios críticos; 0 secretos en el repositorio; pipeline en cada cambio</td>
+<td>Matriz 4.1; plan de mejora</td>
+</tr>
+<tr>
+<td>OB-6</td>
+<td>Madurar el proceso</td>
+<td>Áreas de nivel 2 de CMMI caracterizadas como LI o FI en la auditoría de seguimiento</td>
+<td>Sección 4.3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="312-alcance">3.1.2 Alcance<a class="headerlink" href="#312-alcance" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Dentro del alcance</th>
+<th>Fuera del alcance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Autenticación JWT RSA, roles y permisos; catálogo, productos por lote, almacenes y kardex</td>
+<td>Emisión electrónica SUNAT/OSE y pasarela de pagos (fase 2, HU-28)</td>
+</tr>
+<tr>
+<td>Ventas, descuentos, caja chica y general, compras y cuentas por pagar, anulaciones con aprobación</td>
+<td>Aplicación móvil nativa</td>
+</tr>
+<tr>
+<td>Documentos con plantillas (PDF, QR, código de barras); transferencias Juliaca–Puno</td>
+<td>Módulos de laboratorio, CDI y rehabilitación de otros proyectos</td>
+</tr>
+<tr>
+<td>FEFO, alertas de vencimiento, reabastecimiento automático (TO-BE)</td>
+<td>Integración con DIGEMID u otros sistemas del Estado</td>
+</tr>
+<tr>
+<td>Notificaciones en tiempo real (Outbox + LISTEN/NOTIFY) y mensajería por correo/WhatsApp</td>
+<td>Migración de datos históricos de sistemas anteriores</td>
+</tr>
+<tr>
+<td>Pruebas, CI/CD, contenedores, observabilidad y auditoría de calidad</td>
+<td>Operación 24/7 con guardia (el horario operativo es 07:00–23:00)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="313-estructura-de-desglose-del-trabajo-edt">3.1.3 Estructura de Desglose del Trabajo (EDT)<a class="headerlink" href="#313-estructura-de-desglose-del-trabajo-edt" title="Permanent link">&para;</a></h4>
+<p>La EDT descompone el proyecto en seis entregables de primer nivel. Los niveles 1.2 y 1.3 corresponden a los Entregables 1 y 2 ya presentados; 1.4 agrupa el trabajo de los sprints S1–S8; 1.5 y 1.6 son los Sprints 9 y 10. Cada paquete de trabajo de 1.4 a 1.6 se traduce en historias del Product Backlog.</p>
+<p><img src="media/media/image1.png" style="width:6.49606in;height:3.30709in" /></p>
+<p><em>Figura 3.1 — EDT del proyecto (paquetes de trabajo de nivel 3).</em></p>
+<table>
+<thead>
+<tr>
+<th>Paquete</th>
+<th>Entregable / criterio de término</th>
+<th>Historias</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1 Gestión</td>
+<td>Charter aprobado, backlog priorizado, actas de ceremonias, registro de riesgos y métricas</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1.2 Requerimientos y diseño</td>
+<td>E1 v2 aprobado (33 RF, 18 RNF, 14 RN, C4, ADR)</td>
+<td>Todas (trazabilidad)</td>
+</tr>
+<tr>
+<td>1.3 Plataforma de datos</td>
+<td>E2 v2 aprobado sobre clinica_db (83 tablas)</td>
+<td>HU-23 (migraciones)</td>
+</tr>
+<tr>
+<td>1.4 Construcción</td>
+<td>Incrementos S1–S8 integrados en main</td>
+<td>HU-01…08, 10, 14, 16…22</td>
+</tr>
+<tr>
+<td>1.5 Integración TO-BE</td>
+<td>FEFO, reabastecimiento, Flyway, contenedores y WhatsApp funcionando en articulos-e3</td>
+<td>HU-09, 11, 15, 23, 24</td>
+</tr>
+<tr>
+<td>1.6 Calidad y operación</td>
+<td>Pruebas, pipeline, observabilidad, auditoría y plan de mejora (este documento)</td>
+<td>HU-12, 13, 25, 26, 27</td>
+</tr>
+</tbody>
+</table>
+<h4 id="314-equipo-y-roles">3.1.4 Equipo y roles<a class="headerlink" href="#314-equipo-y-roles" title="Permanent link">&para;</a></h4>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 27%" />
+<col style="width: 39%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rol</th>
+<th>Persona</th>
+<th>Responsabilidades</th>
+<th>Dedicación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Patrocinador</td>
+<td>Gerencia General de Salud Total SAC</td>
+<td>Aprueba presupuesto y Charter; resuelve conflictos de prioridad</td>
+<td>Hitos</td>
+</tr>
+<tr class="even">
+<td>Product Owner</td>
+<td>Gerente de operaciones / Jefe de farmacia — Salud Total SAC</td>
+<td>Ordena el Product Backlog, define criterios de aceptación y acepta cada incremento</td>
+<td>2 h/semana</td>
+</tr>
+<tr class="odd">
+<td>Scrum Master</td>
+<td>Gutierrez Anco Yesenia Alejandra</td>
+<td>Facilita las ceremonias, mide velocidad y burndown, elimina impedimentos</td>
+<td>10 %</td>
+</tr>
+<tr class="even">
+<td>Developers</td>
+<td><p>Turpo Cauna Jose Samuel (backend y datos)</p>
+<p>Quispe Huarilloclla Jhosef Antony (frontend, integración y DevOps)</p>
+<p>Gutierrez Anco Yesenia Alejandra (pruebas y calidad)</p></td>
+<td>Análisis, diseño, código backend/frontend, datos, pruebas, DevOps</td>
+<td>Parcial S1–S8; completa S9–S10</td>
+</tr>
+<tr class="odd">
+<td>Stakeholders</td>
+<td>QF director técnico, encargado de almacén, cajero, médico, administrador de TI</td>
+<td>Validan prototipos e incrementos en las Sprint Review</td>
+<td>Reviews</td>
+</tr>
+<tr class="even">
+<td>Auditor de calidad</td>
+<td>Docente del curso / compañero revisor</td>
+<td>Aplica los checklists de auditoría (Sección 4.3)</td>
+<td>Por entregable</td>
+</tr>
+</tbody>
+</table>
+
+<p>El equipo lo forman tres estudiantes. Gutierrez Anco ejerce el rol de Scrum Master y también desarrolla (pruebas y calidad); Turpo Cauna lidera backend y datos, y Quispe Huarilloclla frontend, integración y DevOps. Los tres participan en la planificación, estimación, revisiones cruzadas y retrospectivas, y cada módulo tiene un responsable principal y un suplente. Como la Scrum Master también desarrolla, se compensa la falta de una mirada externa con la auditoría del docente y con checklists objetivos (riesgo R-05).</p>
+<h4 id="315-hitos">3.1.5 Hitos<a class="headerlink" href="#315-hitos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Hito</th>
+<th>Fecha</th>
+<th>Criterio</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 Inicio del desarrollo</td>
+<td>05/01/2026</td>
+<td>Base del ERP adaptada (commit «adaptacion backend»)</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>H2 Núcleo operativo (inventario, ventas, compras, caja)</td>
+<td>29/03/2026</td>
+<td>Fin de S3: HU-01…05, 08, 14, 16…19</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>H3 Código homogéneo «Gold Standard»</td>
+<td>19/07/2026</td>
+<td>Fin de S7: HU-21 y HU-22</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>H4 Eventos Outbox y alertas de vencimiento</td>
+<td>17/08/2026</td>
+<td>Fin de S8: HU-06 y HU-10</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>H5 E1 v2 y E2 v2 aprobados</td>
+<td>18/11/2026</td>
+<td>Documentos verificados contra el código</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>H6 E3: sistema funcional integrado</td>
+<td>01/12/2026</td>
+<td>Fin de S9: FEFO, reabastecimiento, Flyway, contenedores (logrado el 19/11)</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>H7 E4: calidad y operación</td>
+<td>15/12/2026</td>
+<td>Fin de S10: pruebas, CI/CD, observabilidad (hechos); HU-12, HU-13 y plan de mejora</td>
+<td>En curso</td>
+</tr>
+</tbody>
+</table>
+<h4 id="316-riesgos">3.1.6 Riesgos<a class="headerlink" href="#316-riesgos" title="Permanent link">&para;</a></h4>
+<p>Los riesgos se valoran con probabilidad e impacto de 1 a 5; la exposición es su producto (alta ≥ 15). El registro completo, con fórmulas, está en el Anexo A, hoja Riesgos.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Riesgo</th>
+<th>P</th>
+<th>I</th>
+<th>Exp.</th>
+<th>Respuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-01</td>
+<td>Compromiso del Sprint 9 muy por encima de la velocidad histórica</td>
+<td>4</td>
+<td>4</td>
+<td>16</td>
+<td>Mitigar: priorizar HU-09, HU-23 y HU-24; HU-11 se divide si no cabe; dedicación completa</td>
+</tr>
+<tr>
+<td>R-02</td>
+<td>Regresiones por ausencia de pruebas automatizadas</td>
+<td>5</td>
+<td>4</td>
+<td>20</td>
+<td>Mitigar: HU-25 con pruebas de flujos críticos antes de desplegar</td>
+</tr>
+<tr>
+<td>R-03</td>
+<td>Fuga de llaves y credenciales</td>
+<td>4</td>
+<td>5</td>
+<td>20</td>
+<td>Evitar: HU-23 (secretos externos) y rotación de llaves</td>
+</tr>
+<tr>
+<td>R-04</td>
+<td>Pérdida de datos por recreación del esquema</td>
+<td>3</td>
+<td>5</td>
+<td>15</td>
+<td>Evitar: Flyway + ddl-auto=validate en producción</td>
+</tr>
+<tr>
+<td>R-05</td>
+<td>Conocimiento concentrado en un responsable por módulo (bus factor bajo)</td>
+<td>4</td>
+<td>4</td>
+<td>16</td>
+<td>Mitigar: rotar módulos entre los tres integrantes (responsable y suplente), documentación (E1–E4), estándar Gold Standard y revisiones cruzadas con checklist</td>
+</tr>
+<tr>
+<td>R-06</td>
+<td>Interrupciones del desarrollo</td>
+<td>3</td>
+<td>3</td>
+<td>9</td>
+<td>Aceptar/mitigar: sprints cortos de 2 semanas en E3/E4 y metas por entregable</td>
+</tr>
+<tr>
+<td>R-07</td>
+<td>Falla de proveedores externos (Meta, Gmail)</td>
+<td>3</td>
+<td>3</td>
+<td>9</td>
+<td>Mitigar: microservicio aislado (ADR-10) y reintento; la venta no depende del envío</td>
+</tr>
+<tr>
+<td>R-08</td>
+<td>Incumplimiento de la Ley 29733 en datos clínicos</td>
+<td>3</td>
+<td>5</td>
+<td>15</td>
+<td>Evitar: HU-12 (pgcrypto + auditoría) en S10</td>
+</tr>
+<tr>
+<td>R-09</td>
+<td>Cambios de alcance sin control</td>
+<td>3</td>
+<td>3</td>
+<td>9</td>
+<td>Mitigar: refinamiento del backlog con el PO y registro de cambios</td>
+</tr>
+<tr>
+<td>R-10</td>
+<td>Caída del enlace VPN entre sedes y AWS</td>
+<td>2</td>
+<td>4</td>
+<td>8</td>
+<td>Mitigar: enlace de respaldo y contingencia local (ESXi Juliaca)</td>
+</tr>
+<tr>
+<td>R-11</td>
+<td>Latencia de venta por contención en un mismo lote</td>
+<td>2</td>
+<td>3</td>
+<td>6</td>
+<td>Aceptar/mitigar: escenario poco realista en 2 sedes; alerta LatenciaVentasAlta; si ocurre, reservar stock por lote fuera de la transacción</td>
+</tr>
+</tbody>
+</table>
+<h4 id="317-supuestos-restricciones-y-criterios-de-exito">3.1.7 Supuestos, restricciones y criterios de éxito<a class="headerlink" href="#317-supuestos-restricciones-y-criterios-de-exito" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Supuestos:</strong> el Product Owner dedica dos horas por semana; la infraestructura de CE03 (VPN y VPC en AWS) está disponible para el despliegue; las plantillas de WhatsApp siguen aprobadas por Meta.</p>
+</li>
+<li>
+<p><strong>Restricciones:</strong> equipo de tres estudiantes con dedicación parcial en S1–S8; stack fijado en E1 (Java 21, Spring Boot 3.5.9, Angular 20, PostgreSQL); Ley 29733; CAPEX de S/ 295 000; fechas de entrega académicas.</p>
+</li>
+<li>
+<p><strong>Criterios de éxito:</strong> OB-4 y OB-5 cumplidos al 15/12/2026; el Product Owner acepta los incrementos de S9 y S10; la auditoría de seguimiento no encuentra áreas de nivel 2 en PI o NI.</p>
+</li>
+</ul>
+<h3 id="32-artefactos-de-gestion-agil">3.2 Artefactos de gestión ágil<a class="headerlink" href="#32-artefactos-de-gestion-agil" title="Permanent link">&para;</a></h3>
+<h4 id="321-historias-de-usuario">3.2.1 Historias de usuario<a class="headerlink" href="#321-historias-de-usuario" title="Permanent link">&para;</a></h4>
+<p>Las historias HU-01 a HU-15 son las de E1 (§1.5), con el mismo identificador y la misma trazabilidad a RF y casos de uso; HU-16 a HU-28 se añaden en este entregable para cubrir funcionalidades que ya existen en el código pero no tenían historia (catálogo, descuentos, kardex, caja, configuración) y el trabajo técnico de E3 y E4. Todas siguen el formato «Como… quiero… para…», cumplen INVEST y tienen criterios de aceptación en Gherkin (E1 §1.6 para HU-01…HU-15).</p>
+<p><strong>Definición de Listo (DoR).</strong> Una historia entra a un sprint solo si tiene rol, objetivo y beneficio; criterios de aceptación verificables; trazabilidad a RF/RNF; estimación en puntos; dependencias resueltas y tamaño ≤ 13 puntos.</p>
+<p>Ejemplos de historias técnicas nuevas con sus criterios de aceptación:</p>
+<table>
+<thead>
+<tr>
+<th>HU</th>
+<th>Historia</th>
+<th>Criterios de aceptación (Dado / Cuando / Entonces)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HU-23</td>
+<td>Como administrador de TI, quiero versionar el esquema con Flyway y sacar los secretos del repositorio, para desplegar sin perder datos ni filtrar llaves.</td>
+<td>Dado un entorno vacío, cuando arranca el backend con spring.flyway.enabled=true, entonces se aplican V1 y V2 y el esquema coincide con las entidades (ddl-auto=validate no falla). Y el repositorio no contiene archivos .pem ni contraseñas (escaneo de secretos sin hallazgos).</td>
+</tr>
+<tr>
+<td>HU-25</td>
+<td>Como equipo de desarrollo, quiero pruebas automatizadas de los flujos críticos, para detectar regresiones.</td>
+<td>Dado el pipeline, cuando se ejecuta mvn verify, entonces pasan las pruebas de login, venta, kardex, FEFO y reabastecimiento y la cobertura de esos servicios es ≥ 60 %; si una falla, el build se detiene.</td>
+</tr>
+<tr>
+<td>HU-27</td>
+<td>Como administrador de TI, quiero logs, métricas y alertas en producción, para detectar fallas antes que el usuario.</td>
+<td>Dado el sistema en producción, cuando la tasa de 5xx supera el 2 % en 5 minutos o hay eventos en cola_eventos en ERROR, entonces se envía una alerta al administrador en menos de 15 minutos.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="322-product-backlog">3.2.2 Product Backlog<a class="headerlink" href="#322-product-backlog" title="Permanent link">&para;</a></h4>
+<p>El Product Backlog tiene 28 historias y 193 puntos; 180 pertenecen a la release y 13 a la fase 2. Está ordenado por valor (MoSCoW) y dependencia técnica. La versión completa, con la evidencia en el código de cada historia y fórmulas de avance, está en el Anexo A.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Historia (resumen)</th>
+<th>MoSCoW</th>
+<th>Pts</th>
+<th>Sprint</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HU-01</td>
+<td>Cajero: registrar una venta seleccionando productos y método de pago</td>
+<td>Must</td>
+<td>8</td>
+<td>S1</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-02</td>
+<td>Administrador: gestionar roles y permisos por módulo</td>
+<td>Must</td>
+<td>5</td>
+<td>S1</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-03</td>
+<td>Encargado de almacén: consultar el stock valorizado por almacén</td>
+<td>Should</td>
+<td>3</td>
+<td>S3</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-04</td>
+<td>Comprador: registrar compras a proveedores con su detalle</td>
+<td>Must</td>
+<td>8</td>
+<td>S2</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-05</td>
+<td>Gerente: que las anulaciones de comprobantes pasen por aprobación</td>
+<td>Must</td>
+<td>5</td>
+<td>S3</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-06</td>
+<td>Usuario: recibir notificaciones en tiempo real de eventos relevantes</td>
+<td>Should</td>
+<td>8</td>
+<td>S8</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-07</td>
+<td>Usuario: que mi sesión expire y se bloquee tras varios intentos fallidos</td>
+<td>Must</td>
+<td>5</td>
+<td>S1</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-08</td>
+<td>Diseñador de documentos: crear plantillas visuales y asignarlas a un punto de emisión</td>
+<td>Should</td>
+<td>8</td>
+<td>S3</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-09</td>
+<td>Encargado de almacén: que el sistema proponga siempre el lote que vence primero</td>
+<td>Must</td>
+<td>8</td>
+<td>S9</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-10</td>
+<td>Encargado de almacén: recibir alertas de lotes próximos a vencer</td>
+<td>Must</td>
+<td>5</td>
+<td>S8</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-11</td>
+<td>Comprador: que el sistema genere órdenes de reabastecimiento cuando un producto llega a su mínimo</td>
+<td>Must</td>
+<td>13</td>
+<td>S9</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-12</td>
+<td>Médico: registrar y consultar los datos clínicos de mis pacientes con acceso restringido</td>
+<td>Must</td>
+<td>8</td>
+<td>S10</td>
+<td>Parcial</td>
+</tr>
+<tr>
+<td>HU-13</td>
+<td>Gerente: ver indicadores de quiebres, mermas y tiempo de reposición</td>
+<td>Should</td>
+<td>8</td>
+<td>S10</td>
+<td>Parcial</td>
+</tr>
+<tr>
+<td>HU-14</td>
+<td>Encargado de almacén (Puno): solicitar productos a Juliaca</td>
+<td>Should</td>
+<td>5</td>
+<td>S2</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-15</td>
+<td>Cajero: enviar el comprobante al paciente por WhatsApp o correo</td>
+<td>Should</td>
+<td>5</td>
+<td>S9</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-16</td>
+<td>Encargado de almacén: registrar y buscar productos del catálogo con su unidad, precio y stock</td>
+<td>Must</td>
+<td>8</td>
+<td>S1</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-17</td>
+<td>Cajero: aplicar descuentos vigentes, globales o por producto</td>
+<td>Should</td>
+<td>5</td>
+<td>S2</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-18</td>
+<td>Encargado de almacén: que cada entrada y salida quede en el kardex con su saldo</td>
+<td>Must</td>
+<td>5</td>
+<td>S2</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-19</td>
+<td>Cajero: abrir, mover y arquear la caja chica y la caja general</td>
+<td>Must</td>
+<td>8</td>
+<td>S3</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-20</td>
+<td>Administrador: configurar compañías, sucursales y puntos de emisión con sus series</td>
+<td>Must</td>
+<td>5</td>
+<td>S4</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-21</td>
+<td>Equipo de desarrollo: refactorizar los módulos núcleo al estándar «Gold Standard»</td>
+<td>Should</td>
+<td>8</td>
+<td>S6</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-22</td>
+<td>Equipo de desarrollo: completar la refactorización «Gold Standard» en los módulos restantes</td>
+<td>Should</td>
+<td>5</td>
+<td>S7</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-23</td>
+<td>Administrador de TI: versionar el esquema con Flyway y sacar los secretos del repositorio</td>
+<td>Must</td>
+<td>8</td>
+<td>S9</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-24</td>
+<td>Administrador de TI: empaquetar backend, frontend y mensajería en contenedores</td>
+<td>Must</td>
+<td>5</td>
+<td>S9</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-25</td>
+<td>Equipo de desarrollo: contar con pruebas automatizadas de los flujos críticos (login, venta, kardex, FEFO, reabastecimiento)</td>
+<td>Must</td>
+<td>8</td>
+<td>S10</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-26</td>
+<td>Equipo de desarrollo: un pipeline CI/CD que compile, pruebe y publique imágenes en cada cambio</td>
+<td>Must</td>
+<td>8</td>
+<td>S10</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-27</td>
+<td>Administrador de TI: logs, métricas y alertas de la aplicación en producción</td>
+<td>Should</td>
+<td>5</td>
+<td>S10</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>HU-28</td>
+<td>Contador: enviar comprobantes electrónicos a SUNAT/OSE y cobrar con pasarela de pagos</td>
+<td>Won't</td>
+<td>13</td>
+<td>Fase 2</td>
+<td>Fase 2</td>
+</tr>
+</tbody>
+</table>
+<p>Avance: 164 de 180 puntos de la release terminados (91%): los 39 del Sprint 9 y 21 de los 37 del Sprint 10. Las historias HU-12 y HU-13 figuran como Parcial porque existe parte del comportamiento (módulo clínico, reportes), pero sus 16 puntos no se cuentan hasta cumplir todos los criterios.</p>
+<h4 id="323-sprint-backlog">3.2.3 Sprint Backlog<a class="headerlink" href="#323-sprint-backlog" title="Permanent link">&para;</a></h4>
+<p>Sprint 9 (18/11/2026 – 01/12/2026). Objetivo: Entregable 3: FEFO, reabastecimiento automático, Flyway, Docker y WhatsApp con adjunto. Compromiso: 5 historias, 39 puntos, 89 horas de tareas. Las 15 tareas se terminaron en la copia articulos-e3; el sprint cerró antes de su timebox con los 39 puntos aceptados (Anexo B).</p>
+<table>
+<thead>
+<tr>
+<th>HU</th>
+<th>Tarea</th>
+<th>Tipo</th>
+<th>h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HU-09</td>
+<td>Consulta FEFO por catálogo y sucursal excluyendo lotes vencidos</td>
+<td>Backend</td>
+<td>4</td>
+</tr>
+<tr>
+<td>HU-09</td>
+<td>Servicio y endpoint de lote sugerido (LoteFefoService)</td>
+<td>Backend</td>
+<td>6</td>
+</tr>
+<tr>
+<td>HU-09</td>
+<td>Venta: asignar el lote FEFO y bloquear lotes vencidos (RN-10, RN-11)</td>
+<td>Backend</td>
+<td>6</td>
+</tr>
+<tr>
+<td>HU-09</td>
+<td>Frontend: mostrar el lote propuesto en el registro de venta</td>
+<td>Frontend</td>
+<td>4</td>
+</tr>
+<tr>
+<td>HU-11</td>
+<td>Entidad OrdenReabastecimiento, estados y repositorio</td>
+<td>Backend</td>
+<td>5</td>
+</tr>
+<tr>
+<td>HU-11</td>
+<td>Evento de stock disminuido y evaluación del punto de reorden (RN-12)</td>
+<td>Backend</td>
+<td>8</td>
+</tr>
+<tr>
+<td>HU-11</td>
+<td>Aprobar / rechazar / convertir en compra (RF-28)</td>
+<td>Backend</td>
+<td>8</td>
+</tr>
+<tr>
+<td>HU-11</td>
+<td>Publicar inventario.reabastecimiento en cola_eventos</td>
+<td>Backend</td>
+<td>3</td>
+</tr>
+<tr>
+<td>HU-11</td>
+<td>Pantalla de órdenes de reabastecimiento (wireframe Fig. 2.12 de E1)</td>
+<td>Frontend</td>
+<td>10</td>
+</tr>
+<tr>
+<td>HU-15</td>
+<td>Alinear el contrato backend ↔ mensajeria_api para WhatsApp con PDF adjunto</td>
+<td>Integración</td>
+<td>6</td>
+</tr>
+<tr>
+<td>HU-23</td>
+<td>Migración base V1 y V2 (reabastecimiento e integridad) con Flyway</td>
+<td>Datos</td>
+<td>8</td>
+</tr>
+<tr>
+<td>HU-23</td>
+<td>Llaves RSA y credenciales fuera del repositorio (.env / secretos)</td>
+<td>Seguridad</td>
+<td>4</td>
+</tr>
+<tr>
+<td>HU-24</td>
+<td>Dockerfile de backend, frontend (nginx) y mensajeria_api</td>
+<td>DevOps</td>
+<td>6</td>
+</tr>
+<tr>
+<td>HU-24</td>
+<td>docker-compose con PostgreSQL y rol de aplicación sin superusuario</td>
+<td>DevOps</td>
+<td>5</td>
+</tr>
+<tr>
+<td>—</td>
+<td>Prueba manual integrada de los flujos venta → kardex → reabastecimiento</td>
+<td>QA</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>El Sprint 10 (02/12/2026 – 15/12/2026) tiene 12 tareas (91 h). Al 19/11 están hechas las 7 de HU-25, HU-26 y HU-27; quedan HU-12, HU-13, la refactorización de code smells y la auditoría de seguimiento (Anexo B, hoja Sprint 10).</p>
+<p><strong>Definición de Hecho (DoD).</strong> Una historia está terminada cuando: compila sin errores; cumple el checklist Gold Standard (§4.1.3); sus criterios de aceptación se verificaron; tiene pruebas automatizadas que pasan en el pipeline (desde S10); no introduce secretos; si cambia el esquema, incluye su migración Flyway; y el Product Owner la aceptó en la Sprint Review.</p>
+<h3 id="33-ceremonias-y-metricas-de-avance">3.3 Ceremonias y métricas de avance<a class="headerlink" href="#33-ceremonias-y-metricas-de-avance" title="Permanent link">&para;</a></h3>
+<h4 id="331-cadencia-de-ceremonias">3.3.1 Cadencia de ceremonias<a class="headerlink" href="#331-cadencia-de-ceremonias" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Ceremonia</th>
+<th>Frecuencia y duración</th>
+<th>Participantes</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sprint Planning</td>
+<td>Inicio de sprint; 2 h (S9–S10), 3 h (S1–S8)</td>
+<td>PO, Scrum Master, Developers</td>
+<td>Sprint Backlog (Anexo B)</td>
+</tr>
+<tr>
+<td>Daily Scrum</td>
+<td>Diaria, 15 min (cada integrante informa avances, plan e impedimentos)</td>
+<td>Developers</td>
+<td>Bitácora diaria y burndown del Anexo B (desde S9)</td>
+</tr>
+<tr>
+<td>Refinamiento del backlog</td>
+<td>Semanal, 1 h</td>
+<td>PO, Developers</td>
+<td>Cambios de estado y prioridad en el Anexo A</td>
+</tr>
+<tr>
+<td>Sprint Review</td>
+<td>Fin de sprint; 1 h</td>
+<td>PO, stakeholders, docente</td>
+<td>Acta de validación (E1 Anexo A); sustentación de cada entregable</td>
+</tr>
+<tr>
+<td>Retrospectiva</td>
+<td>Fin de sprint; 45 min</td>
+<td>Scrum Master, Developers</td>
+<td>Sección 3.3.5</td>
+</tr>
+</tbody>
+</table>
+<p>En S1–S8 las ceremonias fueron informales: no hay actas ni burndown diario, y la evidencia disponible es el propio repositorio y las sesiones de validación con stakeholders registradas en E1. Es un hallazgo de la auditoría (PMC, Sección 4.3) y se corrige desde el Sprint 9.</p>
+<h4 id="332-historial-de-sprints">3.3.2 Historial de sprints<a class="headerlink" href="#332-historial-de-sprints" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Sprint</th>
+<th>Fechas</th>
+<th>Objetivo</th>
+<th>Commits</th>
+<th>HU terminadas</th>
+<th>Pts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td>05/01 – 01/02</td>
+<td>Adaptar la base del ERP a Salud Total y construir catálogo, productos, ventas y seguridad</td>
+<td>21</td>
+<td>HU-16, HU-07, HU-02, HU-01</td>
+<td>26</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>02/02 – 01/03</td>
+<td>Kardex, descuentos, compras con cuentas por pagar y transferencias entre sedes</td>
+<td>27</td>
+<td>HU-17, HU-18, HU-04, HU-14</td>
+<td>23</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>02/03 – 29/03</td>
+<td>Anulación con aprobación, caja general, stock valorizado, plantillas y lotes</td>
+<td>22</td>
+<td>HU-05, HU-03, HU-08, HU-19</td>
+<td>24</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>30/03 – 26/04</td>
+<td>Configuración multiempresa, módulo clínico y spike de eventos (Kafka)</td>
+<td>16</td>
+<td>HU-20</td>
+<td>5</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>27/04 – 24/05</td>
+<td>Estabilización (impedimento: solo un commit de respaldo)</td>
+<td>1</td>
+<td>—</td>
+<td>0</td>
+</tr>
+<tr>
+<td>S6</td>
+<td>25/05 – 21/06</td>
+<td>Compras y refactorización «Gold Standard» de los módulos núcleo</td>
+<td>24</td>
+<td>HU-21</td>
+<td>8</td>
+</tr>
+<tr>
+<td>S7</td>
+<td>22/06 – 19/07</td>
+<td>Refactorización «Gold Standard» de los módulos restantes</td>
+<td>10</td>
+<td>HU-22</td>
+<td>5</td>
+</tr>
+<tr>
+<td>S8</td>
+<td>20/07 – 17/08</td>
+<td>Kardex por lote, Outbox sobre PostgreSQL y alertas diarias de vencimiento</td>
+<td>13</td>
+<td>HU-06, HU-10</td>
+<td>13</td>
+</tr>
+<tr>
+<td>S9</td>
+<td>18/11 – 01/12</td>
+<td>Entregable 3: FEFO, reabastecimiento automático, Flyway, Docker y WhatsApp con adjunto</td>
+<td>—</td>
+<td>HU-09, HU-11, HU-15, HU-23, HU-24</td>
+<td>39</td>
+</tr>
+<tr>
+<td>S10</td>
+<td>02/12 – 15/12</td>
+<td>Entregable 4: pruebas automatizadas, CI/CD, observabilidad, privacidad clínica y KPIs</td>
+<td>—</td>
+<td>HU-25, HU-26, HU-27</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/media/image4.png" style="width:6.10236in;height:2.16973in" /></p>
+<p><em>Figura 3.2 — Commits y días con actividad por sprint (git log del repositorio articulos).</em></p>
+<h4 id="333-velocidad">3.3.3 Velocidad<a class="headerlink" href="#333-velocidad" title="Permanent link">&para;</a></h4>
+<p><img src="media/media/image5.png" style="width:6.10236in;height:2.84777in" /></p>
+<p><em>Figura 3.3 — Velocidad por sprint en puntos de historia terminados.</em></p>
+<p>La velocidad media de S1–S8 es de 13 puntos por sprint, pero la serie tiene dos tramos: S1–S3 promedian 24 puntos y S4–S8 solo 6. S1 se apoya en una base de código previa adaptada al dominio (más de 80 000 líneas añadidas); S4 se dedicó a un spike de Kafka que se descartó en S8 en favor del Outbox sobre PostgreSQL (ADR-04 de E1); S5 tuvo un único commit de respaldo; y S6–S7 fueron trabajo de refactorización, con poco valor visible para el usuario pero necesario para reducir la deuda técnica.</p>
+<h4 id="334-burndown-de-la-release">3.3.4 Burndown de la release<a class="headerlink" href="#334-burndown-de-la-release" title="Permanent link">&para;</a></h4>
+<p><img src="media/media/image6.png" style="width:6.10236in;height:2.98338in" /></p>
+<p><em>Figura 3.4 — Burndown de la release: puntos restantes al cierre de cada sprint y escalones de alcance.</em></p>
+<p>El alcance inicial de 133 puntos (HU-01…HU-20) aumentó a 146 en S6 por la refactorización y a 180 en S9 por las historias técnicas de E3 y E4. Entre S3 y S7 la curva se aplana: el trabajo restante no baja porque se añade alcance al mismo ritmo que se termina. Con la velocidad media de 13 puntos, los 76 puntos pendientes al inicio de S9 requerirían unos seis sprints de cuatro semanas; el plan los concentra en dos sprints de dos semanas con dedicación completa, lo que solo es viable si se sostiene una velocidad cercana a la de S1–S3 o si se recorta alcance. Por eso R-01 tiene exposición 16 y el Product Owner fijó un orden de corte: si el sprint no alcanza, HU-11 se divide (generación de órdenes en S9; conversión a compra en S10). No hizo falta: S9 cerró con 39 puntos y dejó 37 restantes, que S10 ya redujo a 16.</p>
+<h4 id="335-sprint-review-y-retrospectiva">3.3.5 Sprint Review y retrospectiva<a class="headerlink" href="#335-sprint-review-y-retrospectiva" title="Permanent link">&para;</a></h4>
+<p><strong>Sprint Review S8 (17/08/2026).</strong> Se demostraron el kardex por lote, la entrega de notificaciones por Outbox + LISTEN/NOTIFY con sondeo de respaldo de 30 s y la alerta diaria de vencimientos. Se aceptaron HU-06 y HU-10. El PO pidió priorizar FEFO y reabastecimiento automático para la siguiente entrega (base del Sprint 9).</p>
+<p>Retrospectiva consolidada de S1–S8 (formato Comenzar / Dejar / Continuar), con los datos del repositorio como evidencia:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Observación</th>
+<th>Evidencia</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Continuar</td>
+<td>Ritmo alto cuando el objetivo del sprint es funcional y acotado</td>
+<td>S1–S3: 24 pts de media</td>
+<td>Objetivo de sprint con 1 o 2 historias Must</td>
+</tr>
+<tr>
+<td>Continuar</td>
+<td>Estándar de código común y refactorización planificada</td>
+<td>23 commits «Gold Standard» en S6–S7</td>
+<td>Checklist Gold Standard en la DoD</td>
+</tr>
+<tr>
+<td>Continuar</td>
+<td>Validar con stakeholders antes de construir</td>
+<td>Acta de validación de E1</td>
+<td>Review con PO al final de cada sprint</td>
+</tr>
+<tr>
+<td>Dejar</td>
+<td>Spikes tecnológicos sin criterio de salida</td>
+<td>Kafka (S4) retirado en S8</td>
+<td>Spike con duración fija y decisión registrada en un ADR</td>
+</tr>
+<tr>
+<td>Dejar</td>
+<td>Commits sin descripción y trabajo directo en main</td>
+<td>60/134 mensajes de una palabra; 0 merges</td>
+<td>Conventional Commits y ramas feature/* con PR</td>
+</tr>
+<tr>
+<td>Dejar</td>
+<td>Añadir alcance sin registrarlo</td>
+<td>+47 pts no registrados en su momento</td>
+<td>Registro de cambios y refinamiento con el PO</td>
+</tr>
+<tr>
+<td>Comenzar</td>
+<td>Pruebas automatizadas como parte de la DoD</td>
+<td>1 prueba en todo el backend</td>
+<td>HU-25 en S10; ninguna historia sin pruebas</td>
+</tr>
+<tr>
+<td>Comenzar</td>
+<td>Medir durante el sprint, no después</td>
+<td>Métricas de S1–S8 reconstruidas en E4</td>
+<td>Burndown diario en el Anexo B</td>
+</tr>
+<tr>
+<td>Comenzar</td>
+<td>Sprints cortos con metas claras</td>
+<td>S5 sin incremento; pausa de agosto a noviembre</td>
+<td>Sprints de 2 semanas en S9–S10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sprint Review S9 (19/11/2026).</strong> Se demostraron la venta con FEFO estricto (rechazo de lote posterior y de lote vencido), la generación automática de órdenes de reabastecimiento hasta su conversión en orden de compra, WhatsApp con PDF adjunto y el sistema completo en contenedores. Se aceptaron HU-09, HU-11, HU-15, HU-23 y HU-24 (39 pts).</p>
+<p>Retrospectiva S9:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Observación</th>
+<th>Evidencia</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Continuar</td>
+<td>Pruebas escritas junto con la historia</td>
+<td>17 pruebas unitarias del código nuevo; 73 % de cobertura</td>
+<td>Mantener en la DoD</td>
+</tr>
+<tr>
+<td>Continuar</td>
+<td>Probar el sistema desplegado, no solo el código</td>
+<td>La prueba de carga, Postman y el pipeline encontraron 8 defectos</td>
+<td>Etapas 7–8 del pipeline en cada cambio</td>
+</tr>
+<tr>
+<td>Dejar</td>
+<td>Trabajo sin commits durante el sprint</td>
+<td>El incremento de S9–S10 sigue sin confirmar en git</td>
+<td>Commits pequeños con convención (PM-05)</td>
+</tr>
+<tr>
+<td>Comenzar</td>
+<td>Pruebas de caracterización antes de refactorizar</td>
+<td>VentaServiceImpl sin pruebas (1 645 líneas)</td>
+<td>Tarea previa a PM-09</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-comparacion-y-adaptacion-frente-a-otros-marcos-de-proceso">3.4 Comparación y adaptación frente a otros marcos de proceso<a class="headerlink" href="#34-comparacion-y-adaptacion-frente-a-otros-marcos-de-proceso" title="Permanent link">&para;</a></h3>
+<p>Se comparó Scrum con dos marcos dirigidos por el plan: el modelo en cascada y el Proceso Unificado de Rational (RUP). La comparación considera las cuatro dimensiones que pide la rúbrica (ciclo de vida, fases, disciplinas y roles) y otras que influyen en este proyecto.</p>
+<table>
+<thead>
+<tr>
+<th>Dimensión</th>
+<th>Cascada</th>
+<th>RUP</th>
+<th>Scrum (Guía 2020)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ciclo de vida</td>
+<td>Secuencial; cada fase empieza cuando termina la anterior</td>
+<td>Iterativo e incremental, dirigido por casos de uso y centrado en la arquitectura</td>
+<td>Iterativo e incremental en sprints de duración fija (≤ 1 mes)</td>
+</tr>
+<tr>
+<td>Fases</td>
+<td>Requisitos → Diseño → Implementación → Pruebas → Mantenimiento</td>
+<td>Inicio, Elaboración, Construcción y Transición, con hitos (objetivos, arquitectura, capacidad operativa, release)</td>
+<td>Sin fases; cada sprint repite planificación, desarrollo, revisión y retrospectiva</td>
+</tr>
+<tr>
+<td>Disciplinas</td>
+<td>Una actividad por fase</td>
+<td>Modelado de negocio, requisitos, análisis y diseño, implementación, pruebas, despliegue; soporte: configuración y cambios, gestión del proyecto, entorno</td>
+<td>No las define; el equipo realiza todo el trabajo necesario dentro del sprint</td>
+</tr>
+<tr>
+<td>Roles</td>
+<td>Jefe de proyecto, analista, diseñador, programador, tester</td>
+<td>Más de 30 roles: analista de sistemas, arquitecto, diseñador, implementador, tester, gestor de configuración, jefe de proyecto…</td>
+<td>Product Owner, Scrum Master y Developers</td>
+</tr>
+<tr>
+<td>Artefactos</td>
+<td>Un documento por fase (SRS, SDD, plan de pruebas)</td>
+<td>Visión, SRS, modelo de casos de uso, documento de arquitectura, plan de iteración, lista de riesgos</td>
+<td>Product Backlog, Sprint Backlog e Incremento, con objetivo de producto, objetivo de sprint y DoD</td>
+</tr>
+<tr>
+<td>Cambios</td>
+<td>Costosos; control formal</td>
+<td>Se absorben entre iteraciones</td>
+<td>Se incorporan reordenando el backlog</td>
+</tr>
+<tr>
+<td>Riesgo</td>
+<td>Se descubre tarde (en pruebas)</td>
+<td>Se ataca en la Elaboración (arquitectura)</td>
+<td>Se revisa en cada sprint</td>
+</tr>
+<tr>
+<td>Medición</td>
+<td>% de avance por fase</td>
+<td>Logro de hitos por fase</td>
+<td>Velocidad, burndown e incremento terminado</td>
+</tr>
+</tbody>
+</table>
+<h4 id="341-adaptacion-aplicada-scrum-con-hitos-de-fase-de-rup">3.4.1 Adaptación aplicada: Scrum con hitos de fase de RUP<a class="headerlink" href="#341-adaptacion-aplicada-scrum-con-hitos-de-fase-de-rup" title="Permanent link">&para;</a></h4>
+<p>El proyecto no usa ninguno de los tres en forma pura. Combina sprints de Scrum para construir con las fases e hitos de RUP para los entregables que exigen documentación revisable (la evaluación académica, la Ley 29733 y la trazabilidad de lotes que piden los establecimientos farmacéuticos):</p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 11%" />
+<col style="width: 7%" />
+<col style="width: 4%" />
+<col style="width: 27%" />
+<col style="width: 14%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fase RUP</th>
+<th colspan="3">Hito</th>
+<th colspan="2">Equivalente en el proyecto</th>
+<th>Sprints</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Inicio</td>
+<td colspan="3">Objetivos del ciclo de vida</td>
+<td colspan="2">Business Case de CE01 y este Project Charter</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Elaboración</td>
+<td colspan="3">Arquitectura del ciclo de vida</td>
+<td colspan="2">E1 (requerimientos, C4, ADR) y E2 (plataforma de datos)</td>
+<td>Paralela a S1–S3 en el código; documentada en noviembre</td>
+</tr>
+<tr class="odd">
+<td>Construcción</td>
+<td colspan="3">Capacidad operativa inicial</td>
+<td colspan="2">Incrementos S1–S8 y E3 (FEFO, reabastecimiento, Flyway, contenedores)</td>
+<td>S1–S9</td>
+</tr>
+<tr class="even">
+<td>Transición</td>
+<td colspan="3">Release del producto</td>
+<td colspan="2">E4: pruebas, CI/CD, observabilidad, despliegue en AWS y auditoría</td>
+<td>S10</td>
+</tr>
+<tr class="odd">
+<td colspan="2">Disciplina RUP</td>
+<td colspan="5"><strong>Cómo se cubre dentro de Scrum</strong></td>
+</tr>
+<tr class="even">
+<td colspan="2">Modelado de negocio</td>
+<td colspan="5">Procesos AS-IS/TO-BE de CE01; se refleja en el objetivo de producto</td>
+</tr>
+<tr class="odd">
+<td colspan="2">Requisitos</td>
+<td colspan="5">Historias de usuario + RF/RNF/RN de E1; refinamiento semanal</td>
+</tr>
+<tr class="even">
+<td colspan="2">Análisis y diseño</td>
+<td colspan="5">C4, ADR y UML de E1; tareas de diseño dentro del Sprint Backlog</td>
+</tr>
+<tr class="odd">
+<td colspan="2">Implementación</td>
+<td colspan="5">Tareas Backend, Frontend y Datos del Sprint Backlog</td>
+</tr>
+<tr class="even">
+<td colspan="2">Pruebas</td>
+<td colspan="5">Tareas QA y DoD con pruebas automatizadas (desde S10)</td>
+</tr>
+<tr class="odd">
+<td colspan="2">Despliegue</td>
+<td colspan="5">Tareas DevOps (contenedores, pipeline) en S9–S10</td>
+</tr>
+<tr class="even">
+<td colspan="2">Configuración y cambios</td>
+<td colspan="5">Git con ramas y PR, Flyway y registro de cambios de alcance (plan de mejora PM-04, PM-05)</td>
+</tr>
+<tr class="odd">
+<td colspan="2">Gestión del proyecto</td>
+<td colspan="5">Ceremonias, velocidad, burndown y registro de riesgos</td>
+</tr>
+<tr class="even">
+<td colspan="2">Entorno</td>
+<td colspan="5">Estándar Gold Standard, docker-compose y perfiles de Spring</td>
+</tr>
+<tr class="odd">
+<td colspan="3">Rol RUP</td>
+<td colspan="2"><strong>Rol Scrum</strong></td>
+<td colspan="2"><strong>Quién lo ejerce</strong></td>
+</tr>
+<tr class="even">
+<td colspan="3">Analista de sistemas / stakeholder</td>
+<td colspan="2">Product Owner</td>
+<td colspan="2">Gerente de operaciones / jefe de farmacia</td>
+</tr>
+<tr class="odd">
+<td colspan="3">Jefe de proyecto</td>
+<td colspan="2">Scrum Master (facilita; no asigna trabajo)</td>
+<td colspan="2">Gutierrez Anco Yesenia Alejandra</td>
+</tr>
+<tr class="even">
+<td colspan="3">Arquitecto, diseñador, implementador, integrador</td>
+<td colspan="2">Developers</td>
+<td colspan="2"><p>Turpo Cauna Jose Samuel (backend, datos)</p>
+<p>Quispe Huarilloclla Jhosef Antony (frontend, integración)</p></td>
+</tr>
+<tr class="odd">
+<td colspan="3">Tester, revisor</td>
+<td colspan="2">Developers + auditor externo</td>
+<td colspan="2">Equipo (revisión cruzada; pruebas: Gutierrez Anco Yesenia Alejandra); docente como auditor</td>
+</tr>
+<tr class="even">
+<td colspan="3">Gestor de configuración</td>
+<td colspan="2">Developers (DoD y pipeline)</td>
+<td colspan="2">Quispe Huarilloclla Jhosef Antony (pipeline); Turpo Cauna Jose Samuel (migraciones)</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="342-justificacion">3.4.2 Justificación<a class="headerlink" href="#342-justificacion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Por qué no cascada:</strong> los requisitos cambiaron durante el proyecto (lotes en S3, Kafka reemplazado por Outbox en S8, reabastecimiento priorizado tras la validación). En cascada esos cambios habrían obligado a rehacer documentos ya cerrados; con sprints se absorbieron reordenando el backlog.</p>
+</li>
+<li>
+<p><strong>Por qué no RUP completo:</strong> RUP supone un equipo con roles especializados y abundante documentación por iteración; con un equipo de tres estudiantes eso duplica el esfuerzo sin aportar control. Se toman solo sus fases e hitos como puntos de control y los artefactos que agregan valor (casos de uso, arquitectura, lista de riesgos).</p>
+</li>
+<li>
+<p><strong>Por qué Scrum adaptado:</strong> entrega valor verificable cada sprint, hace visibles los problemas (la caída de velocidad de S4–S8 y el crecimiento del alcance aparecen en las métricas) y se integra con los hitos académicos. Las adaptaciones (sprints de 4 semanas con dedicación parcial y de 2 con dedicación completa, Scrum Master que también desarrolla, con auditoría externa, documentación por hito) son explícitas y tienen su riesgo registrado.</p>
+</li>
+<li>
+<p><strong>Qué aporta CMMI:</strong> Scrum no prescribe gestión de configuración, medición ni aseguramiento de calidad; esas prácticas se toman del modelo CMMI evaluado en la Sección 4.3.</p>
+</li>
+</ul>
+<h2 id="seccion-4-aseguramiento-y-auditoria-de-la-calidad-del-software">Sección 4: Aseguramiento y Auditoría de la Calidad del Software<a class="headerlink" href="#seccion-4-aseguramiento-y-auditoria-de-la-calidad-del-software" title="Permanent link">&para;</a></h2>
+<p>El aseguramiento de la calidad se organiza en cuatro piezas: una matriz de calidad que dice qué medir (4.1), instrumentos que dicen cómo verificarlo (4.1.2–4.1.4), una evaluación del código (4.2) y una auditoría del proceso con su plan de mejora (4.3–4.4). Las líneas base se midieron sobre el repositorio articulos el 18/11/2026.</p>
+<h3 id="41-matriz-de-calidad-e-instrumentos-de-aseguramiento">4.1 Matriz de calidad e instrumentos de aseguramiento<a class="headerlink" href="#41-matriz-de-calidad-e-instrumentos-de-aseguramiento" title="Permanent link">&para;</a></h3>
+<h4 id="411-matriz-de-calidad-isoiec-25010">4.1.1 Matriz de calidad (ISO/IEC 25010)<a class="headerlink" href="#411-matriz-de-calidad-isoiec-25010" title="Permanent link">&para;</a></h4>
+<p>La matriz usa las características de calidad del producto de ISO/IEC 25010 (en la revisión de 2023, Usabilidad pasa a llamarse Capacidad de interacción y Portabilidad, Flexibilidad). Cada fila vincula una subcaracterística con una métrica calculable, su meta, la línea base medida, el instrumento que la verifica, el riesgo si no se cumple y el requerimiento no funcional de E1 al que responde. La versión completa está en el Anexo C.</p>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 22%" />
+<col style="width: 13%" />
+<col style="width: 20%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Característica / sub.</th>
+<th>Métrica</th>
+<th>Meta</th>
+<th>Línea base (18/11)</th>
+<th>Medición S9–S10 (19/11)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>Adecuación funcional</p>
+<p>Completitud funcional</p></td>
+<td>RF implementados / RF de la release (sin fase 2)</td>
+<td>≥ 95 % al cierre de E4</td>
+<td>81 % (26/32; 4 parciales, 2 TO-BE)</td>
+<td>91 % (29/32: FEFO, reabastecimiento y WhatsApp con adjunto cerrados; RF-17/32 y RF-19/30 parciales)</td>
+</tr>
+<tr class="even">
+<td><p>Adecuación funcional</p>
+<p>Corrección funcional</p></td>
+<td>Casos de prueba de aceptación aprobados / ejecutados</td>
+<td>100 % en flujos críticos</td>
+<td>Pendiente (Sección 1)</td>
+<td>100 %: 18/18 JUnit y 41/41 aserciones Postman (19 peticiones)</td>
+</tr>
+<tr class="odd">
+<td><p>Eficiencia de desempeño</p>
+<p>Comportamiento temporal</p></td>
+<td>p95 de POST /api/ventas (20 ítems, 50 usuarios)</td>
+<td>&lt; 2 s</td>
+<td>No medido</td>
+<td>1 370 ms distribuido (cumple); 2 162 ms mismo lote (no cumple, R-11)</td>
+</tr>
+<tr class="even">
+<td><p>Eficiencia de desempeño</p>
+<p>Utilización de recursos</p></td>
+<td>Listados transaccionales paginados en servidor</td>
+<td>100 %</td>
+<td>Regla vigente (tamaño ≤ 100, por defecto 10)</td>
+<td>Se mantiene (órdenes de reabastecimiento paginadas)</td>
+</tr>
+<tr class="odd">
+<td><p>Compatibilidad</p>
+<p>Interoperabilidad</p></td>
+<td>Contratos REST backend ↔︎ mensajeria_api conformes</td>
+<td>100 %</td>
+<td>1 contrato roto (/whatsapp/enviar-con-adjunto)</td>
+<td>100 %: /whatsapp/enviar-con-adjunto implementado</td>
+</tr>
+<tr class="even">
+<td><p>Usabilidad (capacidad de interacción)</p>
+<p>Consistencia / aprendizaje</p></td>
+<td>Pantallas de gestión que usan los componentes compartidos</td>
+<td>100 %</td>
+<td>Patrón homogéneo validado con stakeholders (E1 2.4)</td>
+<td>Pantalla de reabastecimiento con componentes compartidos</td>
+</tr>
+<tr class="odd">
+<td><p>Fiabilidad</p>
+<p>Tolerancia a fallos</p></td>
+<td>Eventos en cola_eventos en estado ERROR o PENDIENTE &gt; 5 min</td>
+<td>0</td>
+<td>Sondeo de respaldo cada 30 s implementado; sin alerta</td>
+<td>Métrica articulos.outbox.eventos + alertas OutboxEventosAtascados/ConError</td>
+</tr>
+<tr class="even">
+<td><p>Fiabilidad</p>
+<p>Disponibilidad / recuperabilidad</p></td>
+<td>Disponibilidad en horario operativo; RPO / RTO</td>
+<td>≥ 99,5 %; RPO ≤ 24 h; RTO ≤ 4 h</td>
+<td>Restauración probada en E2; sin medición en producción</td>
+<td>Healthchecks en 5 contenedores; rollback a versión anterior probado</td>
+</tr>
+<tr class="odd">
+<td><p>Seguridad</p>
+<p>Confidencialidad</p></td>
+<td>Secretos versionados en el repositorio</td>
+<td>0</td>
+<td>3 archivos .pem en src/main/resources/certs</td>
+<td>2 (.pem de desarrollo, registrados como NC-01); 0 en imágenes y despliegue</td>
+</tr>
+<tr class="even">
+<td><p>Seguridad</p>
+<p>Integridad / no repudio</p></td>
+<td>Entidades con auditoría @CreatedBy/@LastModifiedBy y soft-delete</td>
+<td>100 % de entidades transaccionales</td>
+<td>21 entidades con @SQLRestriction; auditoría en 26 tablas</td>
+<td>Se mantiene; orden_reabastecimiento con auditoría</td>
+</tr>
+<tr class="odd">
+<td><p>Seguridad</p>
+<p>Autenticidad / responsabilidad</p></td>
+<td>Endpoints protegidos con permiso; accesos clínicos auditados</td>
+<td>100 %; 100 %</td>
+<td>155 @PreAuthorize en 56 controladores; acceso clínico sin auditoría</td>
+<td>Endpoints nuevos con @PreAuthorize; acceso clínico sin auditoría (HU-12)</td>
+</tr>
+<tr class="even">
+<td><p>Mantenibilidad</p>
+<p>Modularidad / reusabilidad</p></td>
+<td>Módulos que siguen Controller → Service → Repository → Mapper</td>
+<td>100 %</td>
+<td>Módulos de negocio refactorizados a «Gold Standard» (23 commits, S6–S7)</td>
+<td>Módulo reabastecimiento sigue el patrón; PMD 8 avisos en código nuevo</td>
+</tr>
+<tr class="odd">
+<td><p>Mantenibilidad</p>
+<p>Analizabilidad</p></td>
+<td>Clases &gt; 500 líneas</td>
+<td>≤ 3</td>
+<td>12 en backend (máx. VentaServiceImpl, 1 644)</td>
+<td>12 (sin cambio); PMD 619 avisos, CPD 18 duplicados</td>
+</tr>
+<tr class="even">
+<td><p>Mantenibilidad</p>
+<p>Capacidad de ser probado</p></td>
+<td>Cobertura de líneas en servicios críticos</td>
+<td>≥ 60 %</td>
+<td>≈ 0 % (1 prueba contextLoads)</td>
+<td>LoteFefoService 96,8 %; ReabastecimientoServiceImpl 92,1 %; total 5,7 %</td>
+</tr>
+<tr class="odd">
+<td><p>Mantenibilidad</p>
+<p>Modificabilidad (esquema)</p></td>
+<td>Cambios de esquema realizados con migración versionada</td>
+<td>100 %</td>
+<td>0 % (Flyway desactivado; ddl-auto)</td>
+<td>100 % desde E3 (V1 baseline, V2)</td>
+</tr>
+<tr class="even">
+<td><p>Portabilidad (flexibilidad)</p>
+<p>Instalabilidad</p></td>
+<td>Componentes desplegables con contenedor</td>
+<td>3/3</td>
+<td>0/3 (en curso en E3)</td>
+<td>3/3 (+ PostgreSQL y Prometheus)</td>
+</tr>
+</tbody>
+</table>
+
+<p>La línea base deja tres métricas en estado crítico (cobertura ≈ 0 %, 3 secretos versionados, 0 % de cambios de esquema por migración) y cuatro sin medir (rendimiento, corrección funcional, disponibilidad y tolerancia a fallos), que se miden en las Secciones 1 y 2. Tras S9–S10 las tres críticas mejoraron (cobertura del código nuevo 73 %, 100 % de cambios de esquema por migración, ningún secreto en las imágenes) y las cuatro sin medir ya tienen valor; siguen fuera de meta la cobertura total, las clases grandes y el p95 en el peor caso de carga.</p>
+<h4 id="412-instrumentos-de-aseguramiento">4.1.2 Instrumentos de aseguramiento<a class="headerlink" href="#412-instrumentos-de-aseguramiento" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Instrumento</th>
+<th>Momento</th>
+<th>Qué verifica</th>
+<th>Responsable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Definición de Listo (DoR)</td>
+<td>Antes de comprometer una historia en el Sprint Planning</td>
+<td>Historia con rol/objetivo/beneficio, criterios Gherkin, RF trazado y estimación en puntos</td>
+<td>Product Owner + equipo</td>
+</tr>
+<tr>
+<td>Definición de Hecho (DoD)</td>
+<td>Al cerrar cada historia</td>
+<td>Compila; cumple checklist Gold Standard; criterios de aceptación verificados; pruebas de la historia; sin secretos; migración Flyway si cambia el esquema; desplegado en entorno de prueba</td>
+<td>Equipo</td>
+</tr>
+<tr>
+<td>Revisión de código con checklist</td>
+<td>En cada historia antes de integrarla a main</td>
+<td>Checklist Gold Standard backend/frontend (§4.1.3)</td>
+<td>Autor + revisor par (otro integrante)</td>
+</tr>
+<tr>
+<td>Inspección formal (Fagan simplificada)</td>
+<td>Módulos críticos: venta, kardex, auth, reabastecimiento</td>
+<td>Roles moderador / autor / inspector; tasa ≤ 200 LOC/h; registro de defectos por severidad</td>
+<td>Moderador (Scrum Master)</td>
+</tr>
+<tr>
+<td>Walkthrough con stakeholders</td>
+<td>Sprint Review y validación de prototipos</td>
+<td>Recorrido de pantallas contra RF y criterios; acta firmada</td>
+<td>Product Owner</td>
+</tr>
+<tr>
+<td>Análisis estático</td>
+<td>En cada build del pipeline</td>
+<td>Reglas de complejidad, duplicación, code smells y vulnerabilidades</td>
+<td>Pipeline CI</td>
+</tr>
+<tr>
+<td>Pruebas automatizadas</td>
+<td>En cada build del pipeline</td>
+<td>Unitarias, integración API y contrato con mensajeria_api</td>
+<td>Pipeline CI</td>
+</tr>
+<tr>
+<td>Auditoría de proceso (SCAMPI C)</td>
+<td>Al cierre de cada entregable</td>
+<td>Checklists de gestión, ingeniería y software (Anexo D)</td>
+<td>Auditor (rol rotativo)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="413-checklist-de-revision-de-codigo-gold-standard">4.1.3 Checklist de revisión de código (Gold Standard)<a class="headerlink" href="#413-checklist-de-revision-de-codigo-gold-standard" title="Permanent link">&para;</a></h4>
+<p>El repositorio ya tiene un estándar de codificación escrito (.windsurfrules del backend y del frontend), que se aplicó en la refactorización de S6–S7. Se convierte en checklist verificable para cada revisión e inspección (Anexo C, hoja Checklist Gold Standard):</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Aspecto</th>
+<th>Criterio verificable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Arquitectura</td>
+<td>Flujo Controller → Service (interfaz) → ServiceImpl → Repository → Entity/DTO/Mapper</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Contrato</td>
+<td>El controlador retorna ResponseEntity\&lt;ApiResponse\&lt;T&gt;&gt;; el servicio retorna el DTO</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Validación</td>
+<td>@Valid en el cuerpo de la petición y errores por GlobalExceptionHandler (400/401/403/404/500)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Seguridad</td>
+<td>@PreAuthorize con el permiso del módulo en cada endpoint de escritura</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Mapeo</td>
+<td>MapStruct (componentModel=spring); prohibido el mapeo manual con builders</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Persistencia</td>
+<td>@Index en llaves foráneas y estado; @SQLRestriction("estado != 3") en entidades transaccionales</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Integridad</td>
+<td>Sin borrado físico (estado ELIMINADO = 3); auditoría con @CreatedBy/@LastModifiedBy, nunca manual</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Paginación</td>
+<td>Datos que crecen → Pageable/PageResponse (por defecto 10, máximo 100); catálogos finitos → lista plana</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Búsqueda</td>
+<td>JPQL con LOWER/CONCAT, insensible a mayúsculas, filtros opcionales</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Estilo</td>
+<td>Sin comentarios explicativos; sin nombres totalmente calificados (usar import)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Transacciones</td>
+<td>@Transactional en operaciones de escritura; eventos de negocio por Outbox en la misma transacción</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Frontend</td>
+<td>Componentes compartidos (app-page-header, app-tabla-general, app-pagination, app-modal) y señales estándar</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Secretos</td>
+<td>Ningún secreto, llave o contraseña en el código ni en properties versionados</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Esquema</td>
+<td>Todo cambio de esquema acompañado de su migración Flyway (desde E3)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="414-inspecciones-y-revisiones-procedimiento-y-primeros-resultados">4.1.4 Inspecciones y revisiones: procedimiento y primeros resultados<a class="headerlink" href="#414-inspecciones-y-revisiones-procedimiento-y-primeros-resultados" title="Permanent link">&para;</a></h4>
+<p>Las inspecciones siguen el método de Fagan simplificado: planificación (moderador elige el módulo y los inspectores), preparación individual con el checklist, reunión de inspección (máx. 2 h, 200 LOC/h), registro de defectos por severidad, retrabajo del autor y seguimiento del moderador. Se inspeccionan los módulos de mayor riesgo: venta_registro, kardex, auth y reabastecimiento. El formato de registro está en el Anexo D (hoja Registro de inspección).</p>
+<p>Una primera revisión documental de configuración y seguridad sobre el repositorio, realizada para esta auditoría, registró estas no conformidades:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>No conformidad</th>
+<th>Instrumento</th>
+<th>Severidad</th>
+<th>Tratamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NC-01</td>
+<td>Llaves RSA versionadas (private.pem, keypair.pem) en src/main/resources/certs</td>
+<td>Checklist ítem 13</td>
+<td>Alta</td>
+<td>Abierta: fuera de Docker; siguen para el perfil local</td>
+</tr>
+<tr>
+<td>NC-02</td>
+<td>spring.flyway.enabled=false; perfil supabase con ddl-auto=create</td>
+<td>Checklist ítem 14</td>
+<td>Alta</td>
+<td>Cerrada (Flyway V1/V2, validate)</td>
+</tr>
+<tr>
+<td>NC-03</td>
+<td>El backend llama a /whatsapp/enviar-con-adjunto, que mensajeria_api no expone</td>
+<td>Revisión de integración</td>
+<td>Media</td>
+<td>Cerrada (HU-15)</td>
+</tr>
+<tr>
+<td>NC-04</td>
+<td>commons-io declarado dos veces y spring-boot-devtools en el pom de producción</td>
+<td>Revisión de configuración</td>
+<td>Baja</td>
+<td>PM-02</td>
+</tr>
+<tr>
+<td>NC-05</td>
+<td>Clase KafkaProducerService con nombre heredado: el sistema ya no usa Kafka</td>
+<td>Revisión de diseño</td>
+<td>Baja</td>
+<td>Renombrar (4.2)</td>
+</tr>
+<tr>
+<td>NC-06</td>
+<td>Sin Spring Boot Actuator ni logs estructurados</td>
+<td>Checklist de operación</td>
+<td>Media</td>
+<td>Cerrada (HU-27)</td>
+</tr>
+<tr>
+<td>NC-07</td>
+<td>Claves de usuarios demo en el seed (usuarios.json)</td>
+<td>Escaneo de secretos (pipeline)</td>
+<td>Media</td>
+<td>Abierta: registrada en la lista permitida</td>
+</tr>
+<tr>
+<td>NC-08</td>
+<td>Archivo vacío «[Help» versionado en articulos-backend</td>
+<td>Escaneo de secretos (pipeline)</td>
+<td>Baja</td>
+<td>Abierta: eliminar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-evaluacion-de-calidad-de-codigo-code-smells-y-deuda-tecnica">4.2 Evaluación de calidad de código, code smells y deuda técnica<a class="headerlink" href="#42-evaluacion-de-calidad-de-codigo-code-smells-y-deuda-tecnica" title="Permanent link">&para;</a></h3>
+<p>El análisis se hizo sobre articulos-e3 con PMD 7 (conjunto de reglas quickstart) y su detector de copias CPD (bloques ≥ 100 tokens), integrados en la etapa 2 del pipeline. Se eligió PMD en lugar de SonarQube porque corre dentro de Maven sin servidor y sus reportes quedan como artefactos del pipeline; SonarCloud queda como opción cuando el repositorio se publique. El alcance es el backend: 565 archivos Java y 45 011 líneas.</p>
+<h4 id="421-atributos-internos-y-externos">4.2.1 Atributos internos y externos<a class="headerlink" href="#421-atributos-internos-y-externos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Tipo</th>
+<th>Medida</th>
+<th>Valor</th>
+<th>Lectura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tamaño</td>
+<td>Interno</td>
+<td>Líneas de código Java / archivos</td>
+<td>45 011 / 565</td>
+<td>Media de 80 líneas por archivo; la masa está concentrada en pocas clases</td>
+</tr>
+<tr>
+<td>Tamaño de clase</td>
+<td>Interno</td>
+<td>Clases &gt; 500 líneas</td>
+<td>12</td>
+<td>Meta ≤ 3 (matriz 4.1); VentaServiceImpl 1 645, ExcelExportServiceImpl 1 411</td>
+</tr>
+<tr>
+<td>Acoplamiento</td>
+<td>Interno</td>
+<td>Dependencias inyectadas en VentaServiceImpl</td>
+<td>16</td>
+<td>Clase «dios»: concentra venta, caja, kardex, documentos y descuentos</td>
+</tr>
+<tr>
+<td>Duplicación</td>
+<td>Interno</td>
+<td>Bloques duplicados (CPD ≥ 100 tokens)</td>
+<td>18</td>
+<td>9 de los 18 en ExcelExportServiceImpl</td>
+</tr>
+<tr>
+<td>Conformidad al estándar</td>
+<td>Interno</td>
+<td>Avisos PMD / KLOC</td>
+<td>13,8 (código heredado) · 9,7 (código nuevo E3)</td>
+<td>El código nuevo sigue el estándar con menos avisos por línea</td>
+</tr>
+<tr>
+<td>Fiabilidad</td>
+<td>Externo</td>
+<td>Defectos encontrados por pruebas (1.6)</td>
+<td>8 (3 de severidad alta)</td>
+<td>Todos en concurrencia, transacciones o integración: zonas sin pruebas previas</td>
+</tr>
+<tr>
+<td>Mantenibilidad</td>
+<td>Externo</td>
+<td>Deuda técnica estimada (4.2.4)</td>
+<td>≈ 81 h</td>
+<td>≈ 2 semanas de un desarrollador</td>
+</tr>
+<tr>
+<td>Seguridad</td>
+<td>Externo</td>
+<td>Hallazgos del escaneo de secretos</td>
+<td>6 en 4 archivos (todos registrados)</td>
+<td>Llaves de desarrollo (NC-01) y claves demo del seed (NC-07)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="422-resultado-del-analisis-estatico">4.2.2 Resultado del análisis estático<a class="headerlink" href="#422-resultado-del-analisis-estatico" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Prioridad PMD</th>
+<th>Significado</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>Avisos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Error probable / bloqueante</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Alta: riesgo de error o rendimiento</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>191</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Media: diseño y buenas prácticas</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>308</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Baja: estilo</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>117</td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>619</td>
+</tr>
+<tr>
+<td>Regla PMD</td>
+<td></td>
+<td><strong>Avisos</strong></td>
+<td><strong>Qué indica</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GuardLogStatement</td>
+<td></td>
+<td>191</td>
+<td>Logs con concatenación que se evalúan aunque el nivel esté apagado</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ControlStatementBraces</td>
+<td></td>
+<td>126</td>
+<td>if/for sin llaves: riesgo de errores al editar</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>UnnecessaryFullyQualifiedName</td>
+<td></td>
+<td>87</td>
+<td>Nombres totalmente calificados; viola la regla de estilo del estándar Gold Standard</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>UseLocaleWithCaseConversions</td>
+<td></td>
+<td>64</td>
+<td>toUpperCase/toLowerCase sin Locale: resultados distintos según el sistema</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LiteralsFirstInComparisons</td>
+<td></td>
+<td>40</td>
+<td>x.equals("…") puede lanzar NullPointerException</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>EmptyCatchBlock</td>
+<td></td>
+<td>29</td>
+<td>Excepciones tragadas sin registro: fallos silenciosos</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LambdaCanBeMethodReference / UselessParentheses</td>
+<td></td>
+<td>35</td>
+<td>Legibilidad</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Otras 17 reglas</td>
+<td></td>
+<td>47</td>
+<td>Varias</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clase</td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>Líneas</strong></td>
+<td><strong>Avisos PMD</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>VentaServiceImpl</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1 645</td>
+<td>109</td>
+<td></td>
+</tr>
+<tr>
+<td>ExcelExportServiceImpl</td>
+<td></td>
+<td></td>
+<td></td>
+<td>1 411</td>
+<td>60</td>
+<td></td>
+</tr>
+<tr>
+<td>ReporteServiceImpl</td>
+<td></td>
+<td></td>
+<td></td>
+<td>533</td>
+<td>48</td>
+<td></td>
+</tr>
+<tr>
+<td>UserServiceImpl</td>
+<td></td>
+<td></td>
+<td></td>
+<td>834</td>
+<td>24</td>
+<td></td>
+</tr>
+<tr>
+<td>CompraServiceImpl</td>
+<td></td>
+<td></td>
+<td></td>
+<td>588</td>
+<td>21</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Cinco clases concentran el 42 % de los avisos. El código nuevo de E3 (módulo reabastecimiento, LoteFefoService y MetricasNegocio; 829 líneas) tiene 8 avisos: 6 GuardLogStatement y 2 LambdaCanBeMethodReference, ninguno de prioridad 1 o 2 ligado a errores.</p>
+<h4 id="423-catalogo-de-code-smells">4.2.3 Catálogo de code smells<a class="headerlink" href="#423-catalogo-de-code-smells" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Smell</th>
+<th>Dónde</th>
+<th>Evidencia</th>
+<th>Impacto</th>
+<th>Refactorización propuesta</th>
+<th>Prioridad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clase grande / clase dios</td>
+<td>VentaServiceImpl</td>
+<td>1 645 líneas, 16 dependencias, 109 avisos</td>
+<td>Todo cambio en ventas toca el mismo archivo; difícil de probar</td>
+<td>Extraer CalculoVentaService, PagoVentaService y ComprobanteVentaService (Extract Class)</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Código duplicado</td>
+<td>ExcelExportServiceImpl</td>
+<td>9 de los 18 bloques duplicados; el mayor, 33 líneas repetidas en 4 reportes</td>
+<td>Un cambio de formato debe hacerse cuatro veces</td>
+<td>Método plantilla para la cabecera y el estilo de las hojas (Template Method)</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Código duplicado</td>
+<td>VentaRegistro / VentaDetalle</td>
+<td>47 líneas idénticas de campos y auditoría</td>
+<td>Columnas que divergen con el tiempo</td>
+<td>@MappedSuperclass o @Embeddable común</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>Excepciones tragadas</td>
+<td>29 catch vacíos; 117 catch (Exception …)</td>
+<td>PMD EmptyCatchBlock</td>
+<td>Fallos silenciosos en producción</td>
+<td>Registrar y relanzar excepciones de dominio; capturar tipos concretos</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Nombre engañoso</td>
+<td>KafkaProducerService</td>
+<td>El sistema no usa Kafka (Outbox + LISTEN/NOTIFY)</td>
+<td>Confunde a quien mantiene el código (NC-05)</td>
+<td>Renombrar a OutboxPublisher (Rename Class)</td>
+<td>Baja</td>
+</tr>
+<tr>
+<td>Duplicación entre servicios</td>
+<td>EmailService / WhatsAppService</td>
+<td>18 líneas iguales de armado de petición</td>
+<td>Dos contratos con mensajeria-api que deben cambiar a la vez</td>
+<td>Cliente común MensajeriaClient</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>Archivo basura</td>
+<td>articulos-backend/[Help</td>
+<td>Archivo vacío versionado (salida de Maven redirigida por error)</td>
+<td>Rompió el escaneo de secretos del pipeline</td>
+<td>Eliminar del repositorio</td>
+<td>Baja</td>
+</tr>
+</tbody>
+</table>
+<h4 id="424-deuda-tecnica-estimada">4.2.4 Deuda técnica estimada<a class="headerlink" href="#424-deuda-tecnica-estimada" title="Permanent link">&para;</a></h4>
+<p>La estimación usa tiempos de remediación por aviso al estilo SQALE (2 min para estilo, 10 min para un catch vacío, 30 min por bloque duplicado y una estimación por clase grande):</p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Cálculo</th>
+<th>Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Avisos de estilo y buenas prácticas</td>
+<td>572 avisos de las 8 reglas principales × 1–2 min + 29 catch vacíos × 10 min + 47 otros × 5 min</td>
+<td>26</td>
+</tr>
+<tr>
+<td>Duplicación</td>
+<td>18 bloques × 30 min</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Clases grandes</td>
+<td>VentaServiceImpl 16 h + ExcelExportServiceImpl 12 h + UserServiceImpl 8 h</td>
+<td>36</td>
+</tr>
+<tr>
+<td>Manejo de excepciones genérico</td>
+<td>117 catch (Exception …) × 5 min</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>≈ 81 h</td>
+</tr>
+</tbody>
+</table>
+<p>Con 45 000 líneas (≈ 900 h de desarrollo a 50 líneas por hora) la relación de deuda es ≈ 9 %, calificación B en la escala SQALE (6–10 %). La deuda no está distribuida: tres clases concentran el 44 % de las horas, así que pagarla por partes es viable.</p>
+<h4 id="425-refactorizaciones-aplicadas-en-e3-y-e4">4.2.5 Refactorizaciones aplicadas en E3 y E4<a class="headerlink" href="#425-refactorizaciones-aplicadas-en-e3-y-e4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Antes</th>
+<th>Después</th>
+<th>Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ProductoService.actualizarStockKardex leía el producto y luego lo bloqueaba; la copia en memoria quedaba vieja</td>
+<td>findByIdForUpdate + entityManager.refresh(producto, PESSIMISTIC_WRITE)</td>
+<td>Sin pérdida de stock con 50 ventas concurrentes (DF-01)</td>
+</tr>
+<tr>
+<td>Propiedades con URL, usuario y clave de la base y orígenes CORS escritos en el código</td>
+<td>Perfiles local/docker/supabase y variables de entorno (DB_*, JWT_*, CORS_ALLOWED_ORIGINS)</td>
+<td>La misma imagen corre en cualquier entorno; sin secretos en las imágenes</td>
+</tr>
+<tr>
+<td>JwtService leía las llaves solo del classpath</td>
+<td>DefaultResourceLoader: classpath: o file:</td>
+<td>Llaves montadas desde secrets/ en Docker</td>
+</tr>
+<tr>
+<td>Esquema creado por ddl-auto=update/create</td>
+<td>Flyway V1 (baseline) + V2; ddl-auto=validate</td>
+<td>Cambios de esquema versionados y verificables (NC-02 cerrada)</td>
+</tr>
+<tr>
+<td>URL del backend y de mensajería fijas en los servicios Angular</td>
+<td>environment.ts / environment.prod.ts con fileReplacements</td>
+<td>El frontend funciona detrás de nginx sin recompilar</td>
+</tr>
+<tr>
+<td>Evaluación de reorden síncrona dentro de la venta</td>
+<td>Evento StockDisminuidoEvent → listener AFTER_COMMIT @Async con REQUIRES_NEW</td>
+<td>La venta no espera al reabastecimiento ni bloquea el pool (DF-02)</td>
+</tr>
+</tbody>
+</table>
+<p>Las refactorizaciones de las clases grandes (PM-09) no se hicieron todavía: cambiar VentaServiceImpl sin pruebas que lo cubran sería un riesgo mayor que la deuda. El orden acordado es primero pruebas de caracterización de VentaServiceImpl (PM-01) y después Extract Class.</p>
+<h3 id="43-informe-de-auditoria-tecnica">4.3 Informe de auditoría técnica<a class="headerlink" href="#43-informe-de-auditoria-tecnica" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Objeto</strong></th>
+<th>Proceso de desarrollo y producto del ERP «Articulos» (repositorio articulos, rama main, commit del 17/08/2026) y artefactos E1–E4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modelo y método</strong></td>
+<td>CMMI para Desarrollo v1.3; evaluación SCAMPI clase C (diagnóstico ligero, sin calificación oficial)</td>
+</tr>
+<tr>
+<td><strong>Alcance</strong></td>
+<td>Áreas de proceso del nivel 2 (REQM, PP, PMC, MA, PPQA, CM, SAM) y seis del nivel 3 relevantes para el proyecto (RD, TS, PI, VER, VAL, RSKM)</td>
+</tr>
+<tr>
+<td><strong>Fecha</strong></td>
+<td>18/11/2026</td>
+</tr>
+<tr>
+<td><strong>Equipo auditor</strong></td>
+<td>Auditor externo: docente del curso CE024; auditados: Gutierrez Anco Yesenia Alejandra (Scrum Master), Turpo Cauna Jose Samuel y Quispe Huarilloclla Jhosef Antony (desarrolladores)</td>
+</tr>
+<tr>
+<td><strong>Fuentes de evidencia</strong></td>
+<td>Historial git (134 commits), código fuente, archivos de configuración, E1 v2, E2 v2, artefactos ágiles de este documento</td>
+</tr>
+<tr>
+<td><strong>Escala</strong></td>
+<td>Prácticas: FI totalmente, LI mayormente, PI parcialmente, NI no implementada. Ítems de checklist: Cumple / Parcial / No cumple</td>
+</tr>
+</tbody>
+</table>
+<h4 id="431-checklist-de-gestion-de-proyecto">4.3.1 Checklist de gestión de proyecto<a class="headerlink" href="#431-checklist-de-gestion-de-proyecto" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Área</th>
+<th>Ítem verificado</th>
+<th>Resultado</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PP</td>
+<td>Existe un Project Charter con objetivos, alcance, EDT, equipo y riesgos</td>
+<td>Cumple</td>
+<td>Sección 3.1 de este documento</td>
+</tr>
+<tr>
+<td>PP</td>
+<td>El trabajo está descompuesto en historias estimadas (puntos)</td>
+<td>Cumple</td>
+<td>Product Backlog: 28 historias, 193 pts (Anexo A)</td>
+</tr>
+<tr>
+<td>PP</td>
+<td>Existe un plan de iteraciones con fechas y objetivos de sprint</td>
+<td>Parcial</td>
+<td>Sprints reconstruidos del historial git; S9–S10 planificados formalmente</td>
+</tr>
+<tr>
+<td>PMC</td>
+<td>Se mide el avance (velocidad, burndown) y se compara con el plan</td>
+<td>Parcial</td>
+<td>Métricas calculadas en E4; no se registraron durante S1–S8</td>
+</tr>
+<tr>
+<td>PMC</td>
+<td>Las desviaciones generan acciones correctivas registradas</td>
+<td>No cumple</td>
+<td>S5 sin incremento y sin acción registrada</td>
+</tr>
+<tr>
+<td>RSKM</td>
+<td>Riesgos identificados, valorados y con respuesta y responsable</td>
+<td>Cumple</td>
+<td>Registro de riesgos R-01…R-10</td>
+</tr>
+<tr>
+<td>RSKM</td>
+<td>Los riesgos se revisan periódicamente</td>
+<td>Parcial</td>
+<td>Revisión en las retrospectivas desde S9</td>
+</tr>
+<tr>
+<td>REQM</td>
+<td>Requerimientos con ID único y trazabilidad RF ↔ HU ↔ CU ↔ componente</td>
+<td>Cumple</td>
+<td>E1 Anexo B y Product Backlog</td>
+</tr>
+<tr>
+<td>REQM</td>
+<td>Los cambios de alcance se registran</td>
+<td>Parcial</td>
+<td>Cambios de S6 y S9 documentados en E4, no en su momento</td>
+</tr>
+<tr>
+<td>MA</td>
+<td>Indicadores definidos con fórmula, meta y fuente</td>
+<td>Cumple</td>
+<td>Matriz de calidad ISO 25010 (tabla 4.1)</td>
+</tr>
+<tr>
+<td>MA</td>
+<td>Los indicadores se recolectan automáticamente</td>
+<td>No cumple</td>
+<td>Sin pipeline ni tablero; pendiente Secciones 1 y 2</td>
+</tr>
+<tr>
+<td>PPQA</td>
+<td>Existen estándares de proceso y producto definidos</td>
+<td>Cumple</td>
+<td>.windsurfrules (Gold Standard), DoR y DoD</td>
+</tr>
+<tr>
+<td>PPQA</td>
+<td>Se verifica objetivamente el cumplimiento y se registran no conformidades</td>
+<td>Parcial</td>
+<td>Refactorización Gold Standard (S6–S7) sin registro de hallazgos</td>
+</tr>
+</tbody>
+</table>
+<h4 id="432-checklist-de-ingenieria">4.3.2 Checklist de ingeniería<a class="headerlink" href="#432-checklist-de-ingenieria" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Área</th>
+<th>Ítem verificado</th>
+<th>Resultado</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RD</td>
+<td>Requerimientos funcionales, no funcionales y reglas de negocio especificados</td>
+<td>Cumple</td>
+<td>E1: 33 RF, 18 RNF, 14 RN</td>
+</tr>
+<tr>
+<td>RD</td>
+<td>Criterios de aceptación verificables</td>
+<td>Cumple</td>
+<td>E1 1.6 (Gherkin)</td>
+</tr>
+<tr>
+<td>TS</td>
+<td>Arquitectura documentada con vistas y decisiones (ADR)</td>
+<td>Cumple</td>
+<td>E1: C4 nivel 1–3, despliegue y ADR-01…ADR-10</td>
+</tr>
+<tr>
+<td>TS</td>
+<td>El diseño coincide con la implementación</td>
+<td>Parcial</td>
+<td>Corregido en E1 v2 (Kafka → Outbox); persisten nombres heredados (KafkaProducerService)</td>
+</tr>
+<tr>
+<td>PI</td>
+<td>Integración de componentes definida y probada</td>
+<td>Parcial</td>
+<td>Contrato roto backend ↔ mensajeria_api (HU-15, en E3)</td>
+</tr>
+<tr>
+<td>VER</td>
+<td>Revisiones de pares o inspecciones de código registradas</td>
+<td>No cumple</td>
+<td>Sin revisión cruzada registrada ni pull requests (0 merges)</td>
+</tr>
+<tr>
+<td>VER</td>
+<td>Pruebas unitarias y de integración automatizadas</td>
+<td>No cumple</td>
+<td>1 prueba de backend (contextLoads), 2 specs de frontend</td>
+</tr>
+<tr>
+<td>VAL</td>
+<td>Validación con usuarios / stakeholders</td>
+<td>Cumple</td>
+<td>Sesiones de validación del prototipo (E1 2.4 y Anexo A)</td>
+</tr>
+<tr>
+<td>Datos</td>
+<td>Modelo de datos documentado y verificado sobre la BD real</td>
+<td>Cumple</td>
+<td>E2: 83 tablas, 97 FK, 188 índices</td>
+</tr>
+</tbody>
+</table>
+<h4 id="433-checklist-de-software">4.3.3 Checklist de software<a class="headerlink" href="#433-checklist-de-software" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Área</th>
+<th>Ítem verificado</th>
+<th>Resultado</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CM</td>
+<td>Repositorio con control de versiones</td>
+<td>Cumple</td>
+<td>Git, 134 commits (11/01–17/08/2026)</td>
+</tr>
+<tr>
+<td>CM</td>
+<td>Mensajes de commit descriptivos / convención</td>
+<td>No cumple</td>
+<td>60 de 134 mensajes de una sola palabra («a», «cambios», «arreglos»); 2 con convención</td>
+</tr>
+<tr>
+<td>CM</td>
+<td>Estrategia de ramas y líneas base (tags / releases)</td>
+<td>No cumple</td>
+<td>Rama única main, 0 tags, 0 merges</td>
+</tr>
+<tr>
+<td>CM</td>
+<td>Esquema de base de datos versionado</td>
+<td>No cumple</td>
+<td>spring.flyway.enabled=false; ddl-auto=update/create</td>
+</tr>
+<tr>
+<td>Seguridad</td>
+<td>Sin secretos en el repositorio</td>
+<td>No cumple</td>
+<td>private.pem, keypair.pem, public.pem en src/main/resources/certs</td>
+</tr>
+<tr>
+<td>Seguridad</td>
+<td>Autenticación robusta y control de acceso</td>
+<td>Cumple</td>
+<td>JWT RSA 30 min, bloqueo 5 intentos/15 min, 3 sesiones, 155 @PreAuthorize</td>
+</tr>
+<tr>
+<td>Construcción</td>
+<td>Build reproducible y dependencias limpias</td>
+<td>Parcial</td>
+<td>Maven/npm OK; commons-io declarado dos veces; devtools en el pom</td>
+</tr>
+<tr>
+<td>Construcción</td>
+<td>Contenedores y despliegue automatizado</td>
+<td>No cumple</td>
+<td>Sin Dockerfile ni pipeline (en curso en E3 / Sección 2)</td>
+</tr>
+<tr>
+<td>Operación</td>
+<td>Observabilidad (métricas, logs estructurados, alertas)</td>
+<td>No cumple</td>
+<td>Sin Actuator; solo patrón de log en consola</td>
+</tr>
+<tr>
+<td>Operación</td>
+<td>Respaldo y restauración probados</td>
+<td>Parcial</td>
+<td>Simulacro en E2 (local); falta en producción</td>
+</tr>
+<tr>
+<td>Código</td>
+<td>Estándar de codificación aplicado de forma homogénea</td>
+<td>Cumple</td>
+<td>Refactorización Gold Standard: 23 commits por módulo (S6–S7)</td>
+</tr>
+<tr>
+<td>Código</td>
+<td>Tamaño y complejidad controlados</td>
+<td>Parcial</td>
+<td>12 clases &gt; 500 líneas; VentaServiceImpl 1 644 líneas (detalle en 4.2)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resumen de los checklists (índice = (Cumple + 0,5 × Parcial) / total)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Checklist</th>
+<th>Cumple</th>
+<th>Parcial</th>
+<th>No cumple</th>
+<th>Índice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gestión de proyecto</td>
+<td>6</td>
+<td>5</td>
+<td>2</td>
+<td>65%</td>
+</tr>
+<tr>
+<td>Ingeniería</td>
+<td>5</td>
+<td>2</td>
+<td>2</td>
+<td>67%</td>
+</tr>
+<tr>
+<td>Software</td>
+<td>3</td>
+<td>3</td>
+<td>6</td>
+<td>38%</td>
+</tr>
+</tbody>
+</table>
+<h4 id="434-caracterizacion-por-area-de-proceso-y-nivel-de-madurez">4.3.4 Caracterización por área de proceso y nivel de madurez<a class="headerlink" href="#434-caracterizacion-por-area-de-proceso-y-nivel-de-madurez" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Área</th>
+<th>Nombre</th>
+<th>Nivel</th>
+<th>Caract.</th>
+<th>Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REQM</td>
+<td>Gestión de requerimientos</td>
+<td>2</td>
+<td>LI</td>
+<td>IDs únicos y trazabilidad completa; falta control formal de cambios</td>
+</tr>
+<tr>
+<td>PP</td>
+<td>Planificación del proyecto</td>
+<td>2</td>
+<td>LI</td>
+<td>Charter, EDT, backlog estimado; plan de sprints formal solo desde S9</td>
+</tr>
+<tr>
+<td>PMC</td>
+<td>Monitoreo y control</td>
+<td>2</td>
+<td>PI</td>
+<td>Métricas calculadas a posteriori; sin acciones correctivas registradas</td>
+</tr>
+<tr>
+<td>MA</td>
+<td>Medición y análisis</td>
+<td>2</td>
+<td>PI</td>
+<td>Indicadores definidos; sin recolección automática</td>
+</tr>
+<tr>
+<td>PPQA</td>
+<td>Aseguramiento de calidad de proceso y producto</td>
+<td>2</td>
+<td>PI</td>
+<td>Estándar Gold Standard aplicado; sin registro de no conformidades</td>
+</tr>
+<tr>
+<td>CM</td>
+<td>Gestión de configuración</td>
+<td>2</td>
+<td>PI</td>
+<td>Git sí; sin ramas, tags, convención de commits ni esquema versionado</td>
+</tr>
+<tr>
+<td>SAM</td>
+<td>Gestión de acuerdos con proveedores</td>
+<td>2</td>
+<td>N/A</td>
+<td>Sin proveedores de desarrollo; Meta/Gmail son servicios estándar</td>
+</tr>
+<tr>
+<td>RD</td>
+<td>Desarrollo de requerimientos</td>
+<td>3</td>
+<td>FI</td>
+<td>RF, RNF, RN, HU, CU y criterios de aceptación completos</td>
+</tr>
+<tr>
+<td>TS</td>
+<td>Solución técnica</td>
+<td>3</td>
+<td>LI</td>
+<td>Arquitectura C4 y ADR; diseño alineado al código en E1 v2</td>
+</tr>
+<tr>
+<td>PI</td>
+<td>Integración del producto</td>
+<td>3</td>
+<td>PI</td>
+<td>Integración manual; contrato con mensajeria_api roto</td>
+</tr>
+<tr>
+<td>VER</td>
+<td>Verificación</td>
+<td>3</td>
+<td>NI</td>
+<td>Sin revisiones registradas ni pruebas automatizadas</td>
+</tr>
+<tr>
+<td>VAL</td>
+<td>Validación</td>
+<td>3</td>
+<td>LI</td>
+<td>Validación de prototipo con stakeholders y acta</td>
+</tr>
+<tr>
+<td>RSKM</td>
+<td>Gestión de riesgos</td>
+<td>3</td>
+<td>LI</td>
+<td>Registro valorado con respuestas; revisión periódica desde S9</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/media/image7.png" style="width:5.90551in;height:2.62467in" /></p>
+<p><em>Figura 4.1 — Perfil de caracterización SCAMPI C (verde FI, azul LI, naranja PI, rojo NI).</em></p>
+<p><strong>Nivel de madurez.</strong> En la representación por etapas, el nivel 2 (Gestionado) exige que todas sus áreas estén satisfechas (prácticas caracterizadas como FI o LI). REQM y PP lo están; PMC, MA, PPQA y CM quedan en PI y SAM no aplica. El proceso se ubica, por tanto, en el nivel 1 (Inicial): se obtienen resultados —el sistema funciona y los requerimientos están bien especificados—, pero dependen de la persona y no de un proceso gestionado. En la representación continua, RD alcanza nivel de capacidad 1 con prácticas genéricas parciales, y VER es la brecha más grave (NI).</p>
+<ul>
+<li>
+<p><strong>Fortalezas:</strong> especificación de requerimientos y trazabilidad (RD, REQM); arquitectura documentada con ADR (TS); validación con stakeholders (VAL); estándar de código aplicado de forma homogénea.</p>
+</li>
+<li>
+<p><strong>Debilidades:</strong> verificación (sin pruebas ni revisiones registradas), gestión de configuración (rama única, sin tags, commits no descriptivos, esquema sin versionar), medición solo a posteriori y aseguramiento sin registro de no conformidades.</p>
+</li>
+<li>
+<p><strong>Conclusión:</strong> el producto tiene una base técnica sólida, pero el proceso no garantiza que esa calidad se repita. Las acciones PM-01 a PM-07 atacan directamente las cuatro áreas de nivel 2 en PI.</p>
+</li>
+</ul>
+<h3 id="44-plan-de-mejora-de-la-calidad-del-software">4.4 Plan de mejora de la calidad del software<a class="headerlink" href="#44-plan-de-mejora-de-la-calidad-del-software" title="Permanent link">&para;</a></h3>
+<p>El plan sigue el ciclo PDCA: cada acción nace de un hallazgo de la auditoría (Planificar), se ejecuta como tarea del Sprint Backlog (Hacer), se mide con el indicador de la matriz 4.1 (Verificar) y se revisa en la retrospectiva y en la auditoría de seguimiento (Actuar). Meta: que REQM, PP, PMC, MA, PPQA y CM estén en LI o FI en la auditoría de seguimiento al cierre del Sprint 10.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Hallazgo</th>
+<th>Acción</th>
+<th>Área</th>
+<th>Plazo</th>
+<th>Indicador / meta</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PM-01</td>
+<td>Sin pruebas automatizadas</td>
+<td>Pruebas unitarias e integración de flujos críticos + JaCoCo</td>
+<td>VER</td>
+<td>S10 (15/12/2026)</td>
+<td>Cobertura servicios críticos ≥ 60 %; 100 % flujos críticos</td>
+<td>En curso</td>
+</tr>
+<tr>
+<td>PM-02</td>
+<td>Sin pipeline CI/CD</td>
+<td>Pipeline: build, pruebas, análisis estático, imágenes y despliegue</td>
+<td>PI / CM</td>
+<td>S10</td>
+<td>100 % de cambios a main pasan por el pipeline</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>PM-03</td>
+<td>Secretos en el repositorio</td>
+<td>Sacar llaves/credenciales, rotarlas y escaneo de secretos en CI</td>
+<td>CM / Seguridad</td>
+<td>S9 (01/12/2026)</td>
+<td>0 secretos versionados</td>
+<td>En curso</td>
+</tr>
+<tr>
+<td>PM-04</td>
+<td>Esquema sin versionar</td>
+<td>Flyway con baseline V1, ddl-auto=validate en producción</td>
+<td>CM</td>
+<td>S9</td>
+<td>100 % cambios de esquema por migración</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>PM-05</td>
+<td>Commits no descriptivos y rama única</td>
+<td>Conventional Commits, ramas feature/* con pull request y tag por entregable</td>
+<td>CM / VER</td>
+<td>S10</td>
+<td>≥ 90 % commits con convención; 1 tag por release</td>
+<td>Planificado</td>
+</tr>
+<tr>
+<td>PM-06</td>
+<td>Sin revisiones registradas</td>
+<td>Revisión con checklist Gold Standard en cada PR e inspección de módulos críticos</td>
+<td>VER / PPQA</td>
+<td>S10</td>
+<td>100 % de PR revisados; 4 inspecciones registradas</td>
+<td>Planificado</td>
+</tr>
+<tr>
+<td>PM-07</td>
+<td>Métricas solo a posteriori</td>
+<td>Tablero ágil con burndown diario y revisión de velocidad en cada Review</td>
+<td>PMC / MA</td>
+<td>S9</td>
+<td>Burndown actualizado diariamente</td>
+<td>En curso</td>
+</tr>
+<tr>
+<td>PM-08</td>
+<td>Sin observabilidad</td>
+<td>Actuator, logs estructurados, alertas sobre 5xx, latencia y cola_eventos</td>
+<td>MA / Operación</td>
+<td>S10</td>
+<td>Alertas activas; MTTD \&lt; 15 min</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>PM-09</td>
+<td>Clases grandes (deuda técnica)</td>
+<td>Refactorizar VentaServiceImpl y ExcelExportServiceImpl (extraer servicios)</td>
+<td>TS</td>
+<td>S10</td>
+<td>Clases &gt; 500 líneas ≤ 3</td>
+<td>Planificado</td>
+</tr>
+<tr>
+<td>PM-10</td>
+<td>Datos clínicos sin cifrado ni auditoría de acceso</td>
+<td>pgcrypto en columnas sensibles y auditoría de cada acceso</td>
+<td>RD / Seguridad</td>
+<td>S10</td>
+<td>100 % accesos clínicos auditados</td>
+<td>Planificado</td>
+</tr>
+<tr>
+<td>PM-11</td>
+<td>Sin registro de no conformidades</td>
+<td>Registro de hallazgos de QA con seguimiento hasta el cierre</td>
+<td>PPQA</td>
+<td>S9</td>
+<td>100 % hallazgos con responsable y fecha</td>
+<td>En curso</td>
+</tr>
+</tbody>
+</table>
+<p>Seguimiento: el Scrum Master revisa el estado del plan en cada retrospectiva; el auditor repite los checklists del Anexo D al cierre del Sprint 10 y compara el índice de cumplimiento con el de esta auditoría (gestión 65%, ingeniería 67%, software 38%).</p>
+<h2 id="anexos">Anexos<a class="headerlink" href="#anexos" title="Permanent link">&para;</a></h2>
+<p>Los artefactos ágiles, la matriz de calidad y los checklists se entregan como libros de Excel en la carpeta Anexos, junto a este documento:</p>
+<table>
+<thead>
+<tr>
+<th>Anexo</th>
+<th>Archivo</th>
+<th>Contenido</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Anexo_A_Product_Backlog.xlsx</td>
+<td>Product Backlog (28 HU, evidencia en el código, fórmulas de avance), velocidad y burndown con gráficos, registro de riesgos</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Anexo_B_Sprint_Backlog.xlsx</td>
+<td>Sprint Backlog S9 (con plantilla de burndown diario) y S10; historial S1–S8</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Anexo_C_Matriz_Calidad.xlsx</td>
+<td>Matriz ISO 25010, instrumentos de aseguramiento, checklist Gold Standard</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Anexo_D_Checklists_Auditoria.xlsx</td>
+<td>Checklists de gestión, ingeniería y software; caracterización SCAMPI; plan de mejora; registro de inspección</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Reportes de pruebas (articulos-e3/pruebas, target/site/jacoco)</td>
+<td>Surefire, cobertura JaCoCo, Postman CLI, prueba de carga</td>
+<td>Hecho</td>
+</tr>
+<tr>
+<td>F</td>
+<td>Evidencias de CI/CD y observabilidad (articulos-e3/ci/reportes, Figura 2.1)</td>
+<td>Logs de las ejecuciones del pipeline y del rollback, alertas de Prometheus</td>
+<td>Hecho</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<hr />
+<h3 id="archivos-del-entregable">Archivos del entregable<a class="headerlink" href="#archivos-del-entregable" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="Entregable4_Gestion_Calidad.docx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.2 18h-1.4L12 13.2 10.2 20H8.8l-2.2-9h1.5l1.4 6.8 1.8-6.8h1.3l1.8 6.8 1.4-6.8h1.5zM13 9V3.5L18.5 9z"/></svg></span> Descargar documento original (.docx)</a></li>
+</ul>
+<p><strong>Anexos</strong></p>
+<ul>
+<li><a href="archivos/Anexos/Anexo_A_Product_Backlog.xlsx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.8 18H14l-2-3.4-2 3.4H8.2l2.9-4.5L8.2 11H10l2 3.4 2-3.4h1.8l-2.9 4.5zM13 9V3.5L18.5 9z"/></svg></span> Anexo_A_Product_Backlog.xlsx</a></li>
+<li><a href="archivos/Anexos/Anexo_B_Sprint_Backlog.xlsx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.8 18H14l-2-3.4-2 3.4H8.2l2.9-4.5L8.2 11H10l2 3.4 2-3.4h1.8l-2.9 4.5zM13 9V3.5L18.5 9z"/></svg></span> Anexo_B_Sprint_Backlog.xlsx</a></li>
+<li><a href="archivos/Anexos/Anexo_C_Matriz_Calidad.xlsx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.8 18H14l-2-3.4-2 3.4H8.2l2.9-4.5L8.2 11H10l2 3.4 2-3.4h1.8l-2.9 4.5zM13 9V3.5L18.5 9z"/></svg></span> Anexo_C_Matriz_Calidad.xlsx</a></li>
+<li><a href="archivos/Anexos/Anexo_D_Checklists_Auditoria.xlsx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.8 18H14l-2-3.4-2 3.4H8.2l2.9-4.5L8.2 11H10l2 3.4 2-3.4h1.8l-2.9 4.5zM13 9V3.5L18.5 9z"/></svg></span> Anexo_D_Checklists_Auditoria.xlsx</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.indexes", "navigation.sections", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

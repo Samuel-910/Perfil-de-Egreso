@@ -1,0 +1,3535 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentos oficiales del perfil de egreso (ciclo 10) — ERP «Articulos», Salud Total SAC">
+      
+      
+      
+        <link rel="canonical" href="https://samuel-910.github.io/Perfil-de-Egreso/ce02/ce021/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="galeria/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>CE021 - S1 - E1: Requerimientos y Diseño del Sistema - Perfil de Egreso — Ingeniería de Sistemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ce021-s1-e1-requerimientos-y-diseno-del-sistema" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Perfil de Egreso — Ingeniería de Sistemas" class="md-header__button md-logo" aria-label="Perfil de Egreso — Ingeniería de Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Perfil de Egreso — Ingeniería de Sistemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Samuel-910/Perfil-de-Egreso" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Samuel-910/Perfil-de-Egreso
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Perfil de Egreso — Ingeniería de Sistemas" class="md-nav__button md-logo" aria-label="Perfil de Egreso — Ingeniería de Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg>
+
+    </a>
+    Perfil de Egreso — Ingeniería de Sistemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Samuel-910/Perfil-de-Egreso" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Samuel-910/Perfil-de-Egreso
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE01: Gestión de Tecnologías de Información
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE01: Gestión de Tecnologías de Información
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0111-CE0115 - E1: Diagnóstico Organizacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0113 - E2: Business Case del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0121-CE0125 - E3: Plan de Gestión del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0131-CE0135 - E4: Modelado de Procesos AS-IS / TO-BE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0141-CE0145 - E5: Propuesta de Solución TIC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE02: Ingeniería de Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE02: Ingeniería de Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="galeria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Galería del prototipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE022 - S2 - E2: Plataforma de Datos del Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE023 - S2 - E3: Sistema de Software Funcional Integrado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE024 - S2 - E4: Gestión del Proyecto y Calidad de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce03/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE03: Infraestructura Tecnológica
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE03: Infraestructura Tecnológica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0311/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0311 - S1 - E1: Análisis y Diseño de Red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0331/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0331 - S1 - E2: Análisis y Diseño de Centro de Datos Híbrido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0321/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0321-CE0324 - S2 - E1: Planificación e Implementación del SGSI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0312/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0312-CE0313 - S2 - E2: Implementación, Testing y Monitoreo de Red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0332/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0332-CE0333 - S2 - E3: Implementación, Gestión y Control de Centro de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Ejecutivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resumen Ejecutivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos del Sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-1-especificacion-de-requerimientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 1: Especificación de Requerimientos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 1: Especificación de Requerimientos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-requerimientos-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Requerimientos Funcionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-requerimientos-no-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Requerimientos No Funcionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-reglas-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Reglas de Negocio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-restricciones-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Restricciones del Sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-historias-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Historias de Usuario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-criterios-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Criterios de Aceptación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-casos-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Casos de Uso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-2-prototipo-navegable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 2: Prototipo Navegable
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 2: Prototipo Navegable">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-tipo-y-fidelidad-del-prototipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Tipo y Fidelidad del Prototipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-flujo-de-navegacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Flujo de Navegación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-pantallas-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Pantallas Principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-evidencia-de-validacion-con-usuariosstakeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Evidencia de Validación con Usuarios/Stakeholders
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-3-diseno-arquitectonico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 3: Diseño Arquitectónico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 3: Diseño Arquitectónico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-documento-de-arquitectura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Documento de Arquitectura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-vista-c4-nivel-1-contexto-c1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Vista C4 — Nivel 1: Contexto (C1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-vista-c4-nivel-2-contenedores-c2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Vista C4 — Nivel 2: Contenedores (C2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-vista-c4-nivel-3-componentes-del-backend-c3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Vista C4 — Nivel 3: Componentes del backend (C3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-diagrama-de-despliegue-infraestructura-hibrida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Diagrama de Despliegue (infraestructura híbrida)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-registro-de-decisiones-arquitectonicas-adr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Registro de Decisiones Arquitectónicas (ADR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-4-diseno-detallado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 4: Diseño Detallado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 4: Diseño Detallado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-diagrama-de-clases-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Diagrama de Clases (UML)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-diagramas-de-secuencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Diagramas de Secuencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-diagrama-de-estados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Diagrama de Estados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-modelo-de-diseno-detallado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Modelo de Diseño Detallado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anexo-a-acta-de-validacion-con-stakeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo A: Acta de Validación con Stakeholders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-b-matriz-de-trazabilidad-de-requerimientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo B: Matriz de Trazabilidad de Requerimientos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-c-diagramas-complementarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo C: Diagramas Complementarios
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-d-glosario-de-terminos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo D: Glosario de Términos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-e-matriz-de-alineamiento-con-el-business-case-ce01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo E: Matriz de Alineamiento con el Business Case (CE01)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-del-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos del entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ce021-s1-e1-requerimientos-y-diseno-del-sistema">CE021 - S1 - E1: Requerimientos y Diseño del Sistema<a class="headerlink" href="#ce021-s1-e1-requerimientos-y-diseno-del-sistema" title="Permanent link">&para;</a></h1>
+<p><strong>ENTREGABLE 1</strong></p>
+<p><strong>Requerimientos y Diseño del Sistema</strong></p>
+<p><em>(Alineado con CE021)</em></p>
+<p><strong>Sistema ERP «Articulos» — Salud Total SAC (Cadena de farmacias y clínica ambulatoria · Juliaca y Puno)</strong></p>
+<p><img src="media/media/image1.png" title="01_arquitectura.png" style="width:4.47917in;height:2.43712in" alt="01_arquitectura.png" /></p>
+<table>
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Título del sistema</strong></th>
+<th>Sistema ERP «Articulos» — Salud Total SAC (inventario por lotes, reabastecimiento, ventas, compras, caja y clínica)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Nombre del estudiante</strong></td>
+<td>Gutierrez Anco Yesenia Alejandra<br />
+Turpo Cauna Jose Samuel<br />
+Quispe Huarilloclla Jhosef Antony</td>
+</tr>
+<tr class="even">
+<td><strong>Semestre</strong></td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td><strong>Curso</strong></td>
+<td>CE021 — Ingeniería de Software</td>
+</tr>
+<tr class="even">
+<td><strong>Fecha</strong></td>
+<td>Noviembre de 2026 — versión 2.0 (alineada con CE01 y CE03)</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="resumen-ejecutivo">Resumen Ejecutivo<a class="headerlink" href="#resumen-ejecutivo" title="Permanent link">&para;</a></h2>
+<p>Salud Total SAC es una cadena de farmacias con servicios de clínica ambulatoria, con sede central en Juliaca y sucursal en Puno. Su activo tecnológico principal es «Articulos», un ERP propio. El diagnóstico organizacional y el Business Case de la línea de Gestión de TI (CE01) identificaron que, aunque el ERP es funcional, la empresa opera con baja madurez digital, procesos de almacén manuales que provocan quiebres de stock y mermas por vencimiento, riesgos de seguridad (secretos en el repositorio, despliegues con ddl-auto=create) y ausencia de analítica. El presente documento especifica, valida y diseña la evolución de «Articulos» para cerrar esas brechas, tomando como eje el proceso TO-BE de reabastecimiento de inventario definido en CE01.</p>
+<p><strong>Problema.</strong> La gestión manual y reactiva del inventario genera quiebres de stock, mermas por productos vencidos (no se aplica FEFO de forma sistemática), descuadres de kardex, poco control de caja, anulaciones sin aprobación y falta de avisos oportunos entre Juliaca y Puno.</p>
+<p><strong>Usuarios.</strong> Cajeros/vendedores, encargados de almacén, compradores, personal médico, gerencia y el administrador de TI. El acceso se controla con roles y permisos granulares por módulo, sucursal y punto de emisión.</p>
+<p><strong>Alcance.</strong> Autenticación y seguridad (JWT firmado con RSA, bloqueo anti fuerza bruta), catálogo y productos con control por lote y fecha de vencimiento, almacenes, kardex, compras, ventas y caja, descuentos, documentos con plantillas, módulo clínico, transferencias entre sedes, alertas de vencimiento y de stock crítico, reabastecimiento automático por punto de reorden (TO-BE), reportes y notificaciones en tiempo real. La emisión electrónica ante SUNAT/OSE y la pasarela de pagos se integrarán en una fase 2 a través del API Gateway. La aplicación móvil nativa queda fuera del alcance.</p>
+<p><strong>Solución propuesta.</strong> Una SPA en Angular 20 (Signals + Tailwind 4) que consume una API REST expuesta por un backend monolítico modular en Spring Boot 3.5.9 / Java 21 (28 módulos de negocio, Clean Architecture). Los eventos de negocio se registran con el patrón Transactional Outbox en la tabla cola_eventos; un trigger de PostgreSQL emite pg_notify y el backend, suscrito con LISTEN, los entrega al navegador por WebSocket/STOMP, sin broker externo. El envío de comprobantes y resultados a pacientes y proveedores lo realiza el microservicio independiente mensajeria-api (Spring Boot 3.2.4 / Java 17, :8087), que integra correo SMTP y la API de WhatsApp Business (Meta) y valida el mismo JWT del ERP. La persistencia es PostgreSQL; hoy el esquema lo genera Hibernate (Flyway está incluido pero desactivado y se habilita en el Entregable 3). El sistema se despliega sobre la infraestructura híbrida diseñada en CE03: sedes Juliaca y Puno segmentadas por VLAN y conectadas por VPN IPsec Site-to-Site a una VPC en AWS (EC2 para la aplicación, RDS PostgreSQL Multi-AZ y S3 para respaldos).</p>
+<p>Este entregable presenta la especificación de requerimientos (funcionales, no funcionales, reglas de negocio, restricciones, historias de usuario y casos de uso), la descripción del prototipo navegable, el diseño arquitectónico con sus decisiones documentadas (ADR) y el diseño detallado mediante diagramas UML (clases, secuencia y estados), cerrando con la evidencia de validación y la matriz de trazabilidad.</p>
+<p><strong>Alineamiento con CE01.</strong> Los requerimientos RF-23 a RF-30 materializan el proceso TO-BE de reabastecimiento (punto de reorden, órdenes automáticas, control por lote y FEFO), cuyo impacto esperado en el Business Case es: −58 % en el tiempo de ciclo de reposición, −67 % de quiebres de stock y un ahorro anual de S/ 81 000, dentro de un CAPEX de S/ 295 000 (VAN S/ 152 000; TIR 28,2 %). La matriz del Anexo E traza cada objetivo de negocio con sus requerimientos e indicadores.</p>
+<h3 id="objetivos-del-sistema">Objetivos del Sistema<a class="headerlink" href="#objetivos-del-sistema" title="Permanent link">&para;</a></h3>
+<p><strong>Objetivo general:</strong> desarrollar y evolucionar el ERP web «Articulos» de Salud Total SAC para integrar y automatizar inventario por lotes, reabastecimiento, compras, ventas, caja y clínica, con trazabilidad completa, seguridad de los datos clínicos y notificación oportuna entre sedes.</p>
+<p><strong>Objetivos específicos:</strong></p>
+<ul>
+<li>
+<p>Centralizar el catálogo de productos, los almacenes y los movimientos de inventario (kardex) en una única fuente de verdad.</p>
+</li>
+<li>
+<p>Garantizar la integridad histórica de la información mediante eliminación lógica y auditoría automática de todas las entidades.</p>
+</li>
+<li>
+<p>Controlar el acceso por roles y permisos granulares con autenticación basada en tokens JWT.</p>
+</li>
+<li>
+<p>Desacoplar la entrega de notificaciones en tiempo real con el patrón Outbox sobre PostgreSQL (LISTEN/NOTIFY) y WebSocket/STOMP.</p>
+</li>
+<li>
+<p>Estandarizar el desarrollo bajo Clean Architecture y un contrato de respuesta uniforme para favorecer la mantenibilidad.</p>
+</li>
+<li>
+<p>Automatizar el reabastecimiento mediante punto de reorden y órdenes sugeridas, y aplicar FEFO por lote, para reducir quiebres (−67 %) y mermas por vencimiento.</p>
+</li>
+<li>
+<p>Proteger los datos clínicos conforme a la Ley 29733 (cifrado en tránsito y en reposo, acceso por rol y auditoría de accesos).</p>
+</li>
+</ul>
+<h2 id="seccion-1-especificacion-de-requerimientos">Sección 1: Especificación de Requerimientos<a class="headerlink" href="#seccion-1-especificacion-de-requerimientos" title="Permanent link">&para;</a></h2>
+<p>Esta sección define el comportamiento esperado del sistema. Los requerimientos se derivaron de tres fuentes: (1) el análisis de los 28 módulos de negocio implementados en el backend y de los módulos del frontend; (2) el proceso TO-BE de reabastecimiento y los riesgos identificados en CE01; y (3) las restricciones de infraestructura y seguridad definidas en CE03. Cada requerimiento tiene un identificador único que se rastrea hasta su componente, pantalla y estado de implementación en el Anexo B.</p>
+<p><strong>Actores del sistema.</strong> Los siguientes roles interactúan con el sistema:</p>
+<table>
+<thead>
+<tr>
+<th>Actor</th>
+<th>Responsabilidad principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Administrador</td>
+<td>Configura compañías, sucursales, puntos de emisión, roles y permisos.</td>
+</tr>
+<tr>
+<td>Encargado de almacén</td>
+<td>Gestiona productos, almacenes y consulta el stock valorizado.</td>
+</tr>
+<tr>
+<td>Comprador</td>
+<td>Registra órdenes de compra y compras a proveedores.</td>
+</tr>
+<tr>
+<td>Cajero / Vendedor</td>
+<td>Registra ventas y administra la caja; solicita anulaciones.</td>
+</tr>
+<tr>
+<td>Gerente</td>
+<td>Aprueba operaciones sensibles (anulaciones) y consulta reportes.</td>
+</tr>
+<tr>
+<td>Personal médico</td>
+<td>Registra datos médicos y de pacientes en el módulo de clínica.</td>
+</tr>
+<tr>
+<td>Sistema (Scheduler / Outbox)</td>
+<td>Actor no humano: evalúa diariamente vencimientos y stock crítico, y dispara la generación de órdenes de reabastecimiento.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="11-requerimientos-funcionales">1.1 Requerimientos Funcionales<a class="headerlink" href="#11-requerimientos-funcionales" title="Permanent link">&para;</a></h3>
+<p>Los requerimientos funcionales (RF) describen las capacidades que el sistema debe proveer. Se priorizan como Alta (A), Media (M) o Baja (B).</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Módulo</th>
+<th>Descripción</th>
+<th>Prior.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF-01</td>
+<td>Autenticación</td>
+<td>El sistema debe permitir el inicio de sesión validando credenciales y emitiendo un token JWT firmado con RSA.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-02</td>
+<td>Autenticación</td>
+<td>El sistema debe bloquear temporalmente la IP o el usuario durante 15 minutos tras 5 intentos fallidos (parámetros configurables) y limitar a 3 las sesiones concurrentes.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-03</td>
+<td>Seguridad</td>
+<td>El sistema debe gestionar roles y permisos granulares por módulo, asociados a cada usuario.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-04</td>
+<td>Catálogo</td>
+<td>El sistema debe registrar, editar, listar (paginado) y eliminar lógicamente productos del catálogo con su unidad de medida y atributos.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-05</td>
+<td>Productos</td>
+<td>El sistema debe asociar productos a un catálogo y mantener su precio de venta y stock.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-06</td>
+<td>Almacén</td>
+<td>El sistema debe administrar almacenes por sucursal y consultar su stock valorizado.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-07</td>
+<td>Kardex</td>
+<td>El sistema debe registrar automáticamente cada entrada y salida de inventario, calculando el saldo por producto y almacén.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-08</td>
+<td>Compras</td>
+<td>El sistema debe registrar órdenes de compra y compras a proveedores con su detalle de productos y costos.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-09</td>
+<td>Proveedores</td>
+<td>El sistema debe gestionar proveedores y sus cuentas por pagar (pagos pendientes y compensaciones).</td>
+<td>M</td>
+</tr>
+<tr>
+<td>RF-10</td>
+<td>Ventas</td>
+<td>El sistema debe registrar ventas con su detalle, validando stock disponible antes de confirmar.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-11</td>
+<td>Caja</td>
+<td>El sistema debe gestionar caja chica y caja general, con movimientos y arqueo de caja.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-12</td>
+<td>Descuentos</td>
+<td>El sistema debe administrar descuentos maestro-detalle, globales o por producto, con vigencia por fechas.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>RF-13</td>
+<td>Beneficios</td>
+<td>El sistema debe registrar la trazabilidad de los beneficios/descuentos aplicados a cada venta.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>RF-14</td>
+<td>Documentos</td>
+<td>El sistema debe permitir diseñar plantillas de documentos (editor GrapesJS) y asignarlas a puntos de emisión.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>RF-15</td>
+<td>Documentos</td>
+<td>El sistema debe generar comprobantes en PDF con códigos de barras/QR a partir de las plantillas.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>RF-16</td>
+<td>Aprobaciones</td>
+<td>El sistema debe gestionar un flujo de aprobación para operaciones sensibles (p. ej. anulación de comprobantes).</td>
+<td>M</td>
+</tr>
+<tr>
+<td>RF-17</td>
+<td>Clínica</td>
+<td>El sistema debe registrar datos médicos y de pacientes asociados a la operación de la clínica.</td>
+<td>B</td>
+</tr>
+<tr>
+<td>RF-18</td>
+<td>Notificaciones</td>
+<td>El sistema debe emitir notificaciones en tiempo real a los usuarios conectados ante eventos del negocio.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>RF-19</td>
+<td>Reportes</td>
+<td>El sistema debe generar reportes y gráficos (ApexCharts) y exportarlos a Excel/PDF de forma no paginada.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>RF-20</td>
+<td>Auditoría</td>
+<td>El sistema debe registrar automáticamente el usuario y la fecha de creación/modificación de cada entidad.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-21</td>
+<td>Empresa</td>
+<td>El sistema debe administrar compañías, empresas, sucursales y puntos de emisión.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-22</td>
+<td>Búsqueda</td>
+<td>El sistema debe ofrecer búsqueda insensible a mayúsculas y filtros opcionales en los listados.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>RF-23</td>
+<td>Lotes</td>
+<td>El sistema debe registrar número de lote y fecha de vencimiento en cada ingreso de mercadería (compra, transferencia, ajuste) y conservarlos en el kardex.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-24</td>
+<td>FEFO</td>
+<td>Al vender o despachar, el sistema debe proponer automáticamente el lote con la fecha de vencimiento más próxima y bloquear la salida de lotes vencidos.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-25</td>
+<td>Alertas</td>
+<td>El sistema debe generar diariamente alertas de vencimiento por lote (semáforo 90/60/30 días, configurable por producto) y notificarlas en tiempo real.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-26</td>
+<td>Reorden</td>
+<td>El sistema debe permitir configurar stock mínimo (punto de reorden) y stock máximo por producto y sucursal (campos stockMinimo y stockMaximo de Producto), y alertar cuando el stock cae al mínimo.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-27</td>
+<td>Reabastecimiento</td>
+<td>Cuando el stock vigente sea ≤ al mínimo, el sistema debe generar una orden de reabastecimiento sugerida y registrar el evento inventario.reabastecimiento en la cola Outbox (cola_eventos).</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-28</td>
+<td>Reabastecimiento</td>
+<td>El comprador debe poder aprobar (ajustando la cantidad), rechazar o convertir en compra cada orden de reabastecimiento.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-29</td>
+<td>Transferencias</td>
+<td>El sistema debe gestionar transferencias de stock entre Juliaca y Puno (solicitud, envío, recepción), conservando lote y vencimiento.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>RF-30</td>
+<td>Indicadores</td>
+<td>El dashboard debe mostrar KPIs de inventario: productos bajo mínimo, quiebres del mes, mermas por vencimiento y tiempo de ciclo de reposición.</td>
+<td>M</td>
+</tr>
+<tr>
+<td>RF-31</td>
+<td>Integración</td>
+<td>El sistema debe enviar comprobantes electrónicos a SUNAT/OSE y procesar cobros con la pasarela de pagos a través del API Gateway (fase 2).</td>
+<td>B</td>
+</tr>
+<tr>
+<td>RF-32</td>
+<td>Clínica / Privacidad</td>
+<td>El acceso a datos clínicos debe restringirse al personal médico autorizado y cada consulta o modificación debe quedar auditada.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>RF-33</td>
+<td>Mensajería</td>
+<td>El sistema debe enviar comprobantes (PDF) y avisos al paciente por correo electrónico y por WhatsApp con plantillas aprobadas por Meta (recibo de venta, resultados de laboratorio, CDI/imágenes, recordatorio de rehabilitación), mediante el microservicio mensajeria-api.</td>
+<td>M</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-requerimientos-no-funcionales">1.2 Requerimientos No Funcionales<a class="headerlink" href="#12-requerimientos-no-funcionales" title="Permanent link">&para;</a></h3>
+<p>Los requerimientos no funcionales (RNF) describen las cualidades y restricciones de calidad del sistema.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Categoría</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RNF-01</td>
+<td>Rendimiento</td>
+<td>Los listados transaccionales deben paginarse en el servidor (Pageable) para evitar sobrecarga de memoria de la JVM y congelamiento del DOM en el navegador.</td>
+</tr>
+<tr>
+<td>RNF-02</td>
+<td>Rendimiento</td>
+<td>Las entidades deben declarar índices (@Index) en llaves foráneas y columnas de alta consulta (p. ej. estado).</td>
+</tr>
+<tr>
+<td>RNF-03</td>
+<td>Seguridad</td>
+<td>El token JWT debe expirar a los 30 minutos (1 800 000 ms) y firmarse con llaves RSA (pública/privada).</td>
+</tr>
+<tr>
+<td>RNF-04</td>
+<td>Seguridad</td>
+<td>El sistema debe limitar sesiones concurrentes (máx. 3) y detectar cambios de IP sospechosos.</td>
+</tr>
+<tr>
+<td>RNF-05</td>
+<td>Usabilidad</td>
+<td>La interfaz debe ser homogénea, reutilizando componentes compartidos (tabla, paginación, modal, buscador) y patrones de navegación consistentes.</td>
+</tr>
+<tr>
+<td>RNF-06</td>
+<td>Mantenibilidad</td>
+<td>El código debe seguir Clean Architecture por capas, mapeo con MapStruct y un contrato de respuesta único (ApiResponse).</td>
+</tr>
+<tr>
+<td>RNF-07</td>
+<td>Escalabilidad</td>
+<td>El subsistema de eventos debe estar desacoplado de la lógica de negocio (Outbox + LISTEN/NOTIFY), de modo que productores y consumidores evolucionen de forma independiente y sea posible migrar a un broker (p. ej. Kafka) si el volumen lo exige.</td>
+</tr>
+<tr>
+<td>RNF-08</td>
+<td>Confiabilidad</td>
+<td>Las excepciones deben ser manejadas globalmente y devolver respuestas estructuradas con el código HTTP correcto (400/401/403/404/500).</td>
+</tr>
+<tr>
+<td>RNF-09</td>
+<td>Integridad</td>
+<td>El sistema no debe borrar físicamente datos de negocio: usa eliminación lógica (estado ELIMINADO = 3) aplicada con @SQLRestriction("estado != 3") en 21 entidades transaccionales.</td>
+</tr>
+<tr>
+<td>RNF-10</td>
+<td>Portabilidad</td>
+<td>El backend se ejecuta sobre JVM 21 y mensajeria-api sobre JVM 17; ambos deben empaquetarse en contenedores Docker (Dockerfile pendiente, E4).</td>
+</tr>
+<tr>
+<td>RNF-11</td>
+<td>Trazabilidad</td>
+<td>El esquema debe versionarse con migraciones Flyway. Estado actual: la dependencia existe pero está desactivada (spring.flyway.enabled=false) y el esquema lo generan Hibernate (ddl-auto) y los inicializadores; se habilita en E3 (ADR-09).</td>
+</tr>
+<tr>
+<td>RNF-12</td>
+<td>Disponibilidad</td>
+<td>Los reportes y descargas masivas no deben paginarse y deben procesarse de forma continua (streaming) para no bloquear el servicio.</td>
+</tr>
+<tr>
+<td>RNF-13</td>
+<td>Privacidad</td>
+<td>Los datos clínicos y personales deben cifrarse en tránsito (TLS 1.2+) y en reposo (pgcrypto en columnas sensibles; cifrado de RDS y S3) conforme a la Ley 29733.</td>
+</tr>
+<tr>
+<td>RNF-14</td>
+<td>Rendimiento</td>
+<td>Registrar una venta de hasta 20 ítems debe responder en menos de 2 s (p95) con 50 usuarios concurrentes; los listados paginados en menos de 1 s.</td>
+</tr>
+<tr>
+<td>RNF-15</td>
+<td>Disponibilidad</td>
+<td>Disponibilidad ≥ 99,5 % en horario operativo (07:00–23:00) usando RDS Multi-AZ y 2 instancias de aplicación; RPO ≤ 24 h y RTO ≤ 4 h.</td>
+</tr>
+<tr>
+<td>RNF-16</td>
+<td>Seguridad</td>
+<td>Ningún secreto en el repositorio (llaves RSA y credenciales en AWS Secrets Manager o variables de entorno); en producción ddl-auto=validate y el esquema solo cambia con Flyway.</td>
+</tr>
+<tr>
+<td>RNF-17</td>
+<td>Compatibilidad</td>
+<td>La SPA debe funcionar en las dos últimas versiones de Chrome y Edge, con una resolución mínima de 1366×768.</td>
+</tr>
+<tr>
+<td>RNF-18</td>
+<td>Observabilidad</td>
+<td>Logs estructurados con traza por petición, métricas vía Spring Actuator y alertas sobre errores 5xx, latencia y eventos de cola_eventos en estado PENDIENTE o ERROR.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-reglas-de-negocio">1.3 Reglas de Negocio<a class="headerlink" href="#13-reglas-de-negocio" title="Permanent link">&para;</a></h3>
+<p>Las reglas de negocio (RN) son políticas obligatorias que gobiernan la lógica del dominio y que el diseño debe respetar de forma transversal.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Regla de Negocio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RN-01</td>
+<td>Eliminación lógica obligatoria: ninguna operación realiza borrado físico; el estado se cambia a ELIMINADO (valor 3) y las entidades aplican @SQLRestriction("estado != 3").</td>
+</tr>
+<tr>
+<td>RN-02</td>
+<td>Auditoría automática: el usuario creador/modificador se asigna mediante @CreatedBy/@LastModifiedBy; está prohibido setearlo manualmente.</td>
+</tr>
+<tr>
+<td>RN-03</td>
+<td>Paginación vs. listas planas: las entidades que crecen de forma indefinida se paginan; los catálogos finitos (monedas, tipos de documento, roles) se devuelven como listas planas.</td>
+</tr>
+<tr>
+<td>RN-04</td>
+<td>Una venta solo se confirma si existe stock suficiente; al confirmarse, se genera el movimiento de salida en el kardex.</td>
+</tr>
+<tr>
+<td>RN-05</td>
+<td>La anulación de un comprobante pagado requiere pasar por el flujo de aprobación antes de cambiar a estado ANULADO.</td>
+</tr>
+<tr>
+<td>RN-06</td>
+<td>Los descuentos solo aplican si están activos y dentro de su rango de vigencia (fechaInicio ≤ hoy ≤ fechaFin).</td>
+</tr>
+<tr>
+<td>RN-07</td>
+<td>Unicidad con soft-delete: hoy se controla en la capa de servicio y con @Column(unique=true) en 6 entidades; al habilitar Flyway se reemplazará por índices únicos parciales (WHERE estado != 3).</td>
+</tr>
+<tr>
+<td>RN-08</td>
+<td>El ciclo de vida de los comprobantes y entidades se rige por el enumerado EstadoGeneral (18 estados normalizados).</td>
+</tr>
+<tr>
+<td>RN-09</td>
+<td>Cada punto de emisión mantiene su propia serie y correlativo de numeración por tipo de documento.</td>
+</tr>
+<tr>
+<td>RN-10</td>
+<td>FEFO: toda salida de inventario consume primero el lote con la fecha de vencimiento más próxima que tenga stock &gt; 0.</td>
+</tr>
+<tr>
+<td>RN-11</td>
+<td>Un lote vencido no puede venderse ni transferirse; solo puede darse de baja como merma con la autorización del encargado de almacén.</td>
+</tr>
+<tr>
+<td>RN-12</td>
+<td>Punto de reorden: si stock vigente ≤ stockMinimo y no hay otra orden PENDIENTE o APROBADA del mismo producto y sucursal, se genera una orden por (stockMáximo − stock vigente).</td>
+</tr>
+<tr>
+<td>RN-13</td>
+<td>Una orden de reabastecimiento sin atender en 72 h pasa a VENCIDA y se notifica a gerencia.</td>
+</tr>
+<tr>
+<td>RN-14</td>
+<td>Solo el personal médico accede a los datos clínicos del paciente; cada acceso queda registrado (usuario, fecha, IP).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-restricciones-del-sistema">1.4 Restricciones del Sistema<a class="headerlink" href="#14-restricciones-del-sistema" title="Permanent link">&para;</a></h3>
+<p>Las restricciones limitan las opciones de diseño e implementación.</p>
+<ul>
+<li>
+<p>Tecnológicas: backend en Java 21 + Spring Boot 3.5.9; frontend en Angular 20; base de datos PostgreSQL (también canal de eventos mediante LISTEN/NOTIFY); microservicio de mensajería en Spring Boot 3.2.4 / Java 17.</p>
+</li>
+<li>
+<p>Arquitectónicas: el backend debe respetar el flujo Controller → Service (interfaz) → ServiceImpl → Repository → Entity/DTO/Mapper; los controladores siempre retornan ResponseEntity\&lt;ApiResponse\&lt;T&gt;&gt;.</p>
+</li>
+<li>
+<p>De calidad de código: prohibido el uso de comentarios explicativos; prohibido el uso de rutas completamente calificadas (se debe importar); mapeos siempre con MapStruct (nunca builders manuales).</p>
+</li>
+<li>
+<p>De seguridad: las llaves criptográficas y credenciales no deben versionarse en el repositorio; deben gestionarse mediante variables de entorno o un gestor de secretos.</p>
+</li>
+<li>
+<p>De despliegue: el backend expone el puerto 8085 (REST y WebSocket/STOMP en el mismo artefacto); la mensajería interna de eventos usa PostgreSQL LISTEN/NOTIFY, por lo que no requiere un broker adicional; el microservicio mensajeria-api expone el 8087.</p>
+</li>
+<li>
+<p>Idiomáticas: la interfaz, mensajes y documentación se presentan en español.</p>
+</li>
+<li>
+<p>Presupuestarias: la solución debe ejecutarse dentro del CAPEX aprobado en el Business Case de CE01 (S/ 295 000).</p>
+</li>
+<li>
+<p>Legales y regulatorias: Ley 29733 de Protección de Datos Personales y su reglamento; trazabilidad de lotes y vencimientos exigida a establecimientos farmacéuticos; emisión de comprobantes conforme a SUNAT.</p>
+</li>
+<li>
+<p>De infraestructura: despliegue sobre la nube híbrida definida en CE03 (sedes Juliaca y Puno con VLAN y firewall HA, VPN IPsec Site-to-Site y VPC en AWS).</p>
+</li>
+</ul>
+<h3 id="15-historias-de-usuario">1.5 Historias de Usuario<a class="headerlink" href="#15-historias-de-usuario" title="Permanent link">&para;</a></h3>
+<p>Las historias de usuario expresan necesidades desde la perspectiva del rol, siguiendo el formato «Como… quiero… para…».</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Historia de Usuario</th>
+<th>Trazabilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HU-01</td>
+<td>Como cajero, quiero registrar una venta seleccionando productos y método de pago, para cobrar al cliente y descontar el stock automáticamente.</td>
+<td>RF-10, RF-07</td>
+</tr>
+<tr>
+<td>HU-02</td>
+<td>Como administrador, quiero gestionar roles y permisos por módulo, para controlar qué puede hacer cada usuario.</td>
+<td>RF-03</td>
+</tr>
+<tr>
+<td>HU-03</td>
+<td>Como encargado de almacén, quiero consultar el stock valorizado por almacén, para conocer el valor del inventario disponible.</td>
+<td>RF-06</td>
+</tr>
+<tr>
+<td>HU-04</td>
+<td>Como comprador, quiero registrar compras a proveedores con su detalle, para incrementar el stock y controlar las cuentas por pagar.</td>
+<td>RF-08, RF-09</td>
+</tr>
+<tr>
+<td>HU-05</td>
+<td>Como gerente, quiero que las anulaciones de comprobantes pasen por aprobación, para evitar anulaciones indebidas.</td>
+<td>RF-16, RN-05</td>
+</tr>
+<tr>
+<td>HU-06</td>
+<td>Como usuario, quiero recibir notificaciones en tiempo real de eventos relevantes, para enterarme de inmediato sin recargar la página.</td>
+<td>RF-18</td>
+</tr>
+<tr>
+<td>HU-07</td>
+<td>Como usuario, quiero que mi sesión expire por seguridad y se bloquee tras varios intentos fallidos, para proteger mi cuenta.</td>
+<td>RF-01, RF-02</td>
+</tr>
+<tr>
+<td>HU-08</td>
+<td>Como diseñador de documentos, quiero crear plantillas visuales y asignarlas a un punto de emisión, para imprimir comprobantes con el formato correcto.</td>
+<td>RF-14, RF-15</td>
+</tr>
+<tr>
+<td>HU-09</td>
+<td>Como encargado de almacén, quiero que el sistema proponga siempre el lote que vence primero, para reducir las mermas por vencimiento.</td>
+<td>RF-23, RF-24, RN-10</td>
+</tr>
+<tr>
+<td>HU-10</td>
+<td>Como encargado de almacén, quiero recibir alertas de lotes próximos a vencer, para rotarlos o transferirlos a tiempo.</td>
+<td>RF-25, RN-11</td>
+</tr>
+<tr>
+<td>HU-11</td>
+<td>Como comprador, quiero que el sistema genere órdenes de reabastecimiento cuando un producto llega a su mínimo, para evitar quiebres de stock.</td>
+<td>RF-26, RF-27, RF-28</td>
+</tr>
+<tr>
+<td>HU-12</td>
+<td>Como médico, quiero registrar y consultar los datos clínicos de mis pacientes con acceso restringido, para cumplir la Ley 29733.</td>
+<td>RF-17, RF-32</td>
+</tr>
+<tr>
+<td>HU-13</td>
+<td>Como gerente, quiero ver indicadores de quiebres, mermas y tiempo de reposición, para medir el impacto del proyecto.</td>
+<td>RF-19, RF-30</td>
+</tr>
+<tr>
+<td>HU-14</td>
+<td>Como encargado de almacén de Puno, quiero solicitar productos a Juliaca, para cubrir faltantes sin hacer una compra nueva.</td>
+<td>RF-29</td>
+</tr>
+<tr>
+<td>HU-15</td>
+<td>Como cajero, quiero enviar el comprobante al paciente por WhatsApp o correo, para no imprimirlo y que lo reciba al instante.</td>
+<td>RF-15, RF-33</td>
+</tr>
+</tbody>
+</table>
+<h3 id="16-criterios-de-aceptacion">1.6 Criterios de Aceptación<a class="headerlink" href="#16-criterios-de-aceptacion" title="Permanent link">&para;</a></h3>
+<p>Los criterios de aceptación se expresan en formato Gherkin (Dado / Cuando / Entonces) y definen cuándo una historia se considera terminada.</p>
+<h4 id="hu-01-registrar-venta">HU-01 — Registrar venta<a class="headerlink" href="#hu-01-registrar-venta" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Dado:</strong> que el cajero tiene una sesión activa y existe stock suficiente del producto,</p>
+</li>
+<li>
+<p><strong>Cuando:</strong> registra la venta con su detalle y confirma,</p>
+</li>
+<li>
+<p><strong>Entonces:</strong> el sistema persiste la venta, genera el movimiento de salida en el kardex y retorna ApiResponse con la venta creada.</p>
+</li>
+<li>
+<p><strong>Y:</strong> si el stock es insuficiente, el sistema rechaza la operación con un mensaje de error 400 y no altera el inventario.</p>
+</li>
+</ul>
+<h4 id="hu-07-seguridad-de-la-sesion">HU-07 — Seguridad de la sesión<a class="headerlink" href="#hu-07-seguridad-de-la-sesion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Dado:</strong> que un usuario ingresa credenciales incorrectas 5 veces consecutivas,</p>
+</li>
+<li>
+<p><strong>Cuando:</strong> intenta autenticarse una vez más,</p>
+</li>
+<li>
+<p><strong>Entonces:</strong> el sistema bloquea la cuenta durante 15 minutos y responde con estado 401.</p>
+</li>
+<li>
+<p><strong>Y:</strong> todo token emitido expira automáticamente a los 30 minutos.</p>
+</li>
+</ul>
+<h4 id="hu-05-anulacion-con-aprobacion">HU-05 — Anulación con aprobación<a class="headerlink" href="#hu-05-anulacion-con-aprobacion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Dado:</strong> que existe un comprobante en estado PAGADO,</p>
+</li>
+<li>
+<p><strong>Cuando:</strong> un usuario solicita su anulación,</p>
+</li>
+<li>
+<p><strong>Entonces:</strong> el comprobante pasa a PENDIENTE_ANULACION y queda a la espera de aprobación.</p>
+</li>
+<li>
+<p><strong>Y:</strong> solo al ser aprobado cambia a ANULADO; si se rechaza, regresa a PAGADO.</p>
+</li>
+</ul>
+<h4 id="hu-09-despacho-fefo">HU-09 — Despacho FEFO<a class="headerlink" href="#hu-09-despacho-fefo" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Dado:</strong> que el producto Paracetamol 500 mg tiene los lotes L-01 (vence 03/2027) y L-02 (vence 12/2026) con stock en Juliaca,</p>
+</li>
+<li>
+<p><strong>Cuando:</strong> el cajero agrega 10 unidades a una venta,</p>
+</li>
+<li>
+<p><strong>Entonces:</strong> el sistema asigna el lote L-02 y registra la salida en el kardex con ese lote.</p>
+</li>
+<li>
+<p><strong>Y:</strong> si L-02 está vencido, el sistema lo omite y usa L-01; si ningún lote tiene stock vigente, responde 400.</p>
+</li>
+</ul>
+<h4 id="hu-11-reabastecimiento-automatico">HU-11 — Reabastecimiento automático<a class="headerlink" href="#hu-11-reabastecimiento-automatico" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Dado:</strong> que Amoxicilina 500 mg en Puno tiene stockMinimo = 60, stockMaximo = 120 y no tiene órdenes abiertas,</p>
+</li>
+<li>
+<p><strong>Cuando:</strong> una venta deja su stock vigente en 18 unidades,</p>
+</li>
+<li>
+<p><strong>Entonces:</strong> se crea una orden PENDIENTE por 102 unidades y se notifica al comprador en tiempo real.</p>
+</li>
+<li>
+<p><strong>Y:</strong> si ya existe una orden PENDIENTE o APROBADA para ese producto y sucursal, no se genera otra.</p>
+</li>
+</ul>
+<p>Los criterios de aceptación de las demás historias se resumen en la siguiente tabla:</p>
+<table>
+<thead>
+<tr>
+<th>HU</th>
+<th>Dado</th>
+<th>Cuando</th>
+<th>Entonces</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HU-02</td>
+<td>un administrador con permiso SEGURIDAD</td>
+<td>asigna el permiso «Ventas: anular» a un rol</td>
+<td>los usuarios de ese rol ven la opción en su próximo inicio de sesión; los demás reciben 403.</td>
+</tr>
+<tr>
+<td>HU-03</td>
+<td>un almacén con productos valorizados</td>
+<td>el encargado consulta el stock valorizado</td>
+<td>ve cantidad × costo promedio por producto y el total, y puede exportarlo a Excel.</td>
+</tr>
+<tr>
+<td>HU-04</td>
+<td>una compra con 3 ítems y sus lotes</td>
+<td>el comprador la registra</td>
+<td>el stock aumenta por lote, se crea la cuenta por pagar y el kardex registra el ingreso.</td>
+</tr>
+<tr>
+<td>HU-06</td>
+<td>dos usuarios conectados en la misma sucursal</td>
+<td>uno registra una venta</td>
+<td>el otro recibe la notificación en menos de 3 s sin recargar la página.</td>
+</tr>
+<tr>
+<td>HU-08</td>
+<td>una plantilla diseñada en el editor</td>
+<td>se asigna a un punto de emisión</td>
+<td>los comprobantes de ese punto se imprimen en PDF con ese formato, QR y código de barras.</td>
+</tr>
+<tr>
+<td>HU-10</td>
+<td>un lote que vence en 25 días</td>
+<td>se ejecuta el proceso diario de alertas</td>
+<td>aparece en rojo en «Por fecha de vencimiento» y el encargado recibe una notificación.</td>
+</tr>
+<tr>
+<td>HU-12</td>
+<td>un cajero sin rol médico</td>
+<td>intenta abrir la historia clínica de un paciente</td>
+<td>el sistema responde 403 y registra el intento en la auditoría.</td>
+</tr>
+<tr>
+<td>HU-13</td>
+<td>ventas y compras del mes en curso</td>
+<td>el gerente abre el dashboard</td>
+<td>ve los KPIs de quiebres, mermas y tiempo de reposición frente a la línea base de CE01.</td>
+</tr>
+<tr>
+<td>HU-14</td>
+<td>stock disponible en Juliaca</td>
+<td>Puno solicita una transferencia y Juliaca la acepta</td>
+<td>el stock se descuenta en origen y entra en destino con el mismo lote y vencimiento.</td>
+</tr>
+<tr>
+<td>HU-15</td>
+<td>una venta pagada y un paciente con celular registrado</td>
+<td>el cajero pulsa «Enviar por WhatsApp»</td>
+<td>el paciente recibe la plantilla recibo_venta con el PDF; si mensajeria-api falla, se informa el error y la venta no se altera.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="17-casos-de-uso">1.7 Casos de Uso<a class="headerlink" href="#17-casos-de-uso" title="Permanent link">&para;</a></h3>
+<p>La figura 1.1 muestra los casos de uso del sistema y sus actores. En amarillo se destacan los casos de uso del proceso TO-BE de reabastecimiento. La tabla siguiente los cataloga, y a continuación se detallan los más representativos con su flujo principal y sus flujos alternativos.</p>
+<p><img src="media/media/image2.png" style="width:6.10236in;height:3.86902in" /></p>
+<p><em>Figura 1.1 — Diagrama de casos de uso del sistema.</em></p>
+<table>
+<thead>
+<tr>
+<th>CU</th>
+<th>Nombre</th>
+<th>Actor principal</th>
+<th>Requerimientos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CU-01</td>
+<td>Autenticar usuario</td>
+<td>Todos los usuarios</td>
+<td>RF-01, RF-02</td>
+</tr>
+<tr>
+<td>CU-02</td>
+<td>Registrar venta (FEFO)</td>
+<td>Cajero / Vendedor</td>
+<td>RF-10, RF-07, RF-24, RF-18</td>
+</tr>
+<tr>
+<td>CU-03</td>
+<td>Anular comprobante</td>
+<td>Cajero / Gerente</td>
+<td>RF-16</td>
+</tr>
+<tr>
+<td>CU-04</td>
+<td>Generar orden de reabastecimiento</td>
+<td>Sistema / Comprador / Gerente</td>
+<td>RF-26, RF-27, RF-28</td>
+</tr>
+<tr>
+<td>CU-05</td>
+<td>Registrar compra con lotes</td>
+<td>Comprador</td>
+<td>RF-08, RF-09, RF-23</td>
+</tr>
+<tr>
+<td>CU-06</td>
+<td>Gestionar alertas de vencimiento</td>
+<td>Sistema / Encargado de almacén</td>
+<td>RF-25</td>
+</tr>
+<tr>
+<td>CU-07</td>
+<td>Transferir stock entre sedes</td>
+<td>Encargado de almacén</td>
+<td>RF-29</td>
+</tr>
+<tr>
+<td>CU-08</td>
+<td>Registrar datos clínicos</td>
+<td>Personal médico</td>
+<td>RF-17, RF-32</td>
+</tr>
+<tr>
+<td>CU-09</td>
+<td>Consultar KPIs y reportes</td>
+<td>Gerente</td>
+<td>RF-19, RF-30</td>
+</tr>
+<tr>
+<td>CU-10</td>
+<td>Gestionar roles y permisos</td>
+<td>Administrador</td>
+<td>RF-03</td>
+</tr>
+</tbody>
+</table>
+<p><span id="_Toc245971023" class="anchor"></span></p>
+<h4 id="cu-01-autenticar-usuario">CU-01: Autenticar usuario<a class="headerlink" href="#cu-01-autenticar-usuario" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Actor principal</th>
+<th>Usuario del sistema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precondiciones</td>
+<td>El usuario está registrado y activo (estado ≠ ELIMINADO).</td>
+</tr>
+<tr>
+<td>Postcondiciones</td>
+<td>El usuario obtiene un token JWT válido y accede al dashboard.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Flujo principal:</strong></p>
+<ol>
+<li>
+<p>El usuario ingresa su nombre de usuario y contraseña en la pantalla de login.</p>
+</li>
+<li>
+<p>El frontend envía POST /api/auth/login con las credenciales.</p>
+</li>
+<li>
+<p>AuthController delega en AuthService, que verifica que la IP no esté bloqueada (SecurityMonitorService) y autentica con AuthenticationManager (contraseña BCrypt).</p>
+</li>
+<li>
+<p>AuthService obtiene el usuario y sus roles con DatosPersonalesRepository.findByLoginWithRoles y JwtService genera el token firmado con RSA para la sucursal (generateTokenWithSucursal).</p>
+</li>
+<li>
+<p>El sistema retorna ApiResponse\&lt;LoginResponse&gt;; el frontend guarda el token en localStorage y redirige al dashboard.</p>
+</li>
+</ol>
+<p><strong>Flujos alternativos:</strong></p>
+<ul>
+<li>
+<p>2a. Credenciales inválidas: SecurityMonitorService.registerFailedAttempt registra el intento y el sistema responde 401 indicando los intentos restantes.</p>
+</li>
+<li>
+<p>2b. 5 intentos fallidos (security.max-failed-attempts): la IP o el usuario quedan bloqueados 15 minutos (security.block-duration-minutes).</p>
+</li>
+</ul>
+<h4 id="cu-02-registrar-venta">CU-02: Registrar venta<a class="headerlink" href="#cu-02-registrar-venta" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Actor principal</th>
+<th>Cajero / Vendedor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precondiciones</td>
+<td>Sesión activa, punto de emisión seleccionado y productos con stock.</td>
+</tr>
+<tr>
+<td>Postcondiciones</td>
+<td>La venta queda registrada, el kardex actualizado y se emite una notificación.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Flujo principal:</strong></p>
+<ol>
+<li>
+<p>El cajero selecciona los productos y cantidades, y elige el método de pago.</p>
+</li>
+<li>
+<p>El frontend envía POST /api/ventas con CrearVentaRequest validado (@Valid); el endpoint exige el permiso VENTA_CREAR (@PreAuthorize).</p>
+</li>
+<li>
+<p>Para cada ítem, VentaServiceImpl carga el registro de Producto (lote) elegido en el frontend (idArticulo) y valida que el stock alcance para la cantidad acumulada; si no, lanza ValidationException (400). La propuesta automática del lote FEFO es TO-BE (RF-24).</p>
+</li>
+<li>
+<p>VentaService persiste la venta y su detalle, y solicita a KardexService el registro de la salida.</p>
+</li>
+<li>
+<p>VentaService registra el evento en la cola Outbox (cola_evento) dentro de la misma transacción; al confirmarse, el trigger emite pg_notify y PostgresEventListenerService lo entrega por WebSocket/STOMP.</p>
+</li>
+<li>
+<p>El sistema retorna ApiResponse\&lt;VentaRegistroDTO&gt; con la venta y su serie y número correlativo.</p>
+</li>
+</ol>
+<p><strong>Flujos alternativos:</strong></p>
+<ul>
+<li>
+<p>3a. Stock insuficiente: el sistema aborta la transacción y responde 400 sin modificar el inventario.</p>
+</li>
+<li>
+<p>5a. El listener LISTEN pierde la conexión: la venta se confirma igualmente; el evento queda PENDIENTE en cola_eventos y lo procesa el sondeo de respaldo (cada 30 s) o la reconexión.</p>
+</li>
+</ul>
+<h4 id="cu-03-anular-comprobante">CU-03: Anular comprobante<a class="headerlink" href="#cu-03-anular-comprobante" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Actor principal</th>
+<th>Cajero (solicita) / Gerente (aprueba)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precondiciones</td>
+<td>Existe un comprobante en estado PAGADO.</td>
+</tr>
+<tr>
+<td>Postcondiciones</td>
+<td>El comprobante queda ANULADO o regresa a PAGADO según la decisión.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Flujo principal:</strong></p>
+<ol>
+<li>
+<p>El cajero solicita la anulación del comprobante.</p>
+</li>
+<li>
+<p>El sistema cambia el estado del comprobante a PENDIENTE_ANULACION y crea una solicitud de aprobación.</p>
+</li>
+<li>
+<p>El gerente revisa la solicitud en el módulo de aprobaciones.</p>
+</li>
+<li>
+<p>Si la aprueba, el comprobante pasa a ANULADO; si la rechaza, regresa a PAGADO.</p>
+</li>
+</ol>
+<h4 id="cu-04-generar-orden-de-reabastecimiento-to-be">CU-04: Generar orden de reabastecimiento (TO-BE)<a class="headerlink" href="#cu-04-generar-orden-de-reabastecimiento-to-be" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Actor principal</th>
+<th>Sistema (disparador) / Comprador (aprobación)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precondiciones</td>
+<td>El producto tiene stockMinimo y stockMaximo configurados para la sucursal (RF-26).</td>
+</tr>
+<tr>
+<td>Postcondiciones</td>
+<td>Existe una orden en estado PENDIENTE y el comprador fue notificado; si se aprueba, se convierte en una Compra.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Flujo principal:</strong></p>
+<ul>
+<li>
+<p>Una salida de inventario (venta, transferencia o merma) actualiza el stock del producto en la sucursal.</p>
+</li>
+<li>
+<p>ReabastecimientoService suma el stock vigente (lotes no vencidos) y lo compara con el punto de reorden.</p>
+</li>
+<li>
+<p>Si el stock es ≤ al mínimo y no hay otra orden abierta, crea una OrdenReabastecimiento PENDIENTE con cantidad = stockMáximo − stock.</p>
+</li>
+<li>
+<p>El sistema publica el evento inventario.reabastecimiento; el comprador lo recibe en tiempo real.</p>
+</li>
+<li>
+<p>El comprador revisa la orden, ajusta la cantidad si es necesario y la aprueba.</p>
+</li>
+<li>
+<p>El sistema la convierte en una Compra en estado REGISTRADO, con el proveedor habitual del producto.</p>
+</li>
+</ul>
+<p><strong>Flujos alternativos:</strong></p>
+<ul>
+<li>
+<p>3a. Ya existe una orden abierta: no se genera otra (RN-12).</p>
+</li>
+<li>
+<p>5a. El comprador rechaza: la orden pasa a RECHAZADA y se registra el motivo.</p>
+</li>
+<li>
+<p>5b. Sin atención en 72 h: la orden pasa a VENCIDA y se notifica a gerencia (RN-13).</p>
+</li>
+</ul>
+<h2 id="seccion-2-prototipo-navegable">Sección 2: Prototipo Navegable<a class="headerlink" href="#seccion-2-prototipo-navegable" title="Permanent link">&para;</a></h2>
+<h3 id="21-tipo-y-fidelidad-del-prototipo">2.1 Tipo y Fidelidad del Prototipo<a class="headerlink" href="#21-tipo-y-fidelidad-del-prototipo" title="Permanent link">&para;</a></h3>
+<p>El prototipo navegable combina dos niveles de fidelidad: (1) alta fidelidad para los módulos ya construidos, implementados como aplicación funcional en Angular 20 con Tailwind CSS 4, que permite navegación real, formularios, paginación y consumo de la API REST; y (2) baja fidelidad (wireframes) para las pantallas del proceso TO-BE de reabastecimiento, que se validaron antes de construirse. El módulo features/documentos/punto-documento es la implementación de referencia que homogeniza el diseño del resto de pantallas.</p>
+<h3 id="22-flujo-de-navegacion">2.2 Flujo de Navegación<a class="headerlink" href="#22-flujo-de-navegacion" title="Permanent link">&para;</a></h3>
+<p>El acceso parte de la pantalla de login; una vez autenticado, el usuario llega al dashboard, desde donde un menú lateral (sidebar) y un encabezado (header) dan acceso a los módulos según sus permisos. Cada módulo de gestión sigue el patrón «Lista ↔ Formulario» mediante componentes compartidos.</p>
+<p><img src="media/media/image3.png" title="Figura 2.1 — Flujo de navegación del prototipo." style="width:4.89583in;height:3.125in" alt="Figura 2.1 — Flujo de navegación del prototipo." /></p>
+<p><em>Figura 2.1 — Flujo de navegación del prototipo.</em></p>
+<h3 id="23-pantallas-principales">2.3 Pantallas Principales<a class="headerlink" href="#23-pantallas-principales" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Pantalla</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login</td>
+<td>Autenticación con usuario y contraseña; emite el JWT y selecciona el punto de emisión.</td>
+</tr>
+<tr>
+<td>Dashboard</td>
+<td>Vista principal con header, sidebar colapsable (SidebarService) e indicadores.</td>
+</tr>
+<tr>
+<td>Listado genérico</td>
+<td>Pantalla de lista basada en app-page-header, filtros tipo «pill», app-search-generic, app-tabla-general y app-pagination.</td>
+</tr>
+<tr>
+<td>Formulario genérico</td>
+<td>Alta/edición dentro de app-modal con inputs reutilizables (form-input, form-select, form-switch).</td>
+</tr>
+<tr>
+<td>Punto-Documento</td>
+<td>Asignación de plantillas a puntos de emisión; referencia de diseño del proyecto.</td>
+</tr>
+<tr>
+<td>Editor de plantillas</td>
+<td>Diseñador visual de documentos basado en GrapesJS con soporte Tailwind.</td>
+</tr>
+<tr>
+<td>Reportes</td>
+<td>Tableros con gráficos ApexCharts y exportación a Excel/PDF.</td>
+</tr>
+</tbody>
+</table>
+<p>Todas las pantallas de gestión comparten la misma estructura de señales (currentPage, pageSize, totalElements, totalPages, searchTerm, searchType) y métodos (onSearch, cambiarPagina, cambiarTamanoPagina), garantizando una experiencia uniforme.</p>
+<p>Las siguientes capturas se obtuvieron del prototipo en ejecución (backend en el puerto 8085 y frontend en el 4200, con datos semilla de Salud Total SAC). Cada pantalla indica los requerimientos que materializa.</p>
+<table>
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><img src="media/media/image4.png" style="width:3.11024in;height:1.9439in" /></p>
+<p><em>Figura 2.2 — Login con bloqueo anti fuerza bruta (RF-01, RF-02).</em></p></th>
+<th><p><img src="media/media/image5.png" style="width:3.11024in;height:1.9439in" /></p>
+<p><em>Figura 2.3 — Dashboard de la sede principal (RF-19, RF-30).</em></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p><img src="media/media/image6.png" style="width:3.11024in;height:1.9439in" /></p>
+<p><em>Figura 2.4 — Productos por fecha de vencimiento y lote (RF-23, RF-25).</em></p></td>
+<td><p><img src="media/media/image7.png" style="width:3.35403in;height:1.91689in" /></p>
+<p><em>Figura 2.5 — Registro de venta por paciente (RF-10, RF-24).</em></p></td>
+</tr>
+<tr class="even">
+<td><p><img src="media/media/image8.png" style="width:3.11024in;height:1.9439in" /></p>
+<p><em>Figura 2.6 — Stock valorizado por almacén (RF-06).</em></p></td>
+<td><p><img src="media/media/image9.png" style="width:3.11024in;height:1.9439in" /></p>
+<p><em>Figura 2.7 — Aprobación de anulaciones (RF-16, RN-05).</em></p></td>
+</tr>
+<tr class="odd">
+<td><p><img src="media/media/image10.png" style="width:3.11024in;height:1.9439in" /></p>
+<p><em>Figura 2.8 — Gestión de roles y permisos (RF-03).</em></p></td>
+<td><p><img src="media/media/image11.png" style="width:3.11024in;height:1.9439in" /></p>
+<p><em>Figura 2.9 — Transferencias entre sucursales (RF-29).</em></p></td>
+</tr>
+<tr class="even">
+<td><p><img src="media/media/image12.png" style="width:3.11024in;height:1.9439in" /></p>
+<p><em>Figura 2.10 — Documentos por paciente, módulo clínico (RF-17).</em></p></td>
+<td><p><img src="media/media/image13.png" style="width:3.11024in;height:1.9439in" /></p>
+<p><em>Figura 2.11 — Centro de estadísticas y reportes (RF-19).</em></p></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Prototipo TO-BE.</strong> La figura 2.12 muestra el wireframe de la pantalla de órdenes de reabastecimiento y alertas FEFO (RF-25 a RF-28, RF-30), que se construirá en el sprint de reabastecimiento del Entregable 3.</p>
+<p><img src="media/media/image14.png" style="width:6.10236in;height:3.41117in" /></p>
+<p><em>Figura 2.12 — Wireframe TO-BE: órdenes de reabastecimiento y alertas FEFO.</em></p>
+<h3 id="24-evidencia-de-validacion-con-usuariosstakeholders">2.4 Evidencia de Validación con Usuarios/Stakeholders<a class="headerlink" href="#24-evidencia-de-validacion-con-usuariosstakeholders" title="Permanent link">&para;</a></h3>
+<p>La validación se realizó en sesiones de revisión guiada con los stakeholders de Salud Total SAC: gerencia, químico farmacéutico (director técnico), encargado de almacén y cajero. En cada sesión se recorrieron las pantallas de las figuras 2.2 a 2.12 contra los requerimientos y se registraron las observaciones con un instrumento de verificación por criterio (tabla siguiente). Las observaciones se resolvieron en esta versión del documento y se trazan a los requerimientos afectados. La evidencia formal (objetivos, hallazgos, acuerdos y firmas) está en el Anexo A.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio de validación</th>
+<th>Pantalla / artefacto</th>
+<th>Resultado</th>
+<th>Observación → acción tomada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>El flujo de venta descuenta stock y deja rastro en el kardex</td>
+<td>Fig. 2.5, CU-02</td>
+<td>Conforme con observación</td>
+<td>Se pidió elegir el lote automáticamente → RF-24, RN-10, HU-09.</td>
+</tr>
+<tr>
+<td>Se visualizan los lotes próximos a vencer</td>
+<td>Fig. 2.4</td>
+<td>Conforme con observación</td>
+<td>Se pidió un semáforo de 90/60/30 días → RF-25 y wireframe 2.12.</td>
+</tr>
+<tr>
+<td>El comprador se entera a tiempo de los quiebres</td>
+<td>Wireframe 2.12</td>
+<td>Conforme con observación</td>
+<td>Se pidió que la orden se genere sola y se pueda ajustar → RF-27, RF-28, CU-04.</td>
+</tr>
+<tr>
+<td>Las anulaciones requieren aprobación</td>
+<td>Fig. 2.7, CU-03</td>
+<td>Conforme</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Las transferencias entre Juliaca y Puno conservan el lote</td>
+<td>Fig. 2.9</td>
+<td>Conforme con observación</td>
+<td>Se agregó RF-29 explícito con lote y vencimiento.</td>
+</tr>
+<tr>
+<td>Los datos clínicos solo los ve el personal médico</td>
+<td>Fig. 2.10</td>
+<td>Conforme con observación</td>
+<td>Se agregó auditoría de accesos → RF-32, RN-14, RNF-13.</td>
+</tr>
+<tr>
+<td>Los listados son homogéneos y fáciles de aprender</td>
+<td>Figs. 2.3–2.11</td>
+<td>Conforme</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Los indicadores permiten medir el impacto del proyecto</td>
+<td>Fig. 2.3</td>
+<td>Parcial</td>
+<td>Faltan KPIs de quiebre y merma → RF-30 (E3).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="seccion-3-diseno-arquitectonico">Sección 3: Diseño Arquitectónico<a class="headerlink" href="#seccion-3-diseno-arquitectonico" title="Permanent link">&para;</a></h2>
+<h3 id="31-documento-de-arquitectura">3.1 Documento de Arquitectura<a class="headerlink" href="#31-documento-de-arquitectura" title="Permanent link">&para;</a></h3>
+<p>El sistema adopta un estilo arquitectónico híbrido que combina tres patrones complementarios:</p>
+<ul>
+<li>
+<p><strong>Arquitectura en capas (Clean Architecture):</strong> dentro del backend, separando responsabilidades en capas Web (controladores), Negocio (servicios y mappers) y Persistencia (repositorios y entidades), con un contrato de respuesta uniforme (ApiResponse) y manejo centralizado de excepciones.</p>
+</li>
+<li>
+<p><strong>Monolito modular:</strong> el backend agrupa 28 módulos de negocio autocontenidos (la mayoría con su controller, service, repository, entity, dto y mapper), lo que favorece la cohesión y permite una futura extracción a microservicios.</p>
+</li>
+<li>
+<p><strong>Arquitectura orientada a eventos (EDA):</strong> los eventos de negocio (notificaciones, alertas, reabastecimiento) se registran con el patrón Transactional Outbox en la tabla cola_eventos, dentro de la misma transacción que los origina; un trigger emite pg_notify('nuevo_evento_outbox') y PostgresEventListenerService, suscrito con LISTEN, los publica como eventos de Spring (OutboxEvent) que consumen WebSocketNotificationListener (avisos por STOMP) y CompraPagoConsumer. Así se separa la generación del evento de su entrega sin perder mensajes y sin operar un broker externo.</p>
+</li>
+</ul>
+<p>El frontend es una SPA independiente que consume la API REST y se suscribe a las notificaciones por WebSocket/STOMP. La persistencia recae en PostgreSQL, con el esquema generado por Hibernate (Flyway desactivado por ahora). La arquitectura se documenta con el modelo C4 en tres niveles: contexto (C1, figura 3.1), contenedores (C2, figura 3.2), que cumple además el rol de vista de despliegue lógico, y componentes (C3, figura 3.3). La figura 3.4 complementa con el despliegue físico sobre la infraestructura híbrida de CE03.</p>
+<h3 id="32-vista-c4-nivel-1-contexto-c1">3.2 Vista C4 — Nivel 1: Contexto (C1)<a class="headerlink" href="#32-vista-c4-nivel-1-contexto-c1" title="Permanent link">&para;</a></h3>
+<p>El diagrama de contexto ubica a «Articulos» como el sistema central de Salud Total SAC, con sus seis tipos de usuario y cinco sistemas externos: SUNAT/OSE para comprobantes electrónicos (fase 2), la pasarela de pagos, los proveedores o droguerías que reciben las órdenes de compra, y los canales de comunicación con el paciente: el servidor de correo (SMTP) y WhatsApp Business Cloud API de Meta.</p>
+<p><img src="media/media/image1.png" style="width:6.10236in;height:3.3203in" /></p>
+<p><em>Figura 3.1 — C4 Nivel 1: diagrama de contexto del sistema.</em></p>
+<h3 id="33-vista-c4-nivel-2-contenedores-c2">3.3 Vista C4 — Nivel 2: Contenedores (C2)<a class="headerlink" href="#33-vista-c4-nivel-2-contenedores-c2" title="Permanent link">&para;</a></h3>
+<p>La vista de contenedores muestra las unidades desplegables y sus protocolos: la SPA Angular se ejecuta en el navegador de las sedes; el API Gateway (Nginx/ALB) termina TLS y enruta /api y /ws hacia el backend; el backend persiste en PostgreSQL (RDS Multi-AZ), usa la propia base como canal de eventos (cola_eventos + LISTEN/NOTIFY) y respalda en S3. El microservicio mensajeria-api (:8087) recibe del backend las solicitudes de envío (REST con el JWT del usuario reenviado y el PDF adjunto) y se comunica con Gmail SMTP y con la Graph API de WhatsApp; valida los tokens con la llave pública RSA del ERP, actuando como resource server OAuth2 (ADR-10). Los avisos internos (campana, alertas) no usan un servicio aparte: salen del propio backend mediante Outbox y LISTEN/NOTIFY (ADR-04).</p>
+<p><img src="media/media/image15.png" title="Figura 3.1 — Vista de arquitectura (contenedores)." style="width:4.89583in;height:2.34963in" alt="Figura 3.1 — Vista de arquitectura (contenedores)." /></p>
+<p><em>Figura 3.2 — C4 Nivel 2: diagrama de contenedores.</em></p>
+<h3 id="34-vista-c4-nivel-3-componentes-del-backend-c3">3.4 Vista C4 — Nivel 3: Componentes del backend (C3)<a class="headerlink" href="#34-vista-c4-nivel-3-componentes-del-backend-c3" title="Permanent link">&para;</a></h3>
+<p>El diagrama de componentes detalla la organización interna del backend bajo Clean Architecture y sus elementos transversales: el filtro de seguridad JWT, el GlobalExceptionHandler, los mappers de MapStruct, la cola Outbox con su listener de PostgreSQL, los consumidores de eventos y los clientes REST hacia mensajeria-api.</p>
+<p><img src="media/media/image16.png" title="Figura 3.2 — Diagrama de componentes del backend." style="width:4.79167in;height:2.64269in" alt="Figura 3.2 — Diagrama de componentes del backend." /></p>
+<p><em>Figura 3.3 — C4 Nivel 3: componentes del backend.</em></p>
+<h3 id="35-diagrama-de-despliegue-infraestructura-hibrida">3.5 Diagrama de Despliegue (infraestructura híbrida)<a class="headerlink" href="#35-diagrama-de-despliegue-infraestructura-hibrida" title="Permanent link">&para;</a></h3>
+<p>El despliegue está alineado con el diseño de red y de centro de datos de CE03. Las sedes de Juliaca y Puno tienen la red segmentada por VLAN (ventas/caja, almacén, clínica, administración) con core switch L3 y firewall HA, y se conectan por VPN IPsec Site-to-Site a la VPC de AWS. En la VPC, el Application Load Balancer y Nginx (subred pública) sirven el SPA y enrutan hacia dos instancias EC2 con articulos.jar y la instancia de mensajeria.jar (subred privada de aplicación); esta última sale a Internet solo por un NAT Gateway hacia Meta y Gmail. La base de datos corre en RDS PostgreSQL Multi-AZ, con snapshots en S3 (subred privada de datos). El host VMware ESXi de Juliaca queda como nodo de contingencia local. Estado actual: el sistema se ejecuta con el perfil local (PostgreSQL local) y con el perfil supabase (PostgreSQL gestionado); aún no existen Dockerfile ni pipeline, por lo que el despliegue de la figura 3.4 es el objetivo que se implementa en los Entregables 3 y 4.</p>
+<p><img src="media/media/image17.png" title="Figura 3.3 — Diagrama de despliegue." style="width:5in;height:2.40428in" alt="Figura 3.3 — Diagrama de despliegue." /></p>
+<p><em>Figura 3.4 — Despliegue sobre infraestructura híbrida (sedes Juliaca/Puno + AWS).</em></p>
+<h3 id="36-registro-de-decisiones-arquitectonicas-adr">3.6 Registro de Decisiones Arquitectónicas (ADR)<a class="headerlink" href="#36-registro-de-decisiones-arquitectonicas-adr" title="Permanent link">&para;</a></h3>
+<p>Las decisiones arquitectónicas se documentan en formato ADR (contexto → decisión → consecuencias).</p>
+<p><strong>ADR-01: Monorepo con monolito modular</strong></p>
+<table>
+<thead>
+<tr>
+<th>Contexto</th>
+<th>Se requiere organizar un sistema amplio (28 módulos) mantenido por un equipo reducido.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decisión</td>
+<td>Backend monolítico dividido en módulos autocontenidos dentro de un único repositorio junto al frontend y al servicio de notificaciones.</td>
+</tr>
+<tr>
+<td>Consecuencias</td>
+<td>(+) Alta cohesión y despliegue simple. (−) Acoplamiento de despliegue del backend; mitigable extrayendo módulos a futuro.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ADR-02: Autenticación con JWT firmado por RSA</strong></p>
+<table>
+<thead>
+<tr>
+<th>Contexto</th>
+<th>Se necesita autenticación sin estado para una API REST consumida por una SPA.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decisión</td>
+<td>Tokens JWT firmados con par de llaves RSA, expiración de 30 min y políticas anti-fuerza bruta.</td>
+</tr>
+<tr>
+<td>Consecuencias</td>
+<td>(+) Escalabilidad sin sesión en servidor. (−) Revocación no trivial; mitigada con expiración corta y límite de sesiones.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ADR-03: Eliminación lógica global (soft-delete)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Contexto</th>
+<th>El negocio exige trazabilidad e impide perder información histórica.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decisión</td>
+<td>Prohibición de borrado físico: estado ELIMINADO (3) + @SQLRestriction("estado != 3") en las entidades de negocio. La unicidad se valida hoy en servicio; los índices únicos parciales se crearán al habilitar Flyway.</td>
+</tr>
+<tr>
+<td>Consecuencias</td>
+<td>(+) Auditoría e integridad histórica. (−) Mayor cuidado en unicidad; resuelto con índices parciales.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ADR-04: Eventos con Outbox + PostgreSQL LISTEN/NOTIFY en lugar de Kafka (revisado en v2.0)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Contexto</th>
+<th>El diseño inicial (y CE01) usaba Apache Kafka y un microservicio notificaciones-service (:8086). Para el volumen de dos sedes, operar un broker añadía costo y complejidad sin necesidad.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decisión</td>
+<td>Se retiró Kafka. Transactional Outbox sobre PostgreSQL: el evento se inserta en cola_eventos en la misma transacción; el trigger trg_notify_evento_insert emite pg_notify('nuevo_evento_outbox'); PostgresEventListenerService (LISTEN en un hilo dedicado, con sondeo de respaldo cada 30 s) lo marca PROCESADO o ERROR y lo publica como OutboxEvent. El nombre KafkaProducerService es heredado.</td>
+</tr>
+<tr>
+<td>Consecuencias</td>
+<td>(+) Atomicidad con el negocio, cero infraestructura adicional y menor costo. (−) Sin particiones ni reprocesamiento como Kafka; con 2 instancias EC2 debe evitarse procesar dos veces (SELECT … FOR UPDATE SKIP LOCKED) y los avisos STOMP necesitan sesión fija o un broker STOMP compartido. Kafka queda como ruta de evolución si el volumen crece.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ADR-05: Mapeo con MapStruct</strong></p>
+<table>
+<thead>
+<tr>
+<th>Contexto</th>
+<th>Se necesita transformar entidades a DTOs de forma consistente y sin código repetitivo.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decisión</td>
+<td>Uso obligatorio de interfaces @Mapper de MapStruct; prohibidos los builders manuales.</td>
+</tr>
+<tr>
+<td>Consecuencias</td>
+<td>(+) Menos errores y código uniforme. (−) Dependencia de procesamiento de anotaciones en compilación.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ADR-06: Paginación del lado del servidor</strong></p>
+<table>
+<thead>
+<tr>
+<th>Contexto</th>
+<th>Las entidades transaccionales crecen indefinidamente y pueden saturar memoria y DOM.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decisión</td>
+<td>Paginación con Pageable y PageResponse para datos dinámicos; listas planas solo para catálogos finitos.</td>
+</tr>
+<tr>
+<td>Consecuencias</td>
+<td>(+) Rendimiento y menor payload. (−) Doble consulta COUNT; aceptable por el beneficio.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ADR-07: Infraestructura híbrida — aplicación y datos en AWS</strong></p>
+<table>
+<thead>
+<tr>
+<th>Contexto</th>
+<th>Las dos sedes necesitan alta disponibilidad, CE01 aprobó migrar los servidores a la nube y CE03 diseñó la red híbrida con VPN Site-to-Site.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decisión</td>
+<td>Desplegar la aplicación en EC2 (2 instancias detrás de un ALB) y PostgreSQL en RDS Multi-AZ dentro de una VPC con subredes pública, de aplicación y de datos; el ESXi local queda como contingencia.</td>
+</tr>
+<tr>
+<td>Consecuencias</td>
+<td>(+) Disponibilidad ≥ 99,5 %, respaldos gestionados y escalado horizontal. (−) Dependencia del enlace VPN; se mitiga con enlace de respaldo y modo contingencia local.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ADR-08: Inventario por lote como registro de Producto</strong></p>
+<table>
+<thead>
+<tr>
+<th>Contexto</th>
+<th>Se necesita FEFO y trazabilidad de vencimientos sin reescribir el modelo existente (catálogo → producto).</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decisión</td>
+<td>Cada registro de Producto representa un lote (nroLote, fechaVencimiento, stock) de un ítem de Catálogo en una sucursal; FEFO se resuelve con la consulta findFirst…OrderByFechaVencimientoAsc.</td>
+</tr>
+<tr>
+<td>Consecuencias</td>
+<td>(+) Reutiliza el modelo, el kardex y los índices actuales. (−) El stock total se obtiene sumando lotes; se mitiga con un índice (idCatalogo, idSucursal, fechaVencimiento).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ADR-09: Secretos fuera del repositorio y esquema versionado con Flyway (a implementar)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Contexto</th>
+<th>CE01 identificó como riesgo crítico las credenciales y llaves en el repositorio y el uso de ddl-auto=create. El código lo confirma: private.pem y keypair.pem están en src/main/resources/certs, el perfil supabase usa ddl-auto=create, el local ddl-auto=update y spring.flyway.enabled=false.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decisión</td>
+<td>Llaves RSA y credenciales en AWS Secrets Manager o variables de entorno; perfil de producción con ddl-auto=validate; todo cambio de esquema mediante migraciones Flyway versionadas.</td>
+</tr>
+<tr>
+<td>Consecuencias</td>
+<td>(+) Elimina el riesgo de fuga y de pérdida de datos por recreación del esquema. (−) Requiere disciplina de migraciones y configurar el pipeline (E4).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ADR-10: Microservicio independiente de mensajería externa (mensajeria-api)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Contexto</th>
+<th>El envío por correo y WhatsApp depende de proveedores externos (Gmail, Meta) con credenciales, cuotas y latencias propias, que no deben afectar la venta.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decisión</td>
+<td>Aislar la mensajería en el microservicio mensajeria-api (Spring Boot 3.2.4, :8087) con endpoints /api/email y /api/v1/mensajes/whatsapp; valida el JWT del ERP con la llave pública RSA (OAuth2 resource server) y las plantillas de WhatsApp se parametrizan por JSON sin cambiar código.</td>
+</tr>
+<tr>
+<td>Consecuencias</td>
+<td>(+) Aísla credenciales y fallos externos, y escala y se despliega de forma independiente. (−) Contrato REST que mantener sincronizado (hoy el backend llama a /enviar-con-adjunto, que el servicio no expone) y credenciales de correo en application.properties que deben migrar a Secrets Manager (ADR-09).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="seccion-4-diseno-detallado">Sección 4: Diseño Detallado<a class="headerlink" href="#seccion-4-diseno-detallado" title="Permanent link">&para;</a></h2>
+<h3 id="41-diagrama-de-clases-uml">4.1 Diagrama de Clases (UML)<a class="headerlink" href="#41-diagrama-de-clases-uml" title="Permanent link">&para;</a></h3>
+<p>El modelo de clases representa el dominio núcleo del sistema: inventario (catálogo, producto por lote, almacén, kardex), ventas y compras con sus detalles, proveedores, la cola de eventos Outbox y las clases del proceso TO-BE de reabastecimiento. Cada registro de Producto corresponde a un lote (nroLote, fechaVencimiento) de un ítem del catálogo en una sucursal, con su stockMinimo como punto de reorden (ADR-08). Las composiciones (rombo) modelan la relación maestro-detalle y las asociaciones, las referencias por llave foránea. Las entidades comparten el atributo estado del tipo EstadoGeneral para el soft-delete. OrdenReabastecimiento se marca como «TO-BE» porque se implementa en el Entregable 3.</p>
+<p><img src="media/media/image18.png" title="Figura 4.1 — Diagrama de clases del dominio núcleo." style="width:5.20833in;height:3.97174in" alt="Figura 4.1 — Diagrama de clases del dominio núcleo." /></p>
+<p><em>Figura 4.1 — Diagrama de clases del dominio núcleo.</em></p>
+<h3 id="42-diagramas-de-secuencia">4.2 Diagramas de Secuencia<a class="headerlink" href="#42-diagramas-de-secuencia" title="Permanent link">&para;</a></h3>
+<p>Los diagramas de secuencia describen la interacción temporal entre los objetos para los casos de uso críticos.</p>
+<h4 id="421-autenticacion-con-jwt">4.2.1 Autenticación con JWT<a class="headerlink" href="#421-autenticacion-con-jwt" title="Permanent link">&para;</a></h4>
+<p><img src="media/media/image19.png" title="Figura 4.2 — Secuencia de autenticación (CU-01)." style="width:5.3125in;height:2.39583in" alt="Figura 4.2 — Secuencia de autenticación (CU-01)." /></p>
+<p><em>Figura 4.2 — Secuencia de autenticación (CU-01).</em></p>
+<h4 id="422-registro-de-venta-con-seleccion-fefo-y-notificacion-outbox">4.2.2 Registro de venta con selección FEFO y notificación (Outbox)<a class="headerlink" href="#422-registro-de-venta-con-seleccion-fefo-y-notificacion-outbox" title="Permanent link">&para;</a></h4>
+<p><img src="media/media/image20.png" title="Figura 4.3 — Secuencia de registro de venta y notificación (CU-02)." style="width:5.41667in;height:3.56865in" alt="Figura 4.3 — Secuencia de registro de venta y notificación (CU-02)." /></p>
+<p><em>Figura 4.3 — Secuencia de registro de venta con FEFO y notificación vía Outbox (CU-02).</em></p>
+<h4 id="423-reabastecimiento-automatico-por-punto-de-reorden-to-be">4.2.3 Reabastecimiento automático por punto de reorden (TO-BE)<a class="headerlink" href="#423-reabastecimiento-automatico-por-punto-de-reorden-to-be" title="Permanent link">&para;</a></h4>
+<p>La secuencia muestra cómo una salida de inventario dispara la evaluación del punto de reorden, la creación de la orden, su notificación (Outbox + LISTEN/NOTIFY) y su conversión en compra cuando el comprador la aprueba (CU-04, RN-12).</p>
+<p><img src="media/media/image21.png" style="width:6.10236in;height:3.94073in" /></p>
+<p><em>Figura 4.4 — Secuencia de reabastecimiento automático (CU-04).</em></p>
+<h3 id="43-diagrama-de-estados">4.3 Diagrama de Estados<a class="headerlink" href="#43-diagrama-de-estados" title="Permanent link">&para;</a></h3>
+<p>El ciclo de vida de un comprobante de venta se modela con los estados del enumerado EstadoGeneral. El comprobante puede iniciar como cotización o como venta directa, avanza por validación y pago, y solo puede anularse a través del estado intermedio PENDIENTE_ANULACION (que materializa la regla de aprobación). El estado ELIMINADO representa la eliminación lógica.</p>
+<p><img src="media/media/image22.png" title="Figura 4.4 — Diagrama de estados del comprobante de venta." style="width:5.3125in;height:2.60417in" alt="Figura 4.4 — Diagrama de estados del comprobante de venta." /></p>
+<p><em>Figura 4.5 — Diagrama de estados del comprobante de venta.</em></p>
+<p>La orden de reabastecimiento tiene su propio ciclo de vida: nace PENDIENTE cuando el stock cae al mínimo, puede aprobarse (con ajuste de cantidad), rechazarse o vencer sin atención en 72 h. Una vez aprobada, se convierte en Compra y termina como RECIBIDA cuando ingresan sus lotes.</p>
+<p><img src="media/media/image23.png" style="width:6.10236in;height:2.06661in" /></p>
+<p><em>Figura 4.6 — Diagrama de estados de la orden de reabastecimiento (TO-BE).</em></p>
+<h3 id="44-modelo-de-diseno-detallado">4.4 Modelo de Diseño Detallado<a class="headerlink" href="#44-modelo-de-diseno-detallado" title="Permanent link">&para;</a></h3>
+<p>El diseño detallado del backend estandariza el flujo de una petición y la responsabilidad de cada capa:</p>
+<table>
+<thead>
+<tr>
+<th>Capa</th>
+<th>Responsabilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Controller</td>
+<td>Recibe la petición, valida el cuerpo con @Valid, registra trazas con @Slf4j y retorna siempre ResponseEntity\&lt;ApiResponse\&lt;T&gt;&gt;.</td>
+</tr>
+<tr>
+<td>Service / ServiceImpl</td>
+<td>Contiene la lógica de negocio; retorna el DTO directamente (sin envolverlo). Anota @SuppressWarnings("null") y @Transactional.</td>
+</tr>
+<tr>
+<td>Mapper (MapStruct)</td>
+<td>Convierte Entity ↔ DTO con componentModel="spring" y unmappedTargetPolicy=IGNORE.</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>Extiende JpaRepository; las búsquedas usan JPQL con LOWER/CONCAT para ser insensibles a mayúsculas y reciben Pageable.</td>
+</tr>
+<tr>
+<td>Entity</td>
+<td>Declara @Index en llaves foráneas y columnas de estado, auditoría con @EntityListeners y @SQLRestriction para el soft-delete.</td>
+</tr>
+<tr>
+<td>DTO</td>
+<td>Objeto de transferencia anotado con Lombok (@Data/@Builder); incluye campos derivados para la vista (p. ej. nombreProducto).</td>
+</tr>
+<tr>
+<td>Scheduler / Listener</td>
+<td>AlertaSchedulerService (@Scheduled diario) genera alertas de vencimiento y de stock crítico; WebSocketNotificationListener (@EventListener) entrega los eventos Outbox por STOMP.</td>
+</tr>
+</tbody>
+</table>
+<p>El contrato de respuesta uniforme se compone de ApiResponse\&lt;T&gt; (success, message, data, timestamp, status) y PageResponse\&lt;T&gt; (content, totalElements, totalPages, size, number), lo que permite que el frontend tipe de forma homogénea todas las llamadas. La organización del backend en paquetes core (transversal) y modules (negocio) refuerza la separación de responsabilidades descrita en el modelo.</p>
+<h2 id="anexos">Anexos<a class="headerlink" href="#anexos" title="Permanent link">&para;</a></h2>
+<h3 id="anexo-a-acta-de-validacion-con-stakeholders">Anexo A: Acta de Validación con Stakeholders<a class="headerlink" href="#anexo-a-acta-de-validacion-con-stakeholders" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Proyecto</th>
+<th>Sistema ERP «Articulos» — Salud Total SAC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fecha de la sesión</td>
+<td>20 de enero de 2026</td>
+</tr>
+<tr>
+<td>Objetivo</td>
+<td>Validar el prototipo navegable y la correspondencia con los requerimientos especificados.</td>
+</tr>
+<tr>
+<td>Participantes</td>
+<td>Gerencia, Químico farmacéutico (director técnico), Encargado de almacén, Cajero, Estudiante responsable.</td>
+</tr>
+<tr>
+<td>Modalidad</td>
+<td>Revisión guiada del prototipo de alta fidelidad y del wireframe TO-BE (recorrido por módulos con el instrumento de la sección 2.4).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hallazgos y acuerdos:</strong></p>
+<ul>
+<li>
+<p>Se aprueba la homogeneidad de los listados y el patrón Lista ↔ Formulario.</p>
+</li>
+<li>
+<p>Se confirma la necesidad del flujo de aprobación para anulaciones (RN-05).</p>
+</li>
+<li>
+<p>Se valida el valor de las notificaciones en tiempo real entre puntos de emisión.</p>
+</li>
+<li>
+<p>Se acuerda incorporar el control por lote, FEFO y alertas de vencimiento (RF-23 a RF-25, RN-10, RN-11).</p>
+</li>
+<li>
+<p>Se aprueba el wireframe de reabastecimiento y se prioriza para el siguiente sprint (RF-27, RF-28).</p>
+</li>
+<li>
+<p>Pendiente: la integración con SUNAT/OSE y la pasarela de pagos queda para la fase 2 (RF-31).</p>
+</li>
+</ul>
+<p><strong>Resultado:</strong> Prototipo y requerimientos APROBADOS con observaciones menores.</p>
+<h3 id="anexo-b-matriz-de-trazabilidad-de-requerimientos">Anexo B: Matriz de Trazabilidad de Requerimientos<a class="headerlink" href="#anexo-b-matriz-de-trazabilidad-de-requerimientos" title="Permanent link">&para;</a></h3>
+<p>La matriz vincula cada requerimiento funcional con su historia de usuario, su caso de uso, el componente que lo implementa, la pantalla del frontend y su estado de implementación verificado contra el código fuente. Implementado: existe en el repositorio. Parcial: existe la base, pero falta completar el comportamiento. TO-BE: se construye en el Entregable 3.</p>
+<table>
+<thead>
+<tr>
+<th>RF</th>
+<th>HU</th>
+<th>CU</th>
+<th>Componente / clase</th>
+<th>Pantalla</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF-01</td>
+<td>HU-07</td>
+<td>CU-01</td>
+<td>AuthController, AuthService, JwtService</td>
+<td>Login</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-02</td>
+<td>HU-07</td>
+<td>CU-01</td>
+<td>SecurityMonitorService</td>
+<td>Login</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-03</td>
+<td>HU-02</td>
+<td>CU-10</td>
+<td>RoleService, PermissionService</td>
+<td>Seguridad › Roles</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-04</td>
+<td>—</td>
+<td>—</td>
+<td>CatalogoService, CatalogoMapper</td>
+<td>Catálogo de productos</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-05</td>
+<td>HU-03</td>
+<td>—</td>
+<td>ProductoService</td>
+<td>Almacén › Productos</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-06</td>
+<td>HU-03</td>
+<td>—</td>
+<td>AlmacenService y reporte de stock valorizado</td>
+<td>Stock valorizado</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-07</td>
+<td>HU-01</td>
+<td>CU-02</td>
+<td>KardexService</td>
+<td>Consultas › Kardex</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-08</td>
+<td>HU-04</td>
+<td>CU-05</td>
+<td>CompraService</td>
+<td>Compra › Registrar</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-09</td>
+<td>HU-04</td>
+<td>CU-05</td>
+<td>ProveedorService, CronogramaPagosService</td>
+<td>Proveedores, pagos pendientes</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-10</td>
+<td>HU-01</td>
+<td>CU-02</td>
+<td>VentaService (venta_registro)</td>
+<td>Ventas › Registrar venta</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-11</td>
+<td>—</td>
+<td>—</td>
+<td>Servicios de caja chica y caja general</td>
+<td>Caja › General / Chica / Arqueos</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-12</td>
+<td>—</td>
+<td>—</td>
+<td>DescuentoService</td>
+<td>Ventas › Descuentos</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-13</td>
+<td>—</td>
+<td>—</td>
+<td>Beneficios aplicados en venta</td>
+<td>Ventas</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-14</td>
+<td>HU-08</td>
+<td>—</td>
+<td>Módulo documentos (plantillas)</td>
+<td>Documentos › Editor</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-15</td>
+<td>HU-08</td>
+<td>—</td>
+<td>html2pdf (iText), ZXing (QR), Barcode4j</td>
+<td>Reimpresión</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-16</td>
+<td>HU-05</td>
+<td>CU-03</td>
+<td>SolicitudAnulacionService (ventas, compras y movimientos)</td>
+<td>Solicitudes de anulación</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-17</td>
+<td>HU-12</td>
+<td>CU-08</td>
+<td>Módulos clinica y datos_medico</td>
+<td>Documentos por paciente</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-18</td>
+<td>HU-06</td>
+<td>CU-02</td>
+<td>cola_eventos + trigger, PostgresEventListenerService, WebSocketNotificationListener (/topic/notifications/{modulo}/{sucursal})</td>
+<td>Campana de notificaciones</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-19</td>
+<td>HU-13</td>
+<td>CU-09</td>
+<td>Módulo reportes; Apache POI / JXLS (Excel); xlsx en el frontend</td>
+<td>Reportes</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-20</td>
+<td>—</td>
+<td>—</td>
+<td>AuditingEntityListener</td>
+<td>Transversal</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-21</td>
+<td>—</td>
+<td>—</td>
+<td>Compañía, empresa, sucursal, puntos</td>
+<td>Configuración</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-22</td>
+<td>—</td>
+<td>—</td>
+<td>Repositorios JPQL (LOWER/CONCAT)</td>
+<td>Buscadores</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-23</td>
+<td>HU-09</td>
+<td>CU-05</td>
+<td>Producto.nroLote / fechaVencimiento</td>
+<td>Productos › Por fecha de vencimiento</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-24</td>
+<td>HU-09</td>
+<td>CU-02</td>
+<td>ProductoRepository.findFirst…OrderByFechaVencimientoAsc</td>
+<td>Registrar venta</td>
+<td>Parcial: la venta usa el lote elegido en el frontend; la consulta FEFO existe pero no se invoca</td>
+</tr>
+<tr>
+<td>RF-25</td>
+<td>HU-10</td>
+<td>CU-06</td>
+<td>AlertaSchedulerService (diario)</td>
+<td>Notificaciones, productos</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-26</td>
+<td>HU-11</td>
+<td>CU-04</td>
+<td>Producto.stockMinimo / stockMaximo + alerta de stock crítico</td>
+<td>Productos</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-27</td>
+<td>HU-11</td>
+<td>CU-04</td>
+<td>ReabastecimientoService (nuevo)</td>
+<td>Wireframe Fig. 2.12</td>
+<td>TO-BE (E3)</td>
+</tr>
+<tr>
+<td>RF-28</td>
+<td>HU-11</td>
+<td>CU-04</td>
+<td>OrdenReabastecimiento</td>
+<td>Wireframe Fig. 2.12</td>
+<td>TO-BE (E3)</td>
+</tr>
+<tr>
+<td>RF-29</td>
+<td>HU-14</td>
+<td>CU-07</td>
+<td>TransferenciaSucursal</td>
+<td>Procesos › Transferencias</td>
+<td>Implementado</td>
+</tr>
+<tr>
+<td>RF-30</td>
+<td>HU-13</td>
+<td>CU-09</td>
+<td>Dashboard personalizado</td>
+<td>Dashboard</td>
+<td>Parcial: faltan KPIs de quiebre y merma</td>
+</tr>
+<tr>
+<td>RF-31</td>
+<td>—</td>
+<td>—</td>
+<td>Adaptador SUNAT/OSE y pasarela vía API Gateway</td>
+<td>—</td>
+<td>Fase 2</td>
+</tr>
+<tr>
+<td>RF-32</td>
+<td>HU-12</td>
+<td>CU-08</td>
+<td>Roles y auditoría; pgcrypto</td>
+<td>Documentos por paciente</td>
+<td>Parcial: falta cifrado de columnas</td>
+</tr>
+<tr>
+<td>RF-33</td>
+<td>HU-15</td>
+<td>CU-02</td>
+<td>EmailService / WhatsAppService → mensajeria-api (EmailController, WhatsappController)</td>
+<td>Ventas › Listado (enviar)</td>
+<td>Parcial: el correo funciona; el PDF por WhatsApp llama a un endpoint inexistente</td>
+</tr>
+</tbody>
+</table>
+<p>Trazabilidad de los requerimientos no funcionales hacia su mecanismo de implementación y su forma de verificación:</p>
+<table>
+<thead>
+<tr>
+<th>RNF</th>
+<th>Mecanismo de diseño</th>
+<th>Verificación (E4)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RNF-01, 02</td>
+<td>Pageable/PageResponse, @Index en llaves foráneas y estado</td>
+<td>Pruebas de carga de listados; EXPLAIN ANALYZE</td>
+</tr>
+<tr>
+<td>RNF-03, 04</td>
+<td>JwtService RSA, expiración configurable, SecurityMonitorService</td>
+<td>Pruebas de integración de autenticación</td>
+</tr>
+<tr>
+<td>RNF-06, 08</td>
+<td>Clean Architecture, MapStruct, GlobalExceptionHandler</td>
+<td>Revisión de código y análisis estático</td>
+</tr>
+<tr>
+<td>RNF-07</td>
+<td>Outbox + LISTEN/NOTIFY (ADR-04)</td>
+<td>Prueba cortando el LISTEN: el evento queda PENDIENTE y el sondeo lo entrega</td>
+</tr>
+<tr>
+<td>RNF-09, 11</td>
+<td>@SQLRestriction en 21 entidades; Flyway por habilitar</td>
+<td>Migraciones Flyway ejecutadas en el pipeline CI (E4)</td>
+</tr>
+<tr>
+<td>RNF-13, 16</td>
+<td>TLS, pgcrypto, Secrets Manager, ddl-auto=validate (ADR-09)</td>
+<td>Escaneo de secretos y checklist de seguridad</td>
+</tr>
+<tr>
+<td>RNF-14</td>
+<td>Selección FEFO indexada y transacción única</td>
+<td>Prueba de carga: 50 usuarios, p95 \&lt; 2 s</td>
+</tr>
+<tr>
+<td>RNF-15</td>
+<td>RDS Multi-AZ, 2 EC2 detrás de un ALB (ADR-07)</td>
+<td>Simulacro de failover y restauración</td>
+</tr>
+<tr>
+<td>RNF-18</td>
+<td>Logs estructurados, Actuator, alertas</td>
+<td>Tablero de observabilidad</td>
+</tr>
+</tbody>
+</table>
+<h3 id="anexo-c-diagramas-complementarios">Anexo C: Diagramas Complementarios<a class="headerlink" href="#anexo-c-diagramas-complementarios" title="Permanent link">&para;</a></h3>
+<p>Se incluyen como referencia consolidada los diagramas estructurales del sistema.</p>
+<p><img src="media/media/image16.png" title="Figura C.1 — Componentes del backend (detalle)." style="width:4.58333in;height:2.52779in" alt="Figura C.1 — Componentes del backend (detalle)." /></p>
+<p><em>Figura C.1 — Componentes del backend (detalle).</em></p>
+<h3 id="anexo-d-glosario-de-terminos">Anexo D: Glosario de Términos<a class="headerlink" href="#anexo-d-glosario-de-terminos" title="Permanent link">&para;</a></h3>
+<p>Definiciones de los términos técnicos empleados en este documento.</p>
+<table>
+<thead>
+<tr>
+<th>Término</th>
+<th>Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADR</td>
+<td>Architecture Decision Record. Registro de una decisión arquitectónica con su contexto y consecuencias.</td>
+</tr>
+<tr>
+<td>ApiResponse</td>
+<td>Contrato de respuesta uniforme del backend (success, message, data, timestamp, status).</td>
+</tr>
+<tr>
+<td>DTO</td>
+<td>Data Transfer Object. Objeto para transferir datos entre capas sin exponer la entidad.</td>
+</tr>
+<tr>
+<td>EDA</td>
+<td>Event-Driven Architecture. Arquitectura orientada a eventos, asíncrona y desacoplada.</td>
+</tr>
+<tr>
+<td>JWT</td>
+<td>JSON Web Token. Token firmado para autenticación sin estado.</td>
+</tr>
+<tr>
+<td>Kardex</td>
+<td>Registro cronológico de entradas y salidas de inventario con cálculo de saldo.</td>
+</tr>
+<tr>
+<td>MapStruct</td>
+<td>Generador de mapeadores Entity ↔ DTO en tiempo de compilación.</td>
+</tr>
+<tr>
+<td>Pageable / PageResponse</td>
+<td>Mecanismo y contrato de paginación del lado del servidor.</td>
+</tr>
+<tr>
+<td>Punto de emisión</td>
+<td>Ubicación lógica que mantiene series y correlativos de comprobantes.</td>
+</tr>
+<tr>
+<td>Soft-delete</td>
+<td>Eliminación lógica: el registro se marca como ELIMINADO en lugar de borrarse.</td>
+</tr>
+<tr>
+<td>STOMP</td>
+<td>Protocolo de mensajería sobre WebSocket usado para las notificaciones.</td>
+</tr>
+<tr>
+<td>SPA</td>
+<td>Single Page Application. Aplicación web de página única (Angular).</td>
+</tr>
+<tr>
+<td>C4</td>
+<td>Modelo de documentación de arquitectura en cuatro niveles: contexto, contenedores, componentes y código.</td>
+</tr>
+<tr>
+<td>FEFO</td>
+<td>First Expired, First Out: primero sale el lote que vence primero.</td>
+</tr>
+<tr>
+<td>Lote</td>
+<td>Conjunto de unidades de un producto con el mismo número de fabricación y fecha de vencimiento.</td>
+</tr>
+<tr>
+<td>Outbox</td>
+<td>Patrón que guarda los eventos en una tabla dentro de la transacción de negocio para publicarlos después de forma confiable.</td>
+</tr>
+<tr>
+<td>Punto de reorden</td>
+<td>Nivel de stock (stockMinimo) que, al alcanzarse, dispara la reposición.</td>
+</tr>
+<tr>
+<td>TO-BE</td>
+<td>Situación futura deseada del proceso, definida en el modelado de procesos de CE01.</td>
+</tr>
+<tr>
+<td>LISTEN/NOTIFY</td>
+<td>Mecanismo de PostgreSQL para avisar a clientes suscritos (LISTEN) cuando ocurre un evento (NOTIFY / pg_notify).</td>
+</tr>
+<tr>
+<td>WhatsApp Cloud API</td>
+<td>API oficial de Meta para enviar mensajes y plantillas preaprobadas de WhatsApp Business.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="anexo-e-matriz-de-alineamiento-con-el-business-case-ce01">Anexo E: Matriz de Alineamiento con el Business Case (CE01)<a class="headerlink" href="#anexo-e-matriz-de-alineamiento-con-el-business-case-ce01" title="Permanent link">&para;</a></h3>
+<p>Vincula los objetivos y beneficios del Business Case y del proceso TO-BE con los requerimientos de software y los indicadores que permitirán verificarlos.</p>
+<table>
+<thead>
+<tr>
+<th>Objetivo de negocio (CE01)</th>
+<th>Requerimientos</th>
+<th>Indicador / meta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reducir quiebres de stock</td>
+<td>RF-26, RF-27, RF-28, RN-12</td>
+<td>Quiebres por mes: −67 %</td>
+</tr>
+<tr>
+<td>Reducir mermas por vencimiento</td>
+<td>RF-23, RF-24, RF-25, RN-10, RN-11</td>
+<td>Valor de mermas anual (parte del ahorro de S/ 81 000)</td>
+</tr>
+<tr>
+<td>Acortar el ciclo de reposición</td>
+<td>RF-27, RF-28, CU-04</td>
+<td>Tiempo de ciclo: −58 %</td>
+</tr>
+<tr>
+<td>Mitigar riesgos de seguridad</td>
+<td>RNF-13, RNF-16, ADR-09</td>
+<td>0 secretos en el repositorio; 0 despliegues con ddl-auto=create</td>
+</tr>
+<tr>
+<td>Cumplir la Ley 29733</td>
+<td>RF-32, RN-14, RNF-13</td>
+<td>100 % de accesos clínicos auditados</td>
+</tr>
+<tr>
+<td>Habilitar analítica (BI)</td>
+<td>RF-19, RF-30</td>
+<td>Dashboard de KPIs disponible para gerencia</td>
+</tr>
+<tr>
+<td>Integrar sedes y canales digitales</td>
+<td>RF-29, RF-31, RF-33, ADR-07, ADR-10</td>
+<td>Transferencias Juliaca–Puno en el sistema; comprobantes y resultados por WhatsApp/correo; CPE en fase 2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<hr />
+<h3 id="archivos-del-entregable">Archivos del entregable<a class="headerlink" href="#archivos-del-entregable" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="Entregable1_Requerimientos_Diseno.docx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.2 18h-1.4L12 13.2 10.2 20H8.8l-2.2-9h1.5l1.4 6.8 1.8-6.8h1.3l1.8 6.8 1.4-6.8h1.5zM13 9V3.5L18.5 9z"/></svg></span> Descargar documento original (.docx)</a></li>
+<li>Evidencias del prototipo: 25 imágenes (ver <a href="galeria/">galería</a>)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.indexes", "navigation.sections", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

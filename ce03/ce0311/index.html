@@ -1,0 +1,4441 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentos oficiales del perfil de egreso (ciclo 10) — ERP «Articulos», Salud Total SAC">
+      
+      
+      
+        <link rel="canonical" href="https://samuel-910.github.io/Perfil-de-Egreso/ce03/ce0311/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../ce0331/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>CE0311 - S1 - E1: Análisis y Diseño de Red - Perfil de Egreso — Ingeniería de Sistemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ce0311-s1-e1-analisis-y-diseno-de-red" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Perfil de Egreso — Ingeniería de Sistemas" class="md-header__button md-logo" aria-label="Perfil de Egreso — Ingeniería de Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Perfil de Egreso — Ingeniería de Sistemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CE0311 - S1 - E1: Análisis y Diseño de Red
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Samuel-910/Perfil-de-Egreso" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Samuel-910/Perfil-de-Egreso
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Perfil de Egreso — Ingeniería de Sistemas" class="md-nav__button md-logo" aria-label="Perfil de Egreso — Ingeniería de Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg>
+
+    </a>
+    Perfil de Egreso — Ingeniería de Sistemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Samuel-910/Perfil-de-Egreso" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Samuel-910/Perfil-de-Egreso
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE01: Gestión de Tecnologías de Información
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE01: Gestión de Tecnologías de Información
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0111-CE0115 - E1: Diagnóstico Organizacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0113 - E2: Business Case del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0121-CE0125 - E3: Plan de Gestión del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0131-CE0135 - E4: Modelado de Procesos AS-IS / TO-BE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0141-CE0145 - E5: Propuesta de Solución TIC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce02/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE02: Ingeniería de Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE02: Ingeniería de Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce02/ce021/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce02/ce021/galeria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Galería del prototipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce02/ce022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE022 - S2 - E2: Plataforma de Datos del Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce02/ce023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE023 - S2 - E3: Sistema de Software Funcional Integrado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce02/ce024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE024 - S2 - E4: Gestión del Proyecto y Calidad de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE03: Infraestructura Tecnológica
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE03: Infraestructura Tecnológica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0311 - S1 - E1: Análisis y Diseño de Red
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0311 - S1 - E1: Análisis y Diseño de Red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#control-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de versiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-resumen-ejecutivo-del-diseno-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Resumen ejecutivo del diseño de red
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-descripcion-de-la-organizacion-y-necesidades-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Descripción de la organización y necesidades de red
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Descripción de la organización y necesidades de red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-descripcion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Descripción general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-servicios-y-procesos-criticos-dependientes-de-la-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Servicios y procesos críticos dependientes de la red
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-partes-interesadas-relevantes-a-la-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Partes interesadas relevantes a la red
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-necesidades-de-negocio-que-guian-el-diseno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Necesidades de negocio que guían el diseño
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-alcance-del-diseno-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Alcance del diseño de red
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Alcance del diseño de red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-declaracion-de-alcance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Declaración de alcance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Límites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-exclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Exclusiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-objetivos-del-diseno-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Objetivos del diseño de red
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-topologias-de-red-diseno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Topologías de red (diseño)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Topologías de red (diseño)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-topologia-general-de-infraestructura-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Topología general de infraestructura de red
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-topologia-logica-de-red-vlan-y-subredes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Topología lógica de red — VLAN y subredes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-diseno-de-seguridad-perimetral-y-zonas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Diseño de seguridad perimetral y zonas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-diseno-de-conectividad-vpn-hibrida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Diseño de conectividad VPN híbrida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-diagrama-de-flujo-de-informacion-planeado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Diagrama de flujo de información planeado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-matriz-de-componentes-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Matriz de componentes de red
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-diseno-de-conectividad-hibrida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Diseño de conectividad híbrida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-diseno-de-seguridad-perimetral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Diseño de seguridad perimetral
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Diseño de seguridad perimetral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Firewall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-dmz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 DMZ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-segmentacion-planeada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Segmentación planeada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-diseno-de-deteccion-idsips-y-honeypot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Diseño de detección — IDS/IPS y honeypot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-consideraciones-de-escalabilidad-y-disponibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Consideraciones de escalabilidad y disponibilidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-conclusiones-del-diseno-y-siguientes-pasos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Conclusiones del diseño y siguientes pasos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Referencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo-a-coherencia-con-ce01-ce02-y-el-sistema-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo A. Coherencia con CE01, CE02 y el sistema real
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo-b-trazabilidad-necesidades-objetivos-decisiones-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo B. Trazabilidad necesidades → objetivos → decisiones → pruebas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo-c-productos-entregados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo C. Productos entregados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexo C. Productos entregados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivos-del-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos del entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce0331/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0331 - S1 - E2: Análisis y Diseño de Centro de Datos Híbrido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce0321/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0321-CE0324 - S2 - E1: Planificación e Implementación del SGSI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce0312/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0312-CE0313 - S2 - E2: Implementación, Testing y Monitoreo de Red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce0332/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0332-CE0333 - S2 - E3: Implementación, Gestión y Control de Centro de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#control-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de versiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-resumen-ejecutivo-del-diseno-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Resumen ejecutivo del diseño de red
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-descripcion-de-la-organizacion-y-necesidades-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Descripción de la organización y necesidades de red
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Descripción de la organización y necesidades de red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-descripcion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Descripción general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-servicios-y-procesos-criticos-dependientes-de-la-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Servicios y procesos críticos dependientes de la red
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-partes-interesadas-relevantes-a-la-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Partes interesadas relevantes a la red
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-necesidades-de-negocio-que-guian-el-diseno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Necesidades de negocio que guían el diseño
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-alcance-del-diseno-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Alcance del diseño de red
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Alcance del diseño de red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-declaracion-de-alcance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Declaración de alcance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Límites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-exclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Exclusiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-objetivos-del-diseno-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Objetivos del diseño de red
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-topologias-de-red-diseno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Topologías de red (diseño)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Topologías de red (diseño)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-topologia-general-de-infraestructura-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Topología general de infraestructura de red
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-topologia-logica-de-red-vlan-y-subredes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Topología lógica de red — VLAN y subredes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-diseno-de-seguridad-perimetral-y-zonas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Diseño de seguridad perimetral y zonas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-diseno-de-conectividad-vpn-hibrida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Diseño de conectividad VPN híbrida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-diagrama-de-flujo-de-informacion-planeado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Diagrama de flujo de información planeado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-matriz-de-componentes-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Matriz de componentes de red
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-diseno-de-conectividad-hibrida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Diseño de conectividad híbrida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-diseno-de-seguridad-perimetral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Diseño de seguridad perimetral
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Diseño de seguridad perimetral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Firewall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-dmz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 DMZ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-segmentacion-planeada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Segmentación planeada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-diseno-de-deteccion-idsips-y-honeypot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Diseño de detección — IDS/IPS y honeypot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-consideraciones-de-escalabilidad-y-disponibilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Consideraciones de escalabilidad y disponibilidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-conclusiones-del-diseno-y-siguientes-pasos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Conclusiones del diseño y siguientes pasos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Referencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo-a-coherencia-con-ce01-ce02-y-el-sistema-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo A. Coherencia con CE01, CE02 y el sistema real
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo-b-trazabilidad-necesidades-objetivos-decisiones-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo B. Trazabilidad necesidades → objetivos → decisiones → pruebas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexo-c-productos-entregados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo C. Productos entregados
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexo C. Productos entregados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivos-del-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos del entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ce0311-s1-e1-analisis-y-diseno-de-red">CE0311 - S1 - E1: Análisis y Diseño de Red<a class="headerlink" href="#ce0311-s1-e1-analisis-y-diseno-de-red" title="Permanent link">&para;</a></h1>
+<p><strong>UNIVERSIDAD PERUANA UNIÓN</strong></p>
+<p>Facultad de Ingeniería y Arquitectura · Escuela Profesional de Ingeniería de Sistemas</p>
+<p><strong>ENTREGABLE 1 · SEMESTRE 1</strong></p>
+<p><strong>Análisis y Diseño de Red</strong></p>
+<p><em>(CE0311 · Línea de Infraestructura Tecnológica — CE03)</em></p>
+<p><strong>Red híbrida on-premise + AWS del ERP «Articulos» — Salud Total SAC<br />
+(cadena de farmacias y clínica ambulatoria · Juliaca y Puno)</strong></p>
+<p><img src="media/media/image1.png" style="width:4.33071in;height:2.43602in" /></p>
+<table>
+<thead>
+<tr>
+<th><strong>Campo</strong></th>
+<th><strong>Detalle</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proyecto</td>
+<td>Infraestructura híbrida AWS + on-premise (VMware ESXi) con seguridad perimetral y SGSI ISO/IEC 27001</td>
+</tr>
+<tr>
+<td>Organización</td>
+<td>Salud Total SAC — sede central Juliaca y sucursal Puno</td>
+</tr>
+<tr>
+<td>Responsables</td>
+<td>Jhosef Anthony Quispe Huarilloclla · Jose Samuel Turpo Cauna · Yesenia Alejandra Gutierrez Anco</td>
+</tr>
+<tr>
+<td>Curso</td>
+<td>CE0311 — Análisis y Diseño de Red</td>
+</tr>
+<tr>
+<td>Versión y fecha</td>
+<td>v2.1 — 19 de noviembre de 2026 (alineada con CE01, CE02 E1 v2.0 y el código del ERP)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="control-de-versiones">Control de versiones<a class="headerlink" href="#control-de-versiones" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versión</th>
+<th>Fecha</th>
+<th>Cambios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>Julio de 2026</td>
+<td>Primera versión (variantes «Local» y «AWS»): requerimientos, topología, redundancia, estándares y ética</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>19/11/2026</td>
+<td>Reestructurada según la plantilla S1-E1: alcance, objetivos medibles, seis vistas de topología, VPN, DMZ y matriz de zonas, IDS/IPS y honeypot, flujos y matriz de componentes, trazabilidad. Se retiran Kafka y Supabase y se fija la VPC 10.50.0.0/16</td>
+</tr>
+<tr>
+<td>2.1</td>
+<td>19/11/2026</td>
+<td>AWS alineado a lo implementado y al resumen de la línea: fase 1 con una EC2 y Docker Compose (Elastic IP, sg-erp, Caddy para TLS, puertos internos en 127.0.0.1), VPN con rutas estáticas (una conexión por sede), detección en la instancia; ALB, 2 EC2, RDS y BGP pasan a fase 2 con subredes reservadas</td>
+</tr>
+</tbody>
+</table>
+<p>Este informe se acompaña de tres productos independientes, exigidos por la rúbrica: los diagramas editables (carpeta Diagramas, formato .drawio de diagrams.net y .png), la matriz de componentes y la matriz de pruebas de conectividad (Anexos/Matrices_Diseno_Red_E1.xlsx). Todas las tablas del informe y de la hoja de cálculo se generan desde la misma fuente de datos, por lo que coinciden entre sí.</p>
+<h2 id="1-resumen-ejecutivo-del-diseno-de-red">1. Resumen ejecutivo del diseño de red<a class="headerlink" href="#1-resumen-ejecutivo-del-diseno-de-red" title="Permanent link">&para;</a></h2>
+<p>Salud Total SAC es una cadena de farmacias con clínica ambulatoria que opera una sede central en Juliaca y una sucursal en Puno (unos 66 usuarios). Toda su operación —ventas y caja, inventario por lotes con FEFO, compras, reabastecimiento, historia clínica y notificaciones— corre sobre «Articulos», un ERP web propio (Angular 20, Spring Boot 3.5 / Java 21, PostgreSQL y el microservicio mensajeria-api). CE01 decidió llevar el ERP a la nube y CE02 lo diseñó sobre AWS; este documento diseña la red que lo hace posible.</p>
+<p>Problema que se resuelve. El ERP ya corre en AWS (una EC2 con Docker Compose), pero sin una red diseñada a su alrededor: se publica por HTTP en el puerto 8090, los puertos internos quedan escuchando en el host, las sedes no tienen segmentación documentada (los datos de salud comparten red con cajas e invitados), no hay un camino cifrado hacia la nube para administrar y respaldar ni visibilidad de ataques. Una caída de enlace detiene las ventas.</p>
+<p>Topología propuesta. Cada sede tiene una red segmentada en VLAN (ventas/caja, almacén, clínica, administración, gestión, seguridad, Wi-Fi corporativo e invitados). Juliaca usa un núcleo L3 de dos switches en stack, un par de firewalls OPNsense en alta disponibilidad y doble ISP; Puno, un firewall OPNsense con fibra y respaldo LTE. El ERP vive en AWS (us-east-2) tal como se implementó: una instancia EC2 Ubuntu 24.04 con Elastic IP que ejecuta el sistema con Docker Compose (Nginx, backend Spring Boot, PostgreSQL, mensajería y Prometheus). El diseño la ubica en una VPC dedicada 10.50.0.0/16 y reserva las subredes de la fase 2 (ALB, segunda EC2 y RDS Multi-AZ, la arquitectura objetivo de CE02) para crecer sin renumerar. Un host VMware ESXi en Juliaca queda como contingencia.</p>
+<p>Integración híbrida. VPN IPsec Site-to-Site (IKEv2, AES-256, SHA-256, rutas estáticas) de cada sede a un Virtual Private Gateway, con dos túneles por conexión. Por la VPN viaja lo que nunca debe tocar Internet: gestión, copia nocturna de la base para contingencia, métricas y registros. Los usuarios llegan al ERP por HTTPS a la Elastic IP, de modo que la venta no depende del túnel.</p>
+<p>Zonas de seguridad. Exterior, DMZ local (honeypot y proxy de contingencia), DMZ en la nube (la EC2 publicada), red interna de Docker, zonas de usuarios, zona restringida de clínica, gestión, seguridad e invitados. La política por defecto es denegar; el único servicio publicado es HTTPS 443 en la EC2 (Caddy delante de Nginx), y backend, base y monitoreo solo escuchan en 127.0.0.1 o en la red Docker. Suricata (IPS en el firewall, IDS por SPAN y en la instancia), un honeypot OpenCanary, VPC Flow Logs y Wazuh centralizan la detección.</p>
+<p>Riesgos de red preliminares: caída del enlace o del túnel (mitigado con doble ISP, LTE y dos túneles; el ERP no depende de la VPN); exposición de la base o del backend (mitigado con un único puerto público y puertos internos en 127.0.0.1, riesgo R1 del SGSI); tráfico sin cifrar (TLS con Caddy, riesgo R6); instancia única (snapshots EBS, pg_dump diario y contingencia local); acceso administrativo indebido (VLAN de gestión, SSH solo con llave y desde orígenes autorizados); fuga de secretos de la VPN (fuera del informe y de git).</p>
+<p>Resultados esperados y siguientes pasos. Ocho objetivos medibles (sección 4), 30 reglas de comunicación entre zonas, 40 componentes con IP planeada, 20 pruebas de conectividad y 8 de detección para el Semestre 2 (entregable «Implementación, testing y monitoreo de red»), donde ya se desplegó la fase 1 en AWS.</p>
+<p><img src="media/media/image1.png" style="width:6.49606in;height:3.65404in" /></p>
+<p><em>Figura 1.1 — Topología ejecutiva simplificada del diseño de red</em></p>
+<h2 id="2-descripcion-de-la-organizacion-y-necesidades-de-red">2. Descripción de la organización y necesidades de red<a class="headerlink" href="#2-descripcion-de-la-organizacion-y-necesidades-de-red" title="Permanent link">&para;</a></h2>
+<h3 id="21-descripcion-general">2.1 Descripción general<a class="headerlink" href="#21-descripcion-general" title="Permanent link">&para;</a></h3>
+<p>Organización y rubro: Salud Total SAC, cadena de farmacias (venta de medicamentos con control de lotes y vencimientos exigido por DIGEMID) con consultorios de atención ambulatoria. Sedes: central en Juliaca (ventas, almacén principal, clínica, administración y sala de comunicaciones) y sucursal en Puno.</p>
+<p>Servicios TI que dependen de la red: el ERP «Articulos» (SPA Angular que consume la API REST del backend en el puerto 8085 y recibe notificaciones por WebSocket/STOMP en /ws-notifications), la base de datos PostgreSQL clinica_db, el microservicio mensajeria-api (puerto 8087, correo por Gmail SMTP y WhatsApp Business de Meta), la emisión de comprobantes y, en la fase 2, SUNAT/OSE y pasarela de pagos.</p>
+<p>Uso de nube e infraestructura local: la producción del ERP se aloja en AWS (decisión ADR-07 de CE02) en una EC2 con Docker Compose; en las sedes quedan la red de usuarios, la seguridad perimetral, el monitoreo y un host ESXi de contingencia en Juliaca.</p>
+<p>Usuarios y dispositivos estimados por área:</p>
+<table>
+<thead>
+<tr>
+<th>Área / servicio</th>
+<th>Juliaca</th>
+<th>Puno</th>
+<th>Total</th>
+<th>VLAN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ventas / caja (POS)</td>
+<td>12</td>
+<td>4</td>
+<td>16</td>
+<td>30 / 130</td>
+</tr>
+<tr>
+<td>Almacén</td>
+<td>6</td>
+<td>2</td>
+<td>8</td>
+<td>40 / 140</td>
+</tr>
+<tr>
+<td>Clínica</td>
+<td>8</td>
+<td>3</td>
+<td>11</td>
+<td>50 / 150</td>
+</tr>
+<tr>
+<td>Administración / gerencia</td>
+<td>10</td>
+<td>1</td>
+<td>11</td>
+<td>60 / 160</td>
+</tr>
+<tr>
+<td>Wi-Fi corporativo</td>
+<td>15</td>
+<td>—</td>
+<td>15</td>
+<td>80</td>
+</tr>
+<tr>
+<td>Invitados (Wi-Fi)</td>
+<td>variable</td>
+<td>variable</td>
+<td>—</td>
+<td>90 / 190</td>
+</tr>
+<tr>
+<td>Total de usuarios activos (aprox.)</td>
+<td>~50</td>
+<td>~16</td>
+<td>~66</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Ancho de banda: el ERP intercambia JSON pequeño; los picos vienen de reportes y exportaciones. La estimación y la provisión son:</p>
+<table>
+<thead>
+<tr>
+<th>Tráfico</th>
+<th>Por usuario</th>
+<th>Concurrencia</th>
+<th>Agregado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Operación del ERP (REST/JSON)</td>
+<td>0,5–1 Mbps</td>
+<td>~50 en Juliaca</td>
+<td>~40 Mbps</td>
+</tr>
+<tr>
+<td>Reportes y exportaciones (PDF/Excel)</td>
+<td>3–5 Mbps en pico</td>
+<td>~8 simultáneos</td>
+<td>~30 Mbps en ráfaga</td>
+</tr>
+<tr>
+<td>Notificaciones (WebSocket/STOMP)</td>
+<td>\&lt; 50 kbps</td>
+<td>~66</td>
+<td>~3 Mbps</td>
+</tr>
+<tr>
+<td>Túneles VPN (gestión, copia nocturna, métricas)</td>
+<td>—</td>
+<td>Programado 02:00</td>
+<td>~5 Mbps en ventana (pg_dump de ~0,3 MB hoy)</td>
+</tr>
+<tr>
+<td>Navegación, correo y actualizaciones</td>
+<td>variable</td>
+<td>—</td>
+<td>~40 Mbps</td>
+</tr>
+<tr>
+<td>Provisión Juliaca</td>
+<td></td>
+<td></td>
+<td>200 Mbps (ISP-A) + 100 Mbps (ISP-B)</td>
+</tr>
+<tr>
+<td>Provisión Puno</td>
+<td></td>
+<td></td>
+<td>50 Mbps fibra + LTE de respaldo</td>
+</tr>
+</tbody>
+</table>
+<p>Disponibilidad y crecimiento: el ERP debe estar disponible ≥ 99,5 % de 07:00 a 23:00 (RNF-15 de CE02), con RPO ≤ 24 h y RTO ≤ 4 h; las ventas de hasta 20 ítems deben responder en menos de 2 s con 50 usuarios (RNF-14). El plan estratégico de CE01 (OE1) prevé abrir nuevas sucursales, por lo que el direccionamiento debe admitirlas sin renumerar.</p>
+<h3 id="22-servicios-y-procesos-criticos-dependientes-de-la-red">2.2 Servicios y procesos críticos dependientes de la red<a class="headerlink" href="#22-servicios-y-procesos-criticos-dependientes-de-la-red" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Proceso</th>
+<th>Servicio TI</th>
+<th>Dependencia de red</th>
+<th>Criticidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ventas y caja</td>
+<td>ERP: módulo de ventas, caja y comprobantes</td>
+<td>Sede → EC2-ERP-01 443; WebSocket para avisos</td>
+<td>Crítica</td>
+</tr>
+<tr>
+<td>Inventario por lotes (FEFO) y kardex</td>
+<td>ERP: almacenes, lotes y alertas de vencimiento</td>
+<td>Sede → EC2-ERP-01 443</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Compras y reabastecimiento</td>
+<td>ERP: órdenes de compra y punto de reorden</td>
+<td>Sede → EC2-ERP-01 443; mensajería → Gmail</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Atención clínica</td>
+<td>ERP: historia clínica y resultados</td>
+<td>VLAN de clínica → EC2-ERP-01 443 únicamente</td>
+<td>Crítica</td>
+</tr>
+<tr>
+<td>Transferencias entre sedes</td>
+<td>ERP: transferencias Juliaca–Puno</td>
+<td>Ambas sedes → EC2-ERP-01 443</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Comunicación con pacientes y proveedores</td>
+<td>mensajeria-api (WhatsApp y correo)</td>
+<td>EC2 → IGW → Meta 443 / Gmail 587</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>Continuidad</td>
+<td>pg_dump diario, snapshots EBS y ERP de contingencia en ESXi</td>
+<td>EC2 → S3 443; VPN Juliaca → EC2 22 (scp)</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Administración y monitoreo</td>
+<td>SSH, SIEM, federación de Prometheus</td>
+<td>VLAN 70/100 → EC2 por VPN (22, 9090)</td>
+<td>Alta</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-partes-interesadas-relevantes-a-la-red">2.3 Partes interesadas relevantes a la red<a class="headerlink" href="#23-partes-interesadas-relevantes-a-la-red" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parte interesada</th>
+<th>Qué espera de la conectividad y la seguridad de red</th>
+<th>Influencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clientes y pacientes</td>
+<td>Atención sin colas por caídas; confidencialidad de su historia clínica; Wi-Fi de cortesía separado</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Cajeros, almaceneros y personal clínico</td>
+<td>ERP rápido y disponible; no perder ventas por la red</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Gerencia / Dirección</td>
+<td>Continuidad del negocio, costo controlado, acceso a reportes</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Administrador de TI / red</td>
+<td>Red documentada, gestionable y con acceso administrativo seguro</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Responsable de seguridad (SGSI)</td>
+<td>Segmentación, registros y controles alineados a ISO/IEC 27001</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Proveedores ISP (Juliaca y Puno)</td>
+<td>Enlaces con IP fija y soporte; responsabilidad hasta el CPE</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>AWS (proveedor de nube)</td>
+<td>Modelo de responsabilidad compartida: AWS protege la infraestructura física</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Meta (WhatsApp) y Google (Gmail SMTP)</td>
+<td>Salida HTTPS/SMTP desde la mensajería</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>Reguladores: DIGEMID, SUNAT, ANPD (Ley 29733)</td>
+<td>Trazabilidad de lotes, comprobantes y protección de datos de salud</td>
+<td>Alta</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-necesidades-de-negocio-que-guian-el-diseno">2.4 Necesidades de negocio que guían el diseño<a class="headerlink" href="#24-necesidades-de-negocio-que-guian-el-diseno" title="Permanent link">&para;</a></h3>
+<p>Cada decisión de diseño se rastrea a una de estas necesidades (matriz completa en el Anexo B):</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Necesidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ON-01</td>
+<td>Vender y facturar sin interrupciones en ambas sedes</td>
+</tr>
+<tr>
+<td>ON-02</td>
+<td>Centralizar inventario, ventas y clínica entre sedes</td>
+</tr>
+<tr>
+<td>ON-03</td>
+<td>Proteger los datos de pacientes y de la operación</td>
+</tr>
+<tr>
+<td>ON-04</td>
+<td>Abrir sucursales y crecer sin rediseñar</td>
+</tr>
+<tr>
+<td>ON-05</td>
+<td>Cumplir normativa (Ley 29733, DIGEMID, SUNAT) y buenas prácticas</td>
+</tr>
+<tr>
+<td>ON-06</td>
+<td>Contener costos</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-alcance-del-diseno-de-red">3. Alcance del diseño de red<a class="headerlink" href="#3-alcance-del-diseno-de-red" title="Permanent link">&para;</a></h2>
+<h3 id="31-declaracion-de-alcance">3.1 Declaración de alcance<a class="headerlink" href="#31-declaracion-de-alcance" title="Permanent link">&para;</a></h3>
+<p>El diseño comprende la infraestructura de conectividad, direccionamiento y segmentación de las redes de las sedes Juliaca y Puno (VLAN de usuarios, clínica, DMZ, gestión, seguridad e invitados), su seguridad perimetral y de detección, y su integración mediante VPN IPsec Site-to-Site con la VPC de AWS (subredes, tablas de rutas, Security Group y NACL de la EC2 que ejecuta el ERP con Docker Compose, y la red interna de esos contenedores), incluido el host ESXi de contingencia en lo que respecta a su conectividad.</p>
+<h3 id="32-limites">3.2 Límites<a class="headerlink" href="#32-limites" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Físicos:</strong> sala de comunicaciones y gabinetes de piso de Juliaca, gabinete de Puno, enlaces WAN hasta el CPE del ISP.</p>
+</li>
+<li>
+<p><strong>Tecnológicos:</strong> firewalls OPNsense, switches núcleo y acceso, puntos de acceso Wi-Fi, VLAN 802.1Q, VPN IPsec, IDS/IPS Suricata, honeypot, VPC, subredes, tablas de rutas, IGW, VGW, EC2 con Elastic IP, red Docker, Security Group y NACL.</p>
+</li>
+<li>
+<p><strong>Organizacionales:</strong> quién administra cada segmento (tabla siguiente).</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Segmento</th>
+<th>Administra</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perímetro (firewalls, VPN)</td>
+<td>Administrador de red</td>
+<td>Responsable de seguridad aprueba cambios de reglas</td>
+</tr>
+<tr>
+<td>Núcleo, acceso y Wi-Fi</td>
+<td>Administrador de red</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Host ESXi y VM de contingencia</td>
+<td>Administrador de TI</td>
+<td>—</td>
+</tr>
+<tr>
+<td>VLAN de seguridad (IDS, SIEM, monitoreo)</td>
+<td>Responsable de seguridad</td>
+<td>Administrador de TI opera</td>
+</tr>
+<tr>
+<td>Cuenta, VPC y EC2 de AWS (Docker Compose)</td>
+<td>Responsable de nube (Jefe de TI)</td>
+<td>Usuarios IAM con MFA, sin uso de root; SSH solo con llave</td>
+</tr>
+<tr>
+<td>Enlaces WAN hasta el CPE</td>
+<td>ISP</td>
+<td>TI gestiona el contrato y el SLA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-exclusiones">3.3 Exclusiones<a class="headerlink" href="#33-exclusiones" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Exclusión</th>
+<th>Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equipos personales del personal (BYOD)</td>
+<td>Solo pueden usar la Wi-Fi de invitados; no se administran ni se conectan a la red corporativa</td>
+</tr>
+<tr>
+<td>Cableado horizontal detallado (planos y certificación)</td>
+<td>Se rige por TIA-568 (sección 9); el levantamiento de planos se hará con el contratista de cableado</td>
+</tr>
+<tr>
+<td>Equipos biomédicos con red propia</td>
+<td>La clínica es ambulatoria y hoy no tiene equipos conectados; si se adquieren, irán en una VLAN nueva (VLAN 55)</td>
+</tr>
+<tr>
+<td>Redes de los ISP y de AWS bajo su responsabilidad</td>
+<td>Responsabilidad compartida; solo se diseña lo configurable por Salud Total</td>
+</tr>
+<tr>
+<td>Integración con SUNAT/OSE y pasarela de pagos</td>
+<td>Fase 2 del ERP (RF-31 de CE02); solo se reserva la salida HTTPS</td>
+</tr>
+<tr>
+<td>Diseño físico del centro de datos, energía y clima</td>
+<td>Se trata en el E2 de CE03 (Centro de Datos Híbrido)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-objetivos-del-diseno-de-red">4. Objetivos del diseño de red<a class="headerlink" href="#4-objetivos-del-diseno-de-red" title="Permanent link">&para;</a></h2>
+<p>Los objetivos son medibles y cada uno se comprobará con las pruebas de las secciones 6 y 8:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Objetivo</th>
+<th>Indicador</th>
+<th>Meta</th>
+<th>Responsable</th>
+<th>Necesidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OD-01</td>
+<td>Segmentar el tráfico por zonas</td>
+<td>Servidores, datos y equipos clínicos en VLAN/subredes o redes Docker dedicadas</td>
+<td>100 %</td>
+<td>Diseño de red</td>
+<td>ON-03</td>
+</tr>
+<tr>
+<td>OD-02</td>
+<td>Aislar la gestión</td>
+<td>Interfaces de gestión en VLAN 70/170; SSH a la EC2 solo con llave y desde orígenes autorizados</td>
+<td>100 %</td>
+<td>Seguridad</td>
+<td>ON-03</td>
+</tr>
+<tr>
+<td>OD-03</td>
+<td>Minimizar la exposición</td>
+<td>Servicios publicados a Internet</td>
+<td>1 (HTTPS 443 en la Elastic IP); 0 puertos de BD, backend o monitoreo</td>
+<td>Seguridad</td>
+<td>ON-03</td>
+</tr>
+<tr>
+<td>OD-04</td>
+<td>Garantizar el enlace híbrido</td>
+<td>Túneles por conexión y tiempo de conmutación; independencia del ERP respecto del túnel</td>
+<td>2 túneles por sede; \&lt; 60 s; ventas sin VPN</td>
+<td>Infraestructura</td>
+<td>ON-01, ON-02</td>
+</tr>
+<tr>
+<td>OD-05</td>
+<td>Disponibilidad del acceso al ERP</td>
+<td>Disponibilidad medida desde las sedes (07:00–23:00)</td>
+<td>≥ 99,5 % (RNF-15 de CE02)</td>
+<td>Infraestructura</td>
+<td>ON-01</td>
+</tr>
+<tr>
+<td>OD-06</td>
+<td>Rendimiento</td>
+<td>RTT sede → EC2-ERP-01 (p95) · RTT Juliaca ↔ Puno</td>
+<td>\&lt; 150 ms · \&lt; 30 ms</td>
+<td>Infraestructura</td>
+<td>ON-01</td>
+</tr>
+<tr>
+<td>OD-07</td>
+<td>Visibilidad de seguridad</td>
+<td>Eventos de firewall, IDS, honeypot, EC2 y nube centralizados</td>
+<td>100 %; alerta \&lt; 5 min</td>
+<td>Seguridad</td>
+<td>ON-03, ON-05</td>
+</tr>
+<tr>
+<td>OD-08</td>
+<td>Crecer sin renumerar</td>
+<td>Bloques /16 por sede y subredes de fase 2 reservadas en la VPC</td>
+<td>≥ 20 sedes; fase 2 sin cambiar direcciones</td>
+<td>Diseño de red</td>
+<td>ON-04</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-topologias-de-red-diseno">5. Topologías de red (diseño)<a class="headerlink" href="#5-topologias-de-red-diseno" title="Permanent link">&para;</a></h2>
+<p>Se presentan seis vistas con propósito distinto; la 5.1 es la vista maestra y las demás son acercamientos. Los originales editables están en la carpeta Diagramas (.drawio) y todos sus elementos aparecen en la matriz de componentes (sección 5.6).</p>
+<h3 id="51-topologia-general-de-infraestructura-de-red">5.1 Topología general de infraestructura de red<a class="headerlink" href="#51-topologia-general-de-infraestructura-de-red" title="Permanent link">&para;</a></h3>
+<p>Juliaca: dos ISP (A de 200 Mbps y B de 100 Mbps) terminan en el par FW-JUL-01/02 (OPNsense en activo/pasivo con CARP). El firewall es puerta de enlace de la DMZ y de invitados y se conecta al núcleo por un enlace de tránsito agregado (LACP). El núcleo CORE-JUL —dos switches L3 en stack, un solo plano de control— enruta las VLAN internas y distribuye troncales 802.1Q a tres switches de acceso PoE (ventas, almacén/clínica, administración) y al host ESX-JUL-01, que aloja las VM de contingencia y de seguridad. Puno: un firewall OPNsense que hace de gateway de todas las VLAN (router-on-a-stick) sobre un switch PoE, con fibra y LTE. AWS: VPC-ST con la subred pública snet-publica-a, donde EC2-ERP-01 (Elastic IP) ejecuta los seis contenedores del ERP; las subredes de la fase 2 aparecen reservadas; el VGW termina las VPN de ambas sedes y las copias van a S3.</p>
+<p><img src="media/media/image2.png" style="width:6.49606in;height:4.06004in" /></p>
+<p><em>Figura 5.1 — Topología general de red propuesta</em></p>
+<h3 id="52-topologia-logica-de-red-vlan-y-subredes">5.2 Topología lógica de red — VLAN y subredes<a class="headerlink" href="#52-topologia-logica-de-red-vlan-y-subredes" title="Permanent link">&para;</a></h3>
+<p>Direccionamiento privado RFC 1918, jerárquico por sitio: una /16 por sede (resumible en una sola ruta) y el tercer octeto igual al número de VLAN, lo que simplifica reglas y diagnóstico. La puerta de enlace es siempre la .1. Se conservan las direcciones de la v1.0 y de la implementación de S2 (Juliaca 10.10.x, Puno 10.20.130.x); la VPC se mueve a 10.50.0.0/16 porque la propuesta previa 10.20.0.0/16 se solapaba con Puno.</p>
+<table>
+<thead>
+<tr>
+<th>Sitio</th>
+<th>Bloque</th>
+<th>Esquema</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sede central Juliaca</td>
+<td>10.10.0.0/16</td>
+<td>VLAN 10–100 (tercer octeto = n.º de VLAN)</td>
+<td>En uso</td>
+</tr>
+<tr>
+<td>Sucursal Puno</td>
+<td>10.20.0.0/16</td>
+<td>VLAN 130–190 (tercer octeto = n.º de VLAN)</td>
+<td>En uso</td>
+</tr>
+<tr>
+<td>Futuras sedes (3.ª a 22.ª)</td>
+<td>10.30.0.0/16 – 10.49.0.0/16</td>
+<td>Mismo patrón, una /16 por sede</td>
+<td>Reservado</td>
+</tr>
+<tr>
+<td>VPC de AWS (us-east-2, Ohio)</td>
+<td>10.50.0.0/16</td>
+<td>Subredes /24 por capa y zona de disponibilidad</td>
+<td>En uso</td>
+</tr>
+<tr>
+<td>Ampliación en la nube (otra región / DR)</td>
+<td>10.51.0.0/16 – 10.59.0.0/16</td>
+<td>VPC adicionales sin solaparse</td>
+<td>Reservado</td>
+</tr>
+<tr>
+<td>Enlaces de tránsito internos</td>
+<td>10.10.254.0/24 y 10.20.254.0/24</td>
+<td>/29 entre firewall y núcleo</td>
+<td>En uso</td>
+</tr>
+<tr>
+<td>Túneles IPsec (interior)</td>
+<td>169.254.0.0/16 (/30 por túnel)</td>
+<td>Asignado por AWS (RFC 3927)</td>
+<td>En uso</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sede</th>
+<th>VLAN</th>
+<th>Nombre</th>
+<th>Subred</th>
+<th>Gateway</th>
+<th>DHCP</th>
+<th>Zona</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Juliaca</td>
+<td>10</td>
+<td>SERVIDORES-LOCAL</td>
+<td>10.10.10.0/24</td>
+<td>10.10.10.1 (núcleo)</td>
+<td>Estático</td>
+<td>Servidores locales</td>
+</tr>
+<tr>
+<td>Juliaca</td>
+<td>20</td>
+<td>DMZ</td>
+<td>10.10.20.0/24</td>
+<td>10.10.20.1 (firewall)</td>
+<td>Estático</td>
+<td>DMZ</td>
+</tr>
+<tr>
+<td>Juliaca</td>
+<td>30</td>
+<td>VENTAS-CAJA</td>
+<td>10.10.30.0/24</td>
+<td>10.10.30.1 (núcleo)</td>
+<td>DHCP .100–.200</td>
+<td>Usuarios</td>
+</tr>
+<tr>
+<td>Juliaca</td>
+<td>40</td>
+<td>ALMACEN</td>
+<td>10.10.40.0/24</td>
+<td>10.10.40.1 (núcleo)</td>
+<td>DHCP .100–.200</td>
+<td>Usuarios</td>
+</tr>
+<tr>
+<td>Juliaca</td>
+<td>50</td>
+<td>CLINICA</td>
+<td>10.10.50.0/24</td>
+<td>10.10.50.1 (núcleo)</td>
+<td>DHCP .100–.200</td>
+<td>Clínica (restringida)</td>
+</tr>
+<tr>
+<td>Juliaca</td>
+<td>60</td>
+<td>ADMINISTRACION</td>
+<td>10.10.60.0/24</td>
+<td>10.10.60.1 (núcleo)</td>
+<td>DHCP .100–.200</td>
+<td>Usuarios</td>
+</tr>
+<tr>
+<td>Juliaca</td>
+<td>70</td>
+<td>GESTION</td>
+<td>10.10.70.0/24</td>
+<td>10.10.70.1 (núcleo)</td>
+<td>Estático</td>
+<td>Gestión</td>
+</tr>
+<tr>
+<td>Juliaca</td>
+<td>80</td>
+<td>WIFI-CORP</td>
+<td>10.10.80.0/24</td>
+<td>10.10.80.1 (núcleo)</td>
+<td>DHCP .20–.250</td>
+<td>Usuarios</td>
+</tr>
+<tr>
+<td>Juliaca</td>
+<td>90</td>
+<td>WIFI-INVITADOS</td>
+<td>10.10.90.0/24</td>
+<td>10.10.90.1 (firewall)</td>
+<td>DHCP .20–.250</td>
+<td>Invitados</td>
+</tr>
+<tr>
+<td>Juliaca</td>
+<td>100</td>
+<td>SEGURIDAD</td>
+<td>10.10.100.0/24</td>
+<td>10.10.100.1 (núcleo)</td>
+<td>Estático</td>
+<td>Seguridad</td>
+</tr>
+<tr>
+<td>Puno</td>
+<td>130</td>
+<td>VENTAS-CAJA</td>
+<td>10.20.130.0/24</td>
+<td>10.20.130.1 (firewall)</td>
+<td>DHCP .100–.200</td>
+<td>Usuarios</td>
+</tr>
+<tr>
+<td>Puno</td>
+<td>140</td>
+<td>ALMACEN</td>
+<td>10.20.140.0/24</td>
+<td>10.20.140.1 (firewall)</td>
+<td>DHCP .100–.200</td>
+<td>Usuarios</td>
+</tr>
+<tr>
+<td>Puno</td>
+<td>150</td>
+<td>CLINICA</td>
+<td>10.20.150.0/24</td>
+<td>10.20.150.1 (firewall)</td>
+<td>DHCP .100–.200</td>
+<td>Clínica (restringida)</td>
+</tr>
+<tr>
+<td>Puno</td>
+<td>160</td>
+<td>ADMINISTRACION</td>
+<td>10.20.160.0/24</td>
+<td>10.20.160.1 (firewall)</td>
+<td>DHCP .100–.200</td>
+<td>Usuarios</td>
+</tr>
+<tr>
+<td>Puno</td>
+<td>170</td>
+<td>GESTION</td>
+<td>10.20.170.0/24</td>
+<td>10.20.170.1 (firewall)</td>
+<td>Estático</td>
+<td>Gestión</td>
+</tr>
+<tr>
+<td>Puno</td>
+<td>190</td>
+<td>WIFI-INVITADOS</td>
+<td>10.20.190.0/24</td>
+<td>10.20.190.1 (firewall)</td>
+<td>DHCP .20–.250</td>
+<td>Invitados</td>
+</tr>
+</tbody>
+</table>
+<p>Subredes de la VPC (una /24 por capa y zona; en la fase 1 solo se usa snet-publica-a, las demás quedan reservadas para la fase 2):</p>
+<table>
+<thead>
+<tr>
+<th>Subred</th>
+<th>CIDR</th>
+<th>Zona</th>
+<th>Tipo</th>
+<th>Tabla de rutas</th>
+<th>Recursos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>snet-publica-a</td>
+<td>10.50.0.0/24</td>
+<td>us-east-2a</td>
+<td>Pública (fase 1)</td>
+<td>rtb-publica: 0.0.0.0/0 → IGW; 10.10/16 y 10.20/16 → VGW</td>
+<td>EC2-ERP-01 con Elastic IP (fase 1); nodo A del ALB (fase 2)</td>
+</tr>
+<tr>
+<td>snet-publica-b</td>
+<td>10.50.1.0/24</td>
+<td>us-east-2b</td>
+<td>Pública (reservada)</td>
+<td>rtb-publica</td>
+<td>Fase 2: nodo B del ALB y NAT Gateway</td>
+</tr>
+<tr>
+<td>snet-app-a</td>
+<td>10.50.10.0/24</td>
+<td>us-east-2a</td>
+<td>Privada de aplicación (reservada)</td>
+<td>Fase 2: rtb-app-a → NAT; sedes → VGW</td>
+<td>Fase 2: EC2 del ERP sin IP pública</td>
+</tr>
+<tr>
+<td>snet-app-b</td>
+<td>10.50.11.0/24</td>
+<td>us-east-2b</td>
+<td>Privada de aplicación (reservada)</td>
+<td>Fase 2: rtb-app-b → NAT; sedes → VGW</td>
+<td>Fase 2: segunda EC2 del ERP</td>
+</tr>
+<tr>
+<td>snet-datos-a</td>
+<td>10.50.20.0/24</td>
+<td>us-east-2a</td>
+<td>Privada de datos (reservada)</td>
+<td>Fase 2: rtb-datos sin Internet</td>
+<td>Fase 2: RDS PostgreSQL primario</td>
+</tr>
+<tr>
+<td>snet-datos-b</td>
+<td>10.50.21.0/24</td>
+<td>us-east-2b</td>
+<td>Privada de datos (reservada)</td>
+<td>Fase 2: rtb-datos sin Internet</td>
+<td>Fase 2: RDS en espera (Multi-AZ)</td>
+</tr>
+</tbody>
+</table>
+<p>Ruteo. En Juliaca el núcleo tiene las SVI .1 de las VLAN internas y una ruta por defecto hacia la VIP del firewall (10.10.254.1); el firewall tiene una ruta estática 10.50.0.0/16 hacia el túnel VPN-JUL, y la conexión de AWS declara 10.10.0.0/16 como ruta estática. Las ACL del núcleo aplican la matriz de la sección 7.3 al tráfico entre VLAN; lo que sale de la sede lo filtra el firewall. En Puno el firewall es gateway de todas las VLAN y su conexión declara 10.20.0.0/16. En AWS, rtb-publica tiene 0.0.0.0/0 hacia el IGW y recibe por propagación 10.10.0.0/16 y 10.20.0.0/16 hacia el VGW. Dentro de EC2-ERP-01 los contenedores se comunican por la red interna de Docker.</p>
+<p>Ejemplo de cálculo (VLAN 30 — 10.10.30.0/24): 24 bits de red y 8 de host → 2⁸ = 256 direcciones, 254 utilizables; red 10.10.30.0, gateway 10.10.30.1, difusión 10.10.30.255. Con VLSM la VLAN de clínica (11 hosts) cabría en una /28; se prefiere /24 por simplicidad y crecimiento, lo que es razonable en espacio privado.</p>
+<p><img src="media/media/image3.png" style="width:6.49606in;height:3.73524in" /></p>
+<p><em>Figura 5.2 — Topología lógica de red propuesta (incluye el resumen de comunicación entre VLAN)</em></p>
+<h3 id="53-diseno-de-seguridad-perimetral-y-zonas">5.3 Diseño de seguridad perimetral y zonas<a class="headerlink" href="#53-diseno-de-seguridad-perimetral-y-zonas" title="Permanent link">&para;</a></h3>
+<p>La figura muestra los controles que atraviesa el tráfico antes de llegar a cada zona. En la nube: Internet → NACL → sg-erp (solo 443/80 públicos; 22 y 9090 solo desde orígenes autorizados) → Caddy (TLS) → Nginx → backend en la red Docker → PostgreSQL, que no tiene puerto accesible desde fuera del host. En la sede: Internet → firewall HA con Suricata en modo IPS → DMZ o núcleo con ACL → zonas internas; una copia del tráfico del núcleo (SPAN) alimenta al sensor IDS; firewall, IDS, honeypot, la EC2 (Suricata y Wazuh) y los Flow Logs envían sus eventos al SIEM.</p>
+<table>
+<thead>
+<tr>
+<th>Zona</th>
+<th>Nivel de confianza</th>
+<th>Contenido</th>
+<th>Controles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exterior (Internet)</td>
+<td>Nula</td>
+<td>ISP, usuarios remotos, atacantes</td>
+<td>Firewall HA, IPS, NACL, sg-erp</td>
+</tr>
+<tr>
+<td>DMZ nube (snet-publica-a)</td>
+<td>Baja</td>
+<td>EC2-ERP-01: solo Caddy y Nginx publicados</td>
+<td>sg-erp (443/80), TLS, Suricata y fail2ban en la instancia</td>
+</tr>
+<tr>
+<td>DMZ local (VLAN 20)</td>
+<td>Baja</td>
+<td>Proxy de contingencia, honeypot</td>
+<td>Firewall, IPS, sin acceso a LAN</td>
+</tr>
+<tr>
+<td>Invitados (VLAN 90/190)</td>
+<td>Baja</td>
+<td>Wi-Fi de clientes</td>
+<td>Solo Internet, aislamiento de clientes</td>
+</tr>
+<tr>
+<td>Usuarios (VLAN 30/40/60/80, 130/140/160)</td>
+<td>Media</td>
+<td>POS y estaciones</td>
+<td>802.1X, ACL del núcleo, filtrado web</td>
+</tr>
+<tr>
+<td>Clínica (VLAN 50/150)</td>
+<td>Media, restringida</td>
+<td>Equipos con datos de salud</td>
+<td>Sin Internet general, monitoreo este-oeste</td>
+</tr>
+<tr>
+<td>Aplicación (red Docker de EC2-ERP-01)</td>
+<td>Alta</td>
+<td>backend, mensajería, Prometheus</td>
+<td>Sin puertos públicos; host solo en 127.0.0.1; JWT</td>
+</tr>
+<tr>
+<td>Datos (contenedor db, volumen en EBS)</td>
+<td>Máxima</td>
+<td>PostgreSQL clinica_db</td>
+<td>Solo el backend lo alcanza; rol st_app; EBS cifrado; respaldos a S3</td>
+</tr>
+<tr>
+<td>Gestión (VLAN 70/170) y Seguridad (VLAN 100)</td>
+<td>Máxima</td>
+<td>Interfaces de gestión, IDS, SIEM, monitoreo</td>
+<td>Solo desde 10.10.70.50, registro en SIEM</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/media/image4.png" style="width:6.49606in;height:3.57283in" /></p>
+<p><em>Figura 5.3 — Topología de seguridad y zonas propuesta</em></p>
+<h3 id="54-diseno-de-conectividad-vpn-hibrida">5.4 Diseño de conectividad VPN híbrida<a class="headerlink" href="#54-diseno-de-conectividad-vpn-hibrida" title="Permanent link">&para;</a></h3>
+<p>Extremos, redes anunciadas y cifrado previsto (los secretos no se incluyen en este documento):</p>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Extremo on-premise</th>
+<th>Extremo AWS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tipo de túnel</td>
+<td>IPsec Site-to-Site basado en rutas (VTI) con rutas estáticas</td>
+<td>AWS Site-to-Site VPN (2 túneles por conexión)</td>
+</tr>
+<tr>
+<td>Dispositivo</td>
+<td>FW-JUL-01/02 (OPNsense, strongSwan) · FW-PUN-01</td>
+<td>VGW-ST asociado a VPC-ST</td>
+</tr>
+<tr>
+<td>IP pública</td>
+<td>Juliaca: 203.0.113.10 (ISP-A)* · Puno: 203.0.113.20 (fibra)*</td>
+<td>Dos IP públicas por conexión, asignadas por AWS</td>
+</tr>
+<tr>
+<td>Customer Gateway</td>
+<td>CGW-JUL (IP fija de ISP-A) y CGW-PUN (IP fija de la fibra)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Redes anunciadas (rutas estáticas)</td>
+<td>Juliaca 10.10.0.0/16 · Puno 10.20.0.0/16</td>
+<td>10.50.0.0/16</td>
+</tr>
+<tr>
+<td>Enrutamiento</td>
+<td>Ruta estática 10.50.0.0/16 → interfaz del túnel; los dos túneles con monitoreo de puerta de enlace</td>
+<td>Rutas estáticas por conexión y propagación a rtb-publica</td>
+</tr>
+<tr>
+<td>Fase 1 (IKE)</td>
+<td>IKEv2 · AES-256 · SHA-256 · DH 14 mínimo (20 preferido) · vida 28 800 s</td>
+<td>Igual (propuesta restringida en la configuración del túnel)</td>
+</tr>
+<tr>
+<td>Fase 2 (ESP)</td>
+<td>AES-256 · SHA-256 · PFS DH 14 o superior · vida 3 600 s</td>
+<td>Igual</td>
+</tr>
+<tr>
+<td>Autenticación</td>
+<td>Clave precompartida por túnel</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Detección de caída</td>
+<td>DPD 10 s, acción reiniciar; el firewall conmuta al otro túnel</td>
+<td>DPD timeout 30 s, acción restart; alarma CloudWatch TunnelState</td>
+</tr>
+<tr>
+<td>Custodia de secretos</td>
+<td>Gestor de contraseñas del área de TI; nunca en el informe ni en git</td>
+<td>Configuración del túnel en AWS (no se exporta)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Conexión</th>
+<th>Extremos</th>
+<th>Túneles</th>
+<th>Rol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VPN-JUL</td>
+<td>FW-JUL (ISP-A) ↔ VGW-ST</td>
+<td>2 túneles</td>
+<td>Gestión, copia nocturna, métricas y registros de Juliaca</td>
+</tr>
+<tr>
+<td>VPN-PUN</td>
+<td>FW-PUN (fibra) ↔ VGW-ST</td>
+<td>2 túneles</td>
+<td>Gestión y registros de Puno</td>
+</tr>
+<tr>
+<td>VPN-JUL-B (fase 2)</td>
+<td>FW-JUL (ISP-B) ↔ VGW-ST</td>
+<td>2 túneles</td>
+<td>Respaldo por el segundo ISP con BGP, cuando la VPN deje de ser solo administrativa</td>
+</tr>
+</tbody>
+</table>
+<p><em>* Las IP públicas mostradas son de documentación (RFC 5737); se reemplazarán por las IP fijas que asignen los ISP. El LTE de Puno suele estar detrás de CGNAT y sin IP fija, por eso solo da salida a Internet a los usuarios y no levanta VPN en la fase 1.</em></p>
+<p><img src="media/media/image5.png" style="width:6.49606in;height:3.65404in" /></p>
+<p><em>Figura 5.4 — Topología VPN híbrida propuesta</em></p>
+<h3 id="55-diagrama-de-flujo-de-informacion-planeado">5.5 Diagrama de flujo de información planeado<a class="headerlink" href="#55-diagrama-de-flujo-de-informacion-planeado" title="Permanent link">&para;</a></h3>
+<p>Por dónde viajan los datos, con protocolo, puerto y cifrado. Los puertos son los del docker-compose.yml real: frontend Nginx (publicado en 8090 en la línea base inicial As-Is, 80 detrás de Caddy en el diseño), backend 8085 con /api y /ws-notifications, mensajería 8087, PostgreSQL 5432 y Prometheus 9090; no hay broker de mensajería porque los eventos se guardan en cola_eventos y se avisan con pg_notify/LISTEN (ADR-04 de CE02).</p>
+<table>
+<thead>
+<tr>
+<th>N.°</th>
+<th>Origen</th>
+<th>Destino</th>
+<th>Protocolo</th>
+<th>Puerto</th>
+<th>Cifrado</th>
+<th>Ruta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F01</td>
+<td>Navegador (sede o remoto)</td>
+<td>EC2-ERP-01 (caddy)</td>
+<td>HTTPS</td>
+<td>443</td>
+<td>TLS 1.2+</td>
+<td>Internet</td>
+</tr>
+<tr>
+<td>F02</td>
+<td>Navegador</td>
+<td>caddy → Nginx → backend</td>
+<td>WSS (STOMP)</td>
+<td>443 → 8085 /ws-notifications</td>
+<td>TLS 1.2+</td>
+<td>Internet</td>
+</tr>
+<tr>
+<td>F03</td>
+<td>caddy</td>
+<td>Nginx (contenedor frontend)</td>
+<td>HTTP</td>
+<td>80</td>
+<td>Red interna de Docker</td>
+<td>Mismo host</td>
+</tr>
+<tr>
+<td>F04</td>
+<td>Nginx</td>
+<td>Backend Spring Boot</td>
+<td>HTTP</td>
+<td>8085</td>
+<td>Red interna de Docker</td>
+<td>Mismo host</td>
+</tr>
+<tr>
+<td>F05</td>
+<td>Backend</td>
+<td>PostgreSQL (contenedor db)</td>
+<td>PostgreSQL</td>
+<td>5432</td>
+<td>Red interna de Docker</td>
+<td>Mismo host</td>
+</tr>
+<tr>
+<td>F06</td>
+<td>Backend</td>
+<td>mensajeria-api</td>
+<td>HTTP REST</td>
+<td>8087</td>
+<td>Red interna + JWT</td>
+<td>Mismo host</td>
+</tr>
+<tr>
+<td>F07</td>
+<td>mensajeria-api</td>
+<td>smtp.gmail.com</td>
+<td>SMTP</td>
+<td>587</td>
+<td>STARTTLS</td>
+<td>IGW → Internet</td>
+</tr>
+<tr>
+<td>F08</td>
+<td>mensajeria-api</td>
+<td>graph.facebook.com</td>
+<td>HTTPS</td>
+<td>443</td>
+<td>TLS</td>
+<td>IGW → Internet</td>
+</tr>
+<tr>
+<td>F09</td>
+<td>EC2-ERP-01 (cron 02:00)</td>
+<td>S3-RESPALDOS</td>
+<td>HTTPS</td>
+<td>443</td>
+<td>TLS + cifrado SSE</td>
+<td>IGW → S3</td>
+</tr>
+<tr>
+<td>F10</td>
+<td>DB-CONT-01</td>
+<td>EC2-ERP-01</td>
+<td>SSH (scp)</td>
+<td>22</td>
+<td>SSH dentro de IPsec</td>
+<td>VPN Juliaca</td>
+</tr>
+<tr>
+<td>F11</td>
+<td>Estación de administración</td>
+<td>EC2-ERP-01</td>
+<td>SSH</td>
+<td>22</td>
+<td>SSH dentro de IPsec</td>
+<td>VPN Juliaca</td>
+</tr>
+<tr>
+<td>F12</td>
+<td>MON-JUL-01</td>
+<td>Prometheus (EC2-ERP-01)</td>
+<td>HTTP</td>
+<td>9090 /federate</td>
+<td>Dentro de IPsec</td>
+<td>VPN Juliaca</td>
+</tr>
+<tr>
+<td>F13</td>
+<td>EC2-ERP-01, firewalls, switches</td>
+<td>SIEM-JUL-01</td>
+<td>Wazuh / syslog TLS</td>
+<td>1514, 1515 / 6514</td>
+<td>TLS</td>
+<td>LAN o VPN</td>
+</tr>
+<tr>
+<td>F14</td>
+<td>FW-JUL / FW-PUN</td>
+<td>VGW-ST</td>
+<td>IKEv2 / ESP (NAT-T)</td>
+<td>UDP 500, UDP 4500, IP 50</td>
+<td>AES-256</td>
+<td>Internet</td>
+</tr>
+<tr>
+<td>F15</td>
+<td>Prometheus</td>
+<td>Backend</td>
+<td>HTTP</td>
+<td>8085 /actuator/prometheus</td>
+<td>Red interna de Docker</td>
+<td>Mismo host</td>
+</tr>
+<tr>
+<td>F16</td>
+<td>Puno (contingencia)</td>
+<td>PRX-DMZ-01 (Juliaca)</td>
+<td>HTTPS</td>
+<td>443</td>
+<td>TLS</td>
+<td>Internet</td>
+</tr>
+<tr>
+<td>F17</td>
+<td>Todos los equipos</td>
+<td>Firewall (resolvedor) / NTP</td>
+<td>DNS / NTP</td>
+<td>UDP 53 / UDP 123</td>
+<td>—</td>
+<td>LAN</td>
+</tr>
+<tr>
+<td>F18</td>
+<td>Puertos del núcleo (SPAN)</td>
+<td>IDS-JUL-01</td>
+<td>Copia de tráfico</td>
+<td>—</td>
+<td>—</td>
+<td>LAN</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/media/image6.png" style="width:6.49606in;height:3.65404in" /></p>
+<p><em>Figura 5.5 — Flujo de información planeado</em></p>
+<h3 id="56-matriz-de-componentes-de-red">5.6 Matriz de componentes de red<a class="headerlink" href="#56-matriz-de-componentes-de-red" title="Permanent link">&para;</a></h3>
+<p>Todo elemento dibujado en las figuras 1.1 y 5.1–5.5 aparece aquí con su IP planeada (también en la hoja «Componentes» del XLSX):</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Componente</th>
+<th>Zona</th>
+<th>IP planeada</th>
+<th>Función</th>
+<th>Crit.</th>
+<th>Fig.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C01</td>
+<td>ISP-A (fibra 200 Mbps)</td>
+<td>Exterior</td>
+<td>203.0.113.10 (IP pública fija)*</td>
+<td>Enlace primario a Internet</td>
+<td>Alta</td>
+<td>5.1, 5.4</td>
+</tr>
+<tr>
+<td>C02</td>
+<td>ISP-B (radioenlace/fibra 100 Mbps)</td>
+<td>Exterior</td>
+<td>198.51.100.10 (IP pública fija)*</td>
+<td>Enlace de respaldo a Internet</td>
+<td>Alta</td>
+<td>5.1, 5.4</td>
+</tr>
+<tr>
+<td>C03</td>
+<td>FW-JUL-01 (OPNsense, activo)</td>
+<td>Perímetro</td>
+<td>WAN 203.0.113.10 / 198.51.100.10; tránsito 10.10.254.2; DMZ 10.10.20.2; gestión 10.10.70.3</td>
+<td>Firewall de estado, VPN IPsec, IPS Suricata, gateway DMZ/invitados</td>
+<td>Crítica</td>
+<td>1.1, 5.1–5.4</td>
+</tr>
+<tr>
+<td>C04</td>
+<td>FW-JUL-02 (OPNsense, pasivo)</td>
+<td>Perímetro</td>
+<td>Tránsito 10.10.254.3; DMZ 10.10.20.3; gestión 10.10.70.4</td>
+<td>Par de alta disponibilidad (CARP + pfsync)</td>
+<td>Crítica</td>
+<td>5.1, 5.3</td>
+</tr>
+<tr>
+<td>C05</td>
+<td>VIP del firewall (CARP)</td>
+<td>Perímetro</td>
+<td>10.10.254.1 · 10.10.20.1 · 10.10.90.1</td>
+<td>Puerta de enlace virtual del par HA</td>
+<td>Crítica</td>
+<td>5.2</td>
+</tr>
+<tr>
+<td>C06</td>
+<td>CORE-JUL (2 switches L3 en stack)</td>
+<td>Núcleo</td>
+<td>Tránsito 10.10.254.6; SVI .1 de VLAN 10,30–80,100; gestión 10.10.70.2</td>
+<td>Ruteo entre VLAN con ACL, LACP hacia acceso</td>
+<td>Crítica</td>
+<td>5.1, 5.2</td>
+</tr>
+<tr>
+<td>C07</td>
+<td>ACC-JUL-01 (L2 PoE 24p)</td>
+<td>Acceso</td>
+<td>10.10.70.11</td>
+<td>Piso de ventas: POS e impresoras</td>
+<td>Alta</td>
+<td>5.1</td>
+</tr>
+<tr>
+<td>C08</td>
+<td>ACC-JUL-02 (L2 PoE 24p)</td>
+<td>Acceso</td>
+<td>10.10.70.12</td>
+<td>Almacén y clínica</td>
+<td>Alta</td>
+<td>5.1</td>
+</tr>
+<tr>
+<td>C09</td>
+<td>ACC-JUL-03 (L2 PoE 24p)</td>
+<td>Acceso</td>
+<td>10.10.70.13</td>
+<td>Administración y sala de servidores</td>
+<td>Alta</td>
+<td>5.1</td>
+</tr>
+<tr>
+<td>C10</td>
+<td>AP-JUL-01…03 (Wi-Fi 6)</td>
+<td>Acceso</td>
+<td>10.10.70.21–23</td>
+<td>SSID corporativo (VLAN 80) e invitados (VLAN 90)</td>
+<td>Media</td>
+<td>5.1</td>
+</tr>
+<tr>
+<td>C11</td>
+<td>ESX-JUL-01 (host VMware ESXi)</td>
+<td>Servidores locales</td>
+<td>vmk0 gestión 10.10.70.30; iDRAC 10.10.70.31</td>
+<td>Hipervisor de contingencia y de seguridad</td>
+<td>Alta</td>
+<td>5.1, 5.2</td>
+</tr>
+<tr>
+<td>C12</td>
+<td>APP-CONT-01 (VM)</td>
+<td>Servidores locales</td>
+<td>10.10.10.10</td>
+<td>ERP de contingencia (frontend :8090, backend :8085, mensajería :8087)</td>
+<td>Alta</td>
+<td>5.2, 5.5</td>
+</tr>
+<tr>
+<td>C13</td>
+<td>DB-CONT-01 (VM)</td>
+<td>Servidores locales</td>
+<td>10.10.10.20</td>
+<td>PostgreSQL de contingencia (restaura el pg_dump nocturno de EC2-ERP-01)</td>
+<td>Alta</td>
+<td>5.2, 5.5</td>
+</tr>
+<tr>
+<td>C40</td>
+<td>NAS-JUL-01 (2 bahías, RAID 1)</td>
+<td>Servidores locales</td>
+<td>10.10.10.30</td>
+<td>Respaldos locales: VM del ESXi, pg_dump nocturno y archivo del SIEM (copia 3 de la regla 3-2-1)</td>
+<td>Alta</td>
+<td>5.1</td>
+</tr>
+<tr>
+<td>C14</td>
+<td>PRX-DMZ-01 (VM)</td>
+<td>DMZ</td>
+<td>10.10.20.10</td>
+<td>Nginx de contingencia; publica APP-CONT-01 solo en modo contingencia</td>
+<td>Media</td>
+<td>5.3</td>
+</tr>
+<tr>
+<td>C15</td>
+<td>HPT-DMZ-01 (VM, OpenCanary)</td>
+<td>DMZ</td>
+<td>10.10.20.50</td>
+<td>Honeypot de baja interacción (SSH, HTTP, SMB, PostgreSQL falsos)</td>
+<td>Media</td>
+<td>5.3</td>
+</tr>
+<tr>
+<td>C16</td>
+<td>IDS-JUL-01 (VM, Suricata)</td>
+<td>Seguridad</td>
+<td>Gestión 10.10.100.10; interfaz de captura sin IP (SPAN)</td>
+<td>IDS de tráfico este-oeste (copia del núcleo)</td>
+<td>Alta</td>
+<td>5.3</td>
+</tr>
+<tr>
+<td>C17</td>
+<td>SIEM-JUL-01 (VM, Wazuh)</td>
+<td>Seguridad</td>
+<td>10.10.100.20</td>
+<td>Centraliza syslog, alertas de IDS, honeypot y agentes</td>
+<td>Alta</td>
+<td>5.3, 5.5</td>
+</tr>
+<tr>
+<td>C18</td>
+<td>MON-JUL-01 (VM, Prometheus + Grafana)</td>
+<td>Seguridad</td>
+<td>10.10.100.30</td>
+<td>Monitoreo de red y enlaces; federa el Prometheus de EC2-ERP-01 por VPN</td>
+<td>Media</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>C19</td>
+<td>Estación de administración</td>
+<td>Gestión</td>
+<td>10.10.70.50</td>
+<td>Único origen autorizado para SSH/HTTPS de gestión</td>
+<td>Alta</td>
+<td>5.3, 5.5</td>
+</tr>
+<tr>
+<td>C20</td>
+<td>Cajas POS e impresoras (Juliaca)</td>
+<td>Usuarios</td>
+<td>10.10.30.100–200 (DHCP); impresoras 10.10.30.50–69</td>
+<td>Ventas y caja</td>
+<td>Crítica</td>
+<td>5.2</td>
+</tr>
+<tr>
+<td>C21</td>
+<td>Estaciones de almacén, clínica y administración</td>
+<td>Usuarios / Clínica</td>
+<td>DHCP .100–.200 de VLAN 40, 50 y 60</td>
+<td>Operación del ERP</td>
+<td>Alta</td>
+<td>5.2</td>
+</tr>
+<tr>
+<td>C22</td>
+<td>ISP Puno (fibra 50 Mbps) + LTE</td>
+<td>Exterior</td>
+<td>203.0.113.20 (fija)*; LTE con IP dinámica (CGNAT)</td>
+<td>Enlace primario y de respaldo</td>
+<td>Alta</td>
+<td>5.1, 5.4</td>
+</tr>
+<tr>
+<td>C23</td>
+<td>FW-PUN-01 (OPNsense)</td>
+<td>Perímetro</td>
+<td>WAN 203.0.113.20; gateways 10.20.x.1; gestión 10.20.170.1</td>
+<td>Firewall, gateway de VLAN (router-on-a-stick), VPN</td>
+<td>Crítica</td>
+<td>5.1–5.4</td>
+</tr>
+<tr>
+<td>C24</td>
+<td>ACC-PUN-01 (L2 PoE 24p)</td>
+<td>Acceso</td>
+<td>10.20.170.11</td>
+<td>Acceso de la sucursal (troncal 802.1Q al firewall)</td>
+<td>Alta</td>
+<td>5.1</td>
+</tr>
+<tr>
+<td>C25</td>
+<td>AP-PUN-01 (Wi-Fi 6)</td>
+<td>Acceso</td>
+<td>10.20.170.21</td>
+<td>SSID de invitados (VLAN 190)</td>
+<td>Baja</td>
+<td>5.1</td>
+</tr>
+<tr>
+<td>C26</td>
+<td>Cajas POS y estaciones (Puno)</td>
+<td>Usuarios / Clínica</td>
+<td>DHCP .100–.200 de VLAN 130–160</td>
+<td>Operación del ERP en la sucursal</td>
+<td>Crítica</td>
+<td>5.2</td>
+</tr>
+<tr>
+<td>C27</td>
+<td>VPC-ST (10.50.0.0/16)</td>
+<td>Nube</td>
+<td>10.50.0.0/16</td>
+<td>Red virtual del ERP en us-east-2 (el despliegue inicial As-Is usó la VPC por defecto 172.31.0.0/16)</td>
+<td>Crítica</td>
+<td>5.1, 5.2</td>
+</tr>
+<tr>
+<td>C28</td>
+<td>IGW-ST (Internet Gateway)</td>
+<td>Nube pública</td>
+<td>—</td>
+<td>Entrada y salida a Internet de snet-publica-a</td>
+<td>Alta</td>
+<td>5.1</td>
+</tr>
+<tr>
+<td>C29</td>
+<td>VGW-ST (Virtual Private Gateway)</td>
+<td>Borde híbrido</td>
+<td>Interior de túneles 169.254.x.x/30</td>
+<td>Extremo AWS de las VPN Site-to-Site (rutas estáticas)</td>
+<td>Crítica</td>
+<td>5.4</td>
+</tr>
+<tr>
+<td>C30</td>
+<td>EC2-ERP-01 (Ubuntu 24.04, 2 vCPU / 4 GB, gp3 20 GB)</td>
+<td>Pública (DMZ nube)</td>
+<td>10.50.0.10 + Elastic IP (línea base inicial: 172.31.4.35 / IP elástica pública (198.51.100.50)*)</td>
+<td>Host Docker Compose del ERP; único servidor publicado</td>
+<td>Crítica</td>
+<td>1.1, 5.1, 5.3, 5.5</td>
+</tr>
+<tr>
+<td>C31</td>
+<td>Contenedor caddy (TLS)</td>
+<td>Pública (DMZ nube)</td>
+<td>Host :443 y :80 (redirección)</td>
+<td>Termina HTTPS (certificado TLS autofirmado o Let's Encrypt sobre IP/DNS dinámico al no disponer de dominio comercial registrado) y reenvía a Nginx; cierra el riesgo R6</td>
+<td>Alta</td>
+<td>5.3, 5.5</td>
+</tr>
+<tr>
+<td>C32</td>
+<td>Contenedor frontend (Nginx)</td>
+<td>Aplicación (red Docker)</td>
+<td>:80 interno (línea base inicial: publicado en :8090)</td>
+<td>SPA Angular y proxy de /api, /ws-notifications y /mensajeria</td>
+<td>Crítica</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>C33</td>
+<td>Contenedor backend (Spring Boot)</td>
+<td>Aplicación (red Docker)</td>
+<td>:8085 interno; host 127.0.0.1:8085</td>
+<td>API REST con JWT, WebSocket y /actuator</td>
+<td>Crítica</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>C34</td>
+<td>Contenedor mensajeria (mensajeria-api)</td>
+<td>Aplicación (red Docker)</td>
+<td>:8087 interno; host 127.0.0.1:8087</td>
+<td>Correo (Gmail 587) y WhatsApp (Meta 443)</td>
+<td>Media</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>C35</td>
+<td>Contenedor db (PostgreSQL 17)</td>
+<td>Datos (red Docker)</td>
+<td>:5432 interno; host 127.0.0.1:5433</td>
+<td>Base clinica_db (volumen pgdata en EBS) y eventos Outbox</td>
+<td>Crítica</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>C36</td>
+<td>Contenedor prometheus</td>
+<td>Seguridad (red Docker)</td>
+<td>:9090 interno; host 127.0.0.1:9090</td>
+<td>Métricas y 6 reglas de alerta del ERP</td>
+<td>Media</td>
+<td>5.5</td>
+</tr>
+<tr>
+<td>C37</td>
+<td>sg-erp + NACL de snet-publica-a</td>
+<td>Nube</td>
+<td>—</td>
+<td>Filtrado de la instancia y de la subred (matriz 7.3)</td>
+<td>Crítica</td>
+<td>5.3</td>
+</tr>
+<tr>
+<td>C38</td>
+<td>S3-RESPALDOS + snapshots EBS (DLM)</td>
+<td>Servicio regional</td>
+<td>—</td>
+<td>pg_dump diario cifrado y snapshot diario del disco (7 días)</td>
+<td>Alta</td>
+<td>5.1, 5.5</td>
+</tr>
+<tr>
+<td>C39</td>
+<td>VPC Flow Logs, CloudWatch y GuardDuty</td>
+<td>Servicio regional</td>
+<td>—</td>
+<td>Registro y detección en la nube; alarmas de CPU, disco y StatusCheck</td>
+<td>Alta</td>
+<td>5.3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-diseno-de-conectividad-hibrida">6. Diseño de conectividad híbrida<a class="headerlink" href="#6-diseno-de-conectividad-hibrida" title="Permanent link">&para;</a></h2>
+<p>Tecnología. AWS Site-to-Site VPN sobre un Virtual Private Gateway (VGW-ST) asociado a la VPC, con rutas estáticas. Cada conexión trae dos túneles hacia dos extremos de AWS distintos; OPNsense los configura como túneles basados en rutas (VTI) con monitoreo de la puerta de enlace, de modo que si cae uno el tráfico pasa al otro. Se elige VGW y no Transit Gateway porque hay una sola VPC, y rutas estáticas y no BGP porque cada sede tiene una sola conexión: BGP entra en la fase 2, cuando Juliaca agregue la conexión por ISP-B (VPN-JUL-B).</p>
+<p>Peers y rutas. Juliaca declara 10.10.0.0/16 en VPN-JUL (Customer Gateway en la IP fija de ISP-A) y Puno 10.20.0.0/16 en VPN-PUN (fibra); AWS ofrece 10.50.0.0/16. Las sedes no se comunican entre sí por la VPN: lo único que comparten es el ERP, al que ambas llegan por HTTPS.</p>
+<p>Qué tráfico usa la VPN y cuál no. Los usuarios usan el ERP por HTTPS en la Elastic IP (no dependen del túnel). Por la VPN viajan: SSH de administración desde 10.10.70.50, la copia nocturna del pg_dump hacia DB-CONT-01 (scp), la federación de Prometheus (9090) hacia MON-JUL-01 y los eventos de los agentes Wazuh hacia el SIEM.</p>
+<p>Controles previstos. En el firewall, la interfaz IPsec es una zona propia con reglas explícitas (sección 7.3); en AWS, sg-erp solo acepta desde las sedes 10.10.70.50/32 (22), 10.10.10.20/32 (22) y 10.10.100.30/32 (9090), y la NACL de la subred repite esa restricción. El estado de los túneles se monitorea con CloudWatch (TunnelState) y alerta al SIEM.</p>
+<p>Matriz de pruebas de conectividad que se ejecutará en el Semestre 2 (hoja «Pruebas_conectividad» del XLSX, con columna para el resultado obtenido):</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Origen</th>
+<th>Destino</th>
+<th>Puerto</th>
+<th>Resultado esperado</th>
+<th>Cómo se verifica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C01</td>
+<td>POS Juliaca (VLAN 30)</td>
+<td>EC2-ERP-01</td>
+<td>TCP 443</td>
+<td>Permitido · HTTP 200</td>
+<td>curl -k -I https://198.51.100.50 (o https://198.51.100.50.sslip.io; verificación TLS sobre IP elástica sin dominio comercial)</td>
+</tr>
+<tr>
+<td>C02</td>
+<td>Clínica Puno (VLAN 150)</td>
+<td>EC2-ERP-01</td>
+<td>TCP 443</td>
+<td>Permitido · HTTP 200</td>
+<td>Navegador y curl</td>
+</tr>
+<tr>
+<td>C03</td>
+<td>ON-PREMISE → AWS: gestión 10.10.70.50</td>
+<td>EC2-ERP-01 10.50.0.10</td>
+<td>SSH 22 por VPN</td>
+<td>Permitido</td>
+<td>ssh y traceroute (salto por el túnel)</td>
+</tr>
+<tr>
+<td>C04</td>
+<td>ON-PREMISE → AWS: DB-CONT-01</td>
+<td>EC2-ERP-01</td>
+<td>SSH 22 por VPN (scp)</td>
+<td>Permitido</td>
+<td>scp del último pg_dump</td>
+</tr>
+<tr>
+<td>C05</td>
+<td>ON-PREMISE → AWS: POS (VLAN 30)</td>
+<td>EC2-ERP-01 10.50.0.10</td>
+<td>SSH 22 / TCP 9090</td>
+<td>Denegado</td>
+<td>nc -zv (timeout) + log del firewall</td>
+</tr>
+<tr>
+<td>C06</td>
+<td>AWS → ON-PREMISE: EC2-ERP-01</td>
+<td>SIEM-JUL-01 10.10.100.20</td>
+<td>TCP 1514</td>
+<td>Permitido</td>
+<td>Estado del agente Wazuh</td>
+</tr>
+<tr>
+<td>C07</td>
+<td>AWS → ON-PREMISE: EC2-ERP-01</td>
+<td>VLAN 30 / VLAN 50</td>
+<td>Cualquiera</td>
+<td>Denegado</td>
+<td>nc -zv + log del firewall</td>
+</tr>
+<tr>
+<td>C08</td>
+<td>Internet</td>
+<td>Elastic IP de EC2-ERP-01</td>
+<td>TCP 8085, 8087, 9090, 5433</td>
+<td>Denegado (filtrado)</td>
+<td>nmap -Pn -p 8085,8087,9090,5433 desde equipo externo</td>
+</tr>
+<tr>
+<td>C09</td>
+<td>Internet (IP no autorizada)</td>
+<td>Elastic IP de EC2-ERP-01</td>
+<td>TCP 22</td>
+<td>Denegado</td>
+<td>ssh con timeout; registro REJECT en Flow Logs</td>
+</tr>
+<tr>
+<td>C10</td>
+<td>DMZ (PRX-DMZ-01)</td>
+<td>DB-CONT-01 / EC2-ERP-01</td>
+<td>TCP 5432 / 22</td>
+<td>Denegado</td>
+<td>nc -zv + log</td>
+</tr>
+<tr>
+<td>C11</td>
+<td>Invitados (VLAN 90)</td>
+<td>10.10.0.0/16 y 10.50.0.0/16</td>
+<td>Cualquiera</td>
+<td>Denegado</td>
+<td>nmap -sn desde un portátil de prueba</td>
+</tr>
+<tr>
+<td>C12</td>
+<td>Invitados (VLAN 90)</td>
+<td>Internet</td>
+<td>TCP 443</td>
+<td>Permitido</td>
+<td>Navegación</td>
+</tr>
+<tr>
+<td>C13</td>
+<td>Clínica (VLAN 50)</td>
+<td>Internet general</td>
+<td>TCP 443</td>
+<td>Denegado</td>
+<td>curl a sitio externo (bloqueado)</td>
+</tr>
+<tr>
+<td>C14</td>
+<td>Puno (VLAN 130)</td>
+<td>PRX-DMZ-01 (Juliaca)</td>
+<td>TCP 443</td>
+<td>Permitido solo en contingencia</td>
+<td>Activar regla y probar con curl</td>
+</tr>
+<tr>
+<td>C15</td>
+<td>Puno (VLAN 130)</td>
+<td>Juliaca VLAN 50</td>
+<td>Cualquiera</td>
+<td>Denegado</td>
+<td>nc -zv + log</td>
+</tr>
+<tr>
+<td>C16</td>
+<td>EC2-ERP-01</td>
+<td>smtp.gmail.com / destino no permitido</td>
+<td>TCP 587 / TCP 25</td>
+<td>Permitido / Denegado</td>
+<td>openssl s_client -starttls smtp; nc -zv</td>
+</tr>
+<tr>
+<td>C17</td>
+<td>Conmutación de túnel</td>
+<td>VPN-JUL túnel 1 caído</td>
+<td>—</td>
+<td>Tráfico por el túnel 2 en \&lt; 60 s</td>
+<td>Desactivar túnel; ping continuo a 10.50.0.10</td>
+</tr>
+<tr>
+<td>C18</td>
+<td>Conmutación de ISP</td>
+<td>ISP-A desconectado</td>
+<td>—</td>
+<td>Usuarios siguen en el ERP por ISP-B en \&lt; 2 min (la VPN queda caída hasta fase 2)</td>
+<td>Desconectar WAN1; medir</td>
+</tr>
+<tr>
+<td>C19</td>
+<td>Corte de fibra en Puno</td>
+<td>Fibra desconectada</td>
+<td>—</td>
+<td>Usuarios siguen en el ERP por LTE en \&lt; 3 min</td>
+<td>Desconectar fibra; medir</td>
+</tr>
+<tr>
+<td>C20</td>
+<td>Conmutación del firewall</td>
+<td>FW-JUL-01 apagado</td>
+<td>—</td>
+<td>FW-JUL-02 asume la VIP; \&lt; 5 s de pérdida</td>
+<td>Apagar el nodo activo; ping continuo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-diseno-de-seguridad-perimetral">7. Diseño de seguridad perimetral<a class="headerlink" href="#7-diseno-de-seguridad-perimetral" title="Permanent link">&para;</a></h2>
+<h3 id="71-firewall">7.1 Firewall<a class="headerlink" href="#71-firewall" title="Permanent link">&para;</a></h3>
+<p>Producto propuesto: OPNsense 25.x sobre dos appliances x86 de 4 puertos 2,5 GbE en Juliaca (HA con CARP y pfsync) y uno en Puno. Se elige porque soporta IPsec con AWS (y BGP para la fase 2), alta disponibilidad, IPS Suricata integrado y no requiere licencias anuales; un FortiGate 60F sería técnicamente equivalente. En el Semestre 2 puede emularse con máquinas virtuales manteniendo la misma política (equivalencia técnica aceptada por la línea).</p>
+<table>
+<thead>
+<tr>
+<th>Interfaz</th>
+<th>Zona</th>
+<th>Dirección (Juliaca)</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WAN1</td>
+<td>Exterior</td>
+<td>203.0.113.10/29 (ISP-A)*</td>
+<td>Internet primario, VPN-JUL</td>
+</tr>
+<tr>
+<td>WAN2</td>
+<td>Exterior</td>
+<td>198.51.100.10/29 (ISP-B)*</td>
+<td>Internet de respaldo (VPN-JUL-B en fase 2)</td>
+</tr>
+<tr>
+<td>LAN (tránsito, LACP)</td>
+<td>Interna</td>
+<td>10.10.254.2–.3/29, VIP .1</td>
+<td>Enlace con el núcleo</td>
+</tr>
+<tr>
+<td>DMZ (VLAN 20)</td>
+<td>DMZ</td>
+<td>10.10.20.2–.3/24, VIP .1</td>
+<td>Proxy de contingencia y honeypot</td>
+</tr>
+<tr>
+<td>INVITADOS (VLAN 90)</td>
+<td>Invitados</td>
+<td>10.10.90.2–.3/24, VIP .1</td>
+<td>Wi-Fi de clientes</td>
+</tr>
+<tr>
+<td>GESTION (VLAN 70)</td>
+<td>Gestión</td>
+<td>10.10.70.3–.4/24</td>
+<td>Interfaz web/SSH del firewall</td>
+</tr>
+<tr>
+<td>SYNC</td>
+<td>HA</td>
+<td>10.10.253.0/30 (cable directo)</td>
+<td>pfsync y XMLRPC entre nodos</td>
+</tr>
+<tr>
+<td>ipsec1–ipsec2 (VTI)</td>
+<td>VPN</td>
+<td>169.254.x.x/30</td>
+<td>Los dos túneles de VPN-JUL hacia AWS</td>
+</tr>
+</tbody>
+</table>
+<p>Política por defecto: denegar todo el tráfico entrante y entre zonas, y registrar lo denegado. Criterio de reglas: (1) una regla por flujo de negocio, con origen, destino y puerto concretos —nunca «any-any»—; (2) mínimo privilegio por zona; (3) las interfaces de gestión solo aceptan a 10.10.70.50; (4) salida de usuarios por proxy/filtrado web; (5) toda regla lleva descripción, responsable y fecha; (6) revisión trimestral y cambios aprobados por el responsable de seguridad (control A.8.32).</p>
+<h3 id="72-dmz">7.2 DMZ<a class="headerlink" href="#72-dmz" title="Permanent link">&para;</a></h3>
+<p>DMZ local (VLAN 20). Contiene PRX-DMZ-01 (Nginx que publica el ERP de contingencia solo cuando se activa ese modo) y HPT-DMZ-01 (honeypot). Puede: recibir 443 desde Internet en contingencia; que el proxy alcance APP-CONT-01:8090; enviar registros al SIEM. No puede: alcanzar bases de datos, la LAN ni la VPN; el honeypot no tiene salida a Internet.</p>
+<p>DMZ en la nube (snet-publica-a). EC2-ERP-01 es el único equipo con IP pública. Hacia Internet solo expone el 443 (Caddy, con redirección desde el 80) y el 22 para la IP autorizada del administrador; Nginx, backend, mensajería, PostgreSQL y Prometheus viven en la red interna de Docker y sus puertos de host se publican solo en 127.0.0.1. Así se cumple la intención de la DMZ —un compromiso del punto expuesto no da acceso directo a la base— sin pagar un ALB. En la fase 2 el ALB con AWS WAF toma este papel y las EC2 pasan a subredes privadas.</p>
+<h3 id="73-segmentacion-planeada">7.3 Segmentación planeada<a class="headerlink" href="#73-segmentacion-planeada" title="Permanent link">&para;</a></h3>
+<p>Comportamiento esperado de la segmentación (se valida con las pruebas C05–C16 y D01–D06). Matriz completa de comunicación permitida/denegada entre zonas:</p>
+<table>
+<thead>
+<tr>
+<th>N.°</th>
+<th>Origen</th>
+<th>Destino</th>
+<th>Servicio / puerto</th>
+<th>Decisión</th>
+<th>Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Z01</td>
+<td>Internet</td>
+<td>EC2-ERP-01 (Elastic IP)</td>
+<td>TCP 443 (80 → redirección 301)</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Único servicio publicado (Caddy → Nginx). En la línea base inicial As-Is se publicaba TCP 8090 sin TLS</td>
+</tr>
+<tr>
+<td>Z02</td>
+<td>Internet</td>
+<td>EC2-ERP-01: 8085, 8087, 9090, 5433</td>
+<td>Cualquiera</td>
+<td><strong>DENEGADO</strong></td>
+<td>sg-erp no los abre y Docker los publica solo en 127.0.0.1 (riesgo R1)</td>
+</tr>
+<tr>
+<td>Z03</td>
+<td>Internet</td>
+<td>DMZ local</td>
+<td>Cualquiera (excepto contingencia)</td>
+<td><strong>DENEGADO</strong></td>
+<td>En modo contingencia se abre solo TCP 443 a PRX-DMZ-01</td>
+</tr>
+<tr>
+<td>Z04</td>
+<td>Internet</td>
+<td>LAN (VLAN 10–100, 130–190)</td>
+<td>Cualquiera</td>
+<td><strong>DENEGADO</strong></td>
+<td>Política por defecto: denegar todo lo no permitido</td>
+</tr>
+<tr>
+<td>Z05</td>
+<td>Usuarios (VLAN 30, 40, 60, 80, 130, 140, 160)</td>
+<td>EC2-ERP-01</td>
+<td>TCP 443</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Uso del ERP por HTTPS; no depende del túnel</td>
+</tr>
+<tr>
+<td>Z06</td>
+<td>Usuarios (VLAN 40, 60, 80, 160)</td>
+<td>Internet general</td>
+<td>TCP 80/443 con filtrado web</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Correo, SUNAT, proveedores; categorías de riesgo bloqueadas</td>
+</tr>
+<tr>
+<td>Z07</td>
+<td>Ventas/caja (VLAN 30, 130)</td>
+<td>Internet general</td>
+<td>Cualquiera salvo lista blanca</td>
+<td><strong>DENEGADO</strong></td>
+<td>Los POS solo alcanzan el ERP y la lista blanca (SUNAT/OSE, NTP)</td>
+</tr>
+<tr>
+<td>Z08</td>
+<td>Clínica (VLAN 50, 150)</td>
+<td>EC2-ERP-01</td>
+<td>TCP 443</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Historia clínica a través del ERP</td>
+</tr>
+<tr>
+<td>Z09</td>
+<td>Clínica (VLAN 50, 150)</td>
+<td>Internet general</td>
+<td>Cualquiera</td>
+<td><strong>DENEGADO</strong></td>
+<td>Datos de salud (Ley 29733): sin navegación general</td>
+</tr>
+<tr>
+<td>Z10</td>
+<td>Cualquier VLAN de usuarios</td>
+<td>Clínica (VLAN 50, 150)</td>
+<td>Cualquiera</td>
+<td><strong>DENEGADO</strong></td>
+<td>Aislamiento de los equipos con datos de salud</td>
+</tr>
+<tr>
+<td>Z11</td>
+<td>Usuarios e invitados</td>
+<td>Gestión (VLAN 70, 170) y Seguridad (VLAN 100)</td>
+<td>Cualquiera</td>
+<td><strong>DENEGADO</strong></td>
+<td>Planos de gestión y seguridad fuera del alcance de usuarios</td>
+</tr>
+<tr>
+<td>Z12</td>
+<td>Estación de administración (10.10.70.50)</td>
+<td>Equipos de red, ESXi y VM</td>
+<td>SSH 22, HTTPS 443, SNMPv3 161</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Acceso administrativo con registro en el SIEM</td>
+</tr>
+<tr>
+<td>Z13</td>
+<td>Gestión (10.10.70.50) por VPN</td>
+<td>EC2-ERP-01</td>
+<td>SSH 22</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Administración con llave; ruta alterna: SSH desde la IP pública fija del administrador</td>
+</tr>
+<tr>
+<td>Z14</td>
+<td>Invitados (VLAN 90, 190)</td>
+<td>Redes internas (10.0.0.0/8)</td>
+<td>Cualquiera</td>
+<td><strong>DENEGADO</strong></td>
+<td>Wi-Fi de invitados aislado</td>
+</tr>
+<tr>
+<td>Z15</td>
+<td>Invitados (VLAN 90, 190)</td>
+<td>Internet</td>
+<td>TCP 80/443, UDP 53 al resolvedor del firewall</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Con límite de ancho de banda (10 Mbps por sede)</td>
+</tr>
+<tr>
+<td>Z16</td>
+<td>DMZ (PRX-DMZ-01)</td>
+<td>APP-CONT-01 (VLAN 10)</td>
+<td>TCP 8090</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Solo en modo contingencia</td>
+</tr>
+<tr>
+<td>Z17</td>
+<td>DMZ</td>
+<td>DB-CONT-01, EC2-ERP-01 y cualquier base de datos</td>
+<td>TCP 5432/5433</td>
+<td><strong>DENEGADO</strong></td>
+<td>La DMZ nunca alcanza datos</td>
+</tr>
+<tr>
+<td>Z18</td>
+<td>DMZ</td>
+<td>LAN</td>
+<td>Cualquiera</td>
+<td><strong>DENEGADO</strong></td>
+<td>Un compromiso en la DMZ no se propaga</td>
+</tr>
+<tr>
+<td>Z19</td>
+<td>DB-CONT-01 (VLAN 10) por VPN</td>
+<td>EC2-ERP-01</td>
+<td>SSH 22 (scp del pg_dump)</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Copia nocturna para contingencia (RPO ≤ 24 h); la base nunca se expone</td>
+</tr>
+<tr>
+<td>Z20</td>
+<td>MON-JUL-01 (VLAN 100) por VPN</td>
+<td>EC2-ERP-01</td>
+<td>TCP 9090 (federación de Prometheus)</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Métricas del ERP en el monitoreo central; sg-erp admite solo 10.10.100.30/32</td>
+</tr>
+<tr>
+<td>Z21</td>
+<td>EC2-ERP-01 y equipos de red</td>
+<td>SIEM-JUL-01</td>
+<td>TCP 1514/1515 (Wazuh), TCP 6514 (syslog TLS)</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Centralización de registros</td>
+</tr>
+<tr>
+<td>Z22</td>
+<td>Contenedor caddy</td>
+<td>Contenedor frontend (Nginx)</td>
+<td>TCP 80 (red Docker)</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Proxy inverso dentro del host</td>
+</tr>
+<tr>
+<td>Z23</td>
+<td>Contenedor backend</td>
+<td>Contenedor mensajeria</td>
+<td>TCP 8087 (red Docker)</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Envío de comprobantes y resultados (REST + JWT)</td>
+</tr>
+<tr>
+<td>Z24</td>
+<td>Contenedor backend</td>
+<td>Contenedor db</td>
+<td>TCP 5432 (red Docker)</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Persistencia y eventos Outbox (LISTEN/NOTIFY); rol st_app sin superusuario</td>
+</tr>
+<tr>
+<td>Z25</td>
+<td>Cualquier otro origen</td>
+<td>Contenedor db</td>
+<td>TCP 5432/5433</td>
+<td><strong>DENEGADO</strong></td>
+<td>Solo el backend lo alcanza por la red Docker; host 127.0.0.1</td>
+</tr>
+<tr>
+<td>Z26</td>
+<td>EC2-ERP-01 (mensajería)</td>
+<td>Internet</td>
+<td>TCP 587 (smtp.gmail.com), TCP 443 (graph.facebook.com)</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Correo y WhatsApp Business; también 443 para S3 y actualizaciones</td>
+</tr>
+<tr>
+<td>Z27</td>
+<td>EC2-ERP-01</td>
+<td>Internet</td>
+<td>Cualquier otro destino o puerto</td>
+<td><strong>DENEGADO</strong></td>
+<td>Egreso mínimo en sg-erp y NACL</td>
+</tr>
+<tr>
+<td>Z28</td>
+<td>Puno (VLAN 130–160)</td>
+<td>PRX-DMZ-01 (Juliaca)</td>
+<td>TCP 443 por Internet</td>
+<td><strong>PERMITIDO</strong></td>
+<td>Solo en modo contingencia</td>
+</tr>
+<tr>
+<td>Z29</td>
+<td>Puno</td>
+<td>LAN de Juliaca (usuarios, clínica)</td>
+<td>Cualquiera</td>
+<td><strong>DENEGADO</strong></td>
+<td>Las sedes no se ven entre sí</td>
+</tr>
+<tr>
+<td>Z30</td>
+<td>Cualquier VLAN interna</td>
+<td>HPT-DMZ-01 (honeypot)</td>
+<td>Cualquiera</td>
+<td><strong>PERMITIDO y alertado</strong></td>
+<td>Nadie legítimo lo usa: todo contacto es indicio de intrusión</td>
+</tr>
+</tbody>
+</table>
+<p>Security Group, NACL y publicación de puertos que implementan la misma matriz en la nube (fase 1):</p>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Entrada permitida</th>
+<th>Salida permitida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sg-erp (EC2-ERP-01)</td>
+<td>0.0.0.0/0 :443 y :80; IP pública fija del administrador /32 :22; 10.10.70.50/32 y 10.10.10.20/32 :22; 10.10.100.30/32 :9090</td>
+<td>0.0.0.0/0 :443 y :587; UDP 53/123; 10.10.100.20/32 :1514-1515</td>
+</tr>
+<tr>
+<td>NACL de snet-publica-a</td>
+<td>80/443 desde 0.0.0.0/0; 22 y 9090 desde los mismos orígenes; efímeros de retorno; resto denegado</td>
+<td>Puertos permitidos y efímeros de retorno</td>
+</tr>
+<tr>
+<td>Publicación en el host (docker-compose.yml)</td>
+<td>caddy 0.0.0.0:443/80; frontend, backend, mensajería, Prometheus y db solo en 127.0.0.1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Línea base diagnosticada (As-Is)</td>
+<td>sg: 22 desde la IP del administrador y 8090 desde 0.0.0.0/0; el resto de puertos publicados en 0.0.0.0</td>
+<td>Se subsana y endurece con el diseño propuesto To-Be (mitigación de riesgos R1 y R6)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-diseno-de-deteccion-idsips-y-honeypot">8. Diseño de detección — IDS/IPS y honeypot<a class="headerlink" href="#8-diseno-de-deteccion-idsips-y-honeypot" title="Permanent link">&para;</a></h2>
+<p>En esta etapa solo se planifica. Para cada tecnología se indica qué es, dónde va (correlacionado con las figuras 5.1 y 5.3), qué debería detectar y cómo se operará:</p>
+<table>
+<thead>
+<tr>
+<th>Tecnología</th>
+<th>Ubicación</th>
+<th>Qué debe detectar</th>
+<th>Operación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Suricata en modo IPS (paquete de OPNsense)</td>
+<td>FW-JUL-01/02: interfaces WAN y DMZ; FW-PUN-01: WAN</td>
+<td>Escaneos desde Internet, explotación de servicios, firmas conocidas (ET Open), conexiones a IP de mala reputación</td>
+<td>Dos semanas en modo detección para ajustar falsos positivos; luego bloqueo de las categorías de alta confianza</td>
+</tr>
+<tr>
+<td>Sensor Suricata IDS-JUL-01</td>
+<td>VLAN 100; recibe SPAN de los uplinks del núcleo (VLAN 10, 30, 50, 70)</td>
+<td>Movimiento lateral, escaneos internos, acceso a la VLAN de clínica, tunelización DNS, beaconing</td>
+<td>Solo detección (fuera de banda): un fallo del sensor no corta el servicio</td>
+</tr>
+<tr>
+<td>Suricata IDS + fail2ban en EC2-ERP-01</td>
+<td>Interfaz ens5 de la instancia (equivalente a un IDS de perímetro en la nube)</td>
+<td>Escaneos a la Elastic IP, fuerza bruta SSH, solicitudes anómalas al ERP</td>
+<td>Modo detección; fail2ban bloquea la IP tras 5 intentos SSH fallidos; eventos al SIEM por el agente Wazuh</td>
+</tr>
+<tr>
+<td>Honeypot HPT-DMZ-01 (OpenCanary)</td>
+<td>DMZ 10.10.20.50; servicios señuelo SSH 22, HTTP 80, SMB 445, PostgreSQL 5432</td>
+<td>Cualquier intento de conexión: reconocimiento interno, fuerza bruta, ransomware buscando recursos compartidos</td>
+<td>Sin salida a Internet ni acceso a la LAN; solo envía alertas al SIEM</td>
+</tr>
+<tr>
+<td>VPC Flow Logs + GuardDuty</td>
+<td>VPC-ST y la cuenta</td>
+<td>Conexiones rechazadas a la instancia, escaneos, uso anómalo de credenciales IAM, comunicación con C2</td>
+<td>Flow Logs a CloudWatch Logs; GuardDuty recomendado (detección gestionada), hallazgos por EventBridge al SIEM</td>
+</tr>
+<tr>
+<td>Agentes Wazuh (HIDS)</td>
+<td>EC2-ERP-01 y VM del ESXi</td>
+<td>Cambios en archivos críticos (docker-compose.yml, secrets/), intentos SSH fallidos, elevación de privilegios</td>
+<td>Correlación central en SIEM-JUL-01</td>
+</tr>
+</tbody>
+</table>
+<p>Centralización. Todos los eventos llegan a SIEM-JUL-01 (Wazuh) en la VLAN 100: syslog TLS de firewalls y switches, EVE JSON de Suricata, alertas de OpenCanary, el agente Wazuh de EC2-ERP-01 (incluye Suricata y fail2ban de la instancia) y, si se activa, los hallazgos de GuardDuty por EventBridge. Las alertas de negocio del ERP (outbox, reabastecimiento, 5xx, latencia) las evalúa el Prometheus de la instancia. Se retienen 90 días y se definen alertas por correo al responsable de seguridad para severidad alta.</p>
+<p>Plan de validación (pruebas controladas del Semestre 2, sobre infraestructura propia y con autorización):</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Prueba</th>
+<th>Resultado esperado</th>
+<th>Criterio de aceptación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D01</td>
+<td>Escaneo nmap -sS desde VLAN 90 hacia 10.10.50.0/24</td>
+<td>Denegado por el firewall + alerta ET SCAN en Suricata</td>
+<td>Alerta visible en Wazuh en \&lt; 5 min</td>
+</tr>
+<tr>
+<td>D02</td>
+<td>Fuerza bruta SSH (hydra, 20 intentos) contra HPT-DMZ-01</td>
+<td>Alerta del honeypot</td>
+<td>Alerta en Wazuh en \&lt; 1 min</td>
+</tr>
+<tr>
+<td>D03</td>
+<td>Escaneo nmap autorizado a la Elastic IP de EC2-ERP-01</td>
+<td>Solo 443/80 abiertos; alerta ET SCAN de Suricata en la instancia</td>
+<td>Evento en Wazuh y REJECT en Flow Logs</td>
+</tr>
+<tr>
+<td>D04</td>
+<td>Seis intentos SSH fallidos contra EC2-ERP-01 desde IP externa</td>
+<td>fail2ban bloquea la IP; sg-erp ya filtra el origen no autorizado</td>
+<td>Registro en fail2ban y en el SIEM</td>
+</tr>
+<tr>
+<td>D05</td>
+<td>Descarga del archivo de prueba EICAR desde VLAN 60</td>
+<td>Alerta y bloqueo en el IPS</td>
+<td>Evento en Wazuh</td>
+</tr>
+<tr>
+<td>D06</td>
+<td>Ping sweep desde la DMZ hacia la LAN</td>
+<td>Denegado + alerta del sensor IDS</td>
+<td>Evento en Wazuh</td>
+</tr>
+<tr>
+<td>D07</td>
+<td>Hallazgos de muestra de GuardDuty</td>
+<td>Hallazgo recibido en el SIEM</td>
+<td>Regla de EventBridge funcionando</td>
+</tr>
+<tr>
+<td>D08</td>
+<td>Diez logins fallidos seguidos en el ERP</td>
+<td>Bloqueo temporal del usuario (función del ERP: 5 intentos / 15 min)</td>
+<td>Registro en la tabla de intentos y en el SIEM</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-consideraciones-de-escalabilidad-y-disponibilidad">9. Consideraciones de escalabilidad y disponibilidad<a class="headerlink" href="#9-consideraciones-de-escalabilidad-y-disponibilidad" title="Permanent link">&para;</a></h2>
+<p>Crecimiento sin romper la segmentación. Cada sede nueva recibe la siguiente /16 libre (10.30.0.0/16 en adelante; hay 20 reservadas) con el mismo patrón de VLAN, un firewall OPNsense y su propia conexión VPN al VGW: no se renumera nada existente ni se tocan las reglas de las demás sedes. Cada VLAN /24 admite 254 hosts frente a un máximo actual de 21, es decir, más de diez veces la demanda. En la nube, el crecimiento sigue la tabla siguiente: cada paso usa subredes ya reservadas en 10.50.0.0/16; para otra región se reserva 10.51.0.0/16 y superiores.</p>
+<table>
+<thead>
+<tr>
+<th>Paso</th>
+<th>Qué se agrega</th>
+<th>Disparador</th>
+<th>Subred</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fase 1 (actual)</td>
+<td>EC2-ERP-01 con Docker Compose, Elastic IP, sg-erp, VPN con rutas estáticas</td>
+<td>—</td>
+<td>10.50.0.0/24</td>
+</tr>
+<tr>
+<td>1</td>
+<td>EC2 de mayor tamaño (escalado vertical)</td>
+<td>CPU &gt; 70 % sostenido o p95 de ventas &gt; 2 s</td>
+<td>Igual</td>
+</tr>
+<tr>
+<td>2</td>
+<td>RDS PostgreSQL Multi-AZ y EC2 sin IP pública</td>
+<td>Requisito de 99,5 % medido no alcanzado o datos clínicos reales</td>
+<td>10.50.10–11.0/24 y 10.50.20–21.0/24</td>
+</tr>
+<tr>
+<td>3</td>
+<td>ALB + AWS WAF, segunda EC2 en us-east-2b y NAT Gateway (arquitectura de CE02 E1)</td>
+<td>Más de 2 sedes o necesidad de cero caídas por mantenimiento</td>
+<td>10.50.0.0/24 y 10.50.1.0/24</td>
+</tr>
+<tr>
+<td>4</td>
+<td>VPN-JUL-B por ISP-B y BGP</td>
+<td>Cuando la VPN transporte tráfico de negocio</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Capacidad. Los enlaces se dimensionaron con margen (sección 2.1); el tráfico del ERP tiene prioridad mediante QoS (DSCP AF31 para el tráfico hacia la Elastic IP del ERP desde VLAN 30/130) y los invitados se limitan a 10 Mbps por sede. Los uplinks núcleo–acceso son 2 × 1 GbE en LACP y el núcleo tiene puertos de 10 GbE libres.</p>
+<p>Disponibilidad. Análisis de fallos y mitigación:</p>
+<table>
+<thead>
+<tr>
+<th>Escenario de fallo</th>
+<th>Mitigación</th>
+<th>Impacto residual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Caída del ISP-A en Juliaca</td>
+<td>Salida a Internet por ISP-B (grupo de puertas de enlace del firewall); el ERP sigue por HTTPS</td>
+<td>\&lt; 2 min; la VPN-JUL queda caída hasta que vuelva ISP-A (fase 2: VPN-JUL-B con BGP)</td>
+</tr>
+<tr>
+<td>Falla del firewall activo</td>
+<td>FW-JUL-02 asume las VIP (CARP)</td>
+<td>Segundos; sesiones sincronizadas</td>
+</tr>
+<tr>
+<td>Falla de un switch del núcleo</td>
+<td>El otro miembro del stack sigue enrutando; LACP en los uplinks</td>
+<td>Sin corte perceptible</td>
+</tr>
+<tr>
+<td>Caída de un túnel IPsec</td>
+<td>Segundo túnel de la misma conexión</td>
+<td>\&lt; 60 s; no afecta a las ventas</td>
+</tr>
+<tr>
+<td>Corte de fibra en Puno</td>
+<td>Salida por LTE; el ERP sigue por HTTPS</td>
+<td>Velocidad reducida; VPN-PUN caída</td>
+</tr>
+<tr>
+<td>Falla del host de EC2-ERP-01</td>
+<td>Recuperación automática de EC2 (alarma StatusCheckFailed_System) y política restart de los contenedores</td>
+<td>Minutos de corte; datos intactos en EBS</td>
+</tr>
+<tr>
+<td>Pérdida del disco o de la zona us-east-2a</td>
+<td>Nueva EC2 en us-east-2b desde el último snapshot EBS o el pg_dump en S3 (subredes ya reservadas)</td>
+<td>RTO ≤ 4 h, RPO ≤ 24 h (RNF-15)</td>
+</tr>
+<tr>
+<td>Caída total de AWS o de ambos ISP de Juliaca</td>
+<td>Modo contingencia: APP-CONT-01 + DB-CONT-01 en el ESXi con la copia nocturna; Puno entra por PRX-DMZ-01</td>
+<td>RTO ≤ 4 h, RPO ≤ 24 h (RNF-15)</td>
+</tr>
+</tbody>
+</table>
+<p>Estándares aplicados: TIA-568 (cableado Cat 6A horizontal y fibra en el backbone), TIA-606 (etiquetado), TIA-607 (puesta a tierra); IEEE 802.1Q (VLAN), 802.1X (control de acceso por puerto con RADIUS en el firewall), 802.1w (RSTP), 802.3ad (LACP), 802.3at (PoE+) y 802.11ax con WPA3-Enterprise; RFC 1918 y RFC 5737 para direccionamiento; IKEv2 (RFC 7296) y ESP (RFC 4303) para la conectividad híbrida y BGP-4 (RFC 4271) para la fase 2.</p>
+<h2 id="10-conclusiones-del-diseno-y-siguientes-pasos">10. Conclusiones del diseño y siguientes pasos<a class="headerlink" href="#10-conclusiones-del-diseno-y-siguientes-pasos" title="Permanent link">&para;</a></h2>
+<p>El diseño da a Salud Total SAC una red segmentada por función y sensibilidad, con un único punto expuesto a Internet (HTTPS 443 en la EC2 del ERP), datos de salud y base de datos sin acceso directo, y una integración híbrida por IPsec para la administración, las copias y el monitoreo. Describe lo que ya está desplegado en AWS (una EC2 con Docker Compose) y deja trazado, con subredes reservadas, el crecimiento hacia la arquitectura objetivo de CE02 E1 (ALB, dos EC2 y RDS Multi-AZ). Toma los puertos y flujos del código real y no menciona Kafka ni Supabase, que el sistema no usa.</p>
+<p>Pendiente para el entregable «Implementación, testing y monitoreo de red» (Semestre 2):</p>
+<ul>
+<li>
+<p>Implementar (o emular con equivalencia técnica) las VLAN, el par de firewalls y las ACL, y ejecutar C05–C16 registrando el resultado en el XLSX.</p>
+</li>
+<li>
+<p>Migrar la instancia EC2 de la VPC por defecto (172.31.0.0/16) a la VPC-ST dedicada 10.50.0.0/16 aplicando el Security Group sg-erp y la NACL diseñada.</p>
+</li>
+<li>
+<p>Publicar los puertos internos del docker-compose.yml en 127.0.0.1 (R1) y poner Caddy con TLS en 443 (R6); agregar el origen HTTPS de la IP elástica (o DNS dinámico/público) a CORS_ALLOWED_ORIGINS.</p>
+</li>
+<li>
+<p>Levantar VPN-JUL (AWS Site-to-Site o strongSwan/WireGuard como equivalencia técnica) y medir C03, C04, C06, C07 y C17.</p>
+</li>
+<li>
+<p>Instalar Suricata y fail2ban en la EC2, OpenCanary y Wazuh, activar Flow Logs (y GuardDuty) y ejecutar D01–D08.</p>
+</li>
+<li>
+<p>Medir los indicadores de la sección 4 (disponibilidad, RTT, tiempos de conmutación) y reportarlos.</p>
+</li>
+</ul>
+<p>Consideraciones éticas (Código de Ética de la ACM). Privacidad (1.6) y confidencialidad (1.7): la VLAN de clínica aislada y el cifrado protegen datos de salud (Ley 29733). Evitar daños (1.2): la redundancia evita interrupciones de la atención. Seguridad (2.9): defensa en profundidad y ninguna base de datos expuesta. Las pruebas del Semestre 2 se harán solo sobre infraestructura propia y con autorización, y ninguna credencial figura en este documento.</p>
+<h2 id="11-referencias">11. Referencias<a class="headerlink" href="#11-referencias" title="Permanent link">&para;</a></h2>
+<p>[1] ISO/IEC 27001:2022, "Information security, cybersecurity and privacy protection — Information security management systems — Requirements", ISO, Ginebra, 2022.</p>
+<p>[2] ISO/IEC 27002:2022, "Information security, cybersecurity and privacy protection — Information security controls", ISO, Ginebra, 2022.</p>
+<p>[3] Amazon Web Services, "AWS Site-to-Site VPN User Guide", 2026. [En línea]. Disponible: https://docs.aws.amazon.com/vpn/latest/s2svpn/</p>
+<p>[4] Amazon Web Services, "Amazon VPC User Guide", 2026. [En línea]. Disponible: https://docs.aws.amazon.com/vpc/latest/userguide/</p>
+<p>[5] Amazon Web Services, "AWS Well-Architected Framework — Security Pillar", 2025.</p>
+<p>[6] Y. Rekhter et al., "Address Allocation for Private Internets", RFC 1918, IETF, 1996.</p>
+<p>[7] J. Arkko, M. Cotton y L. Vegoda, "IPv4 Address Blocks Reserved for Documentation", RFC 5737, IETF, 2010.</p>
+<p>[8] C. Kaufman et al., "Internet Key Exchange Protocol Version 2 (IKEv2)", RFC 7296, IETF, 2014.</p>
+<p>[9] S. Kent, "IP Encapsulating Security Payload (ESP)", RFC 4303, IETF, 2005.</p>
+<p>[10] Y. Rekhter, T. Li y S. Hares, "A Border Gateway Protocol 4 (BGP-4)", RFC 4271, IETF, 2006.</p>
+<p>[11] IEEE Std 802.1Q-2022, "Bridges and Bridged Networks", IEEE, 2022.</p>
+<p>[12] IEEE Std 802.1X-2020, "Port-Based Network Access Control", IEEE, 2020.</p>
+<p>[13] NIST SP 800-41 Rev. 1, "Guidelines on Firewalls and Firewall Policy", NIST, 2009.</p>
+<p>[14] NIST SP 800-77 Rev. 1, "Guide to IPsec VPNs", NIST, 2020.</p>
+<p>[15] NIST SP 800-94, "Guide to Intrusion Detection and Prevention Systems (IDPS)", NIST, 2007.</p>
+<p>[16] Deciso B.V., "OPNsense Documentation: High Availability, IPsec and Intrusion Prevention", 2026. [En línea]. Disponible: https://docs.opnsense.org/</p>
+<p>[17] OISF, "Suricata User Guide", 2026. [En línea]. Disponible: https://docs.suricata.io/</p>
+<p>[18] Thinkst, "OpenCanary Documentation", 2025. [En línea]. Disponible: https://opencanary.readthedocs.io/</p>
+<p>[19] Congreso de la República del Perú, "Ley N.° 29733, Ley de Protección de Datos Personales", 2011, y su reglamento (D.S. 016-2024-JUS).</p>
+<p>[20] ACM, "ACM Code of Ethics and Professional Conduct", 2018.</p>
+<h2 id="anexo-a-coherencia-con-ce01-ce02-y-el-sistema-real">Anexo A. Coherencia con CE01, CE02 y el sistema real<a class="headerlink" href="#anexo-a-coherencia-con-ce01-ce02-y-el-sistema-real" title="Permanent link">&para;</a></h2>
+<p>La regla del proyecto es que manda el programa real. Esta tabla muestra qué se tomó de cada fuente y qué ajustes introduce la v2.1:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Fuente</strong></th>
+<th><strong>Qué dice</strong></th>
+<th><strong>Cómo queda en este diseño</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resumen de la línea CE03 (19/11/2026)</td>
+<td>Una EC2 Ubuntu 24.04 con Docker Compose (Nginx, backend, PostgreSQL, mensajería, Prometheus), Elastic IP, Security Group 22/8090; VLAN 10–70 y VPC 10.20.0.0/16 como propuesta</td>
+<td>La fase 1 toma como referencia la instancia EC2. El direccionamiento se estandariza con un bloque /16 independiente por sede (Puno en 10.20.0.0/16 y VPC en 10.50.0.0/16) para evitar solapamientos; se homologa con la tabla de VLAN corporativa.</td>
+</tr>
+<tr>
+<td>Línea base inicial (Diagnóstico As-Is en AWS)</td>
+<td>VPC por defecto 172.31.0.0/16, EC2 en subred pública con Elastic IP (198.51.100.50)*, puerto 8090 sin TLS, puertos internos publicados en el host</td>
+<td>Línea base. El diseño fija VPC-ST dedicada, HTTPS 443 con Caddy y puertos internos en 127.0.0.1 (riesgos R1 y R6 del SGSI)</td>
+</tr>
+<tr>
+<td>CE01 · E5 (Solución TIC)</td>
+<td>Nube híbrida con AWS, red segura con VLAN, firewall y VPN</td>
+<td>Se mantiene. El clúster de 3 ESXi de CE01 se reduce a un host de contingencia, como decidió CE02 E1 (ADR-07)</td>
+</tr>
+<tr>
+<td>CE02 · E1 v2.0 (Arquitectura)</td>
+<td>Arquitectura objetivo: ALB + Nginx, 2 EC2, RDS Multi-AZ, S3, NAT Gateway, ESXi de contingencia</td>
+<td>Es la fase 2 de este diseño; sus subredes (10.50.1.0/24, 10.50.10–11.0/24, 10.50.20–21.0/24) quedan reservadas para crecer sin renumerar</td>
+</tr>
+<tr>
+<td>CE02 · E1 (ADR-04)</td>
+<td>Eventos por Outbox (cola_eventos) + pg_notify/LISTEN, sin Kafka</td>
+<td>No hay broker: los eventos viajan por la conexión 5432 dentro del host</td>
+</tr>
+<tr>
+<td>CE02 · E2 (Plataforma de datos)</td>
+<td>PostgreSQL clinica_db; rol de aplicación st_app distinto del superusuario</td>
+<td>El contenedor db solo es accesible desde el backend por la red Docker</td>
+</tr>
+<tr>
+<td>Código real (docker-compose.yml)</td>
+<td>Servicios db, backend :8085, mensajeria :8087, frontend :8090→80, prometheus :9090; healthchecks; CORS por variable CORS_ALLOWED_ORIGINS</td>
+<td>Los puertos y flujos de la sección 5.5 son esos; en producción se agrega el origen HTTPS de la IP elástica a CORS_ALLOWED_ORIGINS</td>
+</tr>
+<tr>
+<td>CE03 · Entorno de pruebas y validación</td>
+<td>Se emuló Juliaca 10.10.x (VLAN 10, 30, 50, 90) y Puno 10.20.130.0/24</td>
+<td>Se conservan esas direcciones; el diseño agrega VLAN 100 y 160–190</td>
+</tr>
+</tbody>
+</table>
+<h2 id="anexo-b-trazabilidad-necesidades-objetivos-decisiones-pruebas">Anexo B. Trazabilidad necesidades → objetivos → decisiones → pruebas<a class="headerlink" href="#anexo-b-trazabilidad-necesidades-objetivos-decisiones-pruebas" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Necesidad</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Objetivos</strong></th>
+<th><strong>Decisión de diseño</strong></th>
+<th><strong>Sección</strong></th>
+<th><strong>Pruebas</strong></th>
+<th><strong>ISO 27002</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ON-01</td>
+<td>Vender y facturar sin interrupciones en ambas sedes</td>
+<td>OD-04, OD-05, OD-06</td>
+<td>Doble ISP y firewall HA en Juliaca, LTE en Puno; el ERP se usa por HTTPS y no depende del túnel; EC2 con recuperación automática y respaldos diarios</td>
+<td>6, 9</td>
+<td>C17–C20</td>
+<td>A.8.14, A.8.20</td>
+</tr>
+<tr>
+<td>ON-02</td>
+<td>Centralizar inventario, ventas y clínica entre sedes</td>
+<td>OD-04</td>
+<td>ERP único en AWS; VPN Site-to-Site por sede para administración, copias y monitoreo</td>
+<td>5.4, 6</td>
+<td>C01–C04, C14</td>
+<td>A.8.20, A.8.21</td>
+</tr>
+<tr>
+<td>ON-03</td>
+<td>Proteger los datos de pacientes y de la operación</td>
+<td>OD-01, OD-02, OD-03, OD-07</td>
+<td>VLAN de clínica sin Internet, DMZ, gestión aislada, sg-erp con un solo puerto público, puertos internos en 127.0.0.1, TLS e IPsec</td>
+<td>5.2, 5.3, 7</td>
+<td>C05–C13, D01–D08</td>
+<td>A.8.20, A.8.22, A.8.24</td>
+</tr>
+<tr>
+<td>ON-04</td>
+<td>Abrir sucursales y crecer sin rediseñar</td>
+<td>OD-08</td>
+<td>Una /16 por sede, tercer octeto = VLAN; subredes de fase 2 reservadas en la VPC</td>
+<td>5.2, 9</td>
+<td>—</td>
+<td>A.8.20</td>
+</tr>
+<tr>
+<td>ON-05</td>
+<td>Cumplir normativa (Ley 29733, DIGEMID, SUNAT) y buenas prácticas</td>
+<td>OD-07</td>
+<td>Registro centralizado, segmentación de datos de salud, controles ISO/IEC 27002</td>
+<td>7, 8</td>
+<td>D01–D08</td>
+<td>A.5.34, A.8.15, A.8.16</td>
+</tr>
+<tr>
+<td>ON-06</td>
+<td>Contener costos</td>
+<td>OD-05</td>
+<td>Una sola EC2 con Docker Compose en la fase 1 (sin ALB, NAT ni RDS), OPNsense sin licencias, ESXi solo para contingencia</td>
+<td>6, 9</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h2 id="anexo-c-productos-entregados">Anexo C. Productos entregados<a class="headerlink" href="#anexo-c-productos-entregados" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th><strong>Producto</strong></th>
+<th><strong>Archivo</strong></th>
+<th><strong>Contenido</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Informe</td>
+<td>AWS/Entregable1_Diseno_Red_AWS.docx y .pdf</td>
+<td>Este documento (v2.1)</td>
+</tr>
+<tr>
+<td>Diagramas</td>
+<td>Diagramas/F1_1_*.drawio/.png … F5_5_*.drawio/.png</td>
+<td>Ejecutiva, general, lógica, seguridad y zonas, VPN y flujo de información</td>
+</tr>
+<tr>
+<td>Matriz de componentes</td>
+<td>Anexos/Matrices_Diseno_Red_E1.xlsx (hoja Componentes)</td>
+<td>40 componentes con IP, zona, función y criticidad</td>
+</tr>
+<tr>
+<td>Matriz de pruebas de conectividad</td>
+<td>Anexos/Matrices_Diseno_Red_E1.xlsx (hoja Pruebas_conectividad)</td>
+<td>20 pruebas con resultado esperado y columna para S2</td>
+</tr>
+<tr>
+<td>Otras matrices</td>
+<td>Hojas Direccionamiento, Subredes_AWS, Bloques, Comunicacion_zonas, Flujos, VPN, Pruebas_deteccion</td>
+<td>Soporte de las secciones 5–8</td>
+</tr>
+<tr>
+<td>Versiones anteriores</td>
+<td>version_anterior_v1/ (AWS y Local) y version_anterior_v2_0/</td>
+<td>v1.0 de julio de 2026 y v2.0 del 19/11/2026, conservadas sin cambios</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="archivos-del-entregable">Archivos del entregable<a class="headerlink" href="#archivos-del-entregable" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="Entregable1_Diseno_Red_AWS.docx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.2 18h-1.4L12 13.2 10.2 20H8.8l-2.2-9h1.5l1.4 6.8 1.8-6.8h1.3l1.8 6.8 1.4-6.8h1.5zM13 9V3.5L18.5 9z"/></svg></span> Descargar documento original (.docx)</a></li>
+</ul>
+<p><strong>Anexos</strong></p>
+<ul>
+<li><a href="archivos/Anexos/Matrices_Diseno_Red_E1.xlsx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.8 18H14l-2-3.4-2 3.4H8.2l2.9-4.5L8.2 11H10l2 3.4 2-3.4h1.8l-2.9 4.5zM13 9V3.5L18.5 9z"/></svg></span> Matrices_Diseno_Red_E1.xlsx</a></li>
+</ul>
+<p><strong>Diagramas</strong></p>
+<ul>
+<li><a href="archivos/Diagramas/F1_1_topologia_ejecutiva.drawio"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> F1_1_topologia_ejecutiva.drawio</a></li>
+<li><a href="archivos/Diagramas/F1_1_topologia_ejecutiva.png"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m8.5 13.5 2.5 3 3.5-4.5 4.5 6H5m16 1V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2"/></svg></span> F1_1_topologia_ejecutiva.png</a></li>
+<li><a href="archivos/Diagramas/F5_1_topologia_general.drawio"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> F5_1_topologia_general.drawio</a></li>
+<li><a href="archivos/Diagramas/F5_1_topologia_general.png"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m8.5 13.5 2.5 3 3.5-4.5 4.5 6H5m16 1V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2"/></svg></span> F5_1_topologia_general.png</a></li>
+<li><a href="archivos/Diagramas/F5_2_topologia_logica.drawio"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> F5_2_topologia_logica.drawio</a></li>
+<li><a href="archivos/Diagramas/F5_2_topologia_logica.png"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m8.5 13.5 2.5 3 3.5-4.5 4.5 6H5m16 1V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2"/></svg></span> F5_2_topologia_logica.png</a></li>
+<li><a href="archivos/Diagramas/F5_3_seguridad_zonas.drawio"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> F5_3_seguridad_zonas.drawio</a></li>
+<li><a href="archivos/Diagramas/F5_3_seguridad_zonas.png"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m8.5 13.5 2.5 3 3.5-4.5 4.5 6H5m16 1V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2"/></svg></span> F5_3_seguridad_zonas.png</a></li>
+<li><a href="archivos/Diagramas/F5_4_vpn_hibrida.drawio"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> F5_4_vpn_hibrida.drawio</a></li>
+<li><a href="archivos/Diagramas/F5_4_vpn_hibrida.png"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m8.5 13.5 2.5 3 3.5-4.5 4.5 6H5m16 1V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2"/></svg></span> F5_4_vpn_hibrida.png</a></li>
+<li><a href="archivos/Diagramas/F5_5_flujo_informacion.drawio"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> F5_5_flujo_informacion.drawio</a></li>
+<li><a href="archivos/Diagramas/F5_5_flujo_informacion.png"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m8.5 13.5 2.5 3 3.5-4.5 4.5 6H5m16 1V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2"/></svg></span> F5_5_flujo_informacion.png</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.indexes", "navigation.sections", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

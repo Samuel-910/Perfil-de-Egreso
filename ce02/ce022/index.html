@@ -1,0 +1,2877 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentos oficiales del perfil de egreso (ciclo 10) — ERP «Articulos», Salud Total SAC">
+      
+      
+      
+        <link rel="canonical" href="https://samuel-910.github.io/Perfil-de-Egreso/ce02/ce022/">
+      
+      
+        <link rel="prev" href="../ce021/galeria/">
+      
+      
+        <link rel="next" href="../ce023/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>CE022 - S2 - E2: Plataforma de Datos del Sistema - Perfil de Egreso — Ingeniería de Sistemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ce022-s2-e2-plataforma-de-datos-del-sistema" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Perfil de Egreso — Ingeniería de Sistemas" class="md-header__button md-logo" aria-label="Perfil de Egreso — Ingeniería de Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Perfil de Egreso — Ingeniería de Sistemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CE022 - S2 - E2: Plataforma de Datos del Sistema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Samuel-910/Perfil-de-Egreso" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Samuel-910/Perfil-de-Egreso
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Perfil de Egreso — Ingeniería de Sistemas" class="md-nav__button md-logo" aria-label="Perfil de Egreso — Ingeniería de Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg>
+
+    </a>
+    Perfil de Egreso — Ingeniería de Sistemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Samuel-910/Perfil-de-Egreso" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Samuel-910/Perfil-de-Egreso
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE01: Gestión de Tecnologías de Información
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE01: Gestión de Tecnologías de Información
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0111-CE0115 - E1: Diagnóstico Organizacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0113 - E2: Business Case del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0121-CE0125 - E3: Plan de Gestión del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0131-CE0135 - E4: Modelado de Procesos AS-IS / TO-BE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0141-CE0145 - E5: Propuesta de Solución TIC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE02: Ingeniería de Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE02: Ingeniería de Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ce021/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce021/galeria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Galería del prototipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE022 - S2 - E2: Plataforma de Datos del Sistema
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE022 - S2 - E2: Plataforma de Datos del Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Ejecutivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-1-modelo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 1: Modelo de Datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 1: Modelo de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-modelo-entidad-relacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Modelo Entidad-Relación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-modelo-logico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Modelo Lógico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-modelo-normalizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Modelo Normalizado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-diccionario-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Diccionario de Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-2-implementacion-de-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 2: Implementación de Base de Datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 2: Implementación de Base de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-scripts-ddl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Scripts DDL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-scripts-dml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Scripts DML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-evidencias-de-creacion-de-tablas-relaciones-y-restricciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Evidencias de Creación de Tablas, Relaciones y Restricciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-3-consultas-y-programacion-en-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 3: Consultas y Programación en Base de Datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 3: Consultas y Programación en Base de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-consultas-sql-relevantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Consultas SQL Relevantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Funciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-procedimientos-almacenados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Procedimientos Almacenados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Triggers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-planes-de-ejecucion-y-optimizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Planes de Ejecución y Optimización
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-4-seguridad-y-administracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 4: Seguridad y Administración
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 4: Seguridad y Administración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-usuarios-y-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Usuarios y Roles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-auditoria-implementada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Auditoría Implementada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-estrategias-de-respaldo-y-recuperacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Estrategias de Respaldo y Recuperación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-evidencias-de-monitoreo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Evidencias de Monitoreo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anexo-a-scripts-completos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo A: Scripts Completos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-b-capturas-de-ejecucion-y-resultados-de-consultas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo B: Capturas de Ejecución y Resultados de Consultas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-c-documentacion-tecnica-de-administracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo C: Documentación Técnica de Administración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-d-hallazgos-y-plan-de-mejora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo D: Hallazgos y Plan de Mejora
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-del-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos del entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce023/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE023 - S2 - E3: Sistema de Software Funcional Integrado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE024 - S2 - E4: Gestión del Proyecto y Calidad de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce03/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE03: Infraestructura Tecnológica
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE03: Infraestructura Tecnológica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0311/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0311 - S1 - E1: Análisis y Diseño de Red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0331/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0331 - S1 - E2: Análisis y Diseño de Centro de Datos Híbrido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0321/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0321-CE0324 - S2 - E1: Planificación e Implementación del SGSI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0312/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0312-CE0313 - S2 - E2: Implementación, Testing y Monitoreo de Red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0332/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0332-CE0333 - S2 - E3: Implementación, Gestión y Control de Centro de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Ejecutivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-1-modelo-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 1: Modelo de Datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 1: Modelo de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-modelo-entidad-relacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Modelo Entidad-Relación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-modelo-logico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Modelo Lógico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-modelo-normalizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Modelo Normalizado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-diccionario-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Diccionario de Datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-2-implementacion-de-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 2: Implementación de Base de Datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 2: Implementación de Base de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-scripts-ddl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Scripts DDL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-scripts-dml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Scripts DML
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-evidencias-de-creacion-de-tablas-relaciones-y-restricciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Evidencias de Creación de Tablas, Relaciones y Restricciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-3-consultas-y-programacion-en-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 3: Consultas y Programación en Base de Datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 3: Consultas y Programación en Base de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-consultas-sql-relevantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Consultas SQL Relevantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Funciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-procedimientos-almacenados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Procedimientos Almacenados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Triggers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-planes-de-ejecucion-y-optimizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Planes de Ejecución y Optimización
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-4-seguridad-y-administracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 4: Seguridad y Administración
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 4: Seguridad y Administración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-usuarios-y-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Usuarios y Roles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-auditoria-implementada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Auditoría Implementada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-estrategias-de-respaldo-y-recuperacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Estrategias de Respaldo y Recuperación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-evidencias-de-monitoreo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Evidencias de Monitoreo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anexo-a-scripts-completos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo A: Scripts Completos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-b-capturas-de-ejecucion-y-resultados-de-consultas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo B: Capturas de Ejecución y Resultados de Consultas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-c-documentacion-tecnica-de-administracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo C: Documentación Técnica de Administración
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-d-hallazgos-y-plan-de-mejora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo D: Hallazgos y Plan de Mejora
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-del-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos del entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ce022-s2-e2-plataforma-de-datos-del-sistema">CE022 - S2 - E2: Plataforma de Datos del Sistema<a class="headerlink" href="#ce022-s2-e2-plataforma-de-datos-del-sistema" title="Permanent link">&para;</a></h1>
+<p><strong>ENTREGABLE 2</strong></p>
+<p><strong>Plataforma de Datos del Sistema</strong></p>
+<p><em>(Alineado con CE022)</em></p>
+<p><strong>Modelado, implementación, programación, seguridad y administración de la base de datos real del ERP «Articulos» — Salud Total SAC</strong></p>
+<p><img src="media/media/image1.png" title="erd.png" style="width:3.125in;height:2.03142in" alt="erd.png" /></p>
+<table>
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Título del sistema</strong></th>
+<th>ERP «Articulos» — Salud Total SAC · Plataforma de datos (PostgreSQL 17)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Nombre del estudiante</strong></td>
+<td>Gutierrez Anco Yesenia Alejandra<br />
+Turpo Cauna Jose Samuel<br />
+Quispe Huarilloclla Jhosef Antony</td>
+</tr>
+<tr class="even">
+<td><strong>Semestre</strong></td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td><strong>Curso</strong></td>
+<td>CE022 — Bases de Datos</td>
+</tr>
+<tr class="even">
+<td><strong>Fecha</strong></td>
+<td>Noviembre de 2026 — versión 2.0 (verificada contra el código y la base real)</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="resumen-ejecutivo">Resumen Ejecutivo<a class="headerlink" href="#resumen-ejecutivo" title="Permanent link">&para;</a></h2>
+<p>En Salud Total SAC —cadena de farmacias con clínica ambulatoria en Juliaca y Puno— cada venta, compra, transferencia o ajuste de inventario se convierte en transacciones sobre la base de datos del ERP «Articulos». De su consistencia dependen el stock por lote, el control de vencimientos (FEFO), la caja y los indicadores que el Business Case de CE01 se propuso mejorar: −67 % de quiebres de stock y menos mermas por vencimiento.</p>
+<p><strong>Fuente de verdad.</strong> Este entregable describe la base de datos que realmente usa el sistema: clinica_db sobre PostgreSQL 17.11, con un esquema de 83 tablas que Hibernate genera a partir de las 78 entidades JPA del backend (spring.jpa.hibernate.ddl-auto), más los objetos que crea el inicializador CoreDatabaseFunctionsInitializer. Todas las cifras y salidas provienen de consultas ejecutadas sobre esa base, o sobre clinica_db_e2, una copia exacta usada para las pruebas que modifican datos.</p>
+<p><strong>Rol de los datos.</strong> La aplicación concentra hoy la lógica de negocio en Java (VentaServiceImpl valida el stock y KardexService registra cada movimiento), mientras que la base aporta integridad referencial (97 llaves foráneas), 188 índices, 18 restricciones CHECK generadas desde enumerados y el canal de eventos del patrón Outbox: la tabla cola_eventos con el trigger trg_notify_evento_insert, que avisa al backend mediante pg_notify.</p>
+<p><strong>Hallazgos y mejoras.</strong> El análisis encontró brechas que este documento cuantifica y resuelve con scripts probados: Flyway está desactivado; no existen índices parciales ni CHECK de stock no negativo; el login no es único a nivel de BD; la aplicación se conecta como superusuario postgres; y la consulta más frecuente del kardex no tiene un índice adecuado. Se proponen y prueban funciones FEFO, un procedimiento de reabastecimiento integrado con el Outbox real, auditoría en BD, roles de mínimo privilegio, un índice compuesto (10 veces más rápido) y un simulacro de respaldo y restauración verificado.</p>
+<h2 id="seccion-1-modelo-de-datos">Sección 1: Modelo de Datos<a class="headerlink" href="#seccion-1-modelo-de-datos" title="Permanent link">&para;</a></h2>
+<h3 id="11-modelo-entidad-relacion">1.1 Modelo Entidad-Relación<a class="headerlink" href="#11-modelo-entidad-relacion" title="Permanent link">&para;</a></h3>
+<p>La figura 1.1 muestra el núcleo del modelo: 25 de las 83 tablas, agrupadas por dominio. Las relaciones corresponden a llaves foráneas que existen en clinica_db (verificadas en information_schema). Dos vínculos importantes no tienen llave foránea en la base y los mantiene la aplicación: productos.id_sucursal y venta_detalle.id_articulo. Las tablas de eventos y auditoría no tienen llaves foráneas por diseño, para registrar sin acoplarse.</p>
+<p><img src="media/media/image1.png" style="width:6.49606in;height:4.22281in" /></p>
+<p><em>Figura 1.1 — Modelo Entidad-Relación del núcleo del esquema real (clinica_db).</em></p>
+<h3 id="12-modelo-logico">1.2 Modelo Lógico<a class="headerlink" href="#12-modelo-logico" title="Permanent link">&para;</a></h3>
+<p>El modelo lógico lo deriva Hibernate de las entidades JPA. Las decisiones de diseño que se observan en el esquema son:</p>
+<ul>
+<li>
+<p><strong>Identidad:</strong> 75 columnas de llave primaria son BIGINT GENERATED BY DEFAULT AS IDENTITY (GenerationType.IDENTITY). La excepción es kardex, cuya PK id_articulo_kardex es VARCHAR(50) generada por la aplicación.</p>
+</li>
+<li>
+<p><strong>Eliminación lógica:</strong> 45 tablas tienen la columna estado (EstadoGeneral, 18 valores; ELIMINADO = 3). 21 entidades filtran con @SQLRestriction("estado != 3").</p>
+</li>
+<li>
+<p><strong>Auditoría de filas:</strong> usuario_creacion/usuario_modificacion (26 tablas) y created_at/updated_at (24 tablas), completadas por @CreatedBy y @LastModifiedBy.</p>
+</li>
+<li>
+<p><strong>Lote como fila:</strong> cada registro de productos es un lote (nro_lote, fecha_venc, stock) de un ítem de catalogo en una sucursal, con stock_minimo y stock_maximo.</p>
+</li>
+<li>
+<p><strong>Enumerados:</strong> los @Enumerated(STRING) generan las 18 restricciones CHECK (p. ej. solicitudes_anulacion.estado ∈ {PENDIENTE, APROBADA, RECHAZADA}).</p>
+</li>
+<li>
+<p><strong>M:N:</strong> user_roles, role_permissions y user_permissions; maestro-detalle en venta_registro/venta_detalle, compras/detalle_compra y transferencias.</p>
+</li>
+</ul>
+<h3 id="13-modelo-normalizado">1.3 Modelo Normalizado<a class="headerlink" href="#13-modelo-normalizado" title="Permanent link">&para;</a></h3>
+<p>El núcleo de inventario, compras y seguridad está en Tercera Forma Normal. Existen desnormalizaciones deliberadas, que se documentan con su justificación:</p>
+<table>
+<thead>
+<tr>
+<th>Forma / caso</th>
+<th>Situación en el esquema real</th>
+<th>Justificación o acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1FN</td>
+<td>Atributos atómicos; el detalle de ventas y compras va en filas separadas.</td>
+<td>Cumple.</td>
+</tr>
+<tr>
+<td>2FN</td>
+<td>Las tablas puente con clave compuesta no tienen atributos que dependan de parte de la clave.</td>
+<td>Cumple.</td>
+</tr>
+<tr>
+<td>3FN (núcleo)</td>
+<td>productos referencia catalogo, almacen, proveedores y laboratorios; los nombres viven en su tabla.</td>
+<td>Cumple.</td>
+</tr>
+<tr>
+<td>venta_registro</td>
+<td>180 columnas: copia nombre, DNI, RUC y dirección del cliente al emitir.</td>
+<td>Desnormalización intencional: el comprobante debe conservar los datos tal como se emitieron (SUNAT).</td>
+</tr>
+<tr>
+<td>productos vs. catalogo</td>
+<td>Precios y factores (blíster/caja) se repiten por lote y sucursal.</td>
+<td>Cada sede y lote puede tener precio propio; catalogo guarda el precio de referencia.</td>
+</tr>
+<tr>
+<td>kardex</td>
+<td>Guarda saldo_cantidad y saldo_costo_total acumulados.</td>
+<td>Optimiza la consulta de saldo; lo mantiene KardexService en la misma transacción.</td>
+</tr>
+<tr>
+<td>bloque_modulos</td>
+<td>Única tabla sin llave primaria (colección @ElementCollection).</td>
+<td>Acción: añadir PK compuesta al habilitar Flyway.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-diccionario-de-datos">1.4 Diccionario de Datos<a class="headerlink" href="#14-diccionario-de-datos" title="Permanent link">&para;</a></h3>
+<p><em>Tabla 1.1 — Inventario de las 83 tablas por dominio.</em></p>
+<table>
+<thead>
+<tr>
+<th>Dominio</th>
+<th>Tablas (principales)</th>
+<th>N.º</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seguridad y acceso</td>
+<td>datos_personales, roles, permissions, user_roles, role_permissions, user_permissions, acceso_main, menu_items, sessiones, intruso…</td>
+<td>17</td>
+</tr>
+<tr>
+<td>Organización</td>
+<td>datos_companias, datos_empresa, sucursal, almacen, puntos, puntos_tipo, puntos_proceso, configuracion…</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Catálogo e inventario</td>
+<td>catalogo, productos, laboratorios, ubicaciones, unidad_medida, kardex, inventario_ajustes(_detalle), inventario_transferencias(_detalle), movimiento_diverso(_detalle), principios_activos…</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Compras y proveedores</td>
+<td>compras, detalle_compra, cronograma_pagos, proveedores, cuenta_proveedor(_movimiento), deuda_proveedor</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Ventas y caja</td>
+<td>venta_registro, venta_detalle, venta_descuentos, venta_descuento_detalles, venta_beneficios, venta_reimpresion_log, tipo_documento, metodos_pago, caja_chica, caja_general…</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Clínica</td>
+<td>datos_clinica, datos_medico, datos_clinica_auditoria, tipo_paciente, tipos_atencion</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Documentos, eventos y auditoría</td>
+<td>plantillas, documento_formatos, puntos_documento, puntos_documento_auditoria, cola_eventos, notificaciones, lab_auditoria, flujo_aprobacion, solicitudes_anulacion</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+<p><em>Tabla 1.2 — Diccionario: productos (registro por lote; columnas principales de 52).</em></p>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Tipo</th>
+<th>Nulo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id_producto</td>
+<td>bigint identity</td>
+<td>No</td>
+<td>PK. Un registro por lote y sucursal</td>
+</tr>
+<tr>
+<td>id_catalogo</td>
+<td>bigint</td>
+<td>No</td>
+<td>FK → catalogo</td>
+</tr>
+<tr>
+<td>id_sucursal</td>
+<td>bigint</td>
+<td>No</td>
+<td>Sede (sin FK en BD; la valida la aplicación)</td>
+</tr>
+<tr>
+<td>id_almacen / id_proveedor / id_laboratorio / id_ubicacion</td>
+<td>bigint</td>
+<td>Sí</td>
+<td>FK → almacen / proveedores / laboratorios / ubicaciones</td>
+</tr>
+<tr>
+<td>nro_lote</td>
+<td>varchar(50)</td>
+<td>Sí</td>
+<td>Número de lote del fabricante</td>
+</tr>
+<tr>
+<td>fecha_venc</td>
+<td>date</td>
+<td>Sí</td>
+<td>Vencimiento del lote (base de FEFO y alertas)</td>
+</tr>
+<tr>
+<td>dias_alerta_vencimiento</td>
+<td>integer</td>
+<td>Sí</td>
+<td>Umbral de alerta (90 por defecto en AlertaSchedulerService)</td>
+</tr>
+<tr>
+<td>stock / stock_minimo / stock_maximo</td>
+<td>numeric(10,2)</td>
+<td>Sí</td>
+<td>Existencia, punto de reorden y nivel máximo</td>
+</tr>
+<tr>
+<td>precio_compra / precio_venta_unitario</td>
+<td>numeric(12,2)</td>
+<td>Sí</td>
+<td>Costo y precio de venta por unidad</td>
+</tr>
+<tr>
+<td>cod_digemid / registro_invima_lote</td>
+<td>varchar(50)</td>
+<td>Sí</td>
+<td>Códigos regulatorios del producto y del lote</td>
+</tr>
+</tbody>
+</table>
+<p><em>Tabla 1.3 — Diccionario: kardex.</em></p>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Tipo</th>
+<th>Nulo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id_articulo_kardex</td>
+<td>varchar(50)</td>
+<td>No</td>
+<td>PK generada por la aplicación</td>
+</tr>
+<tr>
+<td>id_catalogo / id_sucursal / id_usuario</td>
+<td>bigint</td>
+<td>No</td>
+<td>FK → catalogo / sucursal / datos_personales</td>
+</tr>
+<tr>
+<td>id_clasificacion</td>
+<td>bigint</td>
+<td>Sí</td>
+<td>FK → inventario_clasificaciones (motivo)</td>
+</tr>
+<tr>
+<td>fecha</td>
+<td>timestamp</td>
+<td>No</td>
+<td>Momento del movimiento (indexado)</td>
+</tr>
+<tr>
+<td>operacion / signo</td>
+<td>varchar</td>
+<td>No</td>
+<td>VENTA, COMPRA, AJUSTE… / '+' entrada, '-' salida</td>
+</tr>
+<tr>
+<td>cantidad / costo_unitario / costo_total</td>
+<td>numeric(12,4)</td>
+<td>No</td>
+<td>Valores del movimiento</td>
+</tr>
+<tr>
+<td>saldo_cantidad / saldo_costo_total</td>
+<td>numeric(12,4)</td>
+<td>No</td>
+<td>Saldo acumulado tras el movimiento</td>
+</tr>
+<tr>
+<td>nro_lote / fecha_venc</td>
+<td>varchar / date</td>
+<td>Sí</td>
+<td>Lote afectado</td>
+</tr>
+<tr>
+<td>origen_tipo / origen_id</td>
+<td>varchar</td>
+<td>No</td>
+<td>Documento que originó el movimiento (VTA, CMP…)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Tabla 1.4 — Diccionario: cola_eventos (Outbox).</em></p>
+<table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Tipo</th>
+<th>Nulo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>bigint identity</td>
+<td>No</td>
+<td>PK</td>
+</tr>
+<tr>
+<td>topico</td>
+<td>varchar(100)</td>
+<td>No</td>
+<td>sistema.notificaciones, compras.pago.realizado…</td>
+</tr>
+<tr>
+<td>modulo / titulo / tipo</td>
+<td>varchar</td>
+<td>Sí</td>
+<td>Origen y presentación del aviso</td>
+</tr>
+<tr>
+<td>contenido</td>
+<td>text</td>
+<td>Sí</td>
+<td>Carga JSON del evento</td>
+</tr>
+<tr>
+<td>estado</td>
+<td>varchar(20)</td>
+<td>Sí</td>
+<td>PENDIENTE → PROCESADO / ERROR (PostgresEventListenerService)</td>
+</tr>
+<tr>
+<td>fecha_creacion / fecha_procesado</td>
+<td>timestamp</td>
+<td>Sí</td>
+<td>Trazabilidad del procesamiento</td>
+</tr>
+</tbody>
+</table>
+<h2 id="seccion-2-implementacion-de-base-de-datos">Sección 2: Implementación de Base de Datos<a class="headerlink" href="#seccion-2-implementacion-de-base-de-datos" title="Permanent link">&para;</a></h2>
+<p>La base se implementa en PostgreSQL 17.11 (instalación local en el perfil local; PostgreSQL gestionado en el perfil supabase). Se crea en tres pasos al arrancar el backend:</p>
+<ul>
+<li>
+<p><strong>DDL:</strong> Hibernate crea o actualiza las tablas a partir de las entidades (ddl-auto=update en local; create en supabase, que recrea el esquema). La dependencia Flyway está incluida, pero spring.flyway.enabled=false.</p>
+</li>
+<li>
+<p><strong>Objetos de BD:</strong> CoreDatabaseFunctionsInitializer ejecuta por JDBC la función notify_evento_insert y el trigger trg_notify_evento_insert.</p>
+</li>
+<li>
+<p><strong>DML inicial:</strong> DataInitializer y CoreBusinessInitializer cargan roles, permisos, menús, sucursal, plantillas y usuarios desde los JSON de src/main/resources/data/seed.</p>
+</li>
+</ul>
+<h3 id="21-scripts-ddl">2.1 Scripts DDL<a class="headerlink" href="#21-scripts-ddl" title="Permanent link">&para;</a></h3>
+<p>El archivo 01_ddl_esquema_real.sql (5 396 líneas) es el DDL completo extraído con pg_dump --schema-only de clinica_db. Extracto real:</p>
+<p>CREATE TABLE public.cola_eventos (</p>
+<p>id bigint NOT NULL,</p>
+<p>contenido text,</p>
+<p>estado character varying(20),</p>
+<p>fecha_creacion timestamp(6) without time zone,</p>
+<p>fecha_procesado timestamp(6) without time zone,</p>
+<p>modulo character varying(50),</p>
+<p>tipo character varying(50),</p>
+<p>titulo character varying(100),</p>
+<p>topico character varying(100) NOT NULL</p>
+<p>);</p>
+<p>-- productos (52 columnas; se muestran las de inventario)</p>
+<p>CREATE TABLE public.productos (</p>
+<p>id_producto bigint NOT NULL,</p>
+<p>...</p>
+<p>fecha_venc date,</p>
+<p>id_almacen bigint,</p>
+<p>id_catalogo bigint NOT NULL,</p>
+<p>id_sucursal bigint NOT NULL,</p>
+<p>nro_lote character varying(50),</p>
+<p>stock numeric(10,2),</p>
+<p>stock_maximo numeric(10,2),</p>
+<p>stock_minimo numeric(10,2),</p>
+<p>...</p>
+<p>);</p>
+<p>ALTER TABLE ONLY public.productos ADD CONSTRAINT productos_pkey PRIMARY KEY (id_producto);</p>
+<p>ALTER TABLE ONLY public.productos ADD CONSTRAINT fkohh7lchwdivjj5b2vactdl88w</p>
+<p>FOREIGN KEY (id_almacen) REFERENCES public.almacen(id);</p>
+<p>CREATE INDEX idx_producto_catalogo ON public.productos USING btree (id_catalogo);</p>
+<p>CREATE INDEX idx_producto_sucursal ON public.productos USING btree (id_sucursal);</p>
+<p><em>Código 2.1 — DDL real generado por Hibernate (extracto de pg_dump).</em></p>
+<h3 id="22-scripts-dml">2.2 Scripts DML<a class="headerlink" href="#22-scripts-dml" title="Permanent link">&para;</a></h3>
+<p>Además de la semilla de los inicializadores, el script 02_dml_datos_prueba.sql carga en la copia clinica_db_e2 un escenario de Salud Total: la sede central de Juliaca (la semilla trae «Sede Principal, Lima»), la sucursal Puno con su almacén y lotes con vencimiento y punto de reorden. Respeta el esquema real (INSERT … SELECT para heredar las columnas obligatorias de almacen y productos).</p>
+<p>-- 3. Segundo lote de Paracetamol (vence antes → debe salir primero por FEFO) y lotes en Puno</p>
+<p>INSERT INTO productos (id_catalogo, id_sucursal, id_almacen, nro_lote, fecha_venc, stock, stock_minimo,</p>
+<p>stock_maximo,</p>
+<p>precio_compra, precio_venta_unitario, dias_alerta_vencimiento, presentacion,</p>
+<p>fecha_reg, usuario_crea)</p>
+<p>SELECT id_catalogo, 1, 1, 'L-2105', current_date + 40, 80, 100, 600, precio_compra, precio_venta_unitario,</p>
+<p>90, presentacion, now(), 'dml_e2'</p>
+<p>FROM productos WHERE id_producto = 1;</p>
+<p>INSERT INTO productos (id_catalogo, id_sucursal, id_almacen, nro_lote, fecha_venc, stock, stock_minimo,</p>
+<p>stock_maximo,</p>
+<p>precio_compra, precio_venta_unitario, dias_alerta_vencimiento, presentacion,</p>
+<p>fecha_reg, usuario_crea)</p>
+<p>SELECT p.id_catalogo, 2, (SELECT id FROM almacen WHERE codigo = 'ALM-PUN'), v.lote, v.venc, v.stock,</p>
+<p>v.minimo, v.maximo,</p>
+<p>p.precio_compra, p.precio_venta_unitario, 90, p.presentacion, now(), 'dml_e2'</p>
+<p>FROM productos p</p>
+<p>JOIN (VALUES (1, 'L-2290', DATE '2027-01-12', 140::numeric, 60::numeric, 300::numeric),</p>
+<p>(2, 'L-1181', current_date + 20, 18::numeric, 60::numeric, 120::numeric),</p>
+<p>(5, 'L-7714', current_date - 5, 12::numeric, 30::numeric, 150::numeric)) v(id, lote,</p>
+<p>venc, stock, minimo, maximo)</p>
+<p>ON v.id = p.id_producto;</p>
+<p><em>Código 2.2 — Carga de lotes para FEFO y reabastecimiento.</em></p>
+<p>=== Lotes cargados por sede (FEFO: ordenados por vencimiento) ===</p>
+<p>sede | producto | nro_lote | fecha_venc | stock | stock_minimo</p>
+<p>----------------------+------------------------+----------+------------+--------+--------------</p>
+<p>Sede Central Juliaca | AMOXICILINA 500MG CAP | L-1180 | 2026-12-13 | 300.00 | 60.00</p>
+<p>Sede Central Juliaca | AZITROMICINA 500MG TAB | L-3310 | 2027-01-27 | 200.00 | 40.00</p>
+<p>Sede Central Juliaca | CETIRIZINA 10MG TAB | L-7713 | 2026-12-03 | 400.00 | 30.00</p>
+<p>Sede Central Juliaca | IBUPROFENO 400MG TAB | L-0444 | 2027-08-30 | 450.00 | 80.00</p>
+<p>Sede Central Juliaca | OMEPRAZOL 20MG CAP | L-0932 | 2027-02-28 | 350.00 | 50.00</p>
+<p>Sede Central Juliaca | PARACETAMOL 500MG TAB | L-2105 | 2026-12-28 | 80.00 | 100.00</p>
+<p>Sede Central Juliaca | PARACETAMOL 500MG TAB | L-2291 | 2027-01-12 | 500.00 | 100.00</p>
+<p>Sucursal Puno | AMOXICILINA 500MG CAP | L-1181 | 2026-12-08 | 18.00 | 60.00</p>
+<p>Sucursal Puno | CETIRIZINA 10MG TAB | L-7714 | 2026-11-13 | 12.00 | 30.00</p>
+<p>Sucursal Puno | PARACETAMOL 500MG TAB | L-2290 | 2027-01-12 | 140.00 | 60.00</p>
+<p>(10 rows)</p>
+<p><em>Evidencia 2.1 — Lotes por sede ordenados por vencimiento (clinica_db_e2).</em></p>
+<h3 id="23-evidencias-de-creacion-de-tablas-relaciones-y-restricciones">2.3 Evidencias de Creación de Tablas, Relaciones y Restricciones<a class="headerlink" href="#23-evidencias-de-creacion-de-tablas-relaciones-y-restricciones" title="Permanent link">&para;</a></h3>
+<p>clinica_db=&gt; SELECT version();</p>
+<p>PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit</p>
+<p>clinica_db=&gt; -- Inventario de objetos del esquema public</p>
+<p>tablas | pk | fk | checks | uniques | indices | parciales | triggers | tamano</p>
+<p>--------+----+----+--------+---------+---------+-----------+----------+--------</p>
+<p>83 | 82 | 97 | 18 | 7 | 188 | 0 | 1 | 13 MB</p>
+<p>(1 row)</p>
+<p>clinica_db=&gt; -- Roles con los que se conecta la aplicación (application-local.properties: username=postgres)</p>
+<p>rolname | superusuario | login</p>
+<p>----------+--------------+-------</p>
+<p>postgres | t | t</p>
+<p>(1 row)</p>
+<p><em>Evidencia 2.2 — Inventario real de objetos de clinica_db y rol de conexión.</em></p>
+<p>Las 18 restricciones CHECK y las 7 UNIQUE las generó Hibernate (enumerados y @Column(unique = true)). No hay índices parciales ni restricciones de negocio como stock &gt;= 0. La tabla bloque_modulos no tiene llave primaria.</p>
+<h2 id="seccion-3-consultas-y-programacion-en-base-de-datos">Sección 3: Consultas y Programación en Base de Datos<a class="headerlink" href="#seccion-3-consultas-y-programacion-en-base-de-datos" title="Permanent link">&para;</a></h2>
+<h3 id="31-consultas-sql-relevantes">3.1 Consultas SQL Relevantes<a class="headerlink" href="#31-consultas-sql-relevantes" title="Permanent link">&para;</a></h3>
+<p>Las consultas son las que ejecuta la aplicación, copiadas de los repositorios Spring Data (consultas nativas o JPQL traducidas), con parámetros de prueba:</p>
+<p>\echo '=== C1. ProductoRepository.findProductosEnAlertaVencimientoPorSucursal (AlertaSchedulerService,</p>
+<p>diario) ==='</p>
+<p>SELECT p.id_producto, p.nro_lote, p.fecha_venc, p.fecha_venc - current_date AS dias_restantes,</p>
+<p>COALESCE(p.dias_alerta_vencimiento, 90) AS umbral</p>
+<p>FROM productos p</p>
+<p>WHERE p.id_sucursal = 1 AND p.fecha_venc IS NOT NULL</p>
+<p>AND p.fecha_venc &gt;= CAST(current_date AS date)</p>
+<p>AND p.fecha_venc \&lt;= (CAST(current_date AS date) + COALESCE(p.dias_alerta_vencimiento, 90))</p>
+<p>ORDER BY p.fecha_venc;</p>
+<p><em>Código 3.1 — ProductoRepository.findProductosEnAlertaVencimientoPorSucursal (la usa AlertaSchedulerService cada día).</em></p>
+<p>=== C1. ProductoRepository.findProductosEnAlertaVencimientoPorSucursal (AlertaSchedulerService, diario) ===</p>
+<p>id_producto | nro_lote | fecha_venc | dias_restantes | umbral</p>
+<p>-------------+----------+------------+----------------+--------</p>
+<p>5 | L-7713 | 2026-12-03 | 15 | 60</p>
+<p>2 | L-1180 | 2026-12-13 | 25 | 90</p>
+<p>11 | L-2105 | 2026-12-28 | 40 | 90</p>
+<p>1 | L-2291 | 2027-01-12 | 55 | 90</p>
+<p>4 | L-3310 | 2027-01-27 | 70 | 90</p>
+<p>(5 rows)</p>
+<p>=== C2. ProductoRepository.findStockCriticoPorSucursal (JPQL: p.stock \&lt;= p.stockMinimo AND p.stockMinimo &gt; 0)</p>
+<p>===</p>
+<p>id_producto | nombre_catalogo | nro_lote | stock | stock_minimo</p>
+<p>-------------+-----------------------+----------+-------+--------------</p>
+<p>13 | AMOXICILINA 500MG CAP | L-1181 | 18.00 | 60.00</p>
+<p>14 | CETIRIZINA 10MG TAB | L-7714 | 12.00 | 30.00</p>
+<p>(2 rows)</p>
+<p>=== C3. Búsqueda para venta (JPQL con LOWER/CONCAT, soloVenta = true: excluye vencidos) ===</p>
+<p>id_producto | nombre | nro_lote | fecha_venc | precio_venta_unitario</p>
+<p>-------------+-----------------------+----------+------------+-----------------------</p>
+<p>13 | AMOXICILINA 500MG CAP | L-1181 | 2026-12-08 | 15.00</p>
+<p>(1 row)</p>
+<p>=== C5. Productos más vendidos (venta_detalle.id_articulo -&gt; productos -&gt; catalogo) ===</p>
+<p>nombre_catalogo | unidades | importe</p>
+<p>------------------------+----------+---------</p>
+<p>AMOXICILINA 500MG CAP | 42.00 | 630.00</p>
+<p>AZITROMICINA 500MG TAB | 33.00 | 726.00</p>
+<p>PERFIL LIPIDICO | 32.00 | 1600.00</p>
+<p>PARACETAMOL 500MG TAB | 28.00 | 224.00</p>
+<p>IBUPROFENO 400MG TAB | 22.00 | 220.00</p>
+<p>(5 rows)</p>
+<p><em>Evidencia 3.1 — Alertas de vencimiento, stock crítico, búsqueda para venta (excluye vencidos) y productos más vendidos.</em></p>
+<p>Hallazgo: en los datos reales venta_detalle.id_catalogo está vacío en las 149 filas; el vínculo efectivo con el producto es id_articulo (el lote), que no tiene llave foránea.</p>
+<h3 id="32-funciones">3.2 Funciones<a class="headerlink" href="#32-funciones" title="Permanent link">&para;</a></h3>
+<p>La única función real del sistema es notify_evento_insert (parte A de 03_programabilidad.sql). Se añaden tres funciones complementarias que hoy no invoca la aplicación y que implementan en la BD reglas del E1: fn_stock_vigente, fn_lote_fefo (RF-24) y fn_stock_valorizado.</p>
+<p>CREATE OR REPLACE FUNCTION fn_lote_fefo(p_id_catalogo BIGINT, p_id_sucursal BIGINT)</p>
+<p>RETURNS TABLE (id_producto BIGINT, nro_lote VARCHAR, fecha_venc DATE, stock NUMERIC, dias_para_vencer INTEGER)</p>
+<p>LANGUAGE sql STABLE AS \$\$</p>
+<p>SELECT p.id_producto, p.nro_lote, p.fecha_venc, p.stock, (p.fecha_venc - current_date)</p>
+<p>FROM productos p</p>
+<p>WHERE p.id_catalogo = p_id_catalogo</p>
+<p>AND p.id_sucursal = p_id_sucursal</p>
+<p>AND p.stock &gt; 0</p>
+<p>AND p.fecha_venc &gt;= current_date</p>
+<p>ORDER BY p.fecha_venc ASC, p.id_producto ASC;</p>
+<p>\$\$;</p>
+<p><em>Código 3.2 — fn_lote_fefo: lote con el vencimiento más próximo, excluyendo vencidos y sin stock.</em></p>
+<p>=== P2. fn_lote_fefo: Paracetamol en Juliaca (debe salir primero L-2105) ===</p>
+<p>id_producto | nro_lote | fecha_venc | stock | dias_para_vencer</p>
+<p>-------------+----------+------------+--------+------------------</p>
+<p>11 | L-2105 | 2026-12-28 | 80.00 | 40</p>
+<p>1 | L-2291 | 2027-01-12 | 500.00 | 55</p>
+<p>(2 rows)</p>
+<p>=== P3. fn_lote_fefo: Cetirizina en Puno (lote L-7714 vencido -&gt; no se ofrece) ===</p>
+<p>id_producto | nro_lote | fecha_venc | stock | dias_para_vencer</p>
+<p>-------------+----------+------------+-------+------------------</p>
+<p>(0 rows)</p>
+<p><em>Evidencia 3.2 — FEFO en Juliaca (sale primero L-2105) y en Puno (el lote vencido L-7714 no se ofrece).</em></p>
+<h3 id="33-procedimientos-almacenados">3.3 Procedimientos Almacenados<a class="headerlink" href="#33-procedimientos-almacenados" title="Permanent link">&para;</a></h3>
+<p>El sistema no tiene procedimientos almacenados. Se propone sp_generar_ordenes_reabastecimiento (TO-BE RF-27, CU-04 del E1) junto con la tabla orden_reabastecimiento. El procedimiento agrupa los lotes vigentes por producto y sede, detecta los que están en o bajo el punto de reorden y crea una orden. Un índice único parcial garantiza una sola orden abierta por producto y sede (RN-12). Cada orden publica un evento en la cola_eventos real, de modo que el backend la recibe por el mismo canal LISTEN/NOTIFY que ya usa.</p>
+<p>CREATE OR REPLACE PROCEDURE sp_generar_ordenes_reabastecimiento(IN p_id_sucursal BIGINT, INOUT p_generadas</p>
+<p>INTEGER DEFAULT 0)</p>
+<p>LANGUAGE plpgsql AS \$\$</p>
+<p>DECLARE</p>
+<p>r RECORD;</p>
+<p>BEGIN</p>
+<p>p_generadas := 0;</p>
+<p>FOR r IN</p>
+<p>SELECT p.id_catalogo,</p>
+<p>SUM(CASE WHEN p.fecha_venc IS NULL OR p.fecha_venc &gt;= current_date THEN p.stock ELSE 0 END) AS</p>
+<p>stock_vigente,</p>
+<p>MAX(p.stock_minimo) AS minimo,</p>
+<p>MAX(p.stock_maximo) AS maximo</p>
+<p>FROM productos p</p>
+<p>WHERE p.id_sucursal = p_id_sucursal</p>
+<p>GROUP BY p.id_catalogo</p>
+<p>HAVING MAX(p.stock_minimo) &gt; 0</p>
+<p>AND SUM(CASE WHEN p.fecha_venc IS NULL OR p.fecha_venc &gt;= current_date THEN p.stock ELSE 0 END) \&lt;=</p>
+<p>MAX(p.stock_minimo)</p>
+<p>LOOP</p>
+<p>INSERT INTO orden_reabastecimiento (id_catalogo, id_sucursal, stock_al_generar, stock_minimo,</p>
+<p>cantidad_sugerida)</p>
+<p>VALUES (r.id_catalogo, p_id_sucursal, r.stock_vigente, r.minimo,</p>
+<p>GREATEST(COALESCE(r.maximo, r.minimo * 2) - r.stock_vigente, 1))</p>
+<p>ON CONFLICT DO NOTHING;</p>
+<p>IF FOUND THEN</p>
+<p>p_generadas := p_generadas + 1;</p>
+<p>-- Se integra con el Outbox real: el trigger trg_notify_evento_insert emite pg_notify</p>
+<p>INSERT INTO cola_eventos (modulo, topico, titulo, contenido, tipo, estado, fecha_creacion)</p>
+<p>VALUES ('INVENTARIO', 'inventario.reabastecimiento', 'Orden de reabastecimiento generada',</p>
+<p>json_build_object('idCatalogo', r.id_catalogo, 'idSucursal', p_id_sucursal,</p>
+<p>'stock', r.stock_vigente, 'minimo', r.minimo)::text,</p>
+<p>'INFO', 'PENDIENTE', now());</p>
+<p>END IF;</p>
+<p>END LOOP;</p>
+<p>END;</p>
+<p>\$\$;</p>
+<p><em>Código 3.3 — Procedimiento sp_generar_ordenes_reabastecimiento.</em></p>
+<p>=== P4. sp_generar_ordenes_reabastecimiento (Puno) ===</p>
+<p>p_generadas</p>
+<hr />
+<p>2</p>
+<p>(1 row)</p>
+<p>Asynchronous notification "nuevo_evento_outbox" with payload "{"id":2,"contenido":"{\idCatalogo\ : 5,</p>
+<p>\idSucursal\ : 2, \stock\ : 0, \minimo\ :</p>
+<p>30.00}","estado":"PENDIENTE","fecha_creacion":"2026-11-18T20:53:57.656609","fecha_procesado":null,"modulo"</p>
+<p>:"INVENTARIO","tipo":"INFO","titulo":"Orden de reabastecimiento</p>
+<p>generada","topico":"inventario.reabastecimiento"}" received from server process with PID 23792.</p>
+<p>Asynchronous notification "nuevo_evento_outbox" with payload "{"id":3,"contenido":"{\idCatalogo\ : 2,</p>
+<p>\idSucursal\ : 2, \stock\ : 18.00, \minimo\ :</p>
+<p>60.00}","estado":"PENDIENTE","fecha_creacion":"2026-11-18T20:53:57.656609","fecha_procesado":null,"modulo"</p>
+<p>:"INVENTARIO","tipo":"INFO","titulo":"Orden de reabastecimiento</p>
+<p>generada","topico":"inventario.reabastecimiento"}" received from server process with PID 23792.</p>
+<p>id | nombre_catalogo | stock_al_generar | stock_minimo | cantidad_sugerida | estado</p>
+<p>----+-----------------------+------------------+--------------+-------------------+-----------</p>
+<p>1 | CETIRIZINA 10MG TAB | 0.00 | 30.00 | 150.00 | PENDIENTE</p>
+<p>2 | AMOXICILINA 500MG CAP | 18.00 | 60.00 | 102.00 | PENDIENTE</p>
+<p>(2 rows)</p>
+<p>=== P5. Segunda ejecución: no duplica órdenes abiertas (índice único parcial) ===</p>
+<p>p_generadas</p>
+<hr />
+<p>0</p>
+<p>(1 row)</p>
+<p>=== P6. Eventos generados en el Outbox real ===</p>
+<p>id | topico | titulo | estado</p>
+<p>----+-----------------------------+------------------------------------+-----------</p>
+<p>1 | sistema.notificaciones | Prueba de notificación | PENDIENTE</p>
+<p>2 | inventario.reabastecimiento | Orden de reabastecimiento generada | PENDIENTE</p>
+<p>3 | inventario.reabastecimiento | Orden de reabastecimiento generada | PENDIENTE</p>
+<p>(3 rows)</p>
+<p><em>Evidencia 3.3 — Dos órdenes generadas en Puno, notificaciones recibidas por LISTEN y sin duplicados al repetir.</em></p>
+<h3 id="34-triggers">3.4 Triggers<a class="headerlink" href="#34-triggers" title="Permanent link">&para;</a></h3>
+<p><strong>Trigger real:</strong> trg_notify_evento_insert (AFTER INSERT ON cola_eventos) ejecuta pg_notify('nuevo_evento_outbox', fila en JSON). PostgresEventListenerService mantiene un LISTEN en un hilo dedicado y, al recibir el aviso, procesa los eventos PENDIENTE (con un sondeo de respaldo cada 30 s).</p>
+<p>CREATE OR REPLACE FUNCTION notify_evento_insert()</p>
+<p>RETURNS trigger AS \$\$</p>
+<p>BEGIN</p>
+<p>PERFORM pg_notify('nuevo_evento_outbox', row_to_json(NEW)::text);</p>
+<p>RETURN NEW;</p>
+<p>END;</p>
+<p>\$\$ LANGUAGE plpgsql;</p>
+<p>DROP TRIGGER IF EXISTS trg_notify_evento_insert ON cola_eventos;</p>
+<p>CREATE TRIGGER trg_notify_evento_insert</p>
+<p>AFTER INSERT ON cola_eventos</p>
+<p>FOR EACH ROW EXECUTE FUNCTION notify_evento_insert();</p>
+<p>=== P1. Outbox real: LISTEN + INSERT en cola_eventos -&gt; pg_notify ===</p>
+<p>LISTEN</p>
+<p>INSERT 0 1</p>
+<p>Asynchronous notification "nuevo_evento_outbox" with payload</p>
+<p>"{"id":1,"contenido":"{\userId\:\\,\titulo\:\Prueba\}","estado":"PENDIENTE","fecha_creacion":"2026</p>
+<p>-11-18T20:53:57.650118","fecha_procesado":null,"modulo":"VENTAS","tipo":"INFO","titulo":"Prueba de</p>
+<p>notificación","topico":"sistema.notificaciones"}" received from server process with PID 23792.</p>
+<p>espera_notificacion</p>
+<hr />
+<p>1</p>
+<p>(1 row)</p>
+<p><em>Código 3.4 y Evidencia 3.4 — Trigger real del Outbox y notificación recibida por LISTEN.</em></p>
+<p><strong>Triggers complementarios:</strong> trg_auditar_producto registra en lab_auditoria los cambios de stock o precio hechos directamente en la base, fuera de la aplicación. Además, la restricción ck_productos_stock_no_negativo impide que un error deje el stock negativo, regla que hoy solo valida VentaServiceImpl.</p>
+<p>=== P7. Trigger de auditoría: cambio de precio y stock fuera de la app ===</p>
+<p>UPDATE 1</p>
+<p>id | action | module | details | method |</p>
+<p>username</p>
+<p>----+-----------+-----------+---------------------------------------------------------------+------------+----</p>
+<hr />
+<p>9 | UPDATE_BD | productos | Producto 1 lote L-2291: stock 500.00→490.00, precio 8.00→8.50 | DB-TRIGGER |</p>
+<p>postgres</p>
+<p>(1 row)</p>
+<p>=== P8. CHECK stock &gt;= 0: un stock negativo se rechaza ===</p>
+<p>psql:03b_pruebas_programabilidad.sql:32: ERROR: el nuevo registro para la relación «productos» viola la</p>
+<p>restricción «check» «ck_productos_stock_no_negativo»</p>
+<p>DETAIL: La fila que falla contiene (3, null, MED003, null, 90, null, null, null, 2026-10-12 08:11:29.065317,</p>
+<p>2027-08-30, null, null, null, null, null, null, 1, 3, 1, null, 1, null, null, null, null, null, L-0444,</p>
+<p>null, null, 3.00, null, null, null, 10.00, null, null, -5.00, null, null, 500.00, 80.00, 450.00, null,</p>
+<p>null, null, null, null, null, null, null, null).</p>
+<p><em>Evidencia 3.5 — Auditoría automática en BD y rechazo de stock negativo.</em></p>
+<h3 id="35-planes-de-ejecucion-y-optimizacion">3.5 Planes de Ejecución y Optimización<a class="headerlink" href="#35-planes-de-ejecucion-y-optimizacion" title="Permanent link">&para;</a></h3>
+<p>KardexRepository.findLastMovement se ejecuta en cada movimiento de inventario (cada línea de venta) para calcular el saldo. Con 300 000 movimientos cargados en la copia, el planificador usa el índice de una columna idx_kardex_fecha y filtra en memoria. Un índice compuesto que coincide con el WHERE y el ORDER BY resuelve la consulta leyendo una sola entrada:</p>
+<p>=== ANTES: plan con los índices actuales (una columna) ===</p>
+<p>QUERY PLAN</p>
+<hr />
+<p>Limit (actual time=1.097..1.097 rows=1 loops=1)</p>
+<p>Buffers: shared hit=3025</p>
+<p>-&gt; Incremental Sort (actual time=1.097..1.097 rows=1 loops=1)</p>
+<p>Sort Key: fecha DESC, id_articulo_kardex DESC</p>
+<p>Presorted Key: fecha</p>
+<p>Full-sort Groups: 1 Sort Method: quicksort Average Memory: 25kB Peak Memory: 25kB</p>
+<p>Buffers: shared hit=3025</p>
+<p>-&gt; Index Scan Backward using idx_kardex_fecha on kardex (actual time=1.087..1.087 rows=2 loops=1)</p>
+<p>Filter: ((id_catalogo = 3) AND (id_sucursal = 1))</p>
+<p>Rows Removed by Filter: 2996</p>
+<p>Buffers: shared hit=3025</p>
+<p>Planning:</p>
+<p>Buffers: shared hit=84</p>
+<p>Planning Time: 0.187 ms</p>
+<p>Execution Time: 1.112 ms</p>
+<p>(15 rows)</p>
+<p>=== Índice compuesto propuesto (coincide con WHERE + ORDER BY) ===</p>
+<p>CREATE INDEX</p>
+<p>ANALYZE</p>
+<p>=== DESPUÉS: plan con idx_kardex_ultimo_mov ===</p>
+<p>QUERY PLAN</p>
+<hr />
+<p>Limit (actual time=0.083..0.083 rows=1 loops=1)</p>
+<p>Buffers: shared hit=4 read=3</p>
+<p>-&gt; Index Scan using idx_kardex_ultimo_mov on kardex (actual time=0.082..0.082 rows=1 loops=1)</p>
+<p>Index Cond: ((id_catalogo = 3) AND (id_sucursal = 1))</p>
+<p>Buffers: shared hit=4 read=3</p>
+<p>Planning:</p>
+<p>Buffers: shared hit=111 read=1</p>
+<p>Planning Time: 0.333 ms</p>
+<p>Execution Time: 0.108 ms</p>
+<p>(9 rows)</p>
+<p><em>Evidencia 3.6 — EXPLAIN (ANALYZE, BUFFERS) antes y después del índice idx_kardex_ultimo_mov.</em></p>
+<p>Resultado: el tiempo de ejecución bajó de 1,11 ms a 0,11 ms (10 veces menos) y los bloques leídos de 3 025 a 7. Como la consulta corre en cada línea de venta, la mejora se multiplica en las horas punta. El índice se incluirá en la primera migración de Flyway.</p>
+<h2 id="seccion-4-seguridad-y-administracion">Sección 4: Seguridad y Administración<a class="headerlink" href="#seccion-4-seguridad-y-administracion" title="Permanent link">&para;</a></h2>
+<h3 id="41-usuarios-y-roles">4.1 Usuarios y Roles<a class="headerlink" href="#41-usuarios-y-roles" title="Permanent link">&para;</a></h3>
+<p><strong>Nivel aplicación (real):</strong> control de acceso por roles y permisos en las tablas roles (5), permissions (34), user_roles, role_permissions y user_permissions, aplicado con @PreAuthorize (p. ej. VENTA_CREAR) y JWT firmado con RSA. Las contraseñas se guardan con BCrypt en datos_personales.passwd.</p>
+<p><strong>Nivel base de datos (hallazgo):</strong> la aplicación se conecta como postgres, un superusuario (Evidencia 2.2). Cualquier falla de la aplicación tendría privilegios totales sobre el servidor. 06_seguridad.sql define tres roles de mínimo privilegio para producción: st_app (DML sin DELETE físico, coherente con el soft-delete), st_reportes (solo lectura, sin tablas de credenciales ni datos clínicos) y st_dba (migraciones).</p>
+<p>-- st_app: lo que necesita el backend en ejecución (DML, sin DDL ni DELETE físico: soft-delete)</p>
+<p>GRANT SELECT, INSERT, UPDATE ON ALL TABLES IN SCHEMA public TO st_app;</p>
+<p>GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO st_app;</p>
+<p>-- Las bitácoras solo admiten inserción (no se pueden alterar)</p>
+<p>REVOKE UPDATE ON lab_auditoria, intruso, datos_clinica_auditoria, puntos_documento_auditoria FROM st_app;</p>
+<p>-- Excepciones donde el código sí borra físicamente (tablas puente de seguridad y sesiones)</p>
+<p>GRANT DELETE ON user_roles, role_permissions, user_permissions, sessiones TO st_app;</p>
+<p>-- st_reportes: solo lectura, sin datos clínicos ni de credenciales</p>
+<p>GRANT SELECT ON ALL TABLES IN SCHEMA public TO st_reportes;</p>
+<p>REVOKE SELECT ON datos_personales, datos_clinica, datos_medico, sessiones, intruso FROM st_reportes;</p>
+<p><em>Código 4.1 — Privilegios del rol de la aplicación.</em></p>
+<p>=== Privilegios efectivos por rol (resumen) ===</p>
+<p>grantee | privilege_type | tablas</p>
+<p>-------------+----------------+--------</p>
+<p>st_app | DELETE | 4</p>
+<p>st_app | INSERT | 84</p>
+<p>st_app | SELECT | 84</p>
+<p>st_app | UPDATE | 80</p>
+<p>st_dba | DELETE | 84</p>
+<p>st_dba | INSERT | 84</p>
+<p>st_dba | REFERENCES | 84</p>
+<p>st_dba | SELECT | 84</p>
+<p>st_dba | TRIGGER | 84</p>
+<p>st_dba | TRUNCATE | 84</p>
+<p>st_dba | UPDATE | 84</p>
+<p>st_reportes | SELECT | 79</p>
+<p>(12 rows)</p>
+<p>=== Prueba 1: st_app intenta borrar físicamente una venta ===</p>
+<p>SET</p>
+<p>psql:06_seguridad.sql:43: ERROR: permiso denegado a la tabla venta_registro</p>
+<p>=== Prueba 2: st_app intenta alterar la bitácora de auditoría ===</p>
+<p>psql:06_seguridad.sql:45: ERROR: permiso denegado a la tabla lab_auditoria</p>
+<p>=== Prueba 3: st_app sí puede registrar (soft-delete = UPDATE de estado) ===</p>
+<p>BEGIN</p>
+<p>UPDATE 1</p>
+<p>ROLLBACK</p>
+<p>RESET</p>
+<p>=== Prueba 4: st_reportes intenta leer credenciales de usuarios ===</p>
+<p>SET</p>
+<p>psql:06_seguridad.sql:51: ERROR: permiso denegado a la tabla datos_personales</p>
+<p>=== Prueba 5: st_reportes sí lee ventas ===</p>
+<p>ventas</p>
+<hr />
+<p>60</p>
+<p>(1 row)</p>
+<p>RESET</p>
+<p><em>Evidencia 4.1 — Privilegios efectivos y pruebas de denegación con SET ROLE.</em></p>
+<h3 id="42-auditoria-implementada">4.2 Auditoría Implementada<a class="headerlink" href="#42-auditoria-implementada" title="Permanent link">&para;</a></h3>
+<p>La auditoría del sistema es de aplicación, en cuatro niveles:</p>
+<ul>
+<li>
+<p><strong>Bitácora de acciones:</strong> AuditService escribe en lab_auditoria el módulo, la acción, los datos anteriores y nuevos, el usuario, la IP y el user-agent (login, cambios de compañía, empresa, médicos, niveles y permisos).</p>
+</li>
+<li>
+<p><strong>Seguridad:</strong> SecurityMonitorService registra los intentos fallidos en intruso y las sesiones en sessiones (con detección de cambio de IP).</p>
+</li>
+<li>
+<p><strong>Dominio:</strong> datos_clinica_auditoria y puntos_documento_auditoria guardan el historial de la configuración clínica y de documentos.</p>
+</li>
+<li>
+<p><strong>Filas:</strong> @CreatedBy, @LastModifiedBy y las marcas de tiempo en 26 tablas.</p>
+</li>
+</ul>
+<p>=== A1. Bitácora real de la aplicación (lab_auditoria, escrita por AuditService) ===</p>
+<p>id | action | module | username | status | fecha | method</p>
+<p>----+---------------+--------+-----------------+--------+------------------+--------</p>
+<p>1 | LOGIN_FAILED | LOGIN | admin | Fallo | 2026-10-12 07:50 | POST</p>
+<p>2 | LOGIN_SUCCESS | LOGIN | admin-articulos | Éxito | 2026-10-12 07:52 | POST</p>
+<p>3 | LOGIN_SUCCESS | LOGIN | admin-articulos | Éxito | 2026-10-12 08:12 | POST</p>
+<p>4 | LOGIN_SUCCESS | LOGIN | admin-articulos | Éxito | 2026-10-12 08:13 | POST</p>
+<p>5 | LOGIN_SUCCESS | LOGIN | admin-articulos | Éxito | 2026-10-12 08:48 | POST</p>
+<p>6 | LOGIN_SUCCESS | LOGIN | admin-articulos | Éxito | 2026-11-18 20:09 | POST</p>
+<p>7 | LOGIN_SUCCESS | LOGIN | admin-articulos | Éxito | 2026-11-18 20:22 | POST</p>
+<p>(7 rows)</p>
+<p>=== A2. Otras tablas de auditoría y seguridad del sistema ===</p>
+<p>tabla | registros</p>
+<p>----------------------------+-----------</p>
+<p>lab_auditoria | 7</p>
+<p>intruso | 1</p>
+<p>sessiones | 6</p>
+<p>datos_clinica_auditoria | 0</p>
+<p>puntos_documento_auditoria | 0</p>
+<p>(5 rows)</p>
+<p>=== A3. Columnas de auditoría JPA (@CreatedBy/@LastModifiedBy) presentes en el esquema ===</p>
+<p>column_name | tablas</p>
+<p>----------------------+--------</p>
+<p>usuario_creacion | 26</p>
+<p>usuario_modificacion | 25</p>
+<p>created_at | 24</p>
+<p>updated_at | 24</p>
+<p>created_by | 11</p>
+<p>updated_by | 7</p>
+<p>(6 rows)</p>
+<p><em>Evidencia 4.2 — Auditoría real registrada por la aplicación en clinica_db.</em></p>
+<p>Brecha: lo que se modifica directamente en la base no deja rastro. El trigger complementario trg_auditar_producto (Evidencia 3.5) cubre stock y precios, y 06_seguridad.sql quita al rol de la aplicación el permiso UPDATE sobre las bitácoras, para que no puedan alterarse.</p>
+<h3 id="43-estrategias-de-respaldo-y-recuperacion">4.3 Estrategias de Respaldo y Recuperación<a class="headerlink" href="#43-estrategias-de-respaldo-y-recuperacion" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Entorno</th>
+<th>Estrategia</th>
+<th>RPO / RTO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desarrollo (local)</td>
+<td>pg_dump formato custom diario (08_respaldo_restauracion.ps1) + simulacro de restauración mensual</td>
+<td>24 h / 1 h</td>
+</tr>
+<tr>
+<td>Producción (AWS, CE03)</td>
+<td>RDS PostgreSQL Multi-AZ: snapshots automáticos con PITR (retención 7 días) + pg_dump diario cifrado en S3 (SSE)</td>
+<td>≤ 5 min (PITR) / ≤ 4 h</td>
+</tr>
+<tr>
+<td>Contingencia local</td>
+<td>Réplica del último dump en el host ESXi de Juliaca</td>
+<td>24 h / 4 h</td>
+</tr>
+</tbody>
+</table>
+<p>PS&gt; pg_dump -h localhost -U postgres -d clinica_db_e2 -F c -Z 6 -f respaldo_clinica_db_e2.dump</p>
+<p>Respaldo generado: respaldo_clinica_db_e2.dump 5032839 bytes (0.8 s)</p>
+<p>PS&gt; createdb clinica_db_e2_restore ; pg_restore -d clinica_db_e2_restore --no-owner</p>
+<p>respaldo_clinica_db_e2.dump</p>
+<p>Restauración completada en 5.6 s</p>
+<p>--- Conteos en ORIGEN (clinica_db_e2) ---</p>
+<p>t | count</p>
+<p>------------------------+--------</p>
+<p>kardex | 300000</p>
+<p>orden_reabastecimiento | 2</p>
+<p>productos | 14</p>
+<p>venta_detalle | 149</p>
+<p>venta_registro | 60</p>
+<p>(5 rows)</p>
+<p>--- Conteos en RESTAURADA (clinica_db_e2_restore) ---</p>
+<p>t | count</p>
+<p>------------------------+--------</p>
+<p>kardex | 300000</p>
+<p>orden_reabastecimiento | 2</p>
+<p>productos | 14</p>
+<p>venta_detalle | 149</p>
+<p>venta_registro | 60</p>
+<p>(5 rows)</p>
+<p>--- Objetos programados restaurados ---</p>
+<p>trigger_name | event_object_table</p>
+<p>--------------------------+--------------------</p>
+<p>trg_auditar_producto | productos</p>
+<p>trg_notify_evento_insert | cola_eventos</p>
+<p>(2 rows)</p>
+<p>PS&gt; dropdb clinica_db_e2_restore (simulacro finalizado)</p>
+<p><em>Evidencia 4.3 — Respaldo, restauración en una base nueva y verificación de conteos y triggers.</em></p>
+<h3 id="44-evidencias-de-monitoreo">4.4 Evidencias de Monitoreo<a class="headerlink" href="#44-evidencias-de-monitoreo" title="Permanent link">&para;</a></h3>
+<p>07_monitoreo.sql reúne las consultas de administración sobre las vistas estadísticas de PostgreSQL 17, más dos indicadores propios del sistema: la salud del Outbox (eventos por estado) y los intentos de acceso fallidos.</p>
+<p>=== M2. Tablas más grandes ===</p>
+<p>tabla | tamano_total | filas_vivas | filas_muertas</p>
+<p>---------------+--------------+-------------+---------------</p>
+<p>kardex | 96 MB | 300000 | 0</p>
+<p>sessiones | 160 kB | 6 | 0</p>
+<p>datos_clinica | 144 kB | 1 | 0</p>
+<p>bloques | 128 kB | 132 | 0</p>
+<p>plantillas | 112 kB | 7 | 0</p>
+<p>catalogo | 96 kB | 10 | 0</p>
+<p>(6 rows)</p>
+<p>=== M3. Uso de índices de kardex ===</p>
+<p>indice | veces_usado | tamano</p>
+<p>-----------------------+-------------+---------</p>
+<p>idx_kardex_sucursal | 1 | 1904 kB</p>
+<p>idx_kardex_fecha | 1 | 7888 kB</p>
+<p>idx_kardex_ultimo_mov | 1 | 16 MB</p>
+<p>kardex_pkey | 0 | 14 MB</p>
+<p>idx_kardex_catalogo | 0 | 1936 kB</p>
+<p>(5 rows)</p>
+<p>=== M4. Índices nunca usados (candidatos a revisión) ===</p>
+<p>tabla | indices_sin_uso</p>
+<p>-------------------------+-----------------</p>
+<p>sessiones | 6</p>
+<p>datos_medico | 6</p>
+<p>caja_general_movimiento | 4</p>
+<p>caja_chica | 4</p>
+<p>catalogo | 4</p>
+<p>(5 rows)</p>
+<p>=== M5. Proporción de aciertos en caché ===</p>
+<p>cache_hit_pct</p>
+<hr />
+<p>100.00</p>
+<p>(1 row)</p>
+<p>=== M7. Salud del Outbox (eventos por estado) ===</p>
+<p>estado | count</p>
+<p>-----------+-------</p>
+<p>PENDIENTE | 3</p>
+<p>(1 row)</p>
+<p>=== M8. Intentos de acceso fallidos registrados por la app (tabla intruso) ===</p>
+<p>failure_reason | count</p>
+<p>---------------------+-------</p>
+<p>INVALID_CREDENTIALS | 1</p>
+<p>(1 row)</p>
+<p><em>Evidencia 4.4 — Tamaño de tablas, uso de índices, índices sin uso, caché, Outbox e intentos fallidos (clinica_db_e2).</em></p>
+<p>Lectura: kardex concentra el volumen (96 MB con 300 000 filas) y el índice nuevo ya se usa. Varias tablas tienen índices nunca usados, que deben revisarse con carga real antes de eliminarlos. Los eventos en estado PENDIENTE se deben a que en la copia no corre el backend que los procesa.</p>
+<h2 id="anexos">Anexos<a class="headerlink" href="#anexos" title="Permanent link">&para;</a></h2>
+<h3 id="anexo-a-scripts-completos">Anexo A: Scripts Completos<a class="headerlink" href="#anexo-a-scripts-completos" title="Permanent link">&para;</a></h3>
+<p>Se entregan en Entregable2_Scripts_SQL.zip. Cada script indica si refleja el sistema real o es complementario:</p>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Contenido</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01_ddl_esquema_real.sql</td>
+<td>DDL completo de clinica_db (pg_dump --schema-only)</td>
+<td>Real</td>
+</tr>
+<tr>
+<td>02_dml_datos_prueba.sql</td>
+<td>Sedes Juliaca y Puno, lotes, vencimientos y punto de reorden</td>
+<td>Datos de prueba</td>
+</tr>
+<tr>
+<td>03_programabilidad.sql</td>
+<td>A: Outbox real. B: FEFO, stock valorizado, reabastecimiento, auditoría, CHECK</td>
+<td>Real + complementario</td>
+</tr>
+<tr>
+<td>03b_pruebas_programabilidad.sql</td>
+<td>Pruebas P1–P9</td>
+<td>Pruebas</td>
+</tr>
+<tr>
+<td>04_consultas.sql</td>
+<td>Consultas de los repositorios de la aplicación</td>
+<td>Real</td>
+</tr>
+<tr>
+<td>05_optimizacion.sql</td>
+<td>Carga de 300 000 movimientos y EXPLAIN antes y después</td>
+<td>Pruebas + propuesta</td>
+</tr>
+<tr>
+<td>06_seguridad.sql</td>
+<td>Roles st_app, st_reportes y st_dba con pruebas</td>
+<td>Propuesta</td>
+</tr>
+<tr>
+<td>07_monitoreo.sql</td>
+<td>Consultas de monitoreo</td>
+<td>Administración</td>
+</tr>
+<tr>
+<td>08_respaldo_restauracion.ps1</td>
+<td>Respaldo, restauración y verificación</td>
+<td>Administración</td>
+</tr>
+<tr>
+<td>salidas/*.txt</td>
+<td>Salidas de psql sin editar</td>
+<td>Evidencia</td>
+</tr>
+</tbody>
+</table>
+<h3 id="anexo-b-capturas-de-ejecucion-y-resultados-de-consultas">Anexo B: Capturas de Ejecución y Resultados de Consultas<a class="headerlink" href="#anexo-b-capturas-de-ejecucion-y-resultados-de-consultas" title="Permanent link">&para;</a></h3>
+<p>Las salidas de psql están en las Evidencias 2.1 a 4.4 y en la carpeta salidas/ del ZIP. Se obtuvieron el 18/11/2026 sobre PostgreSQL 17.11: las lecturas de inventario y auditoría, sobre clinica_db; las pruebas que modifican datos, sobre su copia clinica_db_e2.</p>
+<h3 id="anexo-c-documentacion-tecnica-de-administracion">Anexo C: Documentación Técnica de Administración<a class="headerlink" href="#anexo-c-documentacion-tecnica-de-administracion" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Situación actual (código y BD)</th>
+<th>Objetivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Motor</td>
+<td>PostgreSQL 17.11 local (clinica_db); perfil supabase</td>
+<td>RDS PostgreSQL Multi-AZ en la VPC de AWS (CE03)</td>
+</tr>
+<tr>
+<td>Versionado del esquema</td>
+<td>Hibernate ddl-auto (update / create); Flyway desactivado</td>
+<td>Flyway activo + ddl-auto=validate (ADR-09 del E1)</td>
+</tr>
+<tr>
+<td>Conexión</td>
+<td>JDBC (HikariCP) como postgres, superusuario</td>
+<td>Rol st_app con contraseña en Secrets Manager</td>
+</tr>
+<tr>
+<td>Borrado</td>
+<td>Soft-delete (estado = 3); unicidad validada en servicio</td>
+<td>Índices únicos parciales vía Flyway</td>
+</tr>
+<tr>
+<td>Eventos</td>
+<td>Outbox cola_eventos + pg_notify/LISTEN</td>
+<td>Igual; depuración periódica de eventos PROCESADO</td>
+</tr>
+<tr>
+<td>Auditoría</td>
+<td>AuditService, intruso, sessiones y columnas JPA</td>
+<td>+ trigger de BD para cambios fuera de la app</td>
+</tr>
+<tr>
+<td>Respaldo</td>
+<td>Sin política formal en desarrollo</td>
+<td>Snapshots RDS + PITR + pg_dump diario a S3</td>
+</tr>
+<tr>
+<td>Monitoreo</td>
+<td>Ninguno automatizado</td>
+<td>07_monitoreo.sql + CloudWatch / Performance Insights</td>
+</tr>
+</tbody>
+</table>
+<h3 id="anexo-d-hallazgos-y-plan-de-mejora">Anexo D: Hallazgos y Plan de Mejora<a class="headerlink" href="#anexo-d-hallazgos-y-plan-de-mejora" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hallazgo verificado</th>
+<th>Riesgo</th>
+<th>Mejora propuesta (script)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Flyway desactivado; supabase con ddl-auto=create</td>
+<td>Pérdida de datos al reiniciar; esquema sin versión</td>
+<td>Baseline Flyway con 01_ddl + migraciones (E3)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>La aplicación usa el superusuario postgres</td>
+<td>Privilegio excesivo</td>
+<td>Roles st_* (06_seguridad.sql)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sin CHECK stock &gt;= 0 ni unicidad de login en BD</td>
+<td>Datos inconsistentes ante errores</td>
+<td>ck_productos_stock_no_negativo, ux_datos_personales_login (03)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>findLastMovement sin índice adecuado</td>
+<td>Latencia en ventas con kardex grande</td>
+<td>idx_kardex_ultimo_mov (05)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>venta_detalle.id_articulo y productos.id_sucursal sin FK</td>
+<td>Registros huérfanos</td>
+<td>Agregar FK tras limpiar datos (E3)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>FEFO y reabastecimiento no implementados en la app</td>
+<td>Mermas y quiebres</td>
+<td>fn_lote_fefo, sp_generar_ordenes_reabastecimiento (03)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>bloque_modulos sin PK</td>
+<td>Duplicados</td>
+<td>PK compuesta (modulo, bloque)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="archivos-del-entregable">Archivos del entregable<a class="headerlink" href="#archivos-del-entregable" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="Entregable2_Plataforma_Datos.docx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.2 18h-1.4L12 13.2 10.2 20H8.8l-2.2-9h1.5l1.4 6.8 1.8-6.8h1.3l1.8 6.8 1.4-6.8h1.5zM13 9V3.5L18.5 9z"/></svg></span> Descargar documento original (.docx)</a></li>
+</ul>
+<p><strong>Otros</strong></p>
+<ul>
+<li><a href="archivos/Entregable2_Scripts_SQL.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2m-2 6h-2v2h2v2h-2v2h-2v-2h2v-2h-2v-2h2v-2h-2V8h2v2h2z"/></svg></span> Entregable2_Scripts_SQL.zip</a></li>
+<li><a href="archivos/Entregable2_Scripts_SQL.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2m-2 6h-2v2h2v2h-2v2h-2v-2h2v-2h-2v-2h2v-2h-2V8h2v2h2z"/></svg></span> Entregable2_Scripts_SQL.zip</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.indexes", "navigation.sections", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2548 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentos oficiales del perfil de egreso (ciclo 10) — ERP «Articulos», Salud Total SAC">
+      
+      
+      
+        <link rel="canonical" href="https://samuel-910.github.io/Perfil-de-Egreso/ce02/ce023/">
+      
+      
+        <link rel="prev" href="../ce022/">
+      
+      
+        <link rel="next" href="../ce024/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>CE023 - S2 - E3: Sistema de Software Funcional Integrado - Perfil de Egreso — Ingeniería de Sistemas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ce023-s2-e3-sistema-de-software-funcional-integrado" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Perfil de Egreso — Ingeniería de Sistemas" class="md-header__button md-logo" aria-label="Perfil de Egreso — Ingeniería de Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Perfil de Egreso — Ingeniería de Sistemas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CE023 - S2 - E3: Sistema de Software Funcional Integrado
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Samuel-910/Perfil-de-Egreso" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Samuel-910/Perfil-de-Egreso
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Perfil de Egreso — Ingeniería de Sistemas" class="md-nav__button md-logo" aria-label="Perfil de Egreso — Ingeniería de Sistemas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.82 17 13 19.28V22H6c-1.11 0-2-.89-2-2V4a2 2 0 0 1 2-2h1v7l2.5-1.5L12 9V2h6a2 2 0 0 1 2 2v8.54l-1.5-.82zM24 17l-5.5-3-5.5 3 5.5 3zm-9 2.09v2L18.5 23l3.5-1.91v-2L18.5 21z"/></svg>
+
+    </a>
+    Perfil de Egreso — Ingeniería de Sistemas
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Samuel-910/Perfil-de-Egreso" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Samuel-910/Perfil-de-Egreso
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce01/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE01: Gestión de Tecnologías de Información
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE01: Gestión de Tecnologías de Información
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0111-CE0115 - E1: Diagnóstico Organizacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0113 - E2: Business Case del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0121-CE0125 - E3: Plan de Gestión del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0131-CE0135 - E4: Modelado de Procesos AS-IS / TO-BE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce01/e5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0141-CE0145 - E5: Propuesta de Solución TIC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE02: Ingeniería de Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE02: Ingeniería de Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../ce021/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE021 - S1 - E1: Requerimientos y Diseño del Sistema
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce021/galeria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Galería del prototipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce022/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE022 - S2 - E2: Plataforma de Datos del Sistema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE023 - S2 - E3: Sistema de Software Funcional Integrado
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE023 - S2 - E3: Sistema de Software Funcional Integrado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Ejecutivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-1-arquitectura-e-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 1: Arquitectura e Integración
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 1: Arquitectura e Integración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-arquitectura-general-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Arquitectura general del sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-capas-modulos-y-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Capas, módulos y componentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-integracion-con-la-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Integración con la base de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-integracion-con-servicios-y-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Integración con servicios y APIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-2-funcionalidad-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 2: Funcionalidad del Sistema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 2: Funcionalidad del Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-flujos-principales-implementados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Flujos principales implementados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-gestion-de-usuarios-permisos-y-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Gestión de usuarios, permisos y roles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-evidencias-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Evidencias funcionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-3-codigo-y-diseno-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 3: Código y Diseño Técnico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 3: Código y Diseño Técnico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-estructura-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Estructura del repositorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-patrones-y-buenas-practicas-aplicadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Patrones y buenas prácticas aplicadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-modularidad-y-desacoplamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Modularidad y desacoplamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-manejo-de-errores-y-validaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Manejo de errores y validaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-4-despliegue-e-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 4: Despliegue e Instalación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 4: Despliegue e Instalación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-instrucciones-de-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Instrucciones de instalación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-configuracion-requerida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Configuración requerida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-evidencia-de-despliegue-y-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Evidencia de despliegue y ejecución
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anexo-a-repositorio-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo A: Repositorio fuente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-b-manual-tecnico-breve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo B: Manual técnico breve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-c-capturas-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo C: Capturas de funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-d-trazabilidad-con-el-e1-y-el-e2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo D: Trazabilidad con el E1 y el E2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-del-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos del entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ce024/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE024 - S2 - E4: Gestión del Proyecto y Calidad de Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ce03/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE03: Infraestructura Tecnológica
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CE03: Infraestructura Tecnológica
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0311/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0311 - S1 - E1: Análisis y Diseño de Red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0331/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0331 - S1 - E2: Análisis y Diseño de Centro de Datos Híbrido
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0321/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0321-CE0324 - S2 - E1: Planificación e Implementación del SGSI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0312/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0312-CE0313 - S2 - E2: Implementación, Testing y Monitoreo de Red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ce03/ce0332/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CE0332-CE0333 - S2 - E3: Implementación, Gestión y Control de Centro de Datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-ejecutivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen Ejecutivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-1-arquitectura-e-integracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 1: Arquitectura e Integración
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 1: Arquitectura e Integración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-arquitectura-general-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Arquitectura general del sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-capas-modulos-y-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Capas, módulos y componentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-integracion-con-la-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Integración con la base de datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-integracion-con-servicios-y-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Integración con servicios y APIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-2-funcionalidad-del-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 2: Funcionalidad del Sistema
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 2: Funcionalidad del Sistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-flujos-principales-implementados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Flujos principales implementados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-gestion-de-usuarios-permisos-y-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Gestión de usuarios, permisos y roles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-evidencias-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Evidencias funcionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-3-codigo-y-diseno-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 3: Código y Diseño Técnico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 3: Código y Diseño Técnico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-estructura-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Estructura del repositorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-patrones-y-buenas-practicas-aplicadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Patrones y buenas prácticas aplicadas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-modularidad-y-desacoplamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Modularidad y desacoplamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-manejo-de-errores-y-validaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Manejo de errores y validaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seccion-4-despliegue-e-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sección 4: Despliegue e Instalación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sección 4: Despliegue e Instalación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-instrucciones-de-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Instrucciones de instalación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-configuracion-requerida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Configuración requerida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-evidencia-de-despliegue-y-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Evidencia de despliegue y ejecución
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anexo-a-repositorio-fuente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo A: Repositorio fuente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-b-manual-tecnico-breve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo B: Manual técnico breve
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-c-capturas-de-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo C: Capturas de funcionamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anexo-d-trazabilidad-con-el-e1-y-el-e2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anexo D: Trazabilidad con el E1 y el E2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-del-entregable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos del entregable
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ce023-s2-e3-sistema-de-software-funcional-integrado">CE023 - S2 - E3: Sistema de Software Funcional Integrado<a class="headerlink" href="#ce023-s2-e3-sistema-de-software-funcional-integrado" title="Permanent link">&para;</a></h1>
+<p><strong>ENTREGABLE 3</strong></p>
+<p><strong>Sistema de Software Funcional Integrado</strong></p>
+<p><em>(Alineado con CE023)</em></p>
+<p><strong>ERP «Articulos» — Salud Total SAC: FEFO, reabastecimiento automático y despliegue en contenedores</strong></p>
+<p><img src="media/media/image1.png" title="erd.png" style="width:3.125in;height:1.7055in" alt="erd.png" /></p>
+<table>
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Título del sistema</strong></th>
+<th>ERP «Articulos» — Salud Total SAC (backend, frontend y mensajeria-api)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Nombre del estudiante</strong></td>
+<td>Gutierrez Anco Yesenia Alejandra<br />
+Turpo Cauna Jose Samuel<br />
+Quispe Huarilloclla Jhosef Antony</td>
+</tr>
+<tr class="even">
+<td><strong>Semestre</strong></td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td><strong>Curso</strong></td>
+<td>CE023 — Sistema de Software Funcional Integrado</td>
+</tr>
+<tr class="even">
+<td><strong>Fecha</strong></td>
+<td>Noviembre de 2026</td>
+</tr>
+<tr class="odd">
+<td><strong>Repositorio / despliegue</strong></td>
+<td>Código: Entregable3_Codigo_Fuente.zip (git local, rama main) · Despliegue: docker compose → http://localhost:8090</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="resumen-ejecutivo">Resumen Ejecutivo<a class="headerlink" href="#resumen-ejecutivo" title="Permanent link">&para;</a></h2>
+<p>Salud Total SAC, cadena de farmacias con clínica ambulatoria en Juliaca y Puno, pierde dinero por dos causas que el Business Case de CE01 cuantificó: quiebres de stock por reposición manual y mermas por vender o almacenar lotes que vencen. Este entregable implementa, sobre el ERP real «Articulos», la solución de software diseñada en los Entregables 1 y 2 para atacar ambas causas, y la deja desplegable con un solo comando.</p>
+<p><strong>Qué resuelve.</strong> (1) FEFO obligatorio: el backend rechaza la venta de un lote vencido y exige vender primero el lote que vence antes (RF-24, RN-10, RN-11). (2) Reabastecimiento automático: cada salida de stock dispara, después de confirmada la transacción, la evaluación del punto de reorden; si el stock vigente queda en o bajo el mínimo se crea una orden pendiente, se notifica en tiempo real al comprador y éste la aprueba, rechaza o convierte en una orden de compra del módulo existente (RF-26 a RF-28, RN-12, RN-13).</p>
+<p><strong>Cómo se usa.</strong> El cajero vende como siempre desde la pantalla de ventas; el sistema le indica qué lote debe salir. El comprador abre Compra → Reabastecimiento, revisa los indicadores y atiende las órdenes con un clic. El administrador despliega todo con docker compose up y accede en http://localhost:8090.</p>
+<p><strong>Resultados verificados.</strong> La colección de pruebas de la API pasa 19 de 19 peticiones y 41 de 41 aserciones contra el despliegue en contenedores, sobre una base creada desde cero por Flyway. Las pruebas detectaron y permitieron corregir un defecto previo (el login con contraseña incorrecta respondía HTTP 500). Además se eliminaron las contraseñas de los archivos de configuración, se activó el versionado del esquema y la aplicación dejó de conectarse como superusuario.</p>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Código nuevo</td>
+<td>19 clases Java (808 líneas), 1 pantalla Angular (384 líneas), 1 migración Flyway de negocio</td>
+</tr>
+<tr>
+<td>Código modificado</td>
+<td>18 archivos (+204 / −138 líneas): venta, productos, seguridad, mensajería y configuración</td>
+</tr>
+<tr>
+<td>Endpoints nuevos</td>
+<td>7 en /api/reabastecimiento, 1 FEFO en /api/productos, 1 en mensajeria-api</td>
+</tr>
+<tr>
+<td>Pruebas automatizadas</td>
+<td>Postman: 19 peticiones, 41 aserciones, 0 fallos (local y Docker)</td>
+</tr>
+<tr>
+<td>Despliegue</td>
+<td>4 contenedores (db, backend, mensajeria, frontend), todos healthy</td>
+</tr>
+</tbody>
+</table>
+<h2 id="seccion-1-arquitectura-e-integracion">Sección 1: Arquitectura e Integración<a class="headerlink" href="#seccion-1-arquitectura-e-integracion" title="Permanent link">&para;</a></h2>
+<h3 id="11-arquitectura-general-del-sistema">1.1 Arquitectura general del sistema<a class="headerlink" href="#11-arquitectura-general-del-sistema" title="Permanent link">&para;</a></h3>
+<p>El sistema mantiene la arquitectura documentada en el E1: una SPA Angular, un backend monolítico modular en Spring Boot que expone una API REST con JWT firmado con RSA, un microservicio de mensajería y PostgreSQL como almacén y canal de eventos (patrón Outbox con LISTEN/NOTIFY). En el E3 se agregan el módulo de reabastecimiento, la validación FEFO, el proxy Nginx y el despliegue en contenedores.</p>
+<p><img src="media/media/image2.png" style="width:6.29921in;height:3.02315in" /></p>
+<p><em>Figura 1.1 — Contenedores del sistema (C4 nivel 2).</em></p>
+<h3 id="12-capas-modulos-y-componentes">1.2 Capas, módulos y componentes<a class="headerlink" href="#12-capas-modulos-y-componentes" title="Permanent link">&para;</a></h3>
+<p>El backend sigue la arquitectura por capas del proyecto (Controller → Service → Repository → Entity, con DTO y MapStruct). La figura 1.2 resume los módulos que intervienen en el E3 y marca el código nuevo.</p>
+<p><img src="media/media/image3.png" style="width:6.29921in;height:2.72966in" /></p>
+<p><em>Figura 1.2 — Módulos involucrados y código nuevo del Entregable 3.</em></p>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>Capa</th>
+<th>Responsabilidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LoteFefoService</td>
+<td>Servicio (productos)</td>
+<td>Lista lotes en orden FEFO y valida cada salida: rechaza vencidos y lotes que no vencen primero (configurable con ventas.fefo.estricto).</td>
+</tr>
+<tr>
+<td>VentaServiceImpl</td>
+<td>Servicio (ventas)</td>
+<td>Invoca validarSalida() por cada línea tras el control de stock existente.</td>
+</tr>
+<tr>
+<td>ProductoService</td>
+<td>Servicio (productos)</td>
+<td>Tras actualizar stock y kardex publica StockDisminuidoEvent.</td>
+</tr>
+<tr>
+<td>ReabastecimientoListener</td>
+<td>Infraestructura</td>
+<td>@TransactionalEventListener(AFTER_COMMIT) y tarea programada horaria (evaluación y vencimiento a 72 h).</td>
+</tr>
+<tr>
+<td>ReabastecimientoServiceImpl</td>
+<td>Servicio</td>
+<td>Genera, aprueba, rechaza, vence y convierte órdenes; notifica por el Outbox.</td>
+</tr>
+<tr>
+<td>ReordenRepository</td>
+<td>Repositorio</td>
+<td>Consulta agregada: stock vigente por producto y sede frente al punto de reorden.</td>
+</tr>
+<tr>
+<td>ReabastecimientoController</td>
+<td>Web</td>
+<td>7 endpoints REST con @PreAuthorize (COMPRA_LEER / COMPRA_CREAR).</td>
+</tr>
+<tr>
+<td>reabastecimiento-list</td>
+<td>Frontend</td>
+<td>Pantalla con indicadores, filtros por estado, búsqueda, paginación y acciones.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-integracion-con-la-base-de-datos">1.3 Integración con la base de datos<a class="headerlink" href="#13-integracion-con-la-base-de-datos" title="Permanent link">&para;</a></h3>
+<p>La integración es por JPA/Hibernate y, desde este entregable, el esquema queda versionado con Flyway. V1__esquema_base.sql es el esquema real extraído en el E2; en bases existentes Flyway lo registra como baseline y sólo aplica V2. En una base vacía (Docker) ejecuta ambas y Hibernate valida el resultado (ddl-auto=validate).</p>
+<p>CREATE UNIQUE INDEX IF NOT EXISTS ux_orden_reab_abierta</p>
+<p>ON orden_reabastecimiento (id_catalogo, id_sucursal)</p>
+<p>WHERE estado IN ('PENDIENTE', 'APROBADA');</p>
+<p>CREATE INDEX IF NOT EXISTS idx_kardex_ultimo_mov</p>
+<p>ON kardex (id_catalogo, id_sucursal, fecha DESC, id_articulo_kardex DESC);</p>
+<p>CREATE INDEX IF NOT EXISTS idx_producto_fefo</p>
+<p>ON productos (id_catalogo, id_sucursal, fecha_venc);</p>
+<p><em>Código 1.1 — Extracto de V2: una sola orden abierta por producto y sede (índice parcial), índice del kardex e índice FEFO.</em></p>
+<p>La consulta que decide el reabastecimiento agrega todos los lotes del producto en la sede, excluye los vencidos y compara con el mínimo:</p>
+<p>@Query("SELECT p.idCatalogo AS idCatalogo, "</p>
+<p>+ "SUM(CASE WHEN p.fechaVencimiento IS NULL OR p.fechaVencimiento &gt;= :hoy THEN p.stock ELSE 0</p>
+<p>END) AS stockVigente, "</p>
+<p>+ "MAX(p.stockMinimo) AS stockMinimo, MAX(p.stockMaximo) AS stockMaximo, "</p>
+<p>+ "MAX(p.idProveedor) AS idProveedor, MAX(p.precioCompra) AS precioCompra "</p>
+<p>+ "FROM Producto p WHERE p.idSucursal = :idSucursal AND (:idCatalogo IS NULL OR p.idCatalogo =</p>
+<p>:idCatalogo) "</p>
+<p>+ "GROUP BY p.idCatalogo "</p>
+<p>+ "HAVING MAX(p.stockMinimo) &gt; 0 AND "</p>
+<p>+ "SUM(CASE WHEN p.fechaVencimiento IS NULL OR p.fechaVencimiento &gt;= :hoy THEN p.stock ELSE 0</p>
+<p>END) \&lt;= MAX(p.stockMinimo)")</p>
+<p>List\&lt;ResumenReorden&gt; bajoPuntoDeReorden(@Param("idSucursal") Long idSucursal,</p>
+<p>@Param("idCatalogo") Long idCatalogo,</p>
+<p>@Param("hoy") LocalDate hoy);</p>
+<p><em>Código 1.2 — ReordenRepository.bajoPuntoDeReorden.</em></p>
+<h3 id="14-integracion-con-servicios-y-apis">1.4 Integración con servicios y APIs<a class="headerlink" href="#14-integracion-con-servicios-y-apis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Outbox y tiempo real:</strong> las órdenes generadas usan el KafkaProducerService existente (nombre heredado), que inserta en cola_eventos; el trigger trg_notify_evento_insert emite pg_notify y el backend las entrega por WebSocket/STOMP a la campana de notificaciones.</p>
+</li>
+<li>
+<p><strong>Módulo de compras:</strong> la conversión reutiliza CompraService.crearOrden(), por lo que la orden aparece en Compra → Órdenes de compra sin duplicar lógica.</p>
+</li>
+<li>
+<p><strong>mensajeria-api:</strong> se agregó POST /api/v1/mensajes/whatsapp/enviar-con-adjunto (sube el PDF a la API de medios de Meta y lo envía como encabezado de la plantilla), que el backend ya invocaba y no existía; /enviar ahora acepta plantillas.</p>
+</li>
+<li>
+<p><strong>Proxy Nginx:</strong> el frontend de producción usa rutas relativas (/api, /ws-notifications, /mensajeria) que Nginx enruta a cada contenedor.</p>
+</li>
+</ul>
+<h2 id="seccion-2-funcionalidad-del-sistema">Sección 2: Funcionalidad del Sistema<a class="headerlink" href="#seccion-2-funcionalidad-del-sistema" title="Permanent link">&para;</a></h2>
+<h3 id="21-flujos-principales-implementados">2.1 Flujos principales implementados<a class="headerlink" href="#21-flujos-principales-implementados" title="Permanent link">&para;</a></h3>
+<p><strong>Flujo 1 — Venta con FEFO.</strong> Al registrar una venta, por cada línea el backend obtiene el lote elegido, valida el stock y luego LoteFefoService.validarSalida(): si el lote está vencido responde 400 «El lote … venció el …»; si existe otro lote del mismo producto en la sede que vence antes y tiene stock suficiente responde 400 «Por FEFO debe venderse primero el lote …».</p>
+<p>@Transactional(readOnly = true)</p>
+<p>public void validarSalida(Producto lote, BigDecimal cantidad) {</p>
+<p>LocalDate hoy = LocalDate.now();</p>
+<p>if (lote.getFechaVencimiento() != null &amp;&amp; lote.getFechaVencimiento().isBefore(hoy)) {</p>
+<p>log.warn("Intento de vender el lote vencido {} del producto {}", lote.getNroLote(),</p>
+<p>lote.getIdProducto());</p>
+<p>throw new ValidationException("El lote " + descripcion(lote) + " venció el " +</p>
+<p>lote.getFechaVencimiento()</p>
+<p>+ " y no puede venderse.");</p>
+<p>}</p>
+<p>if (!fefoEstricto || lote.getIdCatalogo() == null || lote.getIdSucursal() == null) {</p>
+<p>return;</p>
+<p>}</p>
+<p>Optional\&lt;Producto&gt; primero = productoRepository.findLotesFefo(lote.getIdCatalogo(),</p>
+<p>lote.getIdSucursal(), hoy).stream()</p>
+<p>.filter(l -&gt; !l.getIdProducto().equals(lote.getIdProducto()))</p>
+<p>.filter(l -&gt; venceAntes(l, lote))</p>
+<p>.filter(l -&gt; l.getStock() != null &amp;&amp; l.getStock().compareTo(cantidad) &gt;= 0)</p>
+<p>.findFirst();</p>
+<p>if (primero.isPresent()) {</p>
+<p>Producto debeSalir = primero.get();</p>
+<p>log.warn("Venta del lote {} rechazada por FEFO: debe salir antes el lote {}", lote.getNroLote(),</p>
+<p>debeSalir.getNroLote());</p>
+<p>throw new ValidationException("Por FEFO debe venderse primero el lote " + descripcion(debeSalir)</p>
+<p>+ " (vence el "</p>
+<p>+ debeSalir.getFechaVencimiento() + ", stock " +</p>
+<p>debeSalir.getStock().stripTrailingZeros().toPlainString() + ").");</p>
+<p>}</p>
+<p>}</p>
+<p><em>Código 2.1 — Regla FEFO en LoteFefoService.validarSalida.</em></p>
+<p><strong>Flujo 2 — Reabastecimiento automático.</strong> La figura 2.1 muestra la secuencia tal como quedó implementada.</p>
+<p><img src="media/media/image4.png" style="width:6.49606in;height:4.16234in" /></p>
+<p><em>Figura 2.1 — Secuencia implementada del reabastecimiento automático.</em></p>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Cómo se llega</th>
+<th>Acción disponible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PENDIENTE</td>
+<td>Stock vigente ≤ mínimo y sin otra orden abierta (evento tras la venta, evaluación manual o tarea horaria)</td>
+<td>Aprobar (con cantidad) o rechazar (con motivo)</td>
+</tr>
+<tr>
+<td>APROBADA</td>
+<td>El comprador aprueba</td>
+<td>Generar orden de compra (proveedor habitual o indicado)</td>
+</tr>
+<tr>
+<td>CONVERTIDA</td>
+<td>Se crea la orden de compra</td>
+<td>Consultar el número de compra</td>
+</tr>
+<tr>
+<td>RECHAZADA</td>
+<td>El comprador rechaza</td>
+<td>— (el producto puede volver a generar orden)</td>
+</tr>
+<tr>
+<td>VENCIDA</td>
+<td>72 h en PENDIENTE sin atención</td>
+<td>— (se notifica)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Tabla 2.1 — Estados de la orden de reabastecimiento (implementa el diagrama de estados del E1).</em></p>
+<h3 id="22-gestion-de-usuarios-permisos-y-roles">2.2 Gestión de usuarios, permisos y roles<a class="headerlink" href="#22-gestion-de-usuarios-permisos-y-roles" title="Permanent link">&para;</a></h3>
+<p>Los endpoints nuevos reutilizan los permisos del sistema: lectura con COMPRA_LEER y acciones con COMPRA_CREAR (@PreAuthorize), y el menú se registró en la semilla con moduloRequerido COMPRA, de modo que sólo lo ve quien tiene acceso al módulo. Las acciones quedan auditadas con @CreatedBy/@LastModifiedBy (usuario_creacion, usuario_modificacion). Sin token la API responde 401/403, y con contraseña incorrecta, 401.</p>
+<h3 id="23-evidencias-funcionales">2.3 Evidencias funcionales<a class="headerlink" href="#23-evidencias-funcionales" title="Permanent link">&para;</a></h3>
+<p><img src="media/media/image5.png" style="width:6.29921in;height:3.93701in" /></p>
+<p><em>Figura 2.2 — Compra → Reabastecimiento en el despliegue Docker: indicadores, filtros y órdenes en distintos estados.</em></p>
+<p><img src="media/media/image6.png" style="width:6.29921in;height:3.93701in" /></p>
+<p><em>Figura 2.3 — La orden convertida aparece en el módulo existente de Órdenes de compra (grupo REABASTECIMIENTO-3).</em></p>
+<p><img src="media/media/image7.png" style="width:6.29921in;height:3.93701in" /></p>
+<p><em>Figura 2.4 — La misma pantalla en el entorno local, con una orden rechazada y su motivo.</em></p>
+<p>=== 1. GET /api/productos/catalogo/1/sucursal/1/fefo (Paracetamol, Sede Central Juliaca)</p>
+<p>orden 1 | lote L-2105 | vence 2026-12-28 | dias 40 | stock 79.0</p>
+<p>orden 2 | lote L-2291 | vence 2027-01-12 | dias 55 | stock 500.0</p>
+<p>=== 2. POST /api/ventas con el lote que vence despues (id 10)</p>
+<p>status 400 | Error al crear venta: Por FEFO debe venderse primero el lote L-2105 (vence el 2026-12-28,</p>
+<p>stock 79).</p>
+<p>=== 3. POST /api/ventas con lote vencido de Puno (id 2)</p>
+<p>status 400 | Error al crear venta: El lote L-7714 venció el 2026-11-13 y no puede venderse.</p>
+<p>=== 4. POST /api/ventas con el lote FEFO (id 8)</p>
+<p>Venta creada exitosamente | venta 2 B001-2</p>
+<p>=== 5. POST /api/reabastecimiento/evaluar?idSucursal=2 (Puno)</p>
+<p>2 órdenes generadas</p>
+<p>#4 AMOXICILINA 500MG CAP | stock 18.0 \&lt;= minimo 60.0 | sugerido 102.0 | PENDIENTE</p>
+<p>#5 CETIRIZINA 10MG TAB | stock 0 \&lt;= minimo 30.0 | sugerido 150.0 | PENDIENTE</p>
+<p>=== 6. GET /api/reabastecimiento/resumen?idSucursal=2</p>
+<p>{'pendientes': 2, 'aprobadas': 0, 'convertidas': 0, 'productosBajoMinimo': 2}</p>
+<p>=== 7. Outbox: eventos generados (tabla cola_eventos)</p>
+<p>id | topico | titulo | estado</p>
+<p>----+------------------------+------------------------------------+-----------</p>
+<p>5 | sistema.notificaciones | Orden de reabastecimiento generada | PROCESADO</p>
+<p>4 | sistema.notificaciones | Orden de reabastecimiento generada | PROCESADO</p>
+<p>3 | sistema.notificaciones | Orden de reabastecimiento generada | PROCESADO</p>
+<p>2 | sistema.notificaciones | Orden de reabastecimiento generada | PROCESADO</p>
+<p>(4 rows)</p>
+<p><em>Evidencia 2.1 — Flujos ejecutados contra el despliegue Docker: FEFO, lote vencido, venta correcta, reabastecimiento y Outbox.</em></p>
+<p><img src="media/media/image8.png" style="width:5.90551in;height:3.69094in" /></p>
+<p><em>Figura 2.5 — Documentación OpenAPI del controlador de reabastecimiento.</em></p>
+<h2 id="seccion-3-codigo-y-diseno-tecnico">Sección 3: Código y Diseño Técnico<a class="headerlink" href="#seccion-3-codigo-y-diseno-tecnico" title="Permanent link">&para;</a></h2>
+<h3 id="31-estructura-del-repositorio">3.1 Estructura del repositorio<a class="headerlink" href="#31-estructura-del-repositorio" title="Permanent link">&para;</a></h3>
+<p>articulos-e3/</p>
+<p>├── articulos-backend/ Spring Boot 3.5.9 · Java 21</p>
+<p>│ ├── src/main/java/com/pe/articulos/</p>
+<p>│ │ ├── core/ config, security, exception, shared</p>
+<p>│ │ ├── service/ Outbox (cola_eventos) y listeners</p>
+<p>│ │ └── modules/ 28 módulos + reabastecimiento (nuevo)</p>
+<p>│ ├── src/main/resources/db/migration/ V1__esquema_base, V2__reabastecimiento_e_integridad</p>
+<p>│ └── Dockerfile</p>
+<p>├── articulos-frontend/ Angular 20 · Tailwind 4 · nginx.conf · Dockerfile</p>
+<p>├── mensajeria-api/ Spring Boot 3.2.4 · Java 17 · Dockerfile</p>
+<p>├── db/init/01-rol-aplicacion.sh</p>
+<p>├── pruebas/ postman/ · datos/datos_demo.sql · evidencias/</p>
+<p>├── docker-compose.yml · .env.example · iniciar-docker.ps1</p>
+<p>└── README.md</p>
+<p><em>Código 3.1 — Estructura del repositorio entregado.</em></p>
+<h3 id="32-patrones-y-buenas-practicas-aplicadas">3.2 Patrones y buenas prácticas aplicadas<a class="headerlink" href="#32-patrones-y-buenas-practicas-aplicadas" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Patrón / práctica</strong></th>
+<th><strong>Dónde</strong></th>
+<th><strong>Beneficio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Arquitectura por capas + DTO + MapStruct</strong></td>
+<td>Módulo reabastecimiento, LoteFefoMapper</td>
+<td>Entidades no expuestas; mapeo generado en compilación</td>
+</tr>
+<tr>
+<td><strong>Eventos de dominio (Observer)</strong></td>
+<td>StockDisminuidoEvent + @TransactionalEventListener</td>
+<td>Ventas no conoce al reabastecimiento; bajo acoplamiento</td>
+</tr>
+<tr>
+<td><strong>AFTER_COMMIT + REQUIRES_NEW</strong></td>
+<td>ReabastecimientoListener / evaluarProducto</td>
+<td>Sólo se evalúa stock confirmado y la orden se guarda en su propia transacción</td>
+</tr>
+<tr>
+<td><strong>Transactional Outbox</strong></td>
+<td>Notificaciones de órdenes</td>
+<td>Avisos sin pérdida aunque falle la entrega</td>
+</tr>
+<tr>
+<td><strong>Máquina de estados con guardas</strong></td>
+<td>exigirEstado() → 409 Conflict</td>
+<td>Transiciones inválidas imposibles</td>
+</tr>
+<tr>
+<td><strong>Reutilización de servicios</strong></td>
+<td>CompraService.crearOrden</td>
+<td>Una sola lógica de órdenes de compra</td>
+</tr>
+<tr>
+<td><strong>Configuración externa (12-factor)</strong></td>
+<td>application*.properties con \${VARIABLE}</td>
+<td>Sin secretos en el código; mismo artefacto en todos los entornos</td>
+</tr>
+<tr>
+<td><strong>Migraciones versionadas</strong></td>
+<td>Flyway V1/V2</td>
+<td>Esquema reproducible y auditable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-modularidad-y-desacoplamiento">3.3 Modularidad y desacoplamiento<a class="headerlink" href="#33-modularidad-y-desacoplamiento" title="Permanent link">&para;</a></h3>
+<p>El módulo de ventas no depende del reabastecimiento: ProductoService sólo publica un evento y el listener vive en el módulo nuevo. Si el reabastecimiento falla, la venta no se revierte, porque la evaluación ocurre después del commit y cualquier excepción se registra en el log. El fragmento siguiente muestra el punto de desacople:</p>
+<p>@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)</p>
+<p>public void alDisminuirStock(StockDisminuidoEvent evento) {</p>
+<p>try {</p>
+<p>reabastecimientoService.evaluarProducto(evento.idCatalogo(), evento.idSucursal());</p>
+<p>} catch (Exception e) {</p>
+<p>log.error("No se pudo evaluar el reabastecimiento del catálogo {} en la sucursal {}",</p>
+<p>evento.idCatalogo(), evento.idSucursal(), e);</p>
+<p>}</p>
+<p>}</p>
+<p>@Scheduled(cron = "\${reabastecimiento.cron:0 0 * * * *}")</p>
+<p>public void evaluacionPeriodica() {</p>
+<p>reordenRepository.sucursalesConPuntoDeReorden().forEach(reabastecimientoService::evaluarSucursal);</p>
+<p>reabastecimientoService.vencerOrdenesSinAtencion();</p>
+<p>}</p>
+<p><em>Código 3.2 — ReabastecimientoListener: evento tras el commit y evaluación periódica.</em></p>
+<p>Durante las pruebas se comprobó por qué REQUIRES_NEW es necesario: sin él, la orden se insertaba en una transacción ya finalizada y no se confirmaba. El defecto se detectó porque la orden automática no aparecía tras la venta, y se corrigió anotando evaluarProducto con Propagation.REQUIRES_NEW.</p>
+<h3 id="34-manejo-de-errores-y-validaciones">3.4 Manejo de errores y validaciones<a class="headerlink" href="#34-manejo-de-errores-y-validaciones" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Situación</strong></th>
+<th><strong>Mecanismo</strong></th>
+<th><strong>Respuesta</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cantidad aprobada ≤ 0 o motivo vacío</strong></td>
+<td>Bean Validation (@Positive, @NotBlank, @Size) + @Valid</td>
+<td>400 con el detalle por campo</td>
+</tr>
+<tr>
+<td><strong>Lote vencido / no FEFO</strong></td>
+<td>ValidationException en LoteFefoService</td>
+<td>400 con el lote que debe salir</td>
+</tr>
+<tr>
+<td><strong>Orden inexistente</strong></td>
+<td>ResourceNotFoundException</td>
+<td>404</td>
+</tr>
+<tr>
+<td><strong>Transición inválida (aprobar una rechazada)</strong></td>
+<td>ConflictException en exigirEstado()</td>
+<td>409</td>
+</tr>
+<tr>
+<td><strong>Convertir sin proveedor</strong></td>
+<td>ValidationException</td>
+<td>400 «indique el proveedor»</td>
+</tr>
+<tr>
+<td><strong>Contraseña incorrecta</strong></td>
+<td>AuthException mapeada en GlobalExceptionHandler (corregido)</td>
+<td>401 (antes 500)</td>
+</tr>
+<tr>
+<td><strong>Fallo al evaluar tras la venta</strong></td>
+<td>try/catch en el listener + log</td>
+<td>La venta se mantiene</td>
+</tr>
+</tbody>
+</table>
+<p>Root 12 Aprobar con cantidad inválida</p>
+<p>PUT http://localhost:8085/api/reabastecimiento/3/aprobar [400 Bad Request, 595 B, 45 ms]</p>
+<p>Pass Validación (400)</p>
+<p>Pass Mensaje del campo</p>
+<p>Root 13 Aprobar orden ajustando cantidad</p>
+<p>PUT http://localhost:8085/api/reabastecimiento/3/aprobar [200 OK, 955 B, 41 ms]</p>
+<p>Pass HTTP 200</p>
+<p>Pass Queda APROBADA</p>
+<p>Pass Guarda la cantidad</p>
+<p>Root 14 No se puede rechazar una orden ya aprobada</p>
+<p>PUT http://localhost:8085/api/reabastecimiento/3/rechazar [409 Conflict, 577 B, 38 ms]</p>
+<p>Pass Conflicto (409)</p>
+<p><em>Evidencia 3.1 — Validación 400, aprobación y conflicto 409 en la ejecución de Postman.</em></p>
+<h2 id="seccion-4-despliegue-e-instalacion">Sección 4: Despliegue e Instalación<a class="headerlink" href="#seccion-4-despliegue-e-instalacion" title="Permanent link">&para;</a></h2>
+<h3 id="41-instrucciones-de-instalacion">4.1 Instrucciones de instalación<a class="headerlink" href="#41-instrucciones-de-instalacion" title="Permanent link">&para;</a></h3>
+<p># 1. Configuración</p>
+<p>cp .env.example .env # completar DB_ADMIN_PASSWORD, DB_PASSWORD y credenciales de mensajería</p>
+<p>mkdir -p secrets/jwt # copiar private.pem y public.pem</p>
+<p># 2. Construir y levantar los cuatro servicios</p>
+<p>docker compose up -d --build</p>
+<p># 3. (Opcional) datos de demostración de Salud Total</p>
+<p>docker exec -i salud-total-erp-db-1 psql -U st_app -d clinica_db \&lt; pruebas/datos/datos_demo.sql</p>
+<p># 4. Verificar</p>
+<p>curl http://localhost:8085/actuator/health # {"status":"UP"}</p>
+<p>postman collection run pruebas/postman/E3_SaludTotal.postman_collection.json</p>
+<p><em>Código 4.1 — Instalación con Docker Compose (detalle en README.md).</em></p>
+<h3 id="42-configuracion-requerida">4.2 Configuración requerida<a class="headerlink" href="#42-configuracion-requerida" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Variable</strong></th>
+<th><strong>Uso</strong></th>
+<th><strong>Por defecto</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DB_URL, DB_USER, DB_PASSWORD</strong></td>
+<td>Conexión a PostgreSQL (rol de aplicación)</td>
+<td>local: clinica_db / postgres</td>
+</tr>
+<tr>
+<td><strong>DB_ADMIN_PASSWORD</strong></td>
+<td>Superusuario del contenedor db (sólo administración)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>JWT_PRIVATE_KEY_PATH / JWT_PUBLIC_KEY_PATH</strong></td>
+<td>Llaves RSA (classpath: o file:)</td>
+<td>classpath:certs/*.pem</td>
+</tr>
+<tr>
+<td><strong>VENTAS_FEFO_ESTRICTO</strong></td>
+<td>Exigir FEFO en la venta</td>
+<td>true</td>
+</tr>
+<tr>
+<td><strong>CORS_ALLOWED_ORIGINS</strong></td>
+<td>Orígenes permitidos por la API</td>
+<td>http://localhost:4200,4205</td>
+</tr>
+<tr>
+<td><strong>MENSAJERIA_API_URL</strong></td>
+<td>URL del microservicio de mensajería</td>
+<td>http://localhost:8087</td>
+</tr>
+<tr>
+<td><strong>MAIL_*, WHATSAPP_*</strong></td>
+<td>Credenciales de correo y WhatsApp</td>
+<td>vacías</td>
+</tr>
+</tbody>
+</table>
+<p>Perfiles: local (desarrollo, ddl-auto=update), docker y supabase (ddl-auto=validate: el esquema sólo cambia con Flyway). Ningún archivo de configuración contiene contraseñas; el archivo .env y la carpeta secrets/ están excluidos del control de versiones.</p>
+<h3 id="43-evidencia-de-despliegue-y-ejecucion">4.3 Evidencia de despliegue y ejecución<a class="headerlink" href="#43-evidencia-de-despliegue-y-ejecucion" title="Permanent link">&para;</a></h3>
+<p><img src="media/media/image1.png" style="width:6.29921in;height:3.43786in" /></p>
+<p><em>Figura 4.1 — Topología del despliegue con Docker Compose.</em></p>
+<p>PS&gt; docker compose ps</p>
+<p>SERVICE IMAGE STATUS PORTS</p>
+<p>backend salud-total-erp-backend Up About a minute (healthy) 0.0.0.0:8085-&gt;8085/tcp,</p>
+<p>[::]:8085-&gt;8085/tcp</p>
+<p>db postgres:17-alpine Up 20 minutes (healthy) 0.0.0.0:5433-&gt;5432/tcp,</p>
+<p>[::]:5433-&gt;5432/tcp</p>
+<p>frontend salud-total-erp-frontend Up About a minute (healthy) 0.0.0.0:8090-&gt;80/tcp,</p>
+<p>[::]:8090-&gt;80/tcp</p>
+<p>mensajeria salud-total-erp-mensajeria Up 20 minutes 0.0.0.0:8087-&gt;8087/tcp,</p>
+<p>[::]:8087-&gt;8087/tcp</p>
+<p>PS&gt; docker images</p>
+<p>REPOSITORY TAG SIZE</p>
+<p>salud-total-erp-frontend latest 86.3MB</p>
+<p>salud-total-erp-backend latest 649MB</p>
+<p>salud-total-erp-mensajeria latest 475MB</p>
+<p>PS&gt; curl http://localhost:8085/actuator/health</p>
+<p>{"status":"UP"}</p>
+<p>PS&gt; psql (db): historial de Flyway en la base creada desde cero</p>
+<p>version | description | installed_by | instalado | ms | success</p>
+<p>---------+-------------------------------+--------------+---------------------+-----+---------</p>
+<p>1 | esquema base | st_app | 2026-11-18 21:51:40 | 675 | t</p>
+<p>2 | reabastecimiento e integridad | st_app | 2026-11-18 21:51:40 | 38 | t</p>
+<p>(2 rows)</p>
+<p>PS&gt; psql (db): rol de la aplicación y dueño de las tablas</p>
+<p>rolname | superusuario | crea_bd</p>
+<p>----------+--------------+---------</p>
+<p>postgres | t | t</p>
+<p>st_app | f | f</p>
+<p>(2 rows)</p>
+<p>tableowner | tablas</p>
+<p>------------+--------</p>
+<p>st_app | 85</p>
+<p>(1 row)</p>
+<p><em>Evidencia 4.1 — Contenedores healthy, imágenes, Flyway sobre base vacía y rol de aplicación sin superusuario.</em></p>
+<p><img src="media/media/image9.png" style="width:6.10236in;height:3.81398in" /></p>
+<p><em>Figura 4.2 — Sistema servido por Nginx en http://localhost:8090 con las sedes de Salud Total.</em></p>
+<p><em>Tabla 4.1 — Resultado de la colección Postman contra el despliegue Docker.</em></p>
+<table>
+<thead>
+<tr>
+<th>Prueba</th>
+<th>HTTP</th>
+<th>Aserciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01 Health del backend</td>
+<td>200</td>
+<td>2/2</td>
+</tr>
+<tr>
+<td>02 Login con credenciales inválidas</td>
+<td>401</td>
+<td>2/2</td>
+</tr>
+<tr>
+<td>03 Login correcto</td>
+<td>200</td>
+<td>2/2</td>
+</tr>
+<tr>
+<td>04 Endpoint protegido sin token</td>
+<td>403</td>
+<td>1/1</td>
+</tr>
+<tr>
+<td>05 Lotes FEFO de Paracetamol en Juliaca</td>
+<td>200</td>
+<td>6/6</td>
+</tr>
+<tr>
+<td>05b Lotes vencidos en Puno</td>
+<td>200</td>
+<td>2/2</td>
+</tr>
+<tr>
+<td>05c Abrir caja chica</td>
+<td>200</td>
+<td>1/1</td>
+</tr>
+<tr>
+<td>05d Crear proveedor</td>
+<td>201</td>
+<td>1/1</td>
+</tr>
+<tr>
+<td>06 Venta saltándose el lote FEFO</td>
+<td>400</td>
+<td>2/2</td>
+</tr>
+<tr>
+<td>07 Venta de un lote vencido</td>
+<td>400</td>
+<td>2/2</td>
+</tr>
+<tr>
+<td>08 Venta del lote que vence primero</td>
+<td>201</td>
+<td>2/2</td>
+</tr>
+<tr>
+<td>09 Evaluar punto de reorden en Juliaca</td>
+<td>200</td>
+<td>2/2</td>
+</tr>
+<tr>
+<td>10 Segunda evaluación no duplica órdenes abiertas</td>
+<td>200</td>
+<td>1/1</td>
+</tr>
+<tr>
+<td>11 Listar órdenes pendientes de Juliaca</td>
+<td>200</td>
+<td>4/4</td>
+</tr>
+<tr>
+<td>12 Aprobar con cantidad inválida</td>
+<td>400</td>
+<td>2/2</td>
+</tr>
+<tr>
+<td>13 Aprobar orden ajustando cantidad</td>
+<td>200</td>
+<td>3/3</td>
+</tr>
+<tr>
+<td>14 No se puede rechazar una orden ya aprobada</td>
+<td>409</td>
+<td>1/1</td>
+</tr>
+<tr>
+<td>15 Convertir en orden de compra</td>
+<td>200</td>
+<td>3/3</td>
+</tr>
+<tr>
+<td>16 Resumen de reabastecimiento</td>
+<td>200</td>
+<td>2/2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="anexos">Anexos<a class="headerlink" href="#anexos" title="Permanent link">&para;</a></h2>
+<h3 id="anexo-a-repositorio-fuente">Anexo A: Repositorio fuente<a class="headerlink" href="#anexo-a-repositorio-fuente" title="Permanent link">&para;</a></h3>
+<p>Se entrega Entregable3_Codigo_Fuente.zip con el repositorio completo (sin node_modules, target, .env ni secrets). Es un repositorio git local independiente del repositorio de la empresa: el trabajo del curso se hizo en una copia para no alterar la rama principal de producción.</p>
+<h3 id="anexo-b-manual-tecnico-breve">Anexo B: Manual técnico breve<a class="headerlink" href="#anexo-b-manual-tecnico-breve" title="Permanent link">&para;</a></h3>
+<p>El archivo README.md del repositorio contiene: componentes y puertos, novedades del E3, ejecución con Docker y en local, variables de entorno y cómo ejecutar las pruebas. En Windows Insider, si Docker Desktop no inicia por sockets bloqueados («rename … .sock.stale»), se usa iniciar-docker.ps1.</p>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Método</th>
+<th>Permiso</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/api/productos/catalogo/{c}/sucursal/{s}/fefo</td>
+<td>GET</td>
+<td>autenticado</td>
+<td>Lotes vigentes en orden FEFO</td>
+</tr>
+<tr>
+<td>/api/reabastecimiento</td>
+<td>GET</td>
+<td>COMPRA_LEER</td>
+<td>Órdenes paginadas (estado, búsqueda)</td>
+</tr>
+<tr>
+<td>/api/reabastecimiento/resumen</td>
+<td>GET</td>
+<td>COMPRA_LEER</td>
+<td>Indicadores de la sede</td>
+</tr>
+<tr>
+<td>/api/reabastecimiento/evaluar</td>
+<td>POST</td>
+<td>COMPRA_CREAR</td>
+<td>Evaluar ahora el punto de reorden</td>
+</tr>
+<tr>
+<td>/api/reabastecimiento/{id}/aprobar</td>
+<td>PUT</td>
+<td>COMPRA_CREAR</td>
+<td>Aprobar con cantidad</td>
+</tr>
+<tr>
+<td>/api/reabastecimiento/{id}/rechazar</td>
+<td>PUT</td>
+<td>COMPRA_CREAR</td>
+<td>Rechazar con motivo</td>
+</tr>
+<tr>
+<td>/api/reabastecimiento/{id}/convertir</td>
+<td>POST</td>
+<td>COMPRA_CREAR</td>
+<td>Generar orden de compra</td>
+</tr>
+<tr>
+<td>/api/v1/mensajes/whatsapp/enviar-con-adjunto</td>
+<td>POST</td>
+<td>JWT</td>
+<td>Plantilla de WhatsApp con PDF (mensajeria-api)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="anexo-c-capturas-de-funcionamiento">Anexo C: Capturas de funcionamiento<a class="headerlink" href="#anexo-c-capturas-de-funcionamiento" title="Permanent link">&para;</a></h3>
+<p><img src="media/media/image10.png" style="width:5.90551in;height:3.69094in" /></p>
+<p><em>Figura C.1 — Órdenes pendientes con acciones Aprobar / Rechazar.</em></p>
+<p><img src="media/media/image11.png" style="width:5.90551in;height:3.69094in" /></p>
+<p><em>Figura C.2 — Productos por fecha de vencimiento (lotes cargados para las pruebas FEFO).</em></p>
+<h3 id="anexo-d-trazabilidad-con-el-e1-y-el-e2">Anexo D: Trazabilidad con el E1 y el E2<a class="headerlink" href="#anexo-d-trazabilidad-con-el-e1-y-el-e2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Requerimiento (E1)</th>
+<th>Estado en E1</th>
+<th>Estado en E3</th>
+<th>Evidencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF-24 FEFO en la venta</td>
+<td>Parcial</td>
+<td>Implementado</td>
+<td>Código 2.1, Evidencia 2.1, pruebas 05–08</td>
+</tr>
+<tr>
+<td>RF-26 Punto de reorden</td>
+<td>Implementado</td>
+<td>Implementado (usa stock vigente)</td>
+<td>Código 1.2</td>
+</tr>
+<tr>
+<td>RF-27 Orden automática</td>
+<td>TO-BE</td>
+<td>Implementado</td>
+<td>Figura 2.1, pruebas 09–11</td>
+</tr>
+<tr>
+<td>RF-28 Aprobar / rechazar / convertir</td>
+<td>TO-BE</td>
+<td>Implementado</td>
+<td>Figuras 2.2–2.3, pruebas 12–15</td>
+</tr>
+<tr>
+<td>RF-33 WhatsApp con PDF</td>
+<td>Parcial (endpoint inexistente)</td>
+<td>Endpoint implementado</td>
+<td>Sección 1.4</td>
+</tr>
+<tr>
+<td>RN-12 Una orden abierta</td>
+<td>—</td>
+<td>Índice parcial + validación</td>
+<td>Código 1.1, prueba 10</td>
+</tr>
+<tr>
+<td>RN-13 Vencimiento 72 h</td>
+<td>—</td>
+<td>Tarea programada</td>
+<td>Código 3.2</td>
+</tr>
+<tr>
+<td>ADR-09 Secretos y Flyway (E1) / Hallazgos 1–2 (E2)</td>
+<td>Pendiente</td>
+<td>Implementado</td>
+<td>Sección 4.2, Evidencia 4.1</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="archivos-del-entregable">Archivos del entregable<a class="headerlink" href="#archivos-del-entregable" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="Entregable3_Sistema_Funcional.docx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm1.2 18h-1.4L12 13.2 10.2 20H8.8l-2.2-9h1.5l1.4 6.8 1.8-6.8h1.3l1.8 6.8 1.4-6.8h1.5zM13 9V3.5L18.5 9z"/></svg></span> Descargar documento original (.docx)</a></li>
+</ul>
+<p><strong>Otros</strong></p>
+<ul>
+<li><a href="archivos/Entregable3_Codigo_Fuente.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2m-2 6h-2v2h2v2h-2v2h-2v-2h2v-2h-2v-2h2v-2h-2V8h2v2h2z"/></svg></span> Entregable3_Codigo_Fuente.zip</a></li>
+<li><a href="archivos/Entregable3_Codigo_Fuente.zip"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2m-2 6h-2v2h2v2h-2v2h-2v-2h2v-2h-2v-2h2v-2h-2V8h2v2h2z"/></svg></span> Entregable3_Codigo_Fuente.zip</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.indexes", "navigation.sections", "navigation.tracking", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
